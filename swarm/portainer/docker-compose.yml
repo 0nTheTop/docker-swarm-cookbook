@@ -1,0 +1,42 @@
+---
+version: '3.9'
+
+# ----
+# Note: 
+#    ** As this is agent for portainer - this stack should be created outside of Portainer UI. **
+#    ** Control over this stack will be limited for Portainer UI. **
+#
+# Deploy:
+#    docker stack deploy portainer --compose-file docker-compose.yml
+# Destroy:
+#    docker stack rm portainer
+
+
+services:
+  agent:
+    image: portainer/agent
+    environment:
+      REPLICA_ID: "{{.Task.Slot}}"
+      AGENT_CLUSTER_ADDR: tasks.agent
+      #AGENT_SECRET: "CHANGEME-tWaBvyQK94exo696BPAL"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /var/lib/docker/volumes:/var/lib/docker/volumes
+    ports:
+      - target: 9001
+        published: 9001
+        protocol: tcp
+        mode: host
+    networks:
+      - backend
+    deploy:
+      mode: global
+      labels:
+        - "traefik.http.services.portainer-agent.loadbalancer.server.port=9001"
+      placement:
+        constraints: [node.platform.os == linux]
+
+networks:
+  backend:
+    driver: overlay
+    attachable: true
