@@ -8,3 +8,6 @@ composer.phar
 
 # Ignore .hidden files
 .*
+downloaded*
+download_collection.py
+cook*
