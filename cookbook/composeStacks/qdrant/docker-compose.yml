@@ -4,8 +4,8 @@ version: "3.9"
 services:
   qdrant:
     # https://qdrant.tech/documentation/quick-start/
-    container_name: qdrant
     hostname: qdrant
+    container_name: qdrant
     image: qdrant/qdrant:latest
     restart: always
     networks:
@@ -14,7 +14,7 @@ services:
       - 6333:6333   # REST API + Web UI :6333/dashboard
       - 6334:6334   # GRPC API
     volumes:
-      - data:/qdrant/storage
+      - qdrant_data:/qdrant/storage
     ulimits:
       nofile: 10000
     #environment:
@@ -35,9 +35,10 @@ services:
         - "traefik.http.services.qdrant-qdrant.loadbalancer.server.port=6333" 
 
 volumes:
-  data:
+  qdrant_data:
 
 networks:
   qdrant:
+    name: qdrant
     driver: overlay
     attachable: true
