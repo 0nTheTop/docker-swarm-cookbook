@@ -1,0 +1,44 @@
+---
+version: '3.9'
+
+services:
+  shepherd:
+    image: containrrr/shepherd
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - shepherd
+    environment:
+      SLEEP_TIME: 5m
+      IGNORELIST_SERVICES: shepherd my-other-service
+      WITH_REGISTRY_AUTH: 'true'
+      WITH_INSECURE_REGISTRY: 'true'
+      WITH_NO_RESOLVE_IMAGE: 'true'
+      FILTER_SERVICES: label=com.mydomain.autodeploy
+      APPRISE_SIDECAR_URL: notify:5000
+      IMAGE_AUTOCLEAN_LIMIT: 5
+      RUN_ONCE_AND_EXIT: 'true'
+      ROLLBACK_ON_FAILURE: 'true'
+      UPDATE_OPTIONS: --update-delay=30s
+      TZ: Europe/Warsaw
+      VERBOSE: 'true'
+    deploy:
+      placement:
+        constraints:
+          - node.role == manager
+
+  notify:
+    hostname: notify
+    image: mazzolino/apprise-microservice:0.1
+    environment:
+      NOTIFICATION_URLS: mailtos://user:pass@domain/?to=target@example.com
+    networks:
+      - shepherd
+
+volumes:
+  data:
+
+networks:
+  shepherd:
+    driver: overlay
+    attachable: true

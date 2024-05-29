@@ -1,0 +1,124 @@
+---
+version: "3.9"
+# ---
+# Password generation [https://doc.traefik.io/traefik/middlewares/http/basicauth/]
+#    alpine>  apk add apache2-utils
+#    ubuntu>  apt install apache2-utils
+#
+#  bash#  echo $(htpasswd -nB user) | sed -e s/\\$/\\$\\$/g
+
+services:
+  proxy:
+    hostname: traefik
+    image: "traefik:latest"
+    command:
+      - --api.insecure=true
+      #- --providers.docker=true
+      - --providers.swarm.endpoint=unix:///var/run/docker.sock
+      - --providers.docker.watch=true
+      - --providers.docker.defaultRule=Host("home.arpa")
+      - --entrypoints.web.address=:80
+      - --entrypoints.websecure.address=:443
+      - --ping=true
+      - --ping.entryPoint=web
+    # Logs - https://doc.traefik.io/traefik/observability/logs/
+      - --log.level=DEBUG
+      #- --log.format=json
+      #- --log.filePath=/path/to/traefik.log
+    # Metrics configuration for influx db - https://doc.traefik.io/traefik/observability/metrics/influxdb/
+      #- --metrics=true
+      #- --metrics.influxdb=true
+      #- --metrics.influxdb.address=192.168.8.122:8086
+      #- --metrics.influxdb.protocol=http
+      #- --metrics.influxdb.database=traefik
+      #- --metrics.influxdb.addEntryPointsLabels=true
+      #- --metrics.influxdb.addServicesLabels=true
+      #- --metrics.influxdb.pushInterval=10s
+    # Tracing Zipkin - https://doc.traefik.io/traefik/observability/tracing/zipkin/
+      #- --tracing=true
+      #- --tracing.zipkin=true
+      #- --tracing.zipkin.httpEndpoint=http://192.168.8.117:9411/api/v2/spans
+    # Access Logs - https://doc.traefik.io/traefik/observability/access-logs/
+      #- --accesslog=true
+      #- --accesslog.filepath=/path/to/access.log
+      #- --accesslog.bufferingsize=100
+      #- --accesslog.format=json
+      #- --accesslog.filters.statuscodes=200,300-302
+      #- --accesslog.filters.retryattempts
+      #- --accesslog.filters.minduration=10ms
+      #- --accesslog.fields.defaultmode=keep
+      #- --accesslog.fields.names.ClientUsername=drop
+      #- --accesslog.fields.headers.defaultmode=keep
+      #- --accesslog.fields.headers.names.User-Agent=redact
+      #- --accesslog.fields.headers.names.Authorization=drop
+      #- --accesslog.fields.headers.names.Content-Type=keep
+    networks:
+      - public
+    ports:
+      - target: 80
+        published: 80
+        protocol: tcp
+        mode: host
+      - target: 443
+        published: 443
+        protocol: tcp
+        mode: host
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+      - data:/etc/traefik/
+    deploy:
+      mode: replicated
+      replicas: 1
+      restart_policy:
+        delay: 5s
+        max_attempts: 10
+        window: 60s
+      placement:
+        max_replicas_per_node: 1
+      labels:
+        - "traefik.port=80"
+        - "traefik.docker.network=traefik_public"
+        - "traefik.docker.lbswarm=true"
+        - "traefik.http.routers.api.rule=Host(`traefik.home.arpa`)"
+        - "traefik.http.routers.api.service=api@internal"
+        - "traefik.http.routers.api.middlewares=auth"
+        - "traefik.http.middlewares.auth.basicauth.users=admin:$$2y$$05$$z27zicFAEObGfTesp1wGdOmkIoky/Rfa/H1aHNL0htC9i9H5krx3W"
+       # Docker Swarm does not provide any port detection information to Traefik.
+       # https://doc.traefik.io/traefik/v2.0/providers/docker/#docker-swarm-mode
+       # traefik.http.services.<name>.loadbalancer.server.port
+       #
+       # ** This configuration is just to prevent error message in traefik **
+        - "traefik.http.services.treafik-proxy.loadbalancer.server.port=80"
+       # In case you would like to redirect all traffic from HTTP-80 -> HTTPS-443 (req. additional TLS configuration for 'websecure' entrypoints)
+        #- "traefik.http.routers.redirect.rule=hostregexp(`{host:.+}`)"
+        #- "traefik.http.routers.redirect.entrypoints=web"
+        #- "traefik.http.routers.redirect.middlewares=redirect-to-https"
+        #- "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
+
+
+  whoami:
+    image: containous/whoami
+    deploy:
+      labels:
+        - "traefik.http.routers.whoami-http.entrypoints=web"
+        - "traefik.http.routers.whoami-http.rule=Host(`whoami.home.arpa`)"
+        - "traefik.http.routers.whoami-http.middlewares=whoami-https"
+        - "traefik.http.middlewares.whoami-https.redirectscheme.scheme=https"
+        - "traefik.http.routers.whoami.entrypoints=websecure"
+        - "traefik.http.routers.whoami.rule=Host(`whoami.home.arpa`)"
+        - "traefik.http.routers.whoami.tls=true"
+        # -v- *Swarm Port Detection* -v-
+        - "traefik.http.services.treafik-whoami.loadbalancer.server.port=80"
+
+volumes:
+  data:
+    driver: local
+
+networks:
+  public:
+
+    driver: overlay
+    attachable: true
+
+
+

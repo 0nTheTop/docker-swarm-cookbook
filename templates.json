@@ -22934,7 +22934,7 @@
             "id": 597
         },
         {
-            "description": "minio-cluster",
+            "description": "3 Nodes MinIO Cluster",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/minio.png",
             "title": "Minio cluster (Cookbook)",
             "repository": {
@@ -22968,6 +22968,18 @@
             "logo": "",
             "description": "portainer agent",
             "id": 600
+        },
+        {
+            "description": "Containrrr/shepherd",
+            "logo": "https://avatars.githubusercontent.com/u/49166261?s=48&v=4",
+            "title": "Shepherd (Cookbook)",
+            "repository": {
+                "url": "https://github.com/azdolinski/docker-swarm-cookbook",
+                "stackfile": "cookbook/swarm/shepherd/docker-stack.yml"
+            },
+            "type": 2,
+            "platform": "linux",
+            "id": 601
         }
     ]
 }
