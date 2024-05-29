@@ -27,14 +27,12 @@ services:
       labels:
         - "traefik.enable=true"
         - "traefik.docker.network=traefik_public"
-        - "traefik.http.routers.mysql.rule=Host(`mysql.home.arpa`)"
-        - "traefik.http.routers.mysql.service=mysql-s"
-        - "traefik.http.routers.mysql.entryPoints=tcp_3306"
-        - "traefik.http.services.mysql-s.loadbalancer.server.port=6333"
-        - "traefik.http.services.mysql-s.loadbalancer.sticky.cookie.name=stickycookie"
-        - "traefik.http.services.mysql-s.loadbalancer.sticky.cookie.secure=true"
+        - "traefik.tcp.routers.mysql.entrypoints=mysql"
+        - "traefik.tcp.routers.mysql.rule=HostSNI(`*`)"
+        - "traefik.tcp.routers.mysql.tls.passthrough=true"
+        - "traefik.tcp.services.mysql.loadbalancer.server.port=3306"
         # Dummy config - traefik swarm docs / just to suppress traefik error message 
-        - "traefik.http.services.mysql-mysql.loadbalancer.server.port=3306" 
+        - "traefik.http.services.mysql.loadbalancer.server.port=3306" 
 volumes:
   mysql_data:
     name: mysql_data
