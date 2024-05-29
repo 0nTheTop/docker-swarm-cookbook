@@ -3,13 +3,15 @@ version: '3.9'
 
 services:
   shepherd:
+    container_name: shepherd
+    hostname: shepherd
     image: containrrr/shepherd
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     networks:
       - shepherd
     environment:
-      SLEEP_TIME: 30m
+      SLEEP_TIME: 6h     # https://www.docker.com/increase-rate-limits/
       IGNORELIST_SERVICES: shepherd notify
       #WITH_REGISTRY_AUTH: 'true'
       #WITH_INSECURE_REGISTRY: 'true'
