@@ -6,8 +6,10 @@ version: "3.9"
 # https://dev.mysql.com/blog-archive/docker-compose-setup-for-innodb-cluster/
 services:
   mysql:
+    hostname: mysql_node{{.Task.Slot}}
     image: mysql:latest
     environment:
+      REPLICA_ID: "{{.Task.Slot}}"
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: ${MYSQL_DATABASE}
     networks:
@@ -17,7 +19,7 @@ services:
         published: 3306
         target: 3306
     volumes:
-      - data:/var/lib/mysql
+      - mysql_data:/var/lib/mysql
     deploy:
       replicas: 2
       placement:
@@ -32,10 +34,11 @@ services:
         - "traefik.tcp.routers.mysql.tls.passthrough=true"
         - "traefik.tcp.services.mysql.loadbalancer.server.port=3306"
         # Dummy config - traefik swarm docs / just to suppress traefik error message 
-        - "traefik.http.services.mysql.loadbalancer.server.port=3306" 
+        - "traefik.http.services.mysql.loadbalancer.server.port=3306"
+
 volumes:
   mysql_data:
-    name: mysql_data
+    name: mysql_data_node{{.Task.Slot}}
 
 networks:
   mysql:
