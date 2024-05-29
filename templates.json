@@ -30484,17 +30484,17 @@
         {
             "title": "Traefik (Cookbook)",
             "description": "Traefik v3",
-            "logo": "https://raw.githubusercontent.com/traefik/traefik/master/docs/content/assets/img/traefik.logo.png",
             "platform": "linux",
             "repository": {
-                "stackfile": "cookbook/swarm/traefik/docker-stack.yml",
-                "url": "https://github.com/azdolinski/docker-swarm-cookbook"
+                "url": "https://github.com/azdolinski/docker-swarm-cookbook",
+                "stackfile": "cookbook/swarmStacks/traefik/docker-stack.yml"
             },
             "categories": [
                 "Cookbook"
             ],
             "env": [],
             "type": 2,
+            "logo": "",
             "id": 845
         },
         {
