@@ -22935,18 +22935,18 @@
         },
         {
             "description": "minio-cluster",
-            "title": "minio-cluster",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/minio.png",
+            "title": "Minio cluster (Cookbook)",
             "repository": {
                 "url": "https://github.com/azdolinski/docker-swarm-cookbook",
                 "stackfile": "cookbook/swarm/minio-cluster/docker-stack.yml"
             },
             "type": 2,
             "platform": "linux",
-            "logo": "",
             "id": 598
         },
         {
-            "title": "traefik",
+            "title": "Traefik (Cookbook)",
             "description": "Traefik v3",
             "logo": "https://raw.githubusercontent.com/traefik/traefik/master/docs/content/assets/img/traefik.logo.png",
             "platform": "linux",
@@ -22958,7 +22958,7 @@
             "id": 599
         },
         {
-            "title": "portainer_agent",
+            "title": "Portainer agent (Cookbook)",
             "repository": {
                 "url": "https://github.com/azdolinski/docker-swarm-cookbook",
                 "stackfile": "cookbook/swarm/portainer_agent/docker-stack.yml"

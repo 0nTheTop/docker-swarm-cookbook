@@ -63,7 +63,7 @@ def cookbook_swarms():
         # if inside data not exist title... then setup based on folder name
         if 'title' not in data:
             # This field must consist of lower-case alphanumeric characters, '_' or '-'
-            data['title'] = folder.replace(' ', '_').lower()
+            data['title'] = '-'.join(word.capitalize() or '_' for word in folder.split('_|-')).replace('_', ' ').replace('-', ' ')
             
         if 'repository' not in data:
             data['repository'] = {}
@@ -85,8 +85,7 @@ def cookbook_swarms():
         if 'source' in data:
             del data['source']
         
-        data['title'] = re.sub(r'\w(?<![-_a-z0-9])', '', data['title'].lower())
-       
+        data['title'] = f"{data['title']} (Cookbook)"
         ret.append(data)
     return ret
         
