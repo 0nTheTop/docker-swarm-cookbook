@@ -1,0 +1,11 @@
+repos:
+  - source: portainer
+    filename: portainer_templates.json
+    url: https://raw.githubusercontent.com/portainer/templates/v3/templates.json
+  - source: lissy93
+    filename: lissy93_templates.json
+    url: https://raw.githubusercontent.com/Lissy93/portainer-templates/main/templates.json
+  - source: xneo1
+    filename: xneo1_templates.json
+    url: https://raw.githubusercontent.com/xneo1/portainer_templates/master/Template/template.json
+

@@ -10,3 +10,4 @@ composer.phar
 .*
 downloaded*
 download_collection.py
+__pycache*

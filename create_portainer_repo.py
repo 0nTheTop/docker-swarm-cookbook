@@ -1,23 +1,30 @@
-#env
+import sys
+sys.dont_write_bytecode = True
 
 import os, requests, json, yaml
 from pprint import pprint
 from typing import TypedDict
 from typing import List, Dict
+from config import ConfigReader
 
 import yaml, re
 
+def read_config(file_path):
+    # Check if file_path exist/if not - then check if it is just file name and if it exist in config folder
+    if not os.path.exists(file_path):
+        file_path = os.path.join("config", file_path)
 
+    # read local json file and return as dict
+    with open(file_path, 'r') as f:
+        data = yaml.safe_load(f)
+        return data
 
 class PortainerRepos():
     def __init__(self) -> None:
+        cr = ConfigReader()
         self.templates_folder_path = os.path.join("downloaded-collections", "templates")
-        self.urls = [ 
-            {"url": "https://raw.githubusercontent.com/portainer/templates/v3/templates.json", "filename": "portainer_templates.json", "source": "portainer"},
-            {"url": "https://raw.githubusercontent.com/Lissy93/portainer-templates/main/templates.json", "filename": "lissy93_templates.json", "source": "lissy93"},
-            {"url": "https://raw.githubusercontent.com/xneo1/portainer_templates/master/Template/template.json", "filename": "xneo1_templates.json", "source": "xneo1"},
-            ]
-
+        self.urls = cr.read_config("repos.yaml")['repos']
+        
     def download(self):
         for url in self.urls:
             r = requests.get(url['url'])
@@ -87,7 +94,8 @@ def cookbook(type):
         if 'Cookbook' not in data['categories']:
             data['categories'].append("Cookbook")
         
-        
+        if 'env' not in data:
+            data['env'] = []
         
         if 'type' not in data:
             data['type'] = type

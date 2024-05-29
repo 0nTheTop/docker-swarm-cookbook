@@ -1,0 +1,13 @@
+---
+env:
+- name: MYSQL_ROOT_PASSWORD
+  label: MYSQL_ROOT_PASSWORD
+  description: Password used by the MySQL root user.
+- name: MYSQL_DATABASE
+  label: MYSQL_DATABASE
+  default: db
+  description: Name of the database.
+- name: MYSQL_ROOT_HOST
+  default: "%"
+  preset: true
+               

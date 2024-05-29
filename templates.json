@@ -30476,6 +30476,7 @@
             "categories": [
                 "Cookbook"
             ],
+            "env": [],
             "type": 2,
             "platform": "linux",
             "id": 844
@@ -30492,6 +30493,7 @@
             "categories": [
                 "Cookbook"
             ],
+            "env": [],
             "type": 2,
             "id": 845
         },
@@ -30504,6 +30506,7 @@
             "categories": [
                 "Cookbook"
             ],
+            "env": [],
             "type": 2,
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/icons/portainer_agent.png",
@@ -30511,6 +30514,24 @@
             "id": 846
         },
         {
+            "env": [
+                {
+                    "name": "MYSQL_ROOT_PASSWORD",
+                    "label": "MYSQL_ROOT_PASSWORD",
+                    "description": "Password used by the MySQL root user."
+                },
+                {
+                    "name": "MYSQL_DATABASE",
+                    "label": "MYSQL_DATABASE",
+                    "default": "db",
+                    "description": "Name of the database."
+                },
+                {
+                    "name": "MYSQL_ROOT_HOST",
+                    "default": "%",
+                    "preset": true
+                }
+            ],
             "title": "Mysql cluster (Cookbook)",
             "repository": {
                 "url": "https://github.com/azdolinski/docker-swarm-cookbook",
@@ -30536,6 +30557,7 @@
             "categories": [
                 "Cookbook"
             ],
+            "env": [],
             "type": 3,
             "platform": "linux",
             "id": 848
@@ -30552,6 +30574,7 @@
                 "url": "https://github.com/azdolinski/docker-swarm-cookbook",
                 "stackfile": "cookbook/composeStacks/qdrant/docker-compose.yml"
             },
+            "env": [],
             "type": 3,
             "platform": "linux",
             "id": 849
@@ -30567,6 +30590,7 @@
             "categories": [
                 "Cookbook"
             ],
+            "env": [],
             "type": 3,
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/icons/shepherd.png",
