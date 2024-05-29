@@ -109,12 +109,12 @@ if __name__ == "__main__":
     featch = PortainerRepos()
     featch.download()
     ext_repos = featch.repos()
-    print(ext_repos)
-    
+
     repo = {"version": "3", "templates": []}
     id = 0
     for ext_repo in ext_repos:
         data = featch.decompress_template(ext_repo['file'])
+        print(f"Repo: {ext_repo['name']} - {len(data['templates'])}")
         for template in data['templates']:
             template['id'] = id
             template['title'] = f"{template['title']} ({ext_repo['name']})"
@@ -123,6 +123,7 @@ if __name__ == "__main__":
 
     # add cookbooks
     cbook_swarm = cookbook_swarmStack()
+    print(f"Cookbook: swarmStack - {len(cbook_swarm)}")
     for cbook in cbook_swarm:
         cbook['id'] = id
         repo['templates'].append(cbook)
@@ -130,6 +131,7 @@ if __name__ == "__main__":
 
     # add cookbooks
     cbook_compose = cookbook_composeStack()
+    print(f"Cookbook: composeStack - {len(cbook_compose)}")
     for cbook in cbook_compose:
         cbook['id'] = id
         repo['templates'].append(cbook)
