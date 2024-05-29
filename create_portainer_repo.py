@@ -136,7 +136,7 @@ if __name__ == "__main__":
     ext_repos = featch.repos()
 
     repo = {"version": "3", "templates": []}
-    id = 0
+    id = 1
     for ext_repo in ext_repos:
         data = featch.decompress_template(ext_repo['file'])
         print(f"Repo: {ext_repo['name']} - {len(data['templates'])}")
@@ -174,5 +174,14 @@ if __name__ == "__main__":
 
 
     # write to file only cookbooks records
+    cookbook_repo = {"version": "3", "templates": []}
+    cookbook_repo_id = 1
+    for r in repo['templates']:
+        if r['id'] >= cookbook_id_start:
+            cbr = r
+            cbr['id'] = cookbook_repo_id
+            cookbook_repo['templates'].append(cbr)
+            cookbook_repo_id+=1
+            
     with open('templates_cookbook.json', 'w') as f:
-        json.dump(repo['templates'][cookbook_id_start:], f, indent=4)
+        json.dump(cookbook_repo, f, indent=4)
