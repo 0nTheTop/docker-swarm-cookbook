@@ -45,7 +45,9 @@ class PortainerRepos():
         with open(file_path, 'r') as f:
             data = json.load(f)
             return data
-        
+
+def capitalize_first_letter(names):
+  return [name.capitalize() for name in names] 
         
 def cookbook(type):
     ret = []
@@ -78,6 +80,14 @@ def cookbook(type):
             data['repository']['url'] = "https://github.com/azdolinski/docker-swarm-cookbook"
             data['repository']['stackfile'] = f"cookbook/{cookbook_folder}/{project_folder}/{stack_file_name}"
         
+        if 'categories' not in data:
+            data['categories'] = []
+        
+        if 'Cookbook' not in data['categories']:
+            data['categories'].append("Cookbook")
+        
+        
+        
         if 'type' not in data:
             data['type'] = type
 
@@ -97,7 +107,8 @@ def cookbook(type):
         
         if 'source' in data:
             del data['source']
-        
+            
+        data['categories'] = capitalize_first_letter(data['categories'])
         data['title'] = f"{data['title']} (Cookbook)"
         ret.append(data)
     return ret
@@ -123,6 +134,11 @@ if __name__ == "__main__":
         for template in data['templates']:
             template['id'] = id
             template['title'] = f"{template['title']} ({ext_repo['name']})"
+            if 'categories' not in template:
+                template['categories'] = []
+            if "Cookbook" not in template['categories']:
+                template['categories'].append(ext_repo['name'])
+            template['categories'] = capitalize_first_letter(template['categories'])
             repo['templates'].append(template)
             id = id + 1
 
