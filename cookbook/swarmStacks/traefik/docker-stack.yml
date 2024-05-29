@@ -55,7 +55,7 @@ services:
       #- --accesslog.fields.headers.names.Authorization=drop
       #- --accesslog.fields.headers.names.Content-Type=keep
     networks:
-      - public
+      - traefik
     ports:
       - target: 80
         published: 80
@@ -67,7 +67,7 @@ services:
         mode: host
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
-      - data:/etc/traefik/
+      - traefik_data:/etc/traefik/
     deploy:
       mode: replicated
       replicas: 1
@@ -79,7 +79,7 @@ services:
         max_replicas_per_node: 1
       labels:
         - "traefik.port=80"
-        - "traefik.docker.network=traefik_public"
+        - "traefik.docker.network=traefik"
         - "traefik.docker.lbswarm=true"
         - "traefik.http.routers.api.rule=Host(`traefik.home.arpa`)"
         - "traefik.http.routers.api.service=api@internal"
@@ -113,12 +113,13 @@ services:
         - "traefik.http.services.treafik-whoami.loadbalancer.server.port=80"
 
 volumes:
-  data:
+  traefik_data:
+    name: traefik_data
     driver: local
 
 networks:
-  public:
-
+  traefik:
+    name: traefik
     driver: overlay
     attachable: true
 

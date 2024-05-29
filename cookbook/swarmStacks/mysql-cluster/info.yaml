@@ -1,4 +1,6 @@
 ---
+description: 2 Nodes MySQL Cluster
+title: MySQL Cluster
 env:
 - name: MYSQL_ROOT_PASSWORD
   label: MYSQL_ROOT_PASSWORD

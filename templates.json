@@ -30514,6 +30514,8 @@
             "id": 846
         },
         {
+            "description": "2 Nodes MySQL Cluster",
+            "title": "MySQL Cluster (Cookbook)",
             "env": [
                 {
                     "name": "MYSQL_ROOT_PASSWORD",
@@ -30532,7 +30534,6 @@
                     "preset": true
                 }
             ],
-            "title": "Mysql cluster (Cookbook)",
             "repository": {
                 "url": "https://github.com/azdolinski/docker-swarm-cookbook",
                 "stackfile": "cookbook/swarmStacks/mysql-cluster/docker-stack.yml"
@@ -30543,7 +30544,6 @@
             "type": 2,
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/icons/mysql-cluster.png",
-            "description": "mysql-cluster",
             "id": 847
         },
         {
