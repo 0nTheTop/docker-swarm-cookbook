@@ -85,7 +85,12 @@ def cookbook(type):
             data['platform'] = 'linux'
             
         if 'logo' not in data:
-            data['logo'] = ''
+            # if file with name+.png exist in icons folder
+            # logo: https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/icons/portainer.png
+            if os.path.exists(os.path.join("icons", f"{project_folder}.png")):
+                data['logo'] = f"https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/icons/{project_folder}.png"
+            else:
+                data['logo'] = ''
             
         if 'description' not in data:
             data['description'] = project_folder.replace("_", " ")

@@ -22958,20 +22958,19 @@
             "id": 599
         },
         {
-            "title": "Portainer agent (Cookbook)",
+            "title": "Portainer Agent (Cookbook)",
             "repository": {
                 "url": "https://github.com/azdolinski/docker-swarm-cookbook",
                 "stackfile": "cookbook/swarmStacks/portainer_agent/docker-stack.yml"
             },
             "type": 2,
             "platform": "linux",
-            "logo": "",
+            "logo": "https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/icons/portainer_agent.png",
             "description": "portainer agent",
             "id": 600
         },
         {
             "description": "Containrrr/shepherd",
-            "logo": "https://avatars.githubusercontent.com/u/49166261?s=48&v=4",
             "title": "Shepherd (Cookbook)",
             "repository": {
                 "url": "https://github.com/azdolinski/docker-swarm-cookbook",
@@ -22979,18 +22978,19 @@
             },
             "type": 2,
             "platform": "linux",
+            "logo": "https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/icons/shepherd.png",
             "id": 601
         },
         {
-            "title": "Node red (Cookbook)",
+            "description": "Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.  It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-click.",
+            "logo": "https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/icons/node-red.png",
+            "title": "Node-RED (Cookbook)",
             "repository": {
                 "url": "https://github.com/azdolinski/docker-swarm-cookbook",
                 "stackfile": "cookbook/composeStacks/node-red/docker-compose.yml"
             },
             "type": 3,
             "platform": "linux",
-            "logo": "",
-            "description": "node-red",
             "id": 602
         },
         {
