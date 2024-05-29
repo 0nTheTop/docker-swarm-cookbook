@@ -15,6 +15,7 @@ class PortainerRepos():
         self.urls = [ 
             {"url": "https://raw.githubusercontent.com/portainer/templates/v3/templates.json", "filename": "portainer_templates.json", "source": "portainer"},
             {"url": "https://raw.githubusercontent.com/Lissy93/portainer-templates/main/templates.json", "filename": "lissy93_templates.json", "source": "lissy93"},
+            {"url": "https://raw.githubusercontent.com/xneo1/portainer_templates/master/Template/template.json", "filename": "xneo1_templates.json", "source": "xneo1"},
             ]
 
     def download(self):
