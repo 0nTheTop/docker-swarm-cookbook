@@ -22939,7 +22939,7 @@
             "title": "Minio cluster (Cookbook)",
             "repository": {
                 "url": "https://github.com/azdolinski/docker-swarm-cookbook",
-                "stackfile": "cookbook/swarm/minio-cluster/docker-stack.yml"
+                "stackfile": "cookbook/swarmStacks/minio-cluster/docker-stack.yml"
             },
             "type": 2,
             "platform": "linux",
@@ -22961,7 +22961,7 @@
             "title": "Portainer agent (Cookbook)",
             "repository": {
                 "url": "https://github.com/azdolinski/docker-swarm-cookbook",
-                "stackfile": "cookbook/swarm/portainer_agent/docker-stack.yml"
+                "stackfile": "cookbook/swarmStacks/portainer_agent/docker-stack.yml"
             },
             "type": 2,
             "platform": "linux",
@@ -22975,11 +22975,35 @@
             "title": "Shepherd (Cookbook)",
             "repository": {
                 "url": "https://github.com/azdolinski/docker-swarm-cookbook",
-                "stackfile": "cookbook/swarm/shepherd/docker-stack.yml"
+                "stackfile": "cookbook/swarmStacks/shepherd/docker-stack.yml"
             },
             "type": 2,
             "platform": "linux",
             "id": 601
+        },
+        {
+            "title": "Node red (Cookbook)",
+            "repository": {
+                "url": "https://github.com/azdolinski/docker-swarm-cookbook",
+                "stackfile": "cookbook/composeStacks/node-red/docker-compose.yml"
+            },
+            "type": 3,
+            "platform": "linux",
+            "logo": "",
+            "description": "node-red",
+            "id": 602
+        },
+        {
+            "title": "Qdrant (Cookbook)",
+            "repository": {
+                "url": "https://github.com/azdolinski/docker-swarm-cookbook",
+                "stackfile": "cookbook/composeStacks/qdrant/docker-compose.yml"
+            },
+            "type": 3,
+            "platform": "linux",
+            "logo": "",
+            "description": "qdrant",
+            "id": 603
         }
     ]
 }
