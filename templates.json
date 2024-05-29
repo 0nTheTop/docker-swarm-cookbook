@@ -22932,6 +22932,42 @@
             "title": "Neko (lissy93)",
             "type": 3,
             "id": 597
+        },
+        {
+            "description": "minio-cluster",
+            "title": "minio-cluster",
+            "repository": {
+                "url": "https://github.com/azdolinski/docker-swarm-cookbook",
+                "stackfile": "cookbook/swarm/minio-cluster/docker-stack.yml"
+            },
+            "type": 2,
+            "platform": "linux",
+            "logo": "",
+            "id": 598
+        },
+        {
+            "title": "traefik",
+            "description": "Traefik v3",
+            "logo": "https://raw.githubusercontent.com/traefik/traefik/master/docs/content/assets/img/traefik.logo.png",
+            "platform": "linux",
+            "repository": {
+                "stackfile": "cookbook/swarm/traefik/docker-stack.yml",
+                "url": "https://github.com/azdolinski/docker-swarm-cookbook"
+            },
+            "type": 2,
+            "id": 599
+        },
+        {
+            "title": "portainer_agent",
+            "repository": {
+                "url": "https://github.com/azdolinski/docker-swarm-cookbook",
+                "stackfile": "cookbook/swarm/portainer_agent/docker-stack.yml"
+            },
+            "type": 2,
+            "platform": "linux",
+            "logo": "",
+            "description": "portainer agent",
+            "id": 600
         }
     ]
 }

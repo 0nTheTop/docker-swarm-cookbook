@@ -5,7 +5,7 @@ from pprint import pprint
 from typing import TypedDict
 from typing import List, Dict
 
-import yaml
+import yaml, re
 
 
 
@@ -46,6 +46,51 @@ class PortainerRepos():
             data = json.load(f)
             return data
         
+        
+def cookbook_swarms():
+    ret = []
+    folder_path = os.path.join("cookbook", "swarm")
+    # list all folders
+    folders = [f for f in os.listdir(folder_path) if os.path.isdir(os.path.join(folder_path, f))]
+    # check if in each folder exis a info.yaml
+    for folder in folders:
+        path = os.path.join(folder_path, folder, "info.yaml")
+        data = {}
+        if os.path.exists(path):
+            # read info.yaml
+            with open(path, 'r') as f:
+                data = yaml.safe_load(f)
+        # if inside data not exist title... then setup based on folder name
+        if 'title' not in data:
+            # This field must consist of lower-case alphanumeric characters, '_' or '-'
+            data['title'] = folder.replace(' ', '_').lower()
+            
+        if 'repository' not in data:
+            data['repository'] = {}
+            data['repository']['url'] = "https://github.com/azdolinski/docker-swarm-cookbook"
+            data['repository']['stackfile'] = f"cookbook/swarm/{folder}/docker-stack.yml"
+        
+        if 'type' not in data:
+            data['type'] = 2
+
+        if 'platform' not in data:
+            data['platform'] = 'linux'
+            
+        if 'logo' not in data:
+            data['logo'] = ''
+            
+        if 'description' not in data:
+            data['description'] = folder.replace("_", " ")
+        
+        if 'source' in data:
+            del data['source']
+        
+        data['title'] = re.sub(r'\w(?<![-_a-z0-9])', '', data['title'].lower())
+       
+        ret.append(data)
+    return ret
+        
+        
 if __name__ == "__main__":
     featch = PortainerRepos()
     featch.download()
@@ -61,6 +106,12 @@ if __name__ == "__main__":
             template['title'] = f"{template['title']} ({ext_repo['name']})"
             repo['templates'].append(template)
             id = id + 1
+
+    cbook_swarm = cookbook_swarms()
+    for cbook in cbook_swarm:
+        cbook['id'] = id
+        repo['templates'].append(cbook)
+        id = id + 1
 
     # write to file
     with open('templates.json', 'w') as f:
