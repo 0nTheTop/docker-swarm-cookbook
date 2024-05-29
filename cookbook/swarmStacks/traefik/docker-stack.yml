@@ -57,12 +57,16 @@ services:
     networks:
       - traefik
     ports:
-      - target: 80
+      - target: 80    # HTTP (entrypoints.web)
         published: 80
         protocol: tcp
         mode: host
-      - target: 443
+      - target: 443   # HTTPS (entrypoints.websecure)
         published: 443
+        protocol: tcp
+        mode: host
+      - target: 3306  # MySQL (entrypoints.mysql)
+        published: 3306
         protocol: tcp
         mode: host
     volumes:
