@@ -151,6 +151,7 @@ if __name__ == "__main__":
             repo['templates'].append(template)
             id = id + 1
 
+    cookbook_id_start = id
     # add cookbooks
     cbook_swarm = cookbook_swarmStack()
     print(f"Cookbook: swarmStack - {len(cbook_swarm)}")
@@ -167,6 +168,11 @@ if __name__ == "__main__":
         repo['templates'].append(cbook)
         id = id + 1
 
-    # write to file
+    # write to file all repos
     with open('templates.json', 'w') as f:
         json.dump(repo, f, indent=4)
+
+
+    # write to file only cookbooks records
+    with open('templates_cookbook.json', 'w') as f:
+        json.dump(repo['templates'][cookbook_id_start:], f, indent=4)

@@ -30468,15 +30468,23 @@
         {
             "description": "3 Nodes MinIO Cluster",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/minio.png",
+            "note": "Please remember that MINIO_ROOT_PASSWORD needs to have min **8** characters.",
+            "categories": [
+                "Database",
+                "Cookbook"
+            ],
+            "env": [
+                {
+                    "name": "MINIO_ROOT_PASSWORD",
+                    "label": "MINIO_ROOT_PASSWORD",
+                    "description": "Password used by the MinIO root user. **It needs to have lenght min 8 characters.**"
+                }
+            ],
             "title": "Minio cluster (Cookbook)",
             "repository": {
                 "url": "https://github.com/azdolinski/docker-swarm-cookbook",
                 "stackfile": "cookbook/swarmStacks/minio-cluster/docker-stack.yml"
             },
-            "categories": [
-                "Cookbook"
-            ],
-            "env": [],
             "type": 2,
             "platform": "linux",
             "id": 844
@@ -30494,7 +30502,7 @@
             ],
             "env": [],
             "type": 2,
-            "logo": "",
+            "logo": "https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/icons/traefik.png",
             "id": 845
         },
         {
@@ -30516,6 +30524,10 @@
         {
             "description": "2 Nodes MySQL Cluster",
             "title": "MySQL Cluster (Cookbook)",
+            "categories": [
+                "Database",
+                "Cookbook"
+            ],
             "env": [
                 {
                     "name": "MYSQL_ROOT_PASSWORD",
@@ -30538,9 +30550,6 @@
                 "url": "https://github.com/azdolinski/docker-swarm-cookbook",
                 "stackfile": "cookbook/swarmStacks/mysql-cluster/docker-stack.yml"
             },
-            "categories": [
-                "Cookbook"
-            ],
             "type": 2,
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/icons/mysql-cluster.png",

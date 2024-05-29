@@ -24,8 +24,8 @@ services:
     deploy:
       labels:
         - "traefik.enable=true"
-        - "traefik.docker.network=traefik_public"
-        - "traefik.http.routers.qdrant.rule=Host(`qdrant.home.arpa`)"
+        - "traefik.docker.network=traefik"
+        - "traefik.http.routers.qdrant.rule=HostSNIRegexp(`^qdrant\\..*`)"
         - "traefik.http.routers.qdrant.service=qdrant-s"
         - "traefik.http.routers.qdrant.entryPoints=web"
         - "traefik.http.services.qdrant-s.loadbalancer.server.port=6333"
@@ -43,3 +43,5 @@ networks:
     name: qdrant
     driver: overlay
     attachable: true
+  #traefik:
+  #  external: true

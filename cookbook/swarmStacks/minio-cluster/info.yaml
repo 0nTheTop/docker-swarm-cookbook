@@ -1,3 +1,9 @@
 ---
 description: 3 Nodes MinIO Cluster
 logo: https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/minio.png
+note: Please remember that MINIO_ROOT_PASSWORD needs to have min **8** characters.
+categories: [database]
+env:
+- name: MINIO_ROOT_PASSWORD
+  label: MINIO_ROOT_PASSWORD
+  description: Password used by the MinIO root user. **It needs to have lenght min 8 characters.**

@@ -28,7 +28,7 @@ services:
         #- node.labels.mysql==true                # run only on nodes with lable  'mysql'
       labels:
         - "traefik.enable=true"
-        - "traefik.docker.network=traefik_public"
+        - "traefik.docker.network=traefik"
         - "traefik.tcp.routers.mysql.entrypoints=mysql"
         - "traefik.tcp.routers.mysql.rule=HostSNI(`*`)"
         - "traefik.tcp.routers.mysql.tls.passthrough=true"
@@ -45,3 +45,5 @@ networks:
     name: mysql
     driver: overlay
     attachable: true
+  #traefik:
+  #  external: true
