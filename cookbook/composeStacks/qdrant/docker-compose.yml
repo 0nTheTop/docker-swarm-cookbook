@@ -4,6 +4,7 @@ version: "3.9"
 services:
   qdrant:
     # https://qdrant.tech/documentation/quick-start/
+    container_name: qdrant
     hostname: qdrant
     image: qdrant/qdrant:latest
     restart: always

@@ -32,6 +32,7 @@ services:
   notify:
     # https://github.com/caronc/apprise?tab=readme-ov-file#productivity-based-notifications
     hostname: notify
+    container_name: notify
     image: mazzolino/apprise-microservice:0.1
     environment:
       NOTIFICATION_URLS: ntfy://{token}@{hostname}/{targets}
@@ -43,5 +44,6 @@ volumes:
 
 networks:
   shepherd:
+    name: shepherd
     driver: overlay
     attachable: true
