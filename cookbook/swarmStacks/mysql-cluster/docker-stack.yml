@@ -1,0 +1,46 @@
+---
+version: "3.9"
+
+
+# https://github.com/neumayer/mysql-docker-compose-examples/tree/master/innodb-cluster
+# https://dev.mysql.com/blog-archive/docker-compose-setup-for-innodb-cluster/
+services:
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+    networks:
+      - mysql
+    ports:
+      - mode: host
+        published: 3306
+        target: 3306
+    volumes:
+      - data:/var/lib/mysql
+    deploy:
+      replicas: 2
+      placement:
+        max_replicas_per_node: 1
+        #constraints:
+        #- node.labels.mysql==true                # run only on nodes with lable  'mysql'
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=traefik_public"
+        - "traefik.http.routers.mysql.rule=Host(`mysql.home.arpa`)"
+        - "traefik.http.routers.mysql.service=mysql-s"
+        - "traefik.http.routers.mysql.entryPoints=tcp_3306"
+        - "traefik.http.services.mysql-s.loadbalancer.server.port=6333"
+        - "traefik.http.services.mysql-s.loadbalancer.sticky.cookie.name=stickycookie"
+        - "traefik.http.services.mysql-s.loadbalancer.sticky.cookie.secure=true"
+        # Dummy config - traefik swarm docs / just to suppress traefik error message 
+        - "traefik.http.services.mysql-mysql.loadbalancer.server.port=3306" 
+volumes:
+  mysql_data:
+    name: mysql_data
+
+networks:
+  mysql:
+    name: mysql
+    driver: overlay
+    attachable: true

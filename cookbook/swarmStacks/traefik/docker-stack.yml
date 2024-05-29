@@ -21,6 +21,8 @@ services:
       - --entrypoints.websecure.address=:443
       - --ping=true
       - --ping.entryPoint=web
+    # Othere Entry Point Services
+      - --entryPoints.mysql.address=:3306
     # Logs - https://doc.traefik.io/traefik/observability/logs/
       - --log.level=DEBUG
       #- --log.format=json

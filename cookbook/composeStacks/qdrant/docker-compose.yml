@@ -24,7 +24,7 @@ services:
     deploy:
       labels:
         - "traefik.enable=true"
-        - "traefik.docker.network=proxy"
+        - "traefik.docker.network=traefik_public"
         - "traefik.http.routers.qdrant.rule=Host(`qdrant.home.arpa`)"
         - "traefik.http.routers.qdrant.service=qdrant-s"
         - "traefik.http.routers.qdrant.entryPoints=web"
@@ -36,6 +36,7 @@ services:
 
 volumes:
   qdrant_data:
+    name: qdrant_data
 
 networks:
   qdrant:
