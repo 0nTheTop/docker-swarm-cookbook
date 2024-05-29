@@ -22970,7 +22970,8 @@
             "id": 600
         },
         {
-            "description": "Containrrr/shepherd",
+            "description": "Docker swarm service for automatically updating your services whenever their image is refreshed",
+            "note": "Check the <a href=\"https://github.com/containrrr/shepherd\" target=\"_blank\">GitLab documentation</a> to get started.",
             "title": "Shepherd (Cookbook)",
             "repository": {
                 "url": "https://github.com/azdolinski/docker-swarm-cookbook",
