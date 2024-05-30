@@ -10,6 +10,7 @@ services:
     restart: always
     networks:
       - qdrant
+      #- traefik
     ports:
       - 6333:6333   # REST API + Web UI :6333/dashboard
       - 6334:6334   # GRPC API
@@ -41,5 +42,5 @@ networks:
     name: qdrant
     driver: overlay
     attachable: true
-  #traefik:
-  #  external: true
+# traefik:
+#   external: true

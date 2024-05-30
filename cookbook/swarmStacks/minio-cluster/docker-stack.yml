@@ -14,7 +14,7 @@ x-minio-common: &minio-common
     MINIO_CONSOLE_PORT_NUMBER: 41213
   networks:
     - minio
-    - traefik_backend
+    #- traefik
   healthcheck:
     test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
     interval: 30s
@@ -68,5 +68,5 @@ networks:
     name: minio
     driver: overlay
     attachable: true
-  #traefik:
-  #  external: true
+# traefik:
+#   external: true

@@ -2,18 +2,22 @@ version: "3.7"
 
 services:
   node-red:
+    hostname: node-red
+    container_name: node-red
     image: nodered/node-red:latest
     environment:
-      - TZ=${TZ}
+      TZ: ${TZ}
     ports:
       - "1880:1880"
     networks:
-      - node-red-net
+      - node-red
     volumes:
-      - node-red-data:/data
+      - node-red_data:/data
 
 volumes:
-  node-red-data:
+  node-red_data:
+    name: node-red_data
 
 networks:
-  node-red-net:
+  node-red:
+    name: node-red
