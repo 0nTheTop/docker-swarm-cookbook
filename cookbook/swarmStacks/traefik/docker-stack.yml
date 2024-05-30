@@ -11,6 +11,8 @@ services:
   proxy:
     hostname: traefik
     image: "traefik:latest"
+    environment:
+      REPLICA_ID: "{{.Task.Slot}}"
     command:
       - --api.insecure=true
       #- --providers.docker=true
@@ -104,6 +106,8 @@ services:
 
   whoami:
     image: containous/whoami
+    networks:
+      - traefik
     deploy:
       labels:
         - "traefik.http.routers.whoami-http.entrypoints=web"
