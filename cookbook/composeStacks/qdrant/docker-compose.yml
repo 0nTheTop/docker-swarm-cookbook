@@ -21,18 +21,16 @@ services:
       #QDRANT__SERVICE__HOST: "0.0.0.0"
       #QDRANT__SERVICE__READ_ONLY_API_KEY: "your_secret_read_only_api_key_here"
       #QDRANT__SERVICE__API_KEY: "your_secret_api_key_here"
-    deploy:
-      labels:
-        - "traefik.enable=true"
-        - "traefik.docker.network=traefik"
-        - "traefik.http.routers.qdrant.rule=HostSNIRegexp(`^qdrant\\..*`)"
-        - "traefik.http.routers.qdrant.service=qdrant-s"
-        - "traefik.http.routers.qdrant.entryPoints=web"
-        - "traefik.http.services.qdrant-s.loadbalancer.server.port=6333"
-        - "traefik.http.services.qdrant-s.loadbalancer.sticky.cookie.name=stickycookie"
-        - "traefik.http.services.qdrant-s.loadbalancer.sticky.cookie.secure=true"
-        # Dummy config - traefik swarm docs / just to suppress traefik error message 
-        - "traefik.http.services.qdrant-qdrant.loadbalancer.server.port=6333" 
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=traefik"
+      - "traefik.http.routers.qdrant.rule=HostSNIRegexp(`^qdrant\\..*`)"
+      - "traefik.http.routers.qdrant.service=qdrant-s"
+      - "traefik.http.routers.qdrant.entryPoints=web"
+      - "traefik.http.services.qdrant-s.loadbalancer.server.port=6333"
+      - "traefik.http.services.qdrant-s.loadbalancer.sticky.cookie.name=stickycookie"
+      - "traefik.http.services.qdrant-s.loadbalancer.sticky.cookie.secure=true"
+
 
 volumes:
   qdrant_data:
