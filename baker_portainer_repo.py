@@ -146,6 +146,12 @@ def cookbook(type_id):
         
         if 'source' in data:
             del data['source']
+            
+        # Labels
+        if 'labels' in data:
+            for label_element in data.get('labels'):
+                if 'value' in label_element and type(label_element['value']) == int:
+                    label_element['value'] = str(label_element['value'])
         
         # Default needs to be string type
         # If it is Bool - then we replace by select option with default value

@@ -30549,7 +30549,7 @@
                 },
                 {
                     "name": "traefik.http.services.cloudbeaver-s.loadbalancer.server.port",
-                    "value": 8978
+                    "value": "8978"
                 },
                 {
                     "name": "traefik.http.services.cloudbeaver-s.loadbalancer.sticky.cookie.name",
@@ -30791,7 +30791,7 @@
                 {
                     "name": "LANGFLOW_SECRET_KEY",
                     "description": "A key used for encrypting the superuser's password.",
-                    "default": "TwLZgo-Jfdx2LTaMraCjY4P9GzxCNjh7wsw3ZdPYXgY=",
+                    "default": "AOc9dC4chmequGJ_mLVpLWkqlGhluX2ce308NXQfqTw=",
                     "label": "LANGFLOW_SECRET_KEY"
                 },
                 {
