@@ -5,13 +5,14 @@ categories: [ai, lowcode]
 platform: linux
 note:
   <a href="https://www.docker.com/blog/how-to-use-the-postgres-docker-official-image/">Postgres Docker Info</a> <br>
-  <a href="https://docs.langflow.org/">Langflow Docs</a>
+  <a href="https://docs.langflow.org/">Langflow Docs</a> <br><br>
+
+  <a href="">timedatectl list-timezones</a> to see all timezones
 env:
 - name: TZ
   label: Time-Zone
   description: Time Zone
   default: UTC
-  preset: true
 - name: POSTGRES_USER
   label: POSTGRES_USER
   default: langflow

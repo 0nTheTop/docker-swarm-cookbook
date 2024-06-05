@@ -2,6 +2,8 @@ version: "3.8"
 
 services:
   langflow:
+    hostname: langflow
+    container_name: langflow-ai
     image: langflowai/langflow:latest
     ports:
       - mode: host
@@ -26,6 +28,8 @@ services:
       - langflow
 
   postgres:
+    hostname: langflow-postgres
+    container_name: langflow-postgres
     image: postgres:16
     environment:
       TZ: ${TZ}
