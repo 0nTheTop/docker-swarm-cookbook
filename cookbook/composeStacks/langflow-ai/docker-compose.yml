@@ -11,7 +11,8 @@ services:
         target: 7860
     restart: always
     depends_on:
-      - postgres
+      postgres:
+        condition: service_healthy
     environment:
       TZ: ${TZ}
       LANGFLOW_DATABASE_URL: postgresql://${POSTGRES_USER:-langflow}:${POSTGRES_PASSWORD:-langflow345}@postgres:5432/${POSTGRES_DB:-langflow}
@@ -43,17 +44,18 @@ services:
     networks:
       - langflow
     healthcheck:
-      test: "pg_isready -h postgres"
-      interval: 3s
-      timeout: 5s
+      test: ["CMD-SHELL", "pg_isready -d postgres"]
+      timeout: 20s
+      interval: 10s
       retries: 5
-      start_period: 10s
+      start_period: 30s
 
 volumes:
+  langflow-data:
+    name: langflow-data
   langflow-postgres:
     name: langflow-postgres
-  langflow-data:
-    name: langflow-postgres
+
 
 networks:
   langflow:
