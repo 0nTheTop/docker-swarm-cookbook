@@ -59,13 +59,13 @@ class PortainerRepos():
 def capitalize_first_letter(names):
   return [name.capitalize() for name in names] 
         
-def cookbook(type):
+def cookbook(type_id):
     ret = []
-    if type == 2:
+    if type_id == 2:
         cookbook_folder = "swarmStacks"
         folder_path = os.path.join("cookbook", cookbook_folder)
         stack_file_name = "docker-stack.yml"
-    if type == 3:
+    if type_id == 3:
         cookbook_folder = "composeStacks"
         folder_path = os.path.join("cookbook", cookbook_folder)
         stack_file_name = "docker-compose.yml"
@@ -89,7 +89,10 @@ def cookbook(type):
             data['repository'] = {}
             data['repository']['url'] = "https://github.com/azdolinski/docker-swarm-cookbook"
             data['repository']['stackfile'] = f"cookbook/{cookbook_folder}/{project_folder}/{stack_file_name}"
-        
+            
+            
+
+            
         if 'categories' not in data:
             data['categories'] = []
         
@@ -100,7 +103,7 @@ def cookbook(type):
             data['env'] = []
         
         if 'type' not in data:
-            data['type'] = type
+            data['type'] = type_id
 
         if 'platform' not in data:
             data['platform'] = 'linux'
@@ -118,7 +121,18 @@ def cookbook(type):
         
         if 'source' in data:
             del data['source']
-            
+        
+        # Default needs to be string type
+        # If it is Bool - then we replace by select option with default value
+        # https://github.com/portainer/portainer/blob/4a7f96caf6b685f3235b0fa07c1d8514c0723acf/app/react/portainer/templates/app-templates/view-model.ts#L165
+        for env_element in data['env']:
+            if 'default' in env_element and type(env_element['default']) == bool:
+                if env_element['default'] is True:
+                    env_element['select'] = [{ "text": "True", "value": "true", "default": True }, { "text": "False", "value": "false" }]
+                if env_element['default'] is False:
+                    env_element['select'] = [{ "text": "True", "value": "true" }, { "text": "False", "value": "false", "default": True  }]
+                del env_element['default']
+        
         data['categories'] = capitalize_first_letter(data['categories'])
         data['title'] = f"{data['title']} (Cookbook)"
         ret.append(data)

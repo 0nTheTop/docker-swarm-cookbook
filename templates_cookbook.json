@@ -152,7 +152,7 @@
             "id": 7
         },
         {
-            "description": "Langflow is a visual framework for building multi-agent and RAG applications. It's open-source, Python-powered, fully customizable, model and vector store agnostic.",
+            "description": "Langflow-AI is a visual framework for building multi-agent and RAG applications. It's open-source, Python-powered, fully customizable, model and vector store agnostic.",
             "title": "Langflow-AI (Cookbook)",
             "categories": [
                 "Ai",
@@ -189,8 +189,18 @@
                 },
                 {
                     "name": "LANGFLOW_AUTO_LOGIN",
-                    "default": true,
-                    "description": "Determines whether Langflow should automatically log users in. Default is True."
+                    "description": "Determines whether Langflow should automatically log users in. Default is True.",
+                    "select": [
+                        {
+                            "text": "True",
+                            "value": "true",
+                            "default": true
+                        },
+                        {
+                            "text": "False",
+                            "value": "false"
+                        }
+                    ]
                 },
                 {
                     "name": "LANGFLOW_SUPERUSER",
@@ -206,8 +216,18 @@
                 },
                 {
                     "name": "LANGFLOW_NEW_USER_IS_ACTIVE",
-                    "default": false,
-                    "description": "Determines whether new users are automatically activated. Default is False."
+                    "description": "Determines whether new users are automatically activated. Default is False.",
+                    "select": [
+                        {
+                            "text": "True",
+                            "value": "true"
+                        },
+                        {
+                            "text": "False",
+                            "value": "false",
+                            "default": true
+                        }
+                    ]
                 }
             ],
             "repository": {
