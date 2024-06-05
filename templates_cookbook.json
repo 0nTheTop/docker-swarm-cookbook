@@ -160,14 +160,13 @@
                 "Cookbook"
             ],
             "platform": "linux",
-            "note": "<a href=\"https://www.docker.com/blog/how-to-use-the-postgres-docker-official-image/\">Postgres Docker Info</a> <br> <a href=\"https://docs.langflow.org/\">Langflow Docs</a>",
+            "note": "<a href=\"https://www.docker.com/blog/how-to-use-the-postgres-docker-official-image/\">Postgres Docker Info</a> <br> <a href=\"https://docs.langflow.org/\">Langflow Docs</a> <br><br>\n<a href=\"https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/timezones.txt\">timedatectl list-timezones</a> to see all timezones",
             "env": [
                 {
                     "name": "TZ",
                     "label": "Time-Zone",
-                    "description": "Time Zone",
-                    "default": "UTC",
-                    "preset": true
+                    "description": "Time Zone. Default is UTC.",
+                    "default": "UTC"
                 },
                 {
                     "name": "POSTGRES_USER",
