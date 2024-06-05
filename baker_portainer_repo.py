@@ -133,6 +133,9 @@ def cookbook(type_id):
                     env_element['select'] = [{ "text": "True", "value": "true" }, { "text": "False", "value": "false", "default": True  }]
                 del env_element['default']
         
+            if 'label' not in env_element:
+                env_element['label'] = env_element['name']
+        
         data['categories'] = capitalize_first_letter(data['categories'])
         data['title'] = f"{data['title']} (Cookbook)"
         ret.append(data)
