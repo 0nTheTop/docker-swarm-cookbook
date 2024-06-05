@@ -124,7 +124,7 @@ def cookbook(type_id):
         
         # Default needs to be string type
         # If it is Bool - then we replace by select option with default value
-        # https://github.com/portainer/portainer/blob/4a7f96caf6b685f3235b0fa07c1d8514c0723acf/app/react/portainer/templates/app-templates/view-model.ts#L165
+        # https://docs.portainer.io/advanced/app-templates/format#env
         for env_element in data['env']:
             if 'default' in env_element and type(env_element['default']) == bool:
                 if env_element['default'] is True:
@@ -133,7 +133,7 @@ def cookbook(type_id):
                     env_element['select'] = [{ "text": "True", "value": "true" }, { "text": "False", "value": "false", "default": True  }]
                 del env_element['default']
         
-            if 'label' not in env_element:
+            if 'label' not in env_element and not env_element.get('preset'):
                 env_element['label'] = env_element['name']
         
         data['categories'] = capitalize_first_letter(data['categories'])

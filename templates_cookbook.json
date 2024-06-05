@@ -200,19 +200,23 @@
                             "text": "False",
                             "value": "false"
                         }
-                    ]
+                    ],
+                    "label": "LANGFLOW_AUTO_LOGIN"
                 },
                 {
                     "name": "LANGFLOW_SUPERUSER",
-                    "description": "The username of the superuser."
+                    "description": "The username of the superuser.",
+                    "label": "LANGFLOW_SUPERUSER"
                 },
                 {
                     "name": "LANGFLOW_SUPERUSER_PASSWORD",
-                    "description": "The password for the superuser."
+                    "description": "The password for the superuser.",
+                    "label": "LANGFLOW_SUPERUSER_PASSWORD"
                 },
                 {
                     "name": "LANGFLOW_SECRET_KEY",
-                    "description": "A key used for encrypting the superuser's password."
+                    "description": "A key used for encrypting the superuser's password.",
+                    "label": "LANGFLOW_SECRET_KEY"
                 },
                 {
                     "name": "LANGFLOW_NEW_USER_IS_ACTIVE",
@@ -227,7 +231,8 @@
                             "value": "false",
                             "default": true
                         }
-                    ]
+                    ],
+                    "label": "LANGFLOW_NEW_USER_IS_ACTIVE"
                 }
             ],
             "repository": {
