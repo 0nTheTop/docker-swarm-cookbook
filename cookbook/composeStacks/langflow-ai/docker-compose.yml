@@ -27,6 +27,15 @@ services:
       - langflow-data:/var/lib/langflow
     networks:
       - langflow
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=traefik"
+      - "traefik.http.routers.langflow.rule=HostSNIRegexp(`^langflow\\..*`)"
+      - "traefik.http.routers.langflow.service=langflow-s"
+      - "traefik.http.routers.langflow.entryPoints=web"
+      - "traefik.http.services.langflow-s.loadbalancer.server.port=7860"
+      - "traefik.http.services.langflow-s.loadbalancer.sticky.cookie.name=stickycookie"
+      - "traefik.http.services.langflow-s.loadbalancer.sticky.cookie.secure=true"
 
   postgres:
     hostname: postgres
