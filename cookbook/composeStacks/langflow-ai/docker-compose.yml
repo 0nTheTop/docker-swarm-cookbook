@@ -28,7 +28,7 @@ services:
       - langflow
 
   postgres:
-    hostname: langflow-postgres
+    hostname: postgres
     container_name: langflow-postgres
     image: postgres:16
     environment:
