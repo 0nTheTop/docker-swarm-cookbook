@@ -30529,7 +30529,7 @@
             "labels": [
                 {
                     "name": "traefik.enable",
-                    "value": true
+                    "value": "true"
                 },
                 {
                     "name": "traefik.docker.network",
@@ -30557,7 +30557,7 @@
                 },
                 {
                     "name": "traefik.http.services.cloudbeaver-s.loadbalancer.sticky.cookie.secure",
-                    "value": true
+                    "value": "true"
                 }
             ],
             "repository": {
@@ -30791,7 +30791,7 @@
                 {
                     "name": "LANGFLOW_SECRET_KEY",
                     "description": "A key used for encrypting the superuser's password.",
-                    "default": "AOc9dC4chmequGJ_mLVpLWkqlGhluX2ce308NXQfqTw=",
+                    "default": "vwOGDL6DHuZZzd6wyQoHok5eMYEvawfnZC2zdy77_1Q=",
                     "label": "LANGFLOW_SECRET_KEY"
                 },
                 {

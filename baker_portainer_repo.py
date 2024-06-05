@@ -152,7 +152,12 @@ def cookbook(type_id):
             for label_element in data.get('labels'):
                 if 'value' in label_element and type(label_element['value']) == int:
                     label_element['value'] = str(label_element['value'])
-        
+                if 'value' in label_element and type(label_element['value']) == bool:
+                    if label_element['value'] is True:
+                        label_element['value'] = "true"
+                    if label_element['value'] is False:
+                        label_element['value'] = "false"
+                    
         # Default needs to be string type
         # If it is Bool - then we replace by select option with default value
         # https://docs.portainer.io/advanced/app-templates/format#env
