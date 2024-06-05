@@ -8,7 +8,8 @@ note:
   <a href="https://docs.langflow.org/" target="_blank">Langflow Docs</a> <br><br>
 
 
-  <i class="fa fa-globe"></i>
+
+  <img src="https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/icons/time-zone-icon.png" width="20" height="20" />
   <a href="https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/timezones.txt" target="_blank">timedatectl list-timezones</a> to see all timezones
 
 env:
