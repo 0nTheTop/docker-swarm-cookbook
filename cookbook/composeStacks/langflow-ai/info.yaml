@@ -8,10 +8,11 @@ note:
   <a href="https://docs.langflow.org/" target="_blank">Langflow Docs</a> <br><br>
 
 
-
-  <img src="https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/icons/time-zone-icon.png" width="20" height="20" />
+  <div>
+  <img src="https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/icons/time-zone-icon.png" width="25" height="25" />
+  <span>&nbsp;</span>
   <a href="https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/timezones.txt" target="_blank">timedatectl list-timezones</a> to see all timezones
-
+  </div>
 env:
 - name: TZ
   label: Time-Zone
