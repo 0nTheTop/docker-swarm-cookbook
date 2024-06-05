@@ -30652,7 +30652,7 @@
                 "Cookbook"
             ],
             "platform": "linux",
-            "note": "<a href=\"https://www.docker.com/blog/how-to-use-the-postgres-docker-official-image/\">Postgres Docker Info</a> <br> <a href=\"https://docs.langflow.org/\">Langflow Docs</a> <br><br>\n<a href=\"https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/timezones.txt\">timedatectl list-timezones</a> to see all timezones",
+            "note": "<a href=\"https://www.docker.com/blog/how-to-use-the-postgres-docker-official-image/\">Postgres Docker Info</a> <br> <a href=\"https://docs.langflow.org/\">Langflow Docs</a> <br><br>\n\n<span class=\"fa-stack\"> <i class=\"fa fa-globe fa-stack-2x\"></i> <a href=\"https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/timezones.txt\">timedatectl list-timezones</a> to see all timezones </span>",
             "env": [
                 {
                     "name": "TZ",
