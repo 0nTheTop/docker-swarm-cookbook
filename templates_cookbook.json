@@ -4,7 +4,7 @@
         {
             "title": "Cloudbeaver (Cookbook)",
             "description": "Cloud Database Manager - Community Edition",
-            "note": "Cloud Database Manager - Community Edition.<br> <br> CloudBeaver is a web server which provides rich web interface. Server itself is a Java application, web part is written on TypeScript and React.<br> It is free to use and open-source (licensed under Apache 2 license).<br> See out <a href=\"https://github.com/dbeaver/cloudbeaver/wiki\" target=\"_blank\">WIKI</a> for more details.<br> <br> <br> <br> <a href=\"https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
+            "note": "Cloud Database Manager - Community Edition.<br> <br> CloudBeaver is a web server which provides rich web interface. Server itself is a Java application, web part is written on TypeScript and React.<br> It is free to use and open-source (licensed under Apache 2 license).<br> See out <a href=\"https://github.com/dbeaver/cloudbeaver/wiki\" target=\"_blank\">WIKI</a> for more details.<br> <br> <br> <a href=\"https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
             "categories": [
                 "Web",
                 "Tools",
@@ -32,6 +32,40 @@
                 {
                     "container": "/opt/cloudbeaver/workspace",
                     "bind": "/opt/docker/cloudbeaver/workspace"
+                }
+            ],
+            "labels": [
+                {
+                    "name": "traefik.enable",
+                    "value": true
+                },
+                {
+                    "name": "traefik.docker.network",
+                    "value": "traefik"
+                },
+                {
+                    "name": "traefik.http.routers.cloudbeaver.rule",
+                    "value": "HostRegexp(`^cloudbeaver\\\\..*`)"
+                },
+                {
+                    "name": "traefik.http.routers.cloudbeaver.service",
+                    "value": "cloudbeaver-s"
+                },
+                {
+                    "name": "traefik.http.routers.cloudbeaver.entryPoints",
+                    "value": "web"
+                },
+                {
+                    "name": "traefik.http.services.cloudbeaver-s.loadbalancer.server.port",
+                    "value": 8978
+                },
+                {
+                    "name": "traefik.http.services.cloudbeaver-s.loadbalancer.sticky.cookie.name",
+                    "value": "stickycookie"
+                },
+                {
+                    "name": "traefik.http.services.cloudbeaver-s.loadbalancer.sticky.cookie.secure",
+                    "value": true
                 }
             ],
             "repository": {
@@ -265,7 +299,7 @@
                 {
                     "name": "LANGFLOW_SECRET_KEY",
                     "description": "A key used for encrypting the superuser's password.",
-                    "default": "D-Ho_3NRP-g-4qilwKsotNw4ugMegHj-ecN-k2fkZxg=",
+                    "default": "TwLZgo-Jfdx2LTaMraCjY4P9GzxCNjh7wsw3ZdPYXgY=",
                     "label": "LANGFLOW_SECRET_KEY"
                 },
                 {

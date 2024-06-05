@@ -12,7 +12,8 @@ image: docker/example:latest
 ports: 
   - 53:53/tcp
   - 53:53/udp
-restart_policy: unless-stopped|always
+restart_policy: unless-stopped|always|on-failure|none
+cmd: sleep 1000
 env: 
   - name: TZ
     label: Time-Zone
@@ -29,6 +30,10 @@ volumes:
     bind: /opt/projet/config
   - container: /config
     volume: project_volume
+  - container: /host/sys/fs/cgroup
+    bind: /sys/fs/cgroup
+    readonly: true
+
 labels:
   - name: mylabel
     value: abc

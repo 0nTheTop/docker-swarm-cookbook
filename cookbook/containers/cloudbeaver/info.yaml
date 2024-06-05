@@ -6,8 +6,6 @@ note: Cloud Database Manager - Community Edition.<br>
   CloudBeaver is a web server which provides rich web interface. Server itself is a Java application, web part is written on TypeScript and React.<br>
   It is free to use and open-source (licensed under Apache 2 license).<br>
   See out <a href="https://github.com/dbeaver/cloudbeaver/wiki" target="_blank">WIKI</a> for more details.<br>
-  <br>
-
 categories: [ "Web", "Tools", "Database"]
 platform: linux
 
@@ -26,5 +24,20 @@ env:
 volumes: 
   - container: /opt/cloudbeaver/workspace
     bind: /opt/docker/cloudbeaver/workspace
-
-
+labels:
+  - name: traefik.enable
+    value: true
+  - name: traefik.docker.network
+    value: traefik
+  - name: traefik.http.routers.cloudbeaver.rule
+    value: HostRegexp(`^cloudbeaver\\..*`)
+  - name: traefik.http.routers.cloudbeaver.service
+    value: cloudbeaver-s
+  - name: traefik.http.routers.cloudbeaver.entryPoints
+    value: web
+  - name: traefik.http.services.cloudbeaver-s.loadbalancer.server.port
+    value: 8978
+  - name: traefik.http.services.cloudbeaver-s.loadbalancer.sticky.cookie.name
+    value: stickycookie
+  - name: traefik.http.services.cloudbeaver-s.loadbalancer.sticky.cookie.secure
+    value: true
