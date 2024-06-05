@@ -1,8 +1,14 @@
 ---
-title: cloudbeaver
-description: cloudbeaver
-note: cloudbeaver
-categories: [ "Web", "Tools" ]
+title: Cloudbeaver
+description: Cloud Database Manager - Community Edition
+note: Cloud Database Manager - Community Edition.<br>
+  <br>
+  CloudBeaver is a web server which provides rich web interface. Server itself is a Java application, web part is written on TypeScript and React.<br>
+  It is free to use and open-source (licensed under Apache 2 license).<br>
+  See out <a href="https://github.com/dbeaver/cloudbeaver/wiki" target="_blank">WIKI</a> for more details.<br>
+  <br>
+
+categories: [ "Web", "Tools", "Database"]
 platform: linux
 
 name: cloudbeaver

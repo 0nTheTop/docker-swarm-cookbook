@@ -2,12 +2,13 @@
     "version": "3",
     "templates": [
         {
-            "title": "cloudbeaver (Cookbook)",
-            "description": "cloudbeaver",
-            "note": "cloudbeaver <br> <br> <a href=\"https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
+            "title": "Cloudbeaver (Cookbook)",
+            "description": "Cloud Database Manager - Community Edition",
+            "note": "Cloud Database Manager - Community Edition.<br> <br> CloudBeaver is a web server which provides rich web interface. Server itself is a Java application, web part is written on TypeScript and React.<br> It is free to use and open-source (licensed under Apache 2 license).<br> See out <a href=\"https://github.com/dbeaver/cloudbeaver/wiki\" target=\"_blank\">WIKI</a> for more details.<br> <br> <br> <br> <a href=\"https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
             "categories": [
                 "Web",
                 "Tools",
+                "Database",
                 "Cookbook"
             ],
             "platform": "linux",
@@ -264,7 +265,7 @@
                 {
                     "name": "LANGFLOW_SECRET_KEY",
                     "description": "A key used for encrypting the superuser's password.",
-                    "default": "9SH4NINe1xMA-oumROFn2sVxkiJ8GUQiILxjSt1df-s=",
+                    "default": "D-Ho_3NRP-g-4qilwKsotNw4ugMegHj-ecN-k2fkZxg=",
                     "label": "LANGFLOW_SECRET_KEY"
                 },
                 {
