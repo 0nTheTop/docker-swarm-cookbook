@@ -1,0 +1,51 @@
+version: "3.8"
+
+services:
+  langflow:
+    image: langflowai/langflow:latest
+    ports:
+      - mode: host
+        published: 7860
+        target: 7860
+    restart: always
+    depends_on:
+      - postgres
+    environment:
+      - TZ=${TZ}
+      - LANGFLOW_DATABASE_URL=postgresql://${POSTGRES_USER:-langflow}:${POSTGRES_PASSWORD:-langflow345}@postgres:5432/${POSTGRES_DB:-langflow}
+      # This variable defines where the logs, file storage, monitor data and secret keys are stored.
+      - LANGFLOW_CONFIG_DIR=/var/lib/langflow
+    volumes:
+      - langflow-data:/var/lib/langflow
+    networks:
+      - langflow
+
+  postgres:
+    image: postgres:16
+    environment:
+      TZ: ${TZ}
+      POSTGRES_USER: ${POSTGRES_USER:-langflow}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-langflow345}
+      POSTGRES_DB: ${POSTGRES_DB:-langflow}
+    ports:
+      - "5432:5432"
+    volumes:
+      - langflow-postgres:/var/lib/postgresql/data
+    networks:
+      - langflow
+    healthcheck:
+      test: "pg_isready -h postgres"
+      interval: 3s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+volumes:
+  langflow-postgres:
+    name: langflow-postgres
+  langflow-data:
+    name: langflow-postgres
+
+networks:
+  langflow:
+    name: langflow

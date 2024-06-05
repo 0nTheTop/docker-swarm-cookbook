@@ -17238,7 +17238,7 @@
             "type": 1,
             "title": "Pairdrop (lissy93)",
             "name": "Pairdrop",
-            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p>",
+            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/pairdrop/config</p>",
             "description": "[PairDrop](https://github.com/schlagmichdoch/PairDrop) is a sublime alternative to AirDrop that works on all platforms. Send images, documents or text via peer to peer connection to devices in the same local network/Wi-Fi or to paired devices.",
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/schlagmichdoch/PairDrop/master/public/images/android-chrome-512x512.png",
@@ -17289,6 +17289,12 @@
             ],
             "ports": [
                 "3000:3000/tcp"
+            ],
+            "volumes": [
+                {
+                    "container": "/config",
+                    "bind": "/volume1/docker/pairdrop/config"
+                }
             ],
             "restart_policy": "unless-stopped",
             "categories": [
@@ -17932,7 +17938,7 @@
             "type": 1,
             "title": "Rdesktop (lissy93)",
             "name": "Rdesktop",
-            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p><br>mkdir -p /volume1/docker/rdesktop/config</p>",
+            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/rdesktop/config<br><br>mkdir -p /volume1/docker/rdesktop/config</p>",
             "description": "[Rdesktop](http://xrdp.org/) - Containers containing full desktop environments in many popular flavors for Alpine, Ubuntu, Arch, and Fedora accessible via RDP.",
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/rdesktop.png",
@@ -17961,6 +17967,10 @@
                 "3389:3389/tcp"
             ],
             "volumes": [
+                {
+                    "container": "/config",
+                    "bind": "/volume1/docker/rdesktop/config"
+                },
                 {
                     "container": "/var/run/docker.sock",
                     "bind": "/var/run/docker.sock"
@@ -22902,6 +22912,24 @@
         },
         {
             "categories": [
+                "Productivity",
+                "Lowcode",
+                "Lissy93"
+            ],
+            "description": "OpnForm is an open-source form builder. It's an alternative to products like Typeform, JotForm, Tally etc.",
+            "logo": "https://opnform.com/img/logo.svg",
+            "name": "opnform",
+            "platform": "linux",
+            "repository": {
+                "stackfile": "Template/Stack/opnform.yml",
+                "url": "https://github.com/xneo1/portainer_templates"
+            },
+            "title": "OpnForm (lissy93)",
+            "type": 3,
+            "id": 553
+        },
+        {
+            "categories": [
                 "Automation",
                 "Ai",
                 "Lissy93"
@@ -22916,7 +22944,7 @@
             },
             "title": "Activepieces (lissy93)",
             "type": 3,
-            "id": 553
+            "id": 554
         },
         {
             "categories": [
@@ -22933,7 +22961,7 @@
             },
             "title": "Dockge (lissy93)",
             "type": 3,
-            "id": 554
+            "id": 555
         },
         {
             "categories": [
@@ -22950,7 +22978,7 @@
             },
             "title": "Dokemon (lissy93)",
             "type": 3,
-            "id": 555
+            "id": 556
         },
         {
             "categories": [
@@ -22967,7 +22995,7 @@
             },
             "title": "Hauk (lissy93)",
             "type": 3,
-            "id": 556
+            "id": 557
         },
         {
             "categories": [
@@ -22985,7 +23013,7 @@
             },
             "title": "Plane (lissy93)",
             "type": 3,
-            "id": 557
+            "id": 558
         },
         {
             "categories": [
@@ -23002,7 +23030,7 @@
             },
             "title": "Shaarli (lissy93)",
             "type": 3,
-            "id": 558
+            "id": 559
         },
         {
             "categories": [
@@ -23020,7 +23048,7 @@
             },
             "title": "Flowiseai (lissy93)",
             "type": 3,
-            "id": 559
+            "id": 560
         },
         {
             "categories": [
@@ -23037,7 +23065,7 @@
             },
             "title": "Feedcord (lissy93)",
             "type": 3,
-            "id": 560
+            "id": 561
         },
         {
             "categories": [
@@ -23054,7 +23082,7 @@
             },
             "title": "Fetchcord (lissy93)",
             "type": 3,
-            "id": 561
+            "id": 562
         },
         {
             "categories": [
@@ -23071,7 +23099,7 @@
             },
             "title": "Tubearchivist (lissy93)",
             "type": 3,
-            "id": 562
+            "id": 563
         },
         {
             "categories": [
@@ -23088,7 +23116,7 @@
             },
             "title": "Actual (lissy93)",
             "type": 3,
-            "id": 563
+            "id": 564
         },
         {
             "categories": [
@@ -23106,7 +23134,7 @@
             },
             "title": "Baikal (lissy93)",
             "type": 3,
-            "id": 564
+            "id": 565
         },
         {
             "categories": [
@@ -23124,7 +23152,7 @@
             },
             "title": "Autobrr (lissy93)",
             "type": 3,
-            "id": 565
+            "id": 566
         },
         {
             "categories": [
@@ -23141,7 +23169,7 @@
             },
             "title": "Glances (lissy93)",
             "type": 3,
-            "id": 566
+            "id": 567
         },
         {
             "categories": [
@@ -23159,7 +23187,7 @@
             },
             "title": "Documize (lissy93)",
             "type": 3,
-            "id": 567
+            "id": 568
         },
         {
             "categories": [
@@ -23176,7 +23204,7 @@
             },
             "title": "Rport (lissy93)",
             "type": 3,
-            "id": 568
+            "id": 569
         },
         {
             "categories": [
@@ -23193,7 +23221,7 @@
             },
             "title": "Remotely (lissy93)",
             "type": 3,
-            "id": 569
+            "id": 570
         },
         {
             "categories": [
@@ -23211,7 +23239,7 @@
             },
             "title": "Tabby (lissy93)",
             "type": 3,
-            "id": 570
+            "id": 571
         },
         {
             "categories": [
@@ -23229,7 +23257,7 @@
             },
             "title": "Excalidraw (lissy93)",
             "type": 3,
-            "id": 571
+            "id": 572
         },
         {
             "categories": [
@@ -23246,7 +23274,7 @@
             },
             "title": "Upsnap (lissy93)",
             "type": 3,
-            "id": 572
+            "id": 573
         },
         {
             "categories": [
@@ -23265,7 +23293,7 @@
             },
             "title": "Tooljet (lissy93)",
             "type": 3,
-            "id": 573
+            "id": 574
         },
         {
             "categories": [
@@ -23285,7 +23313,7 @@
             },
             "title": "Budibase (lissy93)",
             "type": 3,
-            "id": 574
+            "id": 575
         },
         {
             "categories": [
@@ -23302,7 +23330,7 @@
             },
             "title": "Meilisearch (lissy93)",
             "type": 3,
-            "id": 575
+            "id": 576
         },
         {
             "categories": [
@@ -23320,7 +23348,7 @@
             },
             "title": "Ory Kratos (Standalone) (lissy93)",
             "type": 3,
-            "id": 576
+            "id": 577
         },
         {
             "categories": [
@@ -23338,7 +23366,7 @@
             },
             "title": "Ory Kratos (Oathkeeper) (lissy93)",
             "type": 3,
-            "id": 577
+            "id": 578
         },
         {
             "categories": [
@@ -23357,7 +23385,7 @@
             },
             "title": "Appsmith (lissy93)",
             "type": 3,
-            "id": 578
+            "id": 579
         },
         {
             "categories": [
@@ -23374,7 +23402,7 @@
             },
             "title": "Mailpile (lissy93)",
             "type": 3,
-            "id": 579
+            "id": 580
         },
         {
             "categories": [
@@ -23391,7 +23419,7 @@
             },
             "title": "Poste.io (lissy93)",
             "type": 3,
-            "id": 580
+            "id": 581
         },
         {
             "categories": [
@@ -23408,7 +23436,7 @@
             },
             "title": "iperf (lissy93)",
             "type": 3,
-            "id": 581
+            "id": 582
         },
         {
             "categories": [
@@ -23425,7 +23453,7 @@
             },
             "title": "Lazytainer (lissy93)",
             "type": 3,
-            "id": 582
+            "id": 583
         },
         {
             "categories": [
@@ -23442,7 +23470,7 @@
             },
             "title": "I hate money (lissy93)",
             "type": 3,
-            "id": 583
+            "id": 584
         },
         {
             "categories": [
@@ -23459,7 +23487,7 @@
             },
             "title": "OpenBudgeteer (lissy93)",
             "type": 3,
-            "id": 584
+            "id": 585
         },
         {
             "categories": [
@@ -23476,7 +23504,7 @@
             },
             "title": "Fireshare (lissy93)",
             "type": 3,
-            "id": 585
+            "id": 586
         },
         {
             "categories": [
@@ -23493,7 +23521,7 @@
             },
             "title": "Filepizza (lissy93)",
             "type": 3,
-            "id": 586
+            "id": 587
         },
         {
             "categories": [
@@ -23510,7 +23538,7 @@
             },
             "title": "Jump (lissy93)",
             "type": 3,
-            "id": 587
+            "id": 588
         },
         {
             "categories": [
@@ -23527,7 +23555,7 @@
             },
             "title": "Hasty-Paste (lissy93)",
             "type": 3,
-            "id": 588
+            "id": 589
         },
         {
             "categories": [
@@ -23544,7 +23572,7 @@
             },
             "title": "Xwiki (lissy93)",
             "type": 3,
-            "id": 589
+            "id": 590
         },
         {
             "categories": [
@@ -23561,7 +23589,7 @@
             },
             "title": "Leantime (lissy93)",
             "type": 3,
-            "id": 590
+            "id": 591
         },
         {
             "categories": [
@@ -23578,7 +23606,7 @@
             },
             "title": "Jellyseer (lissy93)",
             "type": 3,
-            "id": 591
+            "id": 592
         },
         {
             "categories": [
@@ -23595,7 +23623,7 @@
             },
             "title": "Trudesk (lissy93)",
             "type": 3,
-            "id": 592
+            "id": 593
         },
         {
             "categories": [
@@ -23612,7 +23640,7 @@
             },
             "title": "Dashdot (lissy93)",
             "type": 3,
-            "id": 593
+            "id": 594
         },
         {
             "categories": [
@@ -23631,7 +23659,7 @@
             },
             "title": "NocoDB (lissy93)",
             "type": 3,
-            "id": 594
+            "id": 595
         },
         {
             "categories": [
@@ -23648,7 +23676,7 @@
             },
             "title": "Broadlink Manager (lissy93)",
             "type": 3,
-            "id": 595
+            "id": 596
         },
         {
             "categories": [
@@ -23668,7 +23696,7 @@
             ],
             "title": "Umami.is (lissy93)",
             "type": 3,
-            "id": 596
+            "id": 597
         },
         {
             "categories": [
@@ -23688,7 +23716,7 @@
             ],
             "title": "Matomo (lissy93)",
             "type": 3,
-            "id": 597
+            "id": 598
         },
         {
             "categories": [
@@ -23705,7 +23733,7 @@
             },
             "title": "Neko (lissy93)",
             "type": 3,
-            "id": 598
+            "id": 599
         },
         {
             "categories": [
@@ -23722,7 +23750,7 @@
             },
             "title": "Adguard Home (xneo1)",
             "type": 3,
-            "id": 599
+            "id": 600
         },
         {
             "categories": [
@@ -23754,7 +23782,7 @@
                     "container": "/etc/authelia/"
                 }
             ],
-            "id": 600
+            "id": 601
         },
         {
             "categories": [
@@ -23771,7 +23799,7 @@
             },
             "title": "Bazarr (xneo1)",
             "type": 3,
-            "id": 601
+            "id": 602
         },
         {
             "categories": [
@@ -23808,7 +23836,7 @@
                     "container": "/zusam/data"
                 }
             ],
-            "id": 602
+            "id": 603
         },
         {
             "categories": [
@@ -23824,7 +23852,7 @@
             },
             "title": "ProxiTok (xneo1)",
             "type": 3,
-            "id": 603
+            "id": 604
         },
         {
             "categories": [
@@ -23868,7 +23896,7 @@
                     "container": "/music"
                 }
             ],
-            "id": 604
+            "id": 605
         },
         {
             "categories": [
@@ -23893,7 +23921,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 605
+            "id": 606
         },
         {
             "categories": [
@@ -23942,7 +23970,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 606
+            "id": 607
         },
         {
             "categories": [
@@ -23987,7 +24015,7 @@
             },
             "title": "Bookstack (xneo1)",
             "type": 3,
-            "id": 607
+            "id": 608
         },
         {
             "categories": [
@@ -24022,7 +24050,7 @@
                     "container": "/home/node/trilium-data"
                 }
             ],
-            "id": 608
+            "id": 609
         },
         {
             "categories": [
@@ -24063,7 +24091,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 609
+            "id": 610
         },
         {
             "categories": [
@@ -24103,7 +24131,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 610
+            "id": 611
         },
         {
             "categories": [
@@ -24145,7 +24173,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 611
+            "id": 612
         },
         {
             "categories": [
@@ -24206,7 +24234,7 @@
                     "container": "/var/www/html/images"
                 }
             ],
-            "id": 612
+            "id": 613
         },
         {
             "categories": [
@@ -24230,7 +24258,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 613
+            "id": 614
         },
         {
             "categories": [
@@ -24283,7 +24311,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 614
+            "id": 615
         },
         {
             "categories": [
@@ -24319,7 +24347,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 615
+            "id": 616
         },
         {
             "categories": [
@@ -24364,7 +24392,7 @@
                     "container": "/movies"
                 }
             ],
-            "id": 616
+            "id": 617
         },
         {
             "categories": [
@@ -24401,7 +24429,7 @@
                     "container": "/music"
                 }
             ],
-            "id": 617
+            "id": 618
         },
         {
             "categories": [
@@ -24426,7 +24454,7 @@
                     "container": "/dashmachine/dashmachine/user_data"
                 }
             ],
-            "id": 618
+            "id": 619
         },
         {
             "categories": [
@@ -24468,7 +24496,7 @@
                     "container": "/downloads"
                 }
             ],
-            "id": 619
+            "id": 620
         },
         {
             "categories": [
@@ -24497,7 +24525,7 @@
                     "container": "/downloads"
                 }
             ],
-            "id": 620
+            "id": 621
         },
         {
             "categories": [
@@ -24539,7 +24567,7 @@
                     "container": "/downloads"
                 }
             ],
-            "id": 621
+            "id": 622
         },
         {
             "categories": [
@@ -24578,7 +24606,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 622
+            "id": 623
         },
         {
             "categories": [
@@ -24617,7 +24645,7 @@
             "restart_policy": "unless-stopped",
             "title": "Duck DNS (xneo1)",
             "type": 1,
-            "id": 623
+            "id": 624
         },
         {
             "categories": [
@@ -24665,7 +24693,7 @@
                     "container": "/source"
                 }
             ],
-            "id": 624
+            "id": 625
         },
         {
             "categories": [
@@ -24716,7 +24744,7 @@
                     "container": "/data/movies"
                 }
             ],
-            "id": 625
+            "id": 626
         },
         {
             "categories": [
@@ -24741,7 +24769,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 626
+            "id": 627
         },
         {
             "categories": [
@@ -24770,7 +24798,7 @@
                     "container": "/myfiles"
                 }
             ],
-            "id": 627
+            "id": 628
         },
         {
             "categories": [
@@ -24806,7 +24834,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 628
+            "id": 629
         },
         {
             "categories": [
@@ -24823,7 +24851,7 @@
             },
             "title": "Miniflux (xneo1)",
             "type": 3,
-            "id": 629
+            "id": 630
         },
         {
             "categories": [
@@ -24866,7 +24894,7 @@
                     "container": "/mylar"
                 }
             ],
-            "id": 630
+            "id": 631
         },
         {
             "categories": [
@@ -24891,7 +24919,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 631
+            "id": 632
         },
         {
             "categories": [
@@ -24932,7 +24960,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 632
+            "id": 633
         },
         {
             "categories": [
@@ -24969,7 +24997,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 633
+            "id": 634
         },
         {
             "categories": [
@@ -25013,7 +25041,7 @@
                     "container": "/music"
                 }
             ],
-            "id": 634
+            "id": 635
         },
         {
             "categories": [
@@ -25052,7 +25080,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 635
+            "id": 636
         },
         {
             "categories": [
@@ -25082,7 +25110,7 @@
                     "container": "/www/config.yml"
                 }
             ],
-            "id": 636
+            "id": 637
         },
         {
             "categories": [
@@ -25116,7 +25144,7 @@
             },
             "title": "Dashy (xneo1)",
             "type": 3,
-            "id": 637
+            "id": 638
         },
         {
             "categories": [
@@ -25149,7 +25177,7 @@
             },
             "title": "Koillection (xneo1)",
             "type": 3,
-            "id": 638
+            "id": 639
         },
         {
             "categories": [
@@ -25183,7 +25211,7 @@
             },
             "title": "Vikunja (xneo1)",
             "type": 3,
-            "id": 639
+            "id": 640
         },
         {
             "categories": [
@@ -25217,7 +25245,7 @@
             },
             "title": "Audiobookshelf (xneo1)",
             "type": 3,
-            "id": 640
+            "id": 641
         },
         {
             "categories": [
@@ -25251,7 +25279,7 @@
             },
             "title": "Fenrus (xneo1)",
             "type": 3,
-            "id": 641
+            "id": 642
         },
         {
             "categories": [
@@ -25285,7 +25313,7 @@
             },
             "title": "Authentik (xneo1)",
             "type": 3,
-            "id": 642
+            "id": 643
         },
         {
             "categories": [
@@ -25319,7 +25347,7 @@
             },
             "title": "Navidrome (xneo1)",
             "type": 3,
-            "id": 643
+            "id": 644
         },
         {
             "categories": [
@@ -25344,7 +25372,7 @@
                     "container": "/app/data"
                 }
             ],
-            "id": 644
+            "id": 645
         },
         {
             "categories": [
@@ -25368,7 +25396,7 @@
                     "container": "/var/lib/mysql"
                 }
             ],
-            "id": 645
+            "id": 646
         },
         {
             "categories": [
@@ -25404,7 +25432,7 @@
                     "container": "/data"
                 }
             ],
-            "id": 646
+            "id": 647
         },
         {
             "categories": [
@@ -25452,7 +25480,7 @@
             },
             "title": "Invoice Ninja (xneo1)",
             "type": 3,
-            "id": 647
+            "id": 648
         },
         {
             "categories": [
@@ -25493,7 +25521,7 @@
                     "container": "/downloads"
                 }
             ],
-            "id": 648
+            "id": 649
         },
         {
             "categories": [
@@ -25544,7 +25572,7 @@
                     "container": "/data/movies"
                 }
             ],
-            "id": 649
+            "id": 650
         },
         {
             "categories": [
@@ -25581,7 +25609,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 650
+            "id": 651
         },
         {
             "categories": [
@@ -25622,7 +25650,7 @@
                     "container": "/books"
                 }
             ],
-            "id": 651
+            "id": 652
         },
         {
             "categories": [
@@ -25747,7 +25775,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 652
+            "id": 653
         },
         {
             "categories": [
@@ -25772,7 +25800,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 653
+            "id": 654
         },
         {
             "categories": [
@@ -25817,7 +25845,7 @@
                     "container": "/music"
                 }
             ],
-            "id": 654
+            "id": 655
         },
         {
             "categories": [
@@ -25860,7 +25888,7 @@
                     "container": "/pictures"
                 }
             ],
-            "id": 655
+            "id": 656
         },
         {
             "categories": [
@@ -25901,7 +25929,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 656
+            "id": 657
         },
         {
             "categories": [
@@ -25937,7 +25965,7 @@
                     "container": "/minecraft"
                 }
             ],
-            "id": 657
+            "id": 658
         },
         {
             "categories": [
@@ -25982,7 +26010,7 @@
                     "container": "/downloads"
                 }
             ],
-            "id": 658
+            "id": 659
         },
         {
             "categories": [
@@ -26017,7 +26045,7 @@
                     "container": "/config/.minetest"
                 }
             ],
-            "id": 659
+            "id": 660
         },
         {
             "categories": [
@@ -26053,7 +26081,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 660
+            "id": 661
         },
         {
             "categories": [
@@ -26086,7 +26114,7 @@
             "restart_policy": "unless-stopped",
             "title": "Minisatip (xneo1)",
             "type": 1,
-            "id": 661
+            "id": 662
         },
         {
             "categories": [
@@ -26114,7 +26142,7 @@
                     "container": "/music"
                 }
             ],
-            "id": 662
+            "id": 663
         },
         {
             "categories": [
@@ -26168,7 +26196,7 @@
                     "container": "/opt/murmur/log"
                 }
             ],
-            "id": 663
+            "id": 664
         },
         {
             "categories": [
@@ -26214,7 +26242,7 @@
                     "container": "/data"
                 }
             ],
-            "id": 664
+            "id": 665
         },
         {
             "categories": [
@@ -26251,7 +26279,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 665
+            "id": 666
         },
         {
             "categories": [
@@ -26296,7 +26324,7 @@
                     "container": "/comics"
                 }
             ],
-            "id": 666
+            "id": 667
         },
         {
             "categories": [
@@ -26336,7 +26364,7 @@
                     "container": "/downloads"
                 }
             ],
-            "id": 667
+            "id": 668
         },
         {
             "categories": [
@@ -26377,7 +26405,7 @@
                     "container": "/downloads"
                 }
             ],
-            "id": 668
+            "id": 669
         },
         {
             "categories": [
@@ -26426,7 +26454,7 @@
             },
             "title": "Nextcloud (xneo1)",
             "type": 3,
-            "id": 669
+            "id": 670
         },
         {
             "categories": [
@@ -26464,7 +26492,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 670
+            "id": 671
         },
         {
             "categories": [
@@ -26488,7 +26516,7 @@
             "restart_policy": "always",
             "title": "Nginx Proxy Manager (xneo1)",
             "type": 3,
-            "id": 671
+            "id": 672
         },
         {
             "categories": [
@@ -26525,7 +26553,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 672
+            "id": 673
         },
         {
             "categories": [
@@ -26544,7 +26572,7 @@
             },
             "title": "Ombi (xneo1)",
             "type": 3,
-            "id": 673
+            "id": 674
         },
         {
             "categories": [
@@ -26587,7 +26615,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 674
+            "id": 675
         },
         {
             "categories": [
@@ -26605,7 +26633,7 @@
             },
             "title": "Organizr (xneo1)",
             "type": 3,
-            "id": 675
+            "id": 676
         },
         {
             "categories": [
@@ -26622,7 +26650,7 @@
             },
             "title": "Overseerr (xneo1)",
             "type": 3,
-            "id": 676
+            "id": 677
         },
         {
             "categories": [
@@ -26679,7 +26707,7 @@
             },
             "title": "Owncloud (xneo1)",
             "type": 3,
-            "id": 677
+            "id": 678
         },
         {
             "categories": [
@@ -26716,7 +26744,7 @@
             },
             "title": "Petio (xneo1)",
             "type": 3,
-            "id": 678
+            "id": 679
         },
         {
             "categories": [
@@ -26760,7 +26788,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 679
+            "id": 680
         },
         {
             "categories": [
@@ -26794,7 +26822,7 @@
                     "container": "/etc/dnsmasq.d"
                 }
             ],
-            "id": 680
+            "id": 681
         },
         {
             "categories": [
@@ -26830,7 +26858,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 681
+            "id": 682
         },
         {
             "categories": [
@@ -26879,7 +26907,7 @@
                     "container": "/movies"
                 }
             ],
-            "id": 682
+            "id": 683
         },
         {
             "categories": [
@@ -26922,7 +26950,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 683
+            "id": 684
         },
         {
             "categories": [
@@ -26964,7 +26992,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 684
+            "id": 685
         },
         {
             "categories": [
@@ -26992,7 +27020,7 @@
                     "container": "/root"
                 }
             ],
-            "id": 685
+            "id": 686
         },
         {
             "categories": [
@@ -27029,7 +27057,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 686
+            "id": 687
         },
         {
             "categories": [
@@ -27069,7 +27097,7 @@
                     "container": "/data"
                 }
             ],
-            "id": 687
+            "id": 688
         },
         {
             "categories": [
@@ -27111,7 +27139,7 @@
                     "container": "/downloads"
                 }
             ],
-            "id": 688
+            "id": 689
         },
         {
             "categories": [
@@ -27147,7 +27175,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 689
+            "id": 690
         },
         {
             "categories": [
@@ -27192,7 +27220,7 @@
                     "container": "/movies"
                 }
             ],
-            "id": 690
+            "id": 691
         },
         {
             "categories": [
@@ -27209,7 +27237,7 @@
             },
             "title": "Tdarr (xneo1)",
             "type": 3,
-            "id": 691
+            "id": 692
         },
         {
             "categories": [
@@ -27233,7 +27261,7 @@
                     "container": "/usr/src/app"
                 }
             ],
-            "id": 692
+            "id": 693
         },
         {
             "categories": [
@@ -27275,7 +27303,7 @@
                     "container": "/downloads"
                 }
             ],
-            "id": 693
+            "id": 694
         },
         {
             "categories": [
@@ -27317,7 +27345,7 @@
                     "container": "/downloads"
                 }
             ],
-            "id": 694
+            "id": 695
         },
         {
             "categories": [
@@ -27362,7 +27390,7 @@
                     "container": "/incomplete-downloads"
                 }
             ],
-            "id": 695
+            "id": 696
         },
         {
             "categories": [
@@ -27407,7 +27435,7 @@
                     "container": "/tv"
                 }
             ],
-            "id": 696
+            "id": 697
         },
         {
             "categories": [
@@ -27452,7 +27480,7 @@
                     "container": "/downloads"
                 }
             ],
-            "id": 697
+            "id": 698
         },
         {
             "categories": [
@@ -27493,7 +27521,7 @@
                     "container": "/data"
                 }
             ],
-            "id": 698
+            "id": 699
         },
         {
             "categories": [
@@ -27510,7 +27538,7 @@
             },
             "title": "Snibox (xneo1)",
             "type": 3,
-            "id": 699
+            "id": 700
         },
         {
             "categories": [
@@ -27559,7 +27587,7 @@
                     "container": "/downloads"
                 }
             ],
-            "id": 700
+            "id": 701
         },
         {
             "categories": [
@@ -27600,7 +27628,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 701
+            "id": 702
         },
         {
             "categories": [
@@ -27636,7 +27664,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 702
+            "id": 703
         },
         {
             "categories": [
@@ -27661,7 +27689,7 @@
                     "container": "/var/lib/tiddlywiki"
                 }
             ],
-            "id": 703
+            "id": 704
         },
         {
             "categories": [
@@ -27697,7 +27725,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 704
+            "id": 705
         },
         {
             "categories": [
@@ -27741,7 +27769,7 @@
                     "container": "/watch"
                 }
             ],
-            "id": 705
+            "id": 706
         },
         {
             "categories": [
@@ -27804,7 +27832,7 @@
                     "container": "/etc/localtime"
                 }
             ],
-            "id": 706
+            "id": 707
         },
         {
             "categories": [
@@ -27845,7 +27873,7 @@
                     "container": "/recordings"
                 }
             ],
-            "id": 707
+            "id": 708
         },
         {
             "categories": [
@@ -27893,7 +27921,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 708
+            "id": 709
         },
         {
             "categories": [
@@ -27937,7 +27965,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 709
+            "id": 710
         },
         {
             "categories": [
@@ -27960,7 +27988,7 @@
                     "container": "/var/run/docker.sock"
                 }
             ],
-            "id": 710
+            "id": 711
         },
         {
             "categories": [
@@ -27998,7 +28026,7 @@
                     "container": "/data"
                 }
             ],
-            "id": 711
+            "id": 712
         },
         {
             "categories": [
@@ -28022,7 +28050,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 712
+            "id": 713
         },
         {
             "categories": [
@@ -28051,7 +28079,7 @@
                     "container": "/data"
                 }
             ],
-            "id": 713
+            "id": 714
         },
         {
             "categories": [
@@ -28079,7 +28107,7 @@
                     "container": "/var/run/docker.sock"
                 }
             ],
-            "id": 714
+            "id": 715
         },
         {
             "categories": [
@@ -28097,7 +28125,7 @@
             },
             "title": "Uptime Kuma (xneo1)",
             "type": 3,
-            "id": 715
+            "id": 716
         },
         {
             "categories": [
@@ -28121,7 +28149,7 @@
                     "container": "/var/run/docker.sock"
                 }
             ],
-            "id": 716
+            "id": 717
         },
         {
             "categories": [
@@ -28138,7 +28166,7 @@
             },
             "title": "Monica (xneo1)",
             "type": 3,
-            "id": 717
+            "id": 718
         },
         {
             "categories": [
@@ -28156,7 +28184,7 @@
             "restart_policy": "always",
             "title": "Netbox (xneo1)",
             "type": 1,
-            "id": 718
+            "id": 719
         },
         {
             "categories": [
@@ -28178,7 +28206,7 @@
             "restart_policy": "always",
             "title": "Freeboard (xneo1)",
             "type": 3,
-            "id": 719
+            "id": 720
         },
         {
             "categories": [
@@ -28199,7 +28227,7 @@
             "restart_policy": "always",
             "title": "Ghostfolio (xneo1)",
             "type": 3,
-            "id": 720
+            "id": 721
         },
         {
             "categories": [
@@ -28220,7 +28248,7 @@
             "restart_policy": "always",
             "title": "Servas (xneo1)",
             "type": 3,
-            "id": 721
+            "id": 722
         },
         {
             "categories": [
@@ -28241,7 +28269,7 @@
             "restart_policy": "always",
             "title": "Wallabag (xneo1)",
             "type": 3,
-            "id": 722
+            "id": 723
         },
         {
             "categories": [
@@ -28259,7 +28287,7 @@
             "restart_policy": "always",
             "title": "Teleport (xneo1)",
             "type": 3,
-            "id": 723
+            "id": 724
         },
         {
             "categories": [
@@ -28279,7 +28307,7 @@
             "restart_policy": "always",
             "title": "Cryptofolio (xneo1)",
             "type": 1,
-            "id": 724
+            "id": 725
         },
         {
             "categories": [
@@ -28297,7 +28325,7 @@
             },
             "title": "Nodered (xneo1)",
             "type": 3,
-            "id": 725
+            "id": 726
         },
         {
             "categories": [
@@ -28318,7 +28346,7 @@
                     "container": "/datastore"
                 }
             ],
-            "id": 726
+            "id": 727
         },
         {
             "categories": [
@@ -28346,7 +28374,7 @@
                     "container": "/resources"
                 }
             ],
-            "id": 727
+            "id": 728
         },
         {
             "categories": [
@@ -28370,7 +28398,7 @@
                     "container": "/app"
                 }
             ],
-            "id": 728
+            "id": 729
         },
         {
             "categories": [
@@ -28394,7 +28422,7 @@
                     "container": "/app"
                 }
             ],
-            "id": 729
+            "id": 730
         },
         {
             "categories": [
@@ -28411,7 +28439,7 @@
             },
             "title": "Firefox (xneo1)",
             "type": 3,
-            "id": 730
+            "id": 731
         },
         {
             "categories": [
@@ -28428,7 +28456,7 @@
             },
             "title": "Homechart (xneo1)",
             "type": 3,
-            "id": 731
+            "id": 732
         },
         {
             "categories": [
@@ -28468,7 +28496,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 732
+            "id": 733
         },
         {
             "categories": [
@@ -28485,7 +28513,7 @@
             },
             "title": "Ferdi Server (xneo1)",
             "type": 3,
-            "id": 733
+            "id": 734
         },
         {
             "categories": [
@@ -28502,7 +28530,7 @@
             },
             "title": "Ferdium (xneo1)",
             "type": 3,
-            "id": 734
+            "id": 735
         },
         {
             "categories": [
@@ -28519,7 +28547,7 @@
             },
             "title": "Snippet Box (xneo1)",
             "type": 3,
-            "id": 735
+            "id": 736
         },
         {
             "categories": [
@@ -28539,7 +28567,7 @@
             ],
             "title": "Littlelink Server (xneo1)",
             "type": 3,
-            "id": 736
+            "id": 737
         },
         {
             "categories": [
@@ -28556,7 +28584,7 @@
             },
             "title": "Linkstack (xneo1)",
             "type": 3,
-            "id": 737
+            "id": 738
         },
         {
             "categories": [
@@ -28573,7 +28601,7 @@
             },
             "title": "Aria2 Pro (xneo1)",
             "type": 3,
-            "id": 738
+            "id": 739
         },
         {
             "categories": [
@@ -28590,7 +28618,7 @@
             },
             "title": "Flood (xneo1)",
             "type": 3,
-            "id": 739
+            "id": 740
         },
         {
             "categories": [
@@ -28608,7 +28636,7 @@
             },
             "title": "Photoprism (xneo1)",
             "type": 3,
-            "id": 740
+            "id": 741
         },
         {
             "categories": [
@@ -28626,7 +28654,7 @@
             },
             "title": "Immich (xneo1)",
             "type": 3,
-            "id": 741
+            "id": 742
         },
         {
             "categories": [
@@ -28643,7 +28671,7 @@
             },
             "title": "Apprise-API (xneo1)",
             "type": 3,
-            "id": 742
+            "id": 743
         },
         {
             "categories": [
@@ -28660,7 +28688,7 @@
             },
             "title": "Netboot.xyz (xneo1)",
             "type": 3,
-            "id": 743
+            "id": 744
         },
         {
             "categories": [
@@ -28677,7 +28705,7 @@
             },
             "title": "Pingvin (xneo1)",
             "type": 3,
-            "id": 744
+            "id": 745
         },
         {
             "categories": [
@@ -28695,7 +28723,7 @@
             },
             "title": "Stirling-PDF (xneo1)",
             "type": 3,
-            "id": 745
+            "id": 746
         },
         {
             "categories": [
@@ -28712,7 +28740,7 @@
             },
             "title": "NetAlertX (xneo1)",
             "type": 3,
-            "id": 746
+            "id": 747
         },
         {
             "categories": [
@@ -28730,7 +28758,7 @@
             },
             "title": "TimeTagger (xneo1)",
             "type": 3,
-            "id": 747
+            "id": 748
         },
         {
             "categories": [
@@ -28747,7 +28775,7 @@
             },
             "title": "Invidious (xneo1)",
             "type": 3,
-            "id": 748
+            "id": 749
         },
         {
             "categories": [
@@ -28764,7 +28792,7 @@
             },
             "title": "Chibisafe (xneo1)",
             "type": 3,
-            "id": 749
+            "id": 750
         },
         {
             "categories": [
@@ -28781,7 +28809,7 @@
             },
             "title": "Kiwix (xneo1)",
             "type": 3,
-            "id": 750
+            "id": 751
         },
         {
             "categories": [
@@ -28798,7 +28826,7 @@
             },
             "title": "Tandoor (xneo1)",
             "type": 3,
-            "id": 751
+            "id": 752
         },
         {
             "categories": [
@@ -28815,7 +28843,7 @@
             },
             "title": "Webtrees (xneo1)",
             "type": 3,
-            "id": 752
+            "id": 753
         },
         {
             "categories": [
@@ -28833,7 +28861,7 @@
             },
             "title": "Wordpress (xneo1)",
             "type": 3,
-            "id": 753
+            "id": 754
         },
         {
             "categories": [
@@ -28850,7 +28878,7 @@
             },
             "title": "pve-exporter (xneo1)",
             "type": 3,
-            "id": 754
+            "id": 755
         },
         {
             "categories": [
@@ -28867,7 +28895,7 @@
             },
             "title": "Grocy (xneo1)",
             "type": 3,
-            "id": 755
+            "id": 756
         },
         {
             "categories": [
@@ -28884,7 +28912,7 @@
             },
             "title": "Ansible-semaphore (xneo1)",
             "type": 3,
-            "id": 756
+            "id": 757
         },
         {
             "categories": [
@@ -28901,7 +28929,7 @@
             },
             "title": "Shiori (xneo1)",
             "type": 3,
-            "id": 757
+            "id": 758
         },
         {
             "categories": [
@@ -28919,7 +28947,7 @@
             },
             "title": "Airsonic (xneo1)",
             "type": 3,
-            "id": 758
+            "id": 759
         },
         {
             "categories": [
@@ -28937,7 +28965,7 @@
             },
             "title": "Funkwhale (xneo1)",
             "type": 3,
-            "id": 759
+            "id": 760
         },
         {
             "categories": [
@@ -28954,7 +28982,7 @@
             },
             "title": "Gokapi (xneo1)",
             "type": 3,
-            "id": 760
+            "id": 761
         },
         {
             "categories": [
@@ -28971,7 +28999,7 @@
             },
             "title": "Traggo (xneo1)",
             "type": 3,
-            "id": 761
+            "id": 762
         },
         {
             "categories": [
@@ -28988,7 +29016,7 @@
             },
             "title": "Moodle (xneo1)",
             "type": 3,
-            "id": 762
+            "id": 763
         },
         {
             "categories": [
@@ -29005,7 +29033,7 @@
             },
             "title": "Freescout (xneo1)",
             "type": 3,
-            "id": 763
+            "id": 764
         },
         {
             "categories": [
@@ -29022,7 +29050,7 @@
             },
             "title": "Wger (xneo1)",
             "type": 3,
-            "id": 764
+            "id": 765
         },
         {
             "categories": [
@@ -29039,7 +29067,7 @@
             },
             "title": "Docker Container Stats (xneo1)",
             "type": 3,
-            "id": 765
+            "id": 766
         },
         {
             "categories": [
@@ -29056,7 +29084,7 @@
             },
             "title": "Codex (xneo1)",
             "type": 3,
-            "id": 766
+            "id": 767
         },
         {
             "categories": [
@@ -29074,7 +29102,7 @@
             },
             "title": "Kapowarr (xneo1)",
             "type": 3,
-            "id": 767
+            "id": 768
         },
         {
             "categories": [
@@ -29091,7 +29119,7 @@
             },
             "title": "Signal Proxy (xneo1)",
             "type": 3,
-            "id": 768
+            "id": 769
         },
         {
             "categories": [
@@ -29108,7 +29136,7 @@
             },
             "title": "Chiefonboarding (xneo1)",
             "type": 3,
-            "id": 769
+            "id": 770
         },
         {
             "categories": [
@@ -29125,7 +29153,7 @@
             },
             "title": "Castopod (xneo1)",
             "type": 3,
-            "id": 770
+            "id": 771
         },
         {
             "categories": [
@@ -29142,7 +29170,7 @@
             },
             "title": "Mautic (xneo1)",
             "type": 3,
-            "id": 771
+            "id": 772
         },
         {
             "categories": [
@@ -29159,7 +29187,7 @@
             },
             "title": "Medusa (xneo1)",
             "type": 3,
-            "id": 772
+            "id": 773
         },
         {
             "categories": [
@@ -29177,7 +29205,7 @@
             },
             "title": "Your_spotify (xneo1)",
             "type": 3,
-            "id": 773
+            "id": 774
         },
         {
             "categories": [
@@ -29195,7 +29223,7 @@
             },
             "title": "Influxdb & Telegraf (xneo1)",
             "type": 3,
-            "id": 774
+            "id": 775
         },
         {
             "categories": [
@@ -29212,7 +29240,7 @@
             },
             "title": "Influxdb (xneo1)",
             "type": 3,
-            "id": 775
+            "id": 776
         },
         {
             "categories": [
@@ -29231,7 +29259,7 @@
             },
             "title": "Grafana (xneo1)",
             "type": 3,
-            "id": 776
+            "id": 777
         },
         {
             "categories": [
@@ -29248,7 +29276,7 @@
             },
             "title": "Filestash (xneo1)",
             "type": 3,
-            "id": 777
+            "id": 778
         },
         {
             "categories": [
@@ -29265,7 +29293,7 @@
             },
             "title": "Silverstripe (xneo1)",
             "type": 3,
-            "id": 778
+            "id": 779
         },
         {
             "categories": [
@@ -29282,7 +29310,7 @@
             },
             "title": "Readarr (xneo1)",
             "type": 3,
-            "id": 779
+            "id": 780
         },
         {
             "categories": [
@@ -29299,7 +29327,7 @@
             },
             "title": "Whisparr (xneo1)",
             "type": 3,
-            "id": 780
+            "id": 781
         },
         {
             "categories": [
@@ -29316,7 +29344,7 @@
             },
             "title": "Midarr (xneo1)",
             "type": 3,
-            "id": 781
+            "id": 782
         },
         {
             "categories": [
@@ -29333,7 +29361,7 @@
             },
             "title": "Mastodon (xneo1)",
             "type": 3,
-            "id": 782
+            "id": 783
         },
         {
             "categories": [
@@ -29350,7 +29378,7 @@
             },
             "title": "Appwrite (xneo1)",
             "type": 3,
-            "id": 783
+            "id": 784
         },
         {
             "categories": [
@@ -29367,7 +29395,7 @@
             },
             "title": "Speedtest Tracker (xneo1)",
             "type": 3,
-            "id": 784
+            "id": 785
         },
         {
             "categories": [
@@ -29385,7 +29413,7 @@
             },
             "title": "OpnForm (xneo1)",
             "type": 3,
-            "id": 785
+            "id": 786
         },
         {
             "categories": [
@@ -29403,7 +29431,7 @@
             },
             "title": "Activepieces (xneo1)",
             "type": 3,
-            "id": 786
+            "id": 787
         },
         {
             "categories": [
@@ -29420,7 +29448,7 @@
             },
             "title": "Dockge (xneo1)",
             "type": 3,
-            "id": 787
+            "id": 788
         },
         {
             "categories": [
@@ -29437,7 +29465,7 @@
             },
             "title": "Dokemon (xneo1)",
             "type": 3,
-            "id": 788
+            "id": 789
         },
         {
             "categories": [
@@ -29455,7 +29483,7 @@
             },
             "title": "Draw.io (xneo1)",
             "type": 3,
-            "id": 789
+            "id": 790
         },
         {
             "categories": [
@@ -29472,7 +29500,7 @@
             },
             "title": "Hauk (xneo1)",
             "type": 3,
-            "id": 790
+            "id": 791
         },
         {
             "categories": [
@@ -29490,7 +29518,7 @@
             },
             "title": "Plane (xneo1)",
             "type": 3,
-            "id": 791
+            "id": 792
         },
         {
             "categories": [
@@ -29507,7 +29535,7 @@
             },
             "title": "Shaarli (xneo1)",
             "type": 3,
-            "id": 792
+            "id": 793
         },
         {
             "categories": [
@@ -29525,7 +29553,7 @@
             },
             "title": "Flowiseai (xneo1)",
             "type": 3,
-            "id": 793
+            "id": 794
         },
         {
             "categories": [
@@ -29542,7 +29570,7 @@
             },
             "title": "Feedcord (xneo1)",
             "type": 3,
-            "id": 794
+            "id": 795
         },
         {
             "categories": [
@@ -29559,7 +29587,7 @@
             },
             "title": "Fetchcord (xneo1)",
             "type": 3,
-            "id": 795
+            "id": 796
         },
         {
             "categories": [
@@ -29576,7 +29604,7 @@
             },
             "title": "Tubearchivist (xneo1)",
             "type": 3,
-            "id": 796
+            "id": 797
         },
         {
             "categories": [
@@ -29593,7 +29621,7 @@
             },
             "title": "Actual (xneo1)",
             "type": 3,
-            "id": 797
+            "id": 798
         },
         {
             "categories": [
@@ -29611,7 +29639,7 @@
             },
             "title": "Baikal (xneo1)",
             "type": 3,
-            "id": 798
+            "id": 799
         },
         {
             "categories": [
@@ -29629,7 +29657,7 @@
             },
             "title": "Autobrr (xneo1)",
             "type": 3,
-            "id": 799
+            "id": 800
         },
         {
             "categories": [
@@ -29646,7 +29674,7 @@
             },
             "title": "Glances (xneo1)",
             "type": 3,
-            "id": 800
+            "id": 801
         },
         {
             "categories": [
@@ -29664,7 +29692,7 @@
             },
             "title": "Tailscale (xneo1)",
             "type": 3,
-            "id": 801
+            "id": 802
         },
         {
             "categories": [
@@ -29682,7 +29710,7 @@
             },
             "title": "Documize (xneo1)",
             "type": 3,
-            "id": 802
+            "id": 803
         },
         {
             "categories": [
@@ -29699,7 +29727,7 @@
             },
             "title": "Homarr (xneo1)",
             "type": 3,
-            "id": 803
+            "id": 804
         },
         {
             "categories": [
@@ -29716,7 +29744,7 @@
             },
             "title": "Meshcentral (xneo1)",
             "type": 3,
-            "id": 804
+            "id": 805
         },
         {
             "categories": [
@@ -29733,7 +29761,7 @@
             },
             "title": "Rust Desk (xneo1)",
             "type": 3,
-            "id": 805
+            "id": 806
         },
         {
             "categories": [
@@ -29750,7 +29778,7 @@
             },
             "title": "Rport (xneo1)",
             "type": 3,
-            "id": 806
+            "id": 807
         },
         {
             "categories": [
@@ -29767,7 +29795,7 @@
             },
             "title": "Remotely (xneo1)",
             "type": 3,
-            "id": 807
+            "id": 808
         },
         {
             "categories": [
@@ -29785,7 +29813,7 @@
             },
             "title": "Tabby (xneo1)",
             "type": 3,
-            "id": 808
+            "id": 809
         },
         {
             "categories": [
@@ -29803,7 +29831,7 @@
             },
             "title": "Excalidraw (xneo1)",
             "type": 3,
-            "id": 809
+            "id": 810
         },
         {
             "categories": [
@@ -29820,7 +29848,7 @@
             },
             "title": "Upsnap (xneo1)",
             "type": 3,
-            "id": 810
+            "id": 811
         },
         {
             "categories": [
@@ -29839,7 +29867,7 @@
             },
             "title": "Tooljet (xneo1)",
             "type": 3,
-            "id": 811
+            "id": 812
         },
         {
             "categories": [
@@ -29859,7 +29887,7 @@
             },
             "title": "Syncthing (xneo1)",
             "type": 3,
-            "id": 812
+            "id": 813
         },
         {
             "categories": [
@@ -29879,7 +29907,7 @@
             },
             "title": "Budibase (xneo1)",
             "type": 3,
-            "id": 813
+            "id": 814
         },
         {
             "categories": [
@@ -29896,7 +29924,7 @@
             },
             "title": "Meilisearch (xneo1)",
             "type": 3,
-            "id": 814
+            "id": 815
         },
         {
             "categories": [
@@ -29914,7 +29942,7 @@
             },
             "title": "Ory Kratos (Standalone) (xneo1)",
             "type": 3,
-            "id": 815
+            "id": 816
         },
         {
             "categories": [
@@ -29932,7 +29960,7 @@
             },
             "title": "Ory Kratos (Oathkeeper) (xneo1)",
             "type": 3,
-            "id": 816
+            "id": 817
         },
         {
             "categories": [
@@ -29951,7 +29979,7 @@
             },
             "title": "Appsmith (xneo1)",
             "type": 3,
-            "id": 817
+            "id": 818
         },
         {
             "categories": [
@@ -29968,7 +29996,7 @@
             },
             "title": "Mailpile (xneo1)",
             "type": 3,
-            "id": 818
+            "id": 819
         },
         {
             "categories": [
@@ -29985,7 +30013,7 @@
             },
             "title": "Poste.io (xneo1)",
             "type": 3,
-            "id": 819
+            "id": 820
         },
         {
             "categories": [
@@ -30002,7 +30030,7 @@
             },
             "title": "iperf (xneo1)",
             "type": 3,
-            "id": 820
+            "id": 821
         },
         {
             "categories": [
@@ -30019,7 +30047,7 @@
             },
             "title": "Lazytainer (xneo1)",
             "type": 3,
-            "id": 821
+            "id": 822
         },
         {
             "categories": [
@@ -30036,7 +30064,7 @@
             },
             "title": "Homepage (xneo1)",
             "type": 3,
-            "id": 822
+            "id": 823
         },
         {
             "categories": [
@@ -30053,7 +30081,7 @@
             },
             "title": "I hate money (xneo1)",
             "type": 3,
-            "id": 823
+            "id": 824
         },
         {
             "categories": [
@@ -30070,7 +30098,7 @@
             },
             "title": "OpenBudgeteer (xneo1)",
             "type": 3,
-            "id": 824
+            "id": 825
         },
         {
             "categories": [
@@ -30087,7 +30115,7 @@
             },
             "title": "Fireshare (xneo1)",
             "type": 3,
-            "id": 825
+            "id": 826
         },
         {
             "categories": [
@@ -30104,7 +30132,7 @@
             },
             "title": "Filepizza (xneo1)",
             "type": 3,
-            "id": 826
+            "id": 827
         },
         {
             "categories": [
@@ -30121,7 +30149,7 @@
             },
             "title": "Jump (xneo1)",
             "type": 3,
-            "id": 827
+            "id": 828
         },
         {
             "categories": [
@@ -30138,7 +30166,7 @@
             },
             "title": "Hasty-Paste (xneo1)",
             "type": 3,
-            "id": 828
+            "id": 829
         },
         {
             "categories": [
@@ -30155,7 +30183,7 @@
             },
             "title": "Xwiki (xneo1)",
             "type": 3,
-            "id": 829
+            "id": 830
         },
         {
             "categories": [
@@ -30172,7 +30200,7 @@
             },
             "title": "Leantime (xneo1)",
             "type": 3,
-            "id": 830
+            "id": 831
         },
         {
             "categories": [
@@ -30189,7 +30217,7 @@
             },
             "title": "Jellyseer (xneo1)",
             "type": 3,
-            "id": 831
+            "id": 832
         },
         {
             "categories": [
@@ -30206,7 +30234,7 @@
             },
             "title": "Trudesk (xneo1)",
             "type": 3,
-            "id": 832
+            "id": 833
         },
         {
             "categories": [
@@ -30223,7 +30251,7 @@
             },
             "title": "Dashdot (xneo1)",
             "type": 3,
-            "id": 833
+            "id": 834
         },
         {
             "categories": [
@@ -30242,7 +30270,7 @@
             },
             "title": "Baserow (xneo1)",
             "type": 3,
-            "id": 834
+            "id": 835
         },
         {
             "categories": [
@@ -30261,7 +30289,7 @@
             },
             "title": "NocoDB (xneo1)",
             "type": 3,
-            "id": 835
+            "id": 836
         },
         {
             "categories": [
@@ -30278,7 +30306,7 @@
             },
             "title": "Broadlink Manager (xneo1)",
             "type": 3,
-            "id": 836
+            "id": 837
         },
         {
             "categories": [
@@ -30295,7 +30323,7 @@
             },
             "title": "Homebridge (xneo1)",
             "type": 3,
-            "id": 837
+            "id": 838
         },
         {
             "categories": [
@@ -30313,7 +30341,7 @@
             },
             "title": "Frigate NVR (xneo1)",
             "type": 3,
-            "id": 838
+            "id": 839
         },
         {
             "categories": [
@@ -30333,7 +30361,7 @@
             ],
             "title": "Umami.is (xneo1)",
             "type": 3,
-            "id": 839
+            "id": 840
         },
         {
             "categories": [
@@ -30353,7 +30381,7 @@
             ],
             "title": "Matomo (xneo1)",
             "type": 3,
-            "id": 840
+            "id": 841
         },
         {
             "categories": [
@@ -30370,7 +30398,7 @@
             },
             "title": "Neko (xneo1)",
             "type": 3,
-            "id": 841
+            "id": 842
         },
         {
             "categories": [
@@ -30387,7 +30415,7 @@
             },
             "title": "Ghost (xneo1)",
             "type": 3,
-            "id": 842
+            "id": 843
         },
         {
             "categories": [
@@ -30427,7 +30455,7 @@
                     "container": "/app/audio"
                 }
             ],
-            "id": 843
+            "id": 844
         },
         {
             "categories": [
@@ -30463,7 +30491,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 844
+            "id": 845
         },
         {
             "description": "3 Nodes MinIO Cluster",
@@ -30487,7 +30515,7 @@
             },
             "type": 2,
             "platform": "linux",
-            "id": 845
+            "id": 846
         },
         {
             "title": "Traefik (Cookbook)",
@@ -30503,7 +30531,7 @@
             "env": [],
             "type": 2,
             "logo": "https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/icons/traefik.png",
-            "id": 846
+            "id": 847
         },
         {
             "title": "Portainer Agent (Cookbook)",
@@ -30519,7 +30547,7 @@
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/icons/portainer_agent.png",
             "description": "portainer agent",
-            "id": 847
+            "id": 848
         },
         {
             "description": "2 Nodes MySQL Cluster",
@@ -30553,7 +30581,7 @@
             "type": 2,
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/icons/mysql-cluster.png",
-            "id": 848
+            "id": 849
         },
         {
             "description": "Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.  It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-click.",
@@ -30579,7 +30607,7 @@
             },
             "type": 3,
             "platform": "linux",
-            "id": 849
+            "id": 850
         },
         {
             "description": "Qdrant is an Open-Source Vector Database and Vector Search Engine written in Rust. It provides fast and scalable vector similarity search service.",
@@ -30596,7 +30624,7 @@
             "env": [],
             "type": 3,
             "platform": "linux",
-            "id": 850
+            "id": 851
         },
         {
             "description": "Docker swarm service for automatically updating your services whenever their image is refreshed",
@@ -30613,7 +30641,52 @@
             "type": 3,
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/icons/shepherd.png",
-            "id": 851
+            "id": 852
+        },
+        {
+            "description": "Langflow is a visual framework for building multi-agent and RAG applications. It's open-source, Python-powered, fully customizable, model and vector store agnostic.",
+            "title": "Langflow-AI (Cookbook)",
+            "categories": [
+                "Ai",
+                "Lowcode",
+                "Cookbook"
+            ],
+            "platform": "linux",
+            "note": "<a href=\"https://www.docker.com/blog/how-to-use-the-postgres-docker-official-image/\">Postgres Docker Info</a> <br> <a href=\"https://docs.langflow.org/\">Langflow Docs</a>",
+            "env": [
+                {
+                    "name": "TZ",
+                    "label": "Time-Zone",
+                    "description": "Time Zone",
+                    "default": "UTC",
+                    "preset": true
+                },
+                {
+                    "name": "POSTGRES_USER",
+                    "label": "POSTGRES_USER",
+                    "default": "langflow",
+                    "description": "Specifies a user with superuser privileges and a database with the same name. Postgres uses the default user when this is empty."
+                },
+                {
+                    "name": "POSTGRES_PASSWORD",
+                    "label": "POSTGRES_PASSWORD",
+                    "default": "langflow345",
+                    "description": "Password used by the POSTGRES_USER."
+                },
+                {
+                    "name": "POSTGRES_DB",
+                    "label": "POSTGRES_DB",
+                    "default": "langflow",
+                    "description": "Specifies a name for your database or defaults to the POSTGRES_USER value when left blank."
+                }
+            ],
+            "repository": {
+                "url": "https://github.com/azdolinski/docker-swarm-cookbook",
+                "stackfile": "cookbook/composeStacks/langflow-ai/docker-compose.yml"
+            },
+            "type": 3,
+            "logo": "https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/icons/langflow-ai.png",
+            "id": 853
         }
     ]
 }

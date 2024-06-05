@@ -39,8 +39,9 @@ services:
     networks:
       - shepherd
 
-volumes:
-  data:
+#volumes:
+#  shepherd_data:
+#    name: shepherd_data
 
 networks:
   shepherd:
