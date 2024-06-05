@@ -30,7 +30,7 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.docker.network=traefik"
-      - "traefik.http.routers.langflow.rule=HostSNIRegexp(`^langflow\\..*`)"
+      - "traefik.http.routers.langflow.rule=HostRegexp(`^langflow\\..*`)"
       - "traefik.http.routers.langflow.service=langflow-s"
       - "traefik.http.routers.langflow.entryPoints=web"
       - "traefik.http.services.langflow-s.loadbalancer.server.port=7860"

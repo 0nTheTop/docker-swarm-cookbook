@@ -25,7 +25,7 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.docker.network=traefik"
-      - "traefik.http.routers.qdrant.rule=HostSNIRegexp(`^qdrant\\..*`)"
+      - "traefik.http.routers.qdrant.rule=HostRegexp(`^qdrant\\..*`)"
       - "traefik.http.routers.qdrant.service=qdrant-s"
       - "traefik.http.routers.qdrant.entryPoints=web"
       - "traefik.http.services.qdrant-s.loadbalancer.server.port=6333"
