@@ -224,7 +224,7 @@
                 {
                     "name": "LANGFLOW_SECRET_KEY",
                     "description": "A key used for encrypting the superuser's password.",
-                    "default": "e8vV6vdutiWvq-JUYohjX5zEfPMgjUeMpHx4Bppa8v0=",
+                    "default": "-S9KVHMNnzXyeA72XlsQde8Shszwh2RiSN0Tor3G3Sc=",
                     "label": "LANGFLOW_SECRET_KEY"
                 },
                 {
