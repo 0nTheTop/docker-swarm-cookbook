@@ -30761,12 +30761,12 @@
                     "select": [
                         {
                             "text": "True",
-                            "value": "true",
-                            "default": true
+                            "value": "true"
                         },
                         {
                             "text": "False",
-                            "value": "false"
+                            "value": "false",
+                            "default": true
                         }
                     ],
                     "label": "LANGFLOW_ACCESS_SECURE"
@@ -30777,12 +30777,12 @@
                     "select": [
                         {
                             "text": "True",
-                            "value": "true",
-                            "default": true
+                            "value": "true"
                         },
                         {
                             "text": "False",
-                            "value": "false"
+                            "value": "false",
+                            "default": true
                         }
                     ],
                     "label": "LANGFLOW_ACCESS_HTTPONLY"

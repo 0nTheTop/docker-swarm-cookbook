@@ -56,9 +56,9 @@ env:
       value: none
 - name: LANGFLOW_ACCESS_SECURE
   description: Enables or disables the Secure attribute of the access token cookie (default is disabled).
-  default: True
+  default: False
 - name: LANGFLOW_ACCESS_HTTPONLY
   description: Enables or disables the HttpOnly attribute of the access token cookie (default is disabled).
-  default: True
+  default: False
 
 # https://github.com/langflow-ai/langflow/issues/1692#issuecomment-2066739799
