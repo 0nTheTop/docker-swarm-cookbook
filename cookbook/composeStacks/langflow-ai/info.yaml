@@ -8,11 +8,11 @@ note:
   <a href="https://docs.langflow.org/" target="_blank">Langflow Docs</a><br>
   <br> In case of error <b>"An error has occurred while fetching types"</b> <a href="https://github.com/langflow-ai/langflow/issues/1708" target="_blank">Issue 1708</a> <br>
   Uncomment those two env variables<br>
-  <pre>
-      LANGFLOW_ACCESS_SAME_SITE
-      LANGFLOW_ACCESS_SECURE
-  </pre>
-  This error ocure when you access via http and not using SSL proxy.
+  LANGFLOW_ACCESS_SAME_SITE = <b>lax</b><br>
+  LANGFLOW_ACCESS_SECURE = <b>false</b><br>
+  <br>
+  <b>Note:</b> This error ocure when you access via http and not using SSL proxy.
+  <br>
 env:
 - name: TZ
   label: Time-Zone
@@ -44,3 +44,21 @@ env:
 - name: LANGFLOW_NEW_USER_IS_ACTIVE
   default: False
   description: Determines whether new users are automatically activated. Default is False.
+- name: LANGFLOW_ACCESS_SAME_SITE
+  description: Sets the SameSite attribute of the access token cookie. Options are "lax" (default), "strict," and "none."
+  select:
+    - text: Lax
+      value: lax
+      default: true
+    - text: Strict
+      value: strict
+    - text: None
+      value: none
+- name: LANGFLOW_ACCESS_SECURE
+  description: Enables or disables the Secure attribute of the access token cookie (default is disabled).
+  default: True
+- name: LANGFLOW_ACCESS_HTTPONLY
+  description: Enables or disables the HttpOnly attribute of the access token cookie (default is disabled).
+  default: True
+
+# https://github.com/langflow-ai/langflow/issues/1692#issuecomment-2066739799

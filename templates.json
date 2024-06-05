@@ -30660,7 +30660,7 @@
                 "Cookbook"
             ],
             "platform": "linux",
-            "note": "<a href=\"https://www.docker.com/blog/how-to-use-the-postgres-docker-official-image/\" target=\"_blank\">Postgres Docker Info</a> <br> <a href=\"https://docs.langflow.org/\" target=\"_blank\">Langflow Docs</a><br> <br> In case of error <b>\"An error has occurred while fetching types\"</b> <a href=\"https://github.com/langflow-ai/langflow/issues/1708\" target=\"_blank\">Issue 1708</a> <br> Uncomment those two env variables<br> <pre> LANGFLOW_ACCESS_SAME_SITE LANGFLOW_ACCESS_SECURE </pre> This error ocure when you access via http and not using SSL proxy. <br> <br> <a href=\"https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
+            "note": "<a href=\"https://www.docker.com/blog/how-to-use-the-postgres-docker-official-image/\" target=\"_blank\">Postgres Docker Info</a> <br> <a href=\"https://docs.langflow.org/\" target=\"_blank\">Langflow Docs</a><br> <br> In case of error <b>\"An error has occurred while fetching types\"</b> <a href=\"https://github.com/langflow-ai/langflow/issues/1708\" target=\"_blank\">Issue 1708</a> <br> Uncomment those two env variables<br> LANGFLOW_ACCESS_SAME_SITE = <b>lax</b><br> LANGFLOW_ACCESS_SECURE = <b>false</b><br> <br> <b>Note:</b> This error ocure when you access via http and not using SSL proxy. <br> <br> <br> <a href=\"https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
             "env": [
                 {
                     "name": "TZ",
@@ -30734,6 +30734,58 @@
                         }
                     ],
                     "label": "LANGFLOW_NEW_USER_IS_ACTIVE"
+                },
+                {
+                    "name": "LANGFLOW_ACCESS_SAME_SITE",
+                    "description": "Sets the SameSite attribute of the access token cookie. Options are \"lax\" (default), \"strict,\" and \"none.\"",
+                    "select": [
+                        {
+                            "text": "Lax",
+                            "value": "lax",
+                            "default": true
+                        },
+                        {
+                            "text": "Strict",
+                            "value": "strict"
+                        },
+                        {
+                            "text": "None",
+                            "value": "none"
+                        }
+                    ],
+                    "label": "LANGFLOW_ACCESS_SAME_SITE"
+                },
+                {
+                    "name": "LANGFLOW_ACCESS_SECURE",
+                    "description": "Enables or disables the Secure attribute of the access token cookie (default is disabled).",
+                    "select": [
+                        {
+                            "text": "True",
+                            "value": "true",
+                            "default": true
+                        },
+                        {
+                            "text": "False",
+                            "value": "false"
+                        }
+                    ],
+                    "label": "LANGFLOW_ACCESS_SECURE"
+                },
+                {
+                    "name": "LANGFLOW_ACCESS_HTTPONLY",
+                    "description": "Enables or disables the HttpOnly attribute of the access token cookie (default is disabled).",
+                    "select": [
+                        {
+                            "text": "True",
+                            "value": "true",
+                            "default": true
+                        },
+                        {
+                            "text": "False",
+                            "value": "false"
+                        }
+                    ],
+                    "label": "LANGFLOW_ACCESS_HTTPONLY"
                 }
             ],
             "repository": {
