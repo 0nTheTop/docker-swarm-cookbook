@@ -18,7 +18,7 @@ services:
       LANGFLOW_DATABASE_URL: postgresql://${POSTGRES_USER:-langflow}:${POSTGRES_PASSWORD:-langflow345}@postgres:5432/${POSTGRES_DB:-langflow}
       # This variable defines where the logs, file storage, monitor data and secret keys are stored.
       LANGFLOW_CONFIG_DIR: /var/lib/langflow
-      LANGFLOW_AUTO_LOGIN: ${LANGFLOW_AUTO_LOGIN:-True}
+      LANGFLOW_AUTO_LOGIN: ${LANGFLOW_AUTO_LOGIN:-False}
       LANGFLOW_SUPERUSER: ${LANGFLOW_SUPERUSER}
       LANGFLOW_SUPERUSER_PASSWORD: ${LANGFLOW_SUPERUSER_PASSWORD}
       LANGFLOW_SECRET_KEY: ${LANGFLOW_SECRET_KEY}

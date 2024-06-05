@@ -24,8 +24,8 @@ env:
   default: langflow
   description: Specifies a name for your database or defaults to the POSTGRES_USER value when left blank. 
 - name: LANGFLOW_AUTO_LOGIN
-  default: True
-  description: Determines whether Langflow should automatically log users in. Default is True.
+  default: False
+  description: Determines whether Langflow should automatically log users in. Default is False.
 - name: LANGFLOW_SUPERUSER
   description: The username of the superuser.
   default: admin

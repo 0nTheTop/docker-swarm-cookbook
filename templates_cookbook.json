@@ -196,16 +196,16 @@
                 },
                 {
                     "name": "LANGFLOW_AUTO_LOGIN",
-                    "description": "Determines whether Langflow should automatically log users in. Default is True.",
+                    "description": "Determines whether Langflow should automatically log users in. Default is False.",
                     "select": [
                         {
                             "text": "True",
-                            "value": "true",
-                            "default": true
+                            "value": "true"
                         },
                         {
                             "text": "False",
-                            "value": "false"
+                            "value": "false",
+                            "default": true
                         }
                     ],
                     "label": "LANGFLOW_AUTO_LOGIN"
