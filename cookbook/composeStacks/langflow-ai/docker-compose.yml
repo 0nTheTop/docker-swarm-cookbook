@@ -53,7 +53,7 @@ services:
     networks:
       - langflow
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -d postgres"]
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-langflow} -d postgres"]
       timeout: 20s
       interval: 10s
       retries: 5
