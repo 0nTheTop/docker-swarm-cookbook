@@ -11,10 +11,15 @@ services:
     depends_on:
       - postgres
     environment:
-      - TZ=${TZ}
-      - LANGFLOW_DATABASE_URL=postgresql://${POSTGRES_USER:-langflow}:${POSTGRES_PASSWORD:-langflow345}@postgres:5432/${POSTGRES_DB:-langflow}
+      TZ: ${TZ}
+      LANGFLOW_DATABASE_URL: postgresql://${POSTGRES_USER:-langflow}:${POSTGRES_PASSWORD:-langflow345}@postgres:5432/${POSTGRES_DB:-langflow}
       # This variable defines where the logs, file storage, monitor data and secret keys are stored.
-      - LANGFLOW_CONFIG_DIR=/var/lib/langflow
+      LANGFLOW_CONFIG_DIR: /var/lib/langflow
+      LANGFLOW_AUTO_LOGIN: ${LANGFLOW_AUTO_LOGIN:-True}
+      LANGFLOW_SUPERUSER: ${LANGFLOW_SUPERUSER}
+      LANGFLOW_SUPERUSER_PASSWORD: ${LANGFLOW_SUPERUSER_PASSWORD}
+      LANGFLOW_SECRET_KEY: ${LANGFLOW_SECRET_KEY}
+      LANGFLOW_NEW_USER_IS_ACTIVE: ${LANGFLOW_NEW_USER_IS_ACTIVE:-False}
     volumes:
       - langflow-data:/var/lib/langflow
     networks:
