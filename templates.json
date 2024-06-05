@@ -30513,6 +30513,7 @@
                 "url": "https://github.com/azdolinski/docker-swarm-cookbook",
                 "stackfile": "cookbook/swarmStacks/minio-cluster/docker-stack.yml"
             },
+            "name": "minio-cluster",
             "type": 2,
             "platform": "linux",
             "id": 846
@@ -30525,6 +30526,7 @@
                 "url": "https://github.com/azdolinski/docker-swarm-cookbook",
                 "stackfile": "cookbook/swarmStacks/traefik/docker-stack.yml"
             },
+            "name": "traefik",
             "categories": [
                 "Cookbook"
             ],
@@ -30539,6 +30541,7 @@
                 "url": "https://github.com/azdolinski/docker-swarm-cookbook",
                 "stackfile": "cookbook/swarmStacks/portainer_agent/docker-stack.yml"
             },
+            "name": "portainer-agent",
             "categories": [
                 "Cookbook"
             ],
@@ -30578,6 +30581,7 @@
                 "url": "https://github.com/azdolinski/docker-swarm-cookbook",
                 "stackfile": "cookbook/swarmStacks/mysql-cluster/docker-stack.yml"
             },
+            "name": "mysql-cluster",
             "type": 2,
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/icons/mysql-cluster.png",
@@ -30605,6 +30609,7 @@
                 "url": "https://github.com/azdolinski/docker-swarm-cookbook",
                 "stackfile": "cookbook/composeStacks/node-red/docker-compose.yml"
             },
+            "name": "node-red",
             "type": 3,
             "platform": "linux",
             "note": "<br><a href=\"https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
@@ -30622,6 +30627,7 @@
                 "url": "https://github.com/azdolinski/docker-swarm-cookbook",
                 "stackfile": "cookbook/composeStacks/qdrant/docker-compose.yml"
             },
+            "name": "qdrant",
             "env": [],
             "type": 3,
             "platform": "linux",
@@ -30635,6 +30641,7 @@
                 "url": "https://github.com/azdolinski/docker-swarm-cookbook",
                 "stackfile": "cookbook/composeStacks/shepherd/docker-compose.yml"
             },
+            "name": "shepherd",
             "categories": [
                 "Cookbook"
             ],
@@ -30733,6 +30740,7 @@
                 "url": "https://github.com/azdolinski/docker-swarm-cookbook",
                 "stackfile": "cookbook/composeStacks/langflow-ai/docker-compose.yml"
             },
+            "name": "langflow-ai",
             "type": 3,
             "logo": "https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/icons/langflow-ai.png",
             "id": 853

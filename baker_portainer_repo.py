@@ -91,7 +91,8 @@ def cookbook(type_id):
             data['repository']['stackfile'] = f"cookbook/{cookbook_folder}/{project_folder}/{stack_file_name}"
             
             
-
+        if 'name' not in data:
+            data['name'] = data['title'].lower().replace(' ', '_').replace('_', '-')
             
         if 'categories' not in data:
             data['categories'] = []
