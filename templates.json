@@ -30494,21 +30494,41 @@
             "id": 845
         },
         {
-            "description": "cloudbeaver",
-            "image": "dbeaver/cloudbeaver:latest",
             "title": "cloudbeaver (Cookbook)",
+            "description": "cloudbeaver",
+            "note": "cloudbeaver <br> <br> <a href=\"https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
             "categories": [
-                "Ai",
-                "Lowcode",
+                "Web",
+                "Tools",
                 "Cookbook"
             ],
             "platform": "linux",
             "name": "cloudbeaver",
+            "hostname": "cloudbeaver",
+            "container_name": "cloudbeaver",
+            "image": "dbeaver/cloudbeaver:latest",
+            "ports": [
+                "8978:8978/tcp"
+            ],
+            "restart_policy": "always",
+            "env": [
+                {
+                    "name": "TZ",
+                    "label": "Time-Zone",
+                    "description": "Time Zone. Default is UTC.",
+                    "default": "UTC"
+                }
+            ],
+            "volumes": [
+                {
+                    "container": "/opt/cloudbeaver/workspace",
+                    "bind": "/opt/docker/cloudbeaver/workspace"
+                }
+            ],
             "repository": {
                 "url": "https://github.com/azdolinski/docker-swarm-cookbook",
                 "stackfile": "cookbook/containers/cloudbeaver/None"
             },
-            "env": [],
             "type": 1,
             "logo": "https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/icons/cloudbeaver.png",
             "id": 846
@@ -30736,7 +30756,7 @@
                 {
                     "name": "LANGFLOW_SECRET_KEY",
                     "description": "A key used for encrypting the superuser's password.",
-                    "default": "VGjJ2ex73blCO9XQ_DDHE4ethHvX3DHneIYDU_maxis=",
+                    "default": "9SH4NINe1xMA-oumROFn2sVxkiJ8GUQiILxjSt1df-s=",
                     "label": "LANGFLOW_SECRET_KEY"
                 },
                 {

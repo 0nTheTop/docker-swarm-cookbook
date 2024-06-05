@@ -151,6 +151,9 @@ def cookbook(type_id):
         # If it is Bool - then we replace by select option with default value
         # https://docs.portainer.io/advanced/app-templates/format#env
         for env_element in data['env']:
+            if 'default' in env_element and type(env_element['default']) == int:
+                env_element['default'] = str(env_element['default'])
+                
             if 'default' in env_element and type(env_element['default']) == bool:
                 if env_element['default'] is True:
                     env_element['select'] = [{ "text": "True", "value": "true", "default": True }, { "text": "False", "value": "false" }]

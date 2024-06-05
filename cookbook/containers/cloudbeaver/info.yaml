@@ -1,7 +1,24 @@
 ---
-description: cloudbeaver
-image: dbeaver/cloudbeaver:latest
 title: cloudbeaver
-categories: [ai, lowcode]
+description: cloudbeaver
+note: cloudbeaver
+categories: [ "Web", "Tools" ]
 platform: linux
+
 name: cloudbeaver
+hostname: cloudbeaver
+container_name: cloudbeaver
+image: dbeaver/cloudbeaver:latest
+ports: 
+  - 8978:8978/tcp
+restart_policy: always
+env: 
+  - name: TZ
+    label: Time-Zone
+    description: Time Zone. Default is UTC.
+    default: UTC
+volumes: 
+  - container: /opt/cloudbeaver/workspace
+    bind: /opt/docker/cloudbeaver/workspace
+
+
