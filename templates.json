@@ -30716,7 +30716,7 @@
                 {
                     "name": "LANGFLOW_SECRET_KEY",
                     "description": "A key used for encrypting the superuser's password.",
-                    "default": "-secret-key-16-chars-",
+                    "default": "e8vV6vdutiWvq-JUYohjX5zEfPMgjUeMpHx4Bppa8v0=",
                     "label": "LANGFLOW_SECRET_KEY"
                 },
                 {

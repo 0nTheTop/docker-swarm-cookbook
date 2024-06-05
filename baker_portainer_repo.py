@@ -9,7 +9,33 @@ from typing import TypedDict
 from typing import List, Dict
 from config import ConfigReader
 
-import yaml, re
+import yaml, re, random, string
+from cryptography.fernet import Fernet
+
+
+
+def generate_key(key_type):
+  """
+  Generates a key based on the specified type.
+
+  Args:
+    key_type: String indicating the desired key type.
+
+  Returns:
+    str: The generated key, or the input string if the type is not recognized.
+  """
+  if key_type == "-fernet-":
+    return Fernet.generate_key().decode() 
+  elif key_type == "-random-": 
+    return ''.join(random.choice(string.ascii_letters + string.digits) for _ in range(16)) 
+  elif key_type.startswith("-random-") and key_type.endswith("-"):
+    try:
+      length = int(key_type[8:-1]) 
+      return ''.join(random.choice(string.ascii_letters + string.digits) for _ in range(length))
+    except ValueError:
+      return key_type 
+  else:
+    return key_type 
 
 def read_config(file_path):
     # Check if file_path exist/if not - then check if it is just file name and if it exist in config folder
@@ -133,7 +159,10 @@ def cookbook(type_id):
                 if env_element['default'] is False:
                     env_element['select'] = [{ "text": "True", "value": "true" }, { "text": "False", "value": "false", "default": True  }]
                 del env_element['default']
-        
+
+            if env_element.get('default') and env_element.get('default').startswith("-") and env_element.get('default').endswith("-"):
+                env_element['default'] = generate_key(env_element['default'])
+
             if 'label' not in env_element and not env_element.get('preset'):
                 env_element['label'] = env_element['name']
                 
