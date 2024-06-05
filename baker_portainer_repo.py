@@ -15,15 +15,6 @@ from cryptography.fernet import Fernet
 
 
 def generate_key(key_type):
-  """
-  Generates a key based on the specified type.
-
-  Args:
-    key_type: String indicating the desired key type.
-
-  Returns:
-    str: The generated key, or the input string if the type is not recognized.
-  """
   if key_type == "-fernet-":
     return Fernet.generate_key().decode() 
   elif key_type == "-random-": 
@@ -46,6 +37,10 @@ def read_config(file_path):
     with open(file_path, 'r') as f:
         data = yaml.safe_load(f)
         return data
+
+
+
+
 
 class PortainerRepos():
     def __init__(self) -> None:
@@ -87,6 +82,10 @@ def capitalize_first_letter(names):
         
 def cookbook(type_id):
     ret = []
+    if type_id == 1:
+        cookbook_folder = "containers"
+        folder_path = os.path.join("cookbook", cookbook_folder)
+        stack_file_name = None
     if type_id == 2:
         cookbook_folder = "swarmStacks"
         folder_path = os.path.join("cookbook", cookbook_folder)
@@ -115,8 +114,7 @@ def cookbook(type_id):
             data['repository'] = {}
             data['repository']['url'] = "https://github.com/azdolinski/docker-swarm-cookbook"
             data['repository']['stackfile'] = f"cookbook/{cookbook_folder}/{project_folder}/{stack_file_name}"
-            
-            
+        
         if 'name' not in data:
             data['name'] = data['title'].lower().replace(' ', '_').replace('_', '-')
             
@@ -177,6 +175,8 @@ def cookbook(type_id):
         ret.append(data)
     return ret
 
+def cookbook_containers():
+    return cookbook(1)
 
 def cookbook_swarmStack():
     return cookbook(2)
@@ -207,7 +207,16 @@ if __name__ == "__main__":
             id = id + 1
 
     cookbook_id_start = id
-    # add cookbooks
+    # add cookbooks(1)
+    cbook_containers = cookbook_containers()
+    print(f"Cookbook: containers - {len(cbook_containers)}")
+    for cbook in cbook_containers:
+        cbook['id'] = id
+        repo['templates'].append(cbook)
+        id = id + 1
+
+
+    # add cookbooks(2)
     cbook_swarm = cookbook_swarmStack()
     print(f"Cookbook: swarmStack - {len(cbook_swarm)}")
     for cbook in cbook_swarm:
@@ -215,7 +224,7 @@ if __name__ == "__main__":
         repo['templates'].append(cbook)
         id = id + 1
 
-    # add cookbooks
+    # add cookbooks(3)
     cbook_compose = cookbook_composeStack()
     print(f"Cookbook: composeStack - {len(cbook_compose)}")
     for cbook in cbook_compose:
@@ -226,7 +235,6 @@ if __name__ == "__main__":
     # write to file all repos
     with open('templates.json', 'w') as f:
         json.dump(repo, f, indent=4)
-
 
     # write to file only cookbooks records
     cookbook_repo = {"version": "3", "templates": []}

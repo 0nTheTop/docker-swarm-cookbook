@@ -2,6 +2,26 @@
     "version": "3",
     "templates": [
         {
+            "description": "cloudbeaver",
+            "image": "dbeaver/cloudbeaver:latest",
+            "title": "cloudbeaver (Cookbook)",
+            "categories": [
+                "Ai",
+                "Lowcode",
+                "Cookbook"
+            ],
+            "platform": "linux",
+            "name": "cloudbeaver",
+            "repository": {
+                "url": "https://github.com/azdolinski/docker-swarm-cookbook",
+                "stackfile": "cookbook/containers/cloudbeaver/None"
+            },
+            "env": [],
+            "type": 1,
+            "logo": "https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/icons/cloudbeaver.png",
+            "id": 1
+        },
+        {
             "description": "3 Nodes MinIO Cluster",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/minio.png",
             "note": "Please remember that MINIO_ROOT_PASSWORD needs to have min **8** characters.",
@@ -24,7 +44,7 @@
             "name": "minio-cluster",
             "type": 2,
             "platform": "linux",
-            "id": 1
+            "id": 2
         },
         {
             "title": "Traefik (Cookbook)",
@@ -41,7 +61,7 @@
             "env": [],
             "type": 2,
             "logo": "https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/icons/traefik.png",
-            "id": 2
+            "id": 3
         },
         {
             "title": "Portainer Agent (Cookbook)",
@@ -58,7 +78,7 @@
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/icons/portainer_agent.png",
             "description": "portainer agent",
-            "id": 3
+            "id": 4
         },
         {
             "description": "2 Nodes MySQL Cluster",
@@ -93,7 +113,7 @@
             "type": 2,
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/icons/mysql-cluster.png",
-            "id": 4
+            "id": 5
         },
         {
             "description": "Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.  It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-click.",
@@ -121,7 +141,7 @@
             "type": 3,
             "platform": "linux",
             "note": "<br><a href=\"https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
-            "id": 5
+            "id": 6
         },
         {
             "description": "Qdrant is an Open-Source Vector Database and Vector Search Engine written in Rust. It provides fast and scalable vector similarity search service.",
@@ -139,7 +159,7 @@
             "env": [],
             "type": 3,
             "platform": "linux",
-            "id": 6
+            "id": 7
         },
         {
             "description": "Docker swarm service for automatically updating your services whenever their image is refreshed",
@@ -157,7 +177,7 @@
             "type": 3,
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/icons/shepherd.png",
-            "id": 7
+            "id": 8
         },
         {
             "description": "Langflow-AI is a visual framework for building multi-agent and RAG applications. It's open-source, Python-powered, fully customizable, model and vector store agnostic.",
@@ -224,7 +244,7 @@
                 {
                     "name": "LANGFLOW_SECRET_KEY",
                     "description": "A key used for encrypting the superuser's password.",
-                    "default": "-S9KVHMNnzXyeA72XlsQde8Shszwh2RiSN0Tor3G3Sc=",
+                    "default": "VGjJ2ex73blCO9XQ_DDHE4ethHvX3DHneIYDU_maxis=",
                     "label": "LANGFLOW_SECRET_KEY"
                 },
                 {
@@ -303,7 +323,7 @@
             "name": "langflow-ai",
             "type": 3,
             "logo": "https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/icons/langflow-ai.png",
-            "id": 8
+            "id": 9
         }
     ]
 }

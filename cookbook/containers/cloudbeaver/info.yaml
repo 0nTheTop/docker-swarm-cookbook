@@ -1,0 +1,7 @@
+---
+description: cloudbeaver
+image: dbeaver/cloudbeaver:latest
+title: cloudbeaver
+categories: [ai, lowcode]
+platform: linux
+name: cloudbeaver
