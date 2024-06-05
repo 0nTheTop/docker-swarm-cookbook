@@ -135,6 +135,12 @@ def cookbook(type_id):
         
             if 'label' not in env_element and not env_element.get('preset'):
                 env_element['label'] = env_element['name']
+                
+            if env_element.get('name') == 'TZ' and env_element.get('label') == 'Time-Zone':
+                if data.get('note'):
+                    data['note'] = f"{data['note']} <br> <br> <a href=\"https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones"
+                else:
+                    data['note'] = "<br><a href=\"https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones"
         
         data['categories'] = capitalize_first_letter(data['categories'])
         data['title'] = f"{data['title']} (Cookbook)"
