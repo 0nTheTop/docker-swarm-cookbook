@@ -69,3 +69,7 @@ volumes:
 networks:
   langflow:
     name: langflow
+    driver: overlay
+    attachable: true
+# traefik:
+#   external: true
