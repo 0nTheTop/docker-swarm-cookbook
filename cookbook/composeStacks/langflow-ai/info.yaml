@@ -29,10 +29,12 @@ env:
   description: Determines whether Langflow should automatically log users in. Default is True.
 - name: LANGFLOW_SUPERUSER
   description: The username of the superuser.
+  default: admin
 - name: LANGFLOW_SUPERUSER_PASSWORD
   description: The password for the superuser.
 - name: LANGFLOW_SECRET_KEY
   description: A key used for encrypting the superuser's password.
+  default: -secret-key-16-chars-
 - name: LANGFLOW_NEW_USER_IS_ACTIVE
   default: False
   description: Determines whether new users are automatically activated. Default is False.

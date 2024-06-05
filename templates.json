@@ -30698,6 +30698,7 @@
                 {
                     "name": "LANGFLOW_SUPERUSER",
                     "description": "The username of the superuser.",
+                    "default": "admin",
                     "label": "LANGFLOW_SUPERUSER"
                 },
                 {
@@ -30708,6 +30709,7 @@
                 {
                     "name": "LANGFLOW_SECRET_KEY",
                     "description": "A key used for encrypting the superuser's password.",
+                    "default": "-secret-key-16-chars-",
                     "label": "LANGFLOW_SECRET_KEY"
                 },
                 {
