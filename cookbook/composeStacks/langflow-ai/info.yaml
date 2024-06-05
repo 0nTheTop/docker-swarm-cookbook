@@ -5,7 +5,14 @@ categories: [ai, lowcode]
 platform: linux
 note:
   <a href="https://www.docker.com/blog/how-to-use-the-postgres-docker-official-image/" target="_blank">Postgres Docker Info</a> <br>
-  <a href="https://docs.langflow.org/" target="_blank">Langflow Docs</a>
+  <a href="https://docs.langflow.org/" target="_blank">Langflow Docs</a><br>
+  <br> In case of error <b>"An error has occurred while fetching types"</b> <a href="https://github.com/langflow-ai/langflow/issues/1708" target="_blank">Issue 1708</a> <br>
+  Uncomment those two env variables<br>
+  <pre>
+      LANGFLOW_ACCESS_SAME_SITE
+      LANGFLOW_ACCESS_SECURE
+  </pre>
+  This error ocure when you access via http and not using SSL proxy.
 env:
 - name: TZ
   label: Time-Zone
@@ -24,8 +31,8 @@ env:
   default: langflow
   description: Specifies a name for your database or defaults to the POSTGRES_USER value when left blank. 
 - name: LANGFLOW_AUTO_LOGIN
-  default: False
-  description: Determines whether Langflow should automatically log users in. Default is False.
+  default: True
+  description: Determines whether Langflow should automatically log users in. Default is True.
 - name: LANGFLOW_SUPERUSER
   description: The username of the superuser.
   default: admin
