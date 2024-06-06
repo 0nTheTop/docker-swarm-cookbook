@@ -1,4 +1,3 @@
 ---
 description: Qdrant is an Open-Source Vector Database and Vector Search Engine written in Rust. It provides fast and scalable vector similarity search service.
-logo: https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/icons/qdrant.png
 categories: [database]

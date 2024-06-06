@@ -30496,7 +30496,7 @@
         {
             "title": "Cloudbeaver (Cookbook)",
             "description": "Cloud Database Manager - Community Edition",
-            "note": "Cloud Database Manager - Community Edition.<br> <br> CloudBeaver is a web server which provides rich web interface. Server itself is a Java application, web part is written on TypeScript and React.<br> It is free to use and open-source (licensed under Apache 2 license).<br> See out <a href=\"https://github.com/dbeaver/cloudbeaver/wiki\" target=\"_blank\">WIKI</a> for more details.<br> <br> <br> <a href=\"https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
+            "note": "Cloud Database Manager - Community Edition.<br> <br> CloudBeaver is a web server which provides rich web interface. Server itself is a Java application, web part is written on TypeScript and React.<br> It is free to use and open-source (licensed under Apache 2 license).<br> See out <a href=\"https://github.com/dbeaver/cloudbeaver/wiki\" target=\"_blank\">WIKI</a> for more details.<br> <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
             "categories": [
                 "Web",
                 "Tools",
@@ -30537,7 +30537,7 @@
                 },
                 {
                     "name": "traefik.http.routers.cloudbeaver.rule",
-                    "value": "HostRegexp(`^cloudbeaver\\\\..*`)"
+                    "value": "HostRegexp(`^cloudbeaver\\..*`)"
                 },
                 {
                     "name": "traefik.http.routers.cloudbeaver.service",
@@ -30561,11 +30561,11 @@
                 }
             ],
             "repository": {
-                "url": "https://github.com/azdolinski/docker-swarm-cookbook",
+                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
                 "stackfile": "cookbook/containers/cloudbeaver/None"
             },
             "type": 1,
-            "logo": "https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/icons/cloudbeaver.png",
+            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/cloudbeaver.png",
             "id": 846
         },
         {
@@ -30585,7 +30585,7 @@
             ],
             "title": "Minio cluster (Cookbook)",
             "repository": {
-                "url": "https://github.com/azdolinski/docker-swarm-cookbook",
+                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
                 "stackfile": "cookbook/swarmStacks/minio-cluster/docker-stack.yml"
             },
             "name": "minio-cluster",
@@ -30598,33 +30598,33 @@
             "description": "Traefik v3",
             "platform": "linux",
             "repository": {
-                "url": "https://github.com/azdolinski/docker-swarm-cookbook",
+                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
                 "stackfile": "cookbook/swarmStacks/traefik/docker-stack.yml"
             },
             "name": "traefik",
             "categories": [
                 "Cookbook"
             ],
-            "env": [],
             "type": 2,
-            "logo": "https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/icons/traefik.png",
+            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/traefik.png",
+            "env": [],
             "id": 848
         },
         {
             "title": "Portainer Agent (Cookbook)",
             "repository": {
-                "url": "https://github.com/azdolinski/docker-swarm-cookbook",
+                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
                 "stackfile": "cookbook/swarmStacks/portainer_agent/docker-stack.yml"
             },
             "name": "portainer-agent",
             "categories": [
                 "Cookbook"
             ],
-            "env": [],
             "type": 2,
             "platform": "linux",
-            "logo": "https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/icons/portainer_agent.png",
+            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/portainer_agent.png",
             "description": "portainer agent",
+            "env": [],
             "id": 849
         },
         {
@@ -30653,21 +30653,19 @@
                 }
             ],
             "repository": {
-                "url": "https://github.com/azdolinski/docker-swarm-cookbook",
+                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
                 "stackfile": "cookbook/swarmStacks/mysql-cluster/docker-stack.yml"
             },
             "name": "mysql-cluster",
             "type": 2,
             "platform": "linux",
-            "logo": "https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/icons/mysql-cluster.png",
+            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/mysql-cluster.png",
             "id": 850
         },
         {
             "description": "Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.  It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-click.",
-            "logo": "https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/icons/node-red.png",
             "title": "Node-RED (Cookbook)",
             "categories": [
-                "Nocode",
                 "Lowcode",
                 "Cookbook"
             ],
@@ -30676,36 +30674,36 @@
                     "name": "TZ",
                     "label": "Time-Zone",
                     "description": "Time Zone",
-                    "default": "UTC",
-                    "preset": true
+                    "default": "UTC"
                 }
             ],
             "repository": {
-                "url": "https://github.com/azdolinski/docker-swarm-cookbook",
+                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
                 "stackfile": "cookbook/composeStacks/node-red/docker-compose.yml"
             },
             "name": "node-red",
             "type": 3,
             "platform": "linux",
-            "note": "<br><a href=\"https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
+            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/node-red.png",
+            "note": "<br><a href=\"{GITHUB_URL_CONTENT}main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
             "id": 851
         },
         {
             "description": "Qdrant is an Open-Source Vector Database and Vector Search Engine written in Rust. It provides fast and scalable vector similarity search service.",
-            "logo": "https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/icons/qdrant.png",
             "categories": [
                 "Database",
                 "Cookbook"
             ],
             "title": "Qdrant (Cookbook)",
             "repository": {
-                "url": "https://github.com/azdolinski/docker-swarm-cookbook",
+                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
                 "stackfile": "cookbook/composeStacks/qdrant/docker-compose.yml"
             },
             "name": "qdrant",
-            "env": [],
             "type": 3,
             "platform": "linux",
+            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/qdrant.png",
+            "env": [],
             "id": 852
         },
         {
@@ -30713,17 +30711,17 @@
             "note": "Check the <a href=\"https://github.com/containrrr/shepherd\" target=\"_blank\">GitLab documentation</a> to get started.",
             "title": "Shepherd (Cookbook)",
             "repository": {
-                "url": "https://github.com/azdolinski/docker-swarm-cookbook",
+                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
                 "stackfile": "cookbook/composeStacks/shepherd/docker-compose.yml"
             },
             "name": "shepherd",
             "categories": [
                 "Cookbook"
             ],
-            "env": [],
             "type": 3,
             "platform": "linux",
-            "logo": "https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/icons/shepherd.png",
+            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/shepherd.png",
+            "env": [],
             "id": 853
         },
         {
@@ -30735,7 +30733,7 @@
                 "Cookbook"
             ],
             "platform": "linux",
-            "note": "<a href=\"https://www.docker.com/blog/how-to-use-the-postgres-docker-official-image/\" target=\"_blank\">Postgres Docker Info</a> <br> <a href=\"https://docs.langflow.org/\" target=\"_blank\">Langflow Docs</a><br> <br> <a href=\"https://github.com/langflow-ai/langflow/issues/1708\" target=\"_blank\">Issue 1708</a> In case of error <b>\"An error has occurred while fetching types\"</b> <br> Ensure that env variables are set correctly<br> LANGFLOW_ACCESS_SAME_SITE = <b>lax</b><br> LANGFLOW_ACCESS_SECURE = <b>false</b><br> <b>Note:</b> This error ocure when you access via http and not using SSL proxy. <br> <br> <br> <a href=\"https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
+            "note": "<a href=\"https://www.docker.com/blog/how-to-use-the-postgres-docker-official-image/\" target=\"_blank\">Postgres Docker Info</a> <br> <a href=\"https://docs.langflow.org/\" target=\"_blank\">Langflow Docs</a><br> <br> <a href=\"https://github.com/langflow-ai/langflow/issues/1708\" target=\"_blank\">Issue 1708</a> In case of error <b>\"An error has occurred while fetching types\"</b> <br> Ensure that env variables are set correctly<br> LANGFLOW_ACCESS_SAME_SITE = <b>lax</b><br> LANGFLOW_ACCESS_SECURE = <b>false</b><br> <b>Note:</b> This error ocure when you access via http and not using SSL proxy. <br> <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
             "env": [
                 {
                     "name": "TZ",
@@ -30760,6 +30758,12 @@
                     "label": "POSTGRES_DB",
                     "default": "langflow",
                     "description": "Specifies a name for your database or defaults to the POSTGRES_USER value when left blank."
+                },
+                {
+                    "name": "LANGFLOW_PORT",
+                    "default": "7860",
+                    "description": "The port to run the Langflow server on. Default is 7860.",
+                    "label": "LANGFLOW_PORT"
                 },
                 {
                     "name": "LANGFLOW_AUTO_LOGIN",
@@ -30791,7 +30795,7 @@
                 {
                     "name": "LANGFLOW_SECRET_KEY",
                     "description": "A key used for encrypting the superuser's password.",
-                    "default": "vwOGDL6DHuZZzd6wyQoHok5eMYEvawfnZC2zdy77_1Q=",
+                    "default": "EVBB_Uc3x9SoMZ6_cwLfq7-ObyqCIO-gp07YEkWhlyg=",
                     "label": "LANGFLOW_SECRET_KEY"
                 },
                 {
@@ -30864,13 +30868,159 @@
                 }
             ],
             "repository": {
-                "url": "https://github.com/azdolinski/docker-swarm-cookbook",
+                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
                 "stackfile": "cookbook/composeStacks/langflow-ai/docker-compose.yml"
             },
             "name": "langflow-ai",
             "type": 3,
-            "logo": "https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/icons/langflow-ai.png",
+            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/langflow-ai.png",
             "id": 854
+        },
+        {
+            "description": "Infinitely scalable, event-driven, language-agnostic orchestration and scheduling platform to manage millions of workflows declaratively in code.",
+            "title": "Kestra (Cookbook)",
+            "categories": [
+                "Ai",
+                "Lowcode",
+                "Cookbook"
+            ],
+            "platform": "linux",
+            "note": "<a href=\"https://www.docker.com/blog/how-to-use-the-postgres-docker-official-image/\" target=\"_blank\">Postgres Docker Info</a> <br> <a href=\"https://docs.langflow.org/\" target=\"_blank\">Langflow Docs</a><br> <br> <a href=\"https://github.com/langflow-ai/langflow/issues/1708\" target=\"_blank\">Issue 1708</a> In case of error <b>\"An error has occurred while fetching types\"</b> <br> Ensure that env variables are set correctly<br> LANGFLOW_ACCESS_SAME_SITE = <b>lax</b><br> LANGFLOW_ACCESS_SECURE = <b>false</b><br> <b>Note:</b> This error ocure when you access via http and not using SSL proxy. <br> <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
+            "env": [
+                {
+                    "name": "TZ",
+                    "label": "Time-Zone",
+                    "description": "Time Zone. Default is UTC.",
+                    "default": "UTC"
+                },
+                {
+                    "name": "POSTGRES_USER",
+                    "label": "POSTGRES_USER",
+                    "default": "langflow",
+                    "description": "Specifies a user with superuser privileges and a database with the same name. Postgres uses the default user when this is empty."
+                },
+                {
+                    "name": "POSTGRES_PASSWORD",
+                    "label": "POSTGRES_PASSWORD",
+                    "default": "langflow345",
+                    "description": "Password used by the POSTGRES_USER."
+                },
+                {
+                    "name": "POSTGRES_DB",
+                    "label": "POSTGRES_DB",
+                    "default": "langflow",
+                    "description": "Specifies a name for your database or defaults to the POSTGRES_USER value when left blank."
+                },
+                {
+                    "name": "LANGFLOW_AUTO_LOGIN",
+                    "description": "Determines whether Langflow should automatically log users in. Default is True.",
+                    "select": [
+                        {
+                            "text": "True",
+                            "value": "true",
+                            "default": true
+                        },
+                        {
+                            "text": "False",
+                            "value": "false"
+                        }
+                    ],
+                    "label": "LANGFLOW_AUTO_LOGIN"
+                },
+                {
+                    "name": "LANGFLOW_SUPERUSER",
+                    "description": "The username of the superuser.",
+                    "default": "admin",
+                    "label": "LANGFLOW_SUPERUSER"
+                },
+                {
+                    "name": "LANGFLOW_SUPERUSER_PASSWORD",
+                    "description": "The password for the superuser.",
+                    "label": "LANGFLOW_SUPERUSER_PASSWORD"
+                },
+                {
+                    "name": "LANGFLOW_SECRET_KEY",
+                    "description": "A key used for encrypting the superuser's password.",
+                    "default": "aSNdhwXl-H8vBg5hIsQ5ty3_axYUgo1Doj_xWte3uHw=",
+                    "label": "LANGFLOW_SECRET_KEY"
+                },
+                {
+                    "name": "LANGFLOW_NEW_USER_IS_ACTIVE",
+                    "description": "Determines whether new users are automatically activated. Default is False.",
+                    "select": [
+                        {
+                            "text": "True",
+                            "value": "true"
+                        },
+                        {
+                            "text": "False",
+                            "value": "false",
+                            "default": true
+                        }
+                    ],
+                    "label": "LANGFLOW_NEW_USER_IS_ACTIVE"
+                },
+                {
+                    "name": "LANGFLOW_ACCESS_SAME_SITE",
+                    "description": "Sets the SameSite attribute of the access token cookie. Options are \"lax\" (default), \"strict,\" and \"none.\"",
+                    "select": [
+                        {
+                            "text": "Lax",
+                            "value": "lax",
+                            "default": true
+                        },
+                        {
+                            "text": "Strict",
+                            "value": "strict"
+                        },
+                        {
+                            "text": "None",
+                            "value": "none"
+                        }
+                    ],
+                    "label": "LANGFLOW_ACCESS_SAME_SITE"
+                },
+                {
+                    "name": "LANGFLOW_ACCESS_SECURE",
+                    "description": "Enables or disables the Secure attribute of the access token cookie (default is disabled).",
+                    "select": [
+                        {
+                            "text": "True",
+                            "value": "true"
+                        },
+                        {
+                            "text": "False",
+                            "value": "false",
+                            "default": true
+                        }
+                    ],
+                    "label": "LANGFLOW_ACCESS_SECURE"
+                },
+                {
+                    "name": "LANGFLOW_ACCESS_HTTPONLY",
+                    "description": "Enables or disables the HttpOnly attribute of the access token cookie (default is disabled).",
+                    "select": [
+                        {
+                            "text": "True",
+                            "value": "true"
+                        },
+                        {
+                            "text": "False",
+                            "value": "false",
+                            "default": true
+                        }
+                    ],
+                    "label": "LANGFLOW_ACCESS_HTTPONLY"
+                }
+            ],
+            "repository": {
+                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
+                "stackfile": "cookbook/composeStacks/kestra/docker-compose.yml"
+            },
+            "name": "kestra",
+            "type": 3,
+            "logo": "",
+            "id": 855
         }
     ]
 }
