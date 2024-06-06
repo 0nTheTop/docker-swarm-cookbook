@@ -30795,7 +30795,7 @@
                 {
                     "name": "LANGFLOW_SECRET_KEY",
                     "description": "A key used for encrypting the superuser's password.",
-                    "default": "gahMnWcfCV6XGwxRhJPlVPjUtz7DXKC5C1HApicjcLg=",
+                    "default": "bIIUpSgT5ryJaw31CY54lbytas_6UEVY-JJ0JHAUN8c=",
                     "label": "LANGFLOW_SECRET_KEY"
                 },
                 {
@@ -30884,7 +30884,7 @@
                 "Cookbook"
             ],
             "platform": "linux",
-            "note": "<a href=\"https://kestra.io/docs\" target=\"_blank\">Kestra Docs</a><br> <a href=\"https://www.docker.com/blog/how-to-use-the-postgres-docker-official-image/\" target=\"_blank\">Postgres Docker Info</a> <br> <br> <b>Note:</b><br> Remember to create on host tmp folder<br> - mkdir /tmp/kestra-wd/ <br> - chmod -R 0777 /tmp/kestra-wd/ <br> <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
+            "note": "<a href=\"https://kestra.io/docs\" target=\"_blank\">Kestra Docs</a><br> <a href=\"https://github.com/kestra-io/kestra\" target=\"_blank\">Kestra Github</a> | Report <a href=\"https://github.com/kestra-io/kestra/issues\" target=\"_blank\">Issue</a><br> <a href=\"https://hub.docker.com/r/kestra/kestra\" target=\"_blank\">Kestra Docker Hub</a><br> <a href=\"https://www.docker.com/blog/how-to-use-the-postgres-docker-official-image/\" target=\"_blank\">Postgres Docker Info</a> <br> <br> <b>Note:</b><br> Remember to create on host tmp folder<br> - mkdir /tmp/kestra-wd/ <br> - chmod -R 0777 /tmp/kestra-wd/ <br> <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
             "env": [
                 {
                     "name": "TZ",
