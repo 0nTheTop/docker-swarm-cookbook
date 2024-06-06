@@ -11,8 +11,8 @@ services:
     command: server standalone --worker-thread=128
     volumes:
       - kestra-data:/app/storage
-      - kestra-dind-socket:/dind
-      - kestra-tmp-data:/tmp/kestra-wd
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /tmp/kestra-wd:/tmp/kestra-wd:rw
     environment:
       TZ: ${TZ:-UTC}
       KESTRA_CONFIGURATION: |
@@ -52,8 +52,6 @@ services:
     depends_on:
       postgres:
         condition: service_started
-      dind:
-        condition: service_started
     networks:
       - kestra
       # - traefik
@@ -66,24 +64,6 @@ services:
       - "traefik.http.services.kestra-s.loadbalancer.server.port=8080"
       - "traefik.http.services.kestra-s.loadbalancer.sticky.cookie.name=stickycookie"
       - "traefik.http.services.kestra-s.loadbalancer.sticky.cookie.secure=true"
-
-  dind:
-    hostname: dind
-    container_name: kestra-dind
-    volumes:
-      - kestra-dind-socket:/var/run/docker.sock:rw
-      - kestra-tmp-data:/tmp/kestra-wd
-    networks:
-      - kestra
-    restart: always
-    image: docker:dind
-    privileged: true
-    # user: "1000"
-    environment:
-      DOCKER_HOST: unix://dind/docker.sock
-    command:
-      - --log-level=fatal
-      # - --group=1000
   
   postgres:
     hostname: postgres
@@ -115,12 +95,6 @@ volumes:
     driver: local
   kestra-data:
     name: kestra-data
-    driver: local
-  kestra-dind-socket:
-    name: kestra-dind-socket
-    driver: local
-  kestra-tmp-data:
-    name: kestra-tmp-data
     driver: local
 
 networks:
