@@ -30,7 +30,7 @@ labels:
   - name: traefik.docker.network
     value: traefik
   - name: traefik.http.routers.cloudbeaver.rule
-    value: HostRegexp(`^cloudbeaver\\..*`)
+    value: HostRegexp(`^cloudbeaver\..*`)
   - name: traefik.http.routers.cloudbeaver.service
     value: cloudbeaver-s
   - name: traefik.http.routers.cloudbeaver.entryPoints

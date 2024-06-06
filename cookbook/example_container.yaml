@@ -1,4 +1,5 @@
 ---
+# https://docs.portainer.io/advanced/app-templates/format#container-template-definition-format
 title: example
 description: example
 logo: <auto search by name if not defined>
@@ -9,12 +10,20 @@ platform: linux
 name: example
 hostname: example
 image: docker/example:latest
+privileged: false
 ports: 
   - 53:53/tcp
   - 53:53/udp
+network: "host|bridge|none"
 restart_policy: unless-stopped|always|on-failure|none
-cmd: sleep 1000
+command: sleep 1000
 env: 
+  - name: "the name of the environment variable, as supported in the container image (mandatory)"
+    label: "label for the input in the UI (mandatory unless set is present)"
+    description: "a short description for this input, will be available as a tooltip in the UI (optional)"
+    default: "default value associated to the variable (optional)"
+    preset: "boolean. If set to true, the UI will not generate an input (optional)"
+    select: "an array of possible values, will generate a select input (optional)"
   - name: TZ
     label: Time-Zone
     description: Time Zone. Default is UTC.

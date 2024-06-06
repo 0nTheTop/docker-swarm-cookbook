@@ -105,45 +105,49 @@ def cookbook(type_id):
             # read info.yaml
             with open(path, 'r') as f:
                 data = yaml.safe_load(f)
+                
+        # Title
         # if inside data not exist title... then setup based on project_folder name
         if 'title' not in data:
             # This field must consist of lower-case alphanumeric characters, '_' or '-'
             data['title'] = '-'.join(word.capitalize() or '_' for word in project_folder.split('_|-')).replace('_', ' ').replace('-', ' ')
-            
+        
+        # Repository
         if 'repository' not in data:
             data['repository'] = {}
             data['repository']['url'] = "https://github.com/azdolinski/docker-swarm-cookbook"
             data['repository']['stackfile'] = f"cookbook/{cookbook_folder}/{project_folder}/{stack_file_name}"
         
+        # Name
         if 'name' not in data:
             data['name'] = data['title'].lower().replace(' ', '_').replace('_', '-')
-            
+        
+        # Categories
         if 'categories' not in data:
             data['categories'] = []
-        
         if 'Cookbook' not in data['categories']:
             data['categories'].append("Cookbook")
         
-        if 'env' not in data:
-            data['env'] = []
-        
+        # Type
         if 'type' not in data:
-            data['type'] = type_id
+            data['type'] = int(type_id)
 
+        # Platform
         if 'platform' not in data:
             data['platform'] = 'linux'
-            
+        
+        # Logo
         if 'logo' not in data:
-            # if file with name+.png exist in icons folder
-            # logo: https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/icons/portainer.png
             if os.path.exists(os.path.join("icons", f"{project_folder}.png")):
                 data['logo'] = f"https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/icons/{project_folder}.png"
             else:
                 data['logo'] = ''
-            
+        
+        # Desription
         if 'description' not in data:
             data['description'] = project_folder.replace("_", " ")
         
+        # Source
         if 'source' in data:
             del data['source']
             
@@ -158,9 +162,9 @@ def cookbook(type_id):
                     if label_element['value'] is False:
                         label_element['value'] = "false"
                     
-        # Default needs to be string type
-        # If it is Bool - then we replace by select option with default value
-        # https://docs.portainer.io/advanced/app-templates/format#env
+        # Environment
+        if 'env' not in data:
+            data['env'] = []
         for env_element in data['env']:
             if 'default' in env_element and type(env_element['default']) == int:
                 env_element['default'] = str(env_element['default'])
@@ -184,8 +188,12 @@ def cookbook(type_id):
                 else:
                     data['note'] = "<br><a href=\"https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones"
         
+        # Categories
         data['categories'] = capitalize_first_letter(data['categories'])
+        
+        # Title
         data['title'] = f"{data['title']} (Cookbook)"
+        
         ret.append(data)
     return ret
 
