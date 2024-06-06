@@ -13,8 +13,8 @@ services:
       - /app/kestra server standalone --worker-thread=128
     volumes:
       - kestra-data:/app/storage
-      - dind-socket:/dind
-      - tmp-data:/tmp/kestra-wd
+      - kestra-dind-socket:/dind
+      - kestra-tmp-data:/tmp/kestra-wd
     environment:
       TZ: ${TZ:-UTC}
       KESTRA_CONFIGURATION: |
@@ -71,8 +71,8 @@ services:
     hostname: dind
     container_name: kestra-dind
     volumes:
-      - dind-socket:/var/run/docker.sock:rw
-      - tmp-data:/tmp/kestra-wd
+      - kestra-dind-socket:/var/run/docker.sock:rw
+      - kestra-tmp-data:/tmp/kestra-wd
     networks:
       - kestra
     restart: always
