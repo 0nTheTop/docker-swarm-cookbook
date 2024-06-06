@@ -60,12 +60,18 @@ services:
       - "traefik.http.services.kestra-s.loadbalancer.server.port=8080"
       - "traefik.http.services.kestra-s.loadbalancer.sticky.cookie.name=stickycookie"
       - "traefik.http.services.kestra-s.loadbalancer.sticky.cookie.secure=true"
+
   postgres:
     hostname: postgres
     container_name: kestra-postgres
     image: postgres
     volumes:
       - kestra-postgres-data:/var/lib/postgresql/data
+    networks:
+      - kestra
+    restart: always
+    #ports:
+    #  - "5432:5432"
     environment:
       TZ: ${TZ:-UTC}
       PGTZ: ${TZ:-UTC}
@@ -74,9 +80,10 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-k3str4}
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-kestra} -d ${POSTGRES_DB:-kestra}"]
-      interval: 30s
-      timeout: 10s
-      retries: 10
+      timeout: 20s
+      interval: 10s
+      retries: 5
+      start_period: 30s
 
 volumes:
   kestra-postgres-data:
