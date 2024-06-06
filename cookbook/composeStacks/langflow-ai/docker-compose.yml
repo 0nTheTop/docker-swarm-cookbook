@@ -7,7 +7,7 @@ services:
     image: langflowai/langflow:latest
     ports:
       - mode: host
-        published: 7860
+        published: ${LANGFLOW_PORT:-7860}
         target: 7860
     restart: always
     depends_on:
@@ -30,13 +30,14 @@ services:
       - langflow-data:/var/lib/langflow
     networks:
       - langflow
+      # - traefik
     labels:
       - "traefik.enable=true"
       - "traefik.docker.network=traefik"
       - "traefik.http.routers.langflow.rule=HostRegexp(`^langflow\\..*`)"
       - "traefik.http.routers.langflow.service=langflow-s"
       - "traefik.http.routers.langflow.entryPoints=web"
-      - "traefik.http.services.langflow-s.loadbalancer.server.port=7860"
+      - "traefik.http.services.langflow-s.loadbalancer.server.port=${LANGFLOW_PORT:-7860}"
       - "traefik.http.services.langflow-s.loadbalancer.sticky.cookie.name=stickycookie"
       - "traefik.http.services.langflow-s.loadbalancer.sticky.cookie.secure=true"
 
@@ -49,14 +50,15 @@ services:
       POSTGRES_USER: ${POSTGRES_USER:-langflow}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-langflow345}
       POSTGRES_DB: ${POSTGRES_DB:-langflow}
-    ports:
-      - "5432:5432"
+    restart: always
+    #ports:
+    #  - "5432:5432"
     volumes:
-      - langflow-postgres:/var/lib/postgresql/data
+      - langflow-postgres-data:/var/lib/postgresql/data
     networks:
       - langflow
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-langflow} -d postgres"]
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-langflow} -d ${POSTGRES_DB:-langflow}"]
       timeout: 20s
       interval: 10s
       retries: 5
@@ -65,8 +67,8 @@ services:
 volumes:
   langflow-data:
     name: langflow-data
-  langflow-postgres:
-    name: langflow-postgres
+  langflow-postgres-data:
+    name: langflow-postgres-data
 
 
 networks:
@@ -74,5 +76,5 @@ networks:
     name: langflow
     driver: overlay
     attachable: true
-# traefik:
-#   external: true
+#  traefik:
+#    external: true

@@ -1,0 +1,93 @@
+version: "3.8"
+
+services:
+  kestra:
+    hostname: kestra
+    container_name: kestra
+    image: kestra/kestra:latest-full
+    pull_policy: always
+    command: server standalone --worker-thread=128
+    volumes:
+      - kestra-data:/app/storage
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /tmp/kestra-wd:/tmp/kestra-wd
+    environment:
+      KESTRA_CONFIGURATION: |
+        datasources:
+          postgres:
+            url: jdbc:postgresql://postgres:5432/${POSTGRES_DB:-kestra}
+            driverClassName: org.postgresql.Driver
+            username: ${POSTGRES_USER:-kestra}
+            password: ${POSTGRES_PASSWORD:-k3str4}
+        kestra:
+          server:
+            basic-auth:
+              enabled: false
+              username: "${KESTRA_USERNAME:-admin@kestra.io}"
+              password: ${KESTRA_PASSWORD:-kestra}"
+          repository:
+            type: postgres
+          storage:
+            type: local
+            local:
+              base-path: "/app/storage"
+          queue:
+            type: postgres
+          tasks:
+            tmp-dir:
+              path: /tmp/kestra-wd/tmp
+          url: http://localhost:8080/
+    ports:
+      - mode: host
+        published: ${KESTRA_PORT:-8080}
+        target: 8080
+      - mode: host
+        published: 8081
+        target: 8081
+    depends_on:
+      postgres:
+        condition: service_started
+    networks:
+      - kestra
+      # - traefik
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=traefik"
+      - "traefik.http.routers.langflkestraow.rule=HostRegexp(`^kestra\\..*`)"
+      - "traefik.http.routers.kestra.service=kestra-s"
+      - "traefik.http.routers.kestra.entryPoints=web"
+      - "traefik.http.services.kestra-s.loadbalancer.server.port=8080"
+      - "traefik.http.services.kestra-s.loadbalancer.sticky.cookie.name=stickycookie"
+      - "traefik.http.services.kestra-s.loadbalancer.sticky.cookie.secure=true"
+
+  postgres:
+    hostname: postgres
+    container_name: kestra-postgres
+    image: postgres
+    volumes:
+      - kestra-postgres-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-kestra}
+      POSTGRES_USER: ${POSTGRES_USER:-kestra}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-k3str4}
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-kestra} -d ${POSTGRES_DB:-kestra}"]
+      interval: 30s
+      timeout: 10s
+      retries: 10
+
+volumes:
+  kestra-postgres-data:
+    name: kestra-postgres-data
+    driver: local
+  kestra-data:
+    name: kestra-data
+    driver: local
+
+networks:
+  kestra:
+    name: kestra
+    driver: overlay
+    attachable: true
+#  traefik:
+#    external: true

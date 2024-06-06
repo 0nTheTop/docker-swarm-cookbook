@@ -12,6 +12,9 @@ from config import ConfigReader
 import yaml, re, random, string
 from cryptography.fernet import Fernet
 
+cr = ConfigReader()
+GITHUB_URL = cr.read_config("github.yaml")['github_url']
+GITHUB_URL_CONTENT = cr.read_config("github.yaml")['github_url_content']
 
 
 def generate_key(key_type):
@@ -47,6 +50,7 @@ class PortainerRepos():
         cr = ConfigReader()
         self.templates_folder_path = os.path.join("downloaded-collections", "templates")
         self.urls = cr.read_config("repos.yaml")['repos']
+        
         
     def download(self):
         for url in self.urls:
@@ -115,7 +119,7 @@ def cookbook(type_id):
         # Repository
         if 'repository' not in data:
             data['repository'] = {}
-            data['repository']['url'] = "https://github.com/azdolinski/docker-swarm-cookbook"
+            data['repository']['url'] = GITHUB_URL
             data['repository']['stackfile'] = f"cookbook/{cookbook_folder}/{project_folder}/{stack_file_name}"
         
         # Name
@@ -139,7 +143,7 @@ def cookbook(type_id):
         # Logo
         if 'logo' not in data:
             if os.path.exists(os.path.join("icons", f"{project_folder}.png")):
-                data['logo'] = f"https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/icons/{project_folder}.png"
+                data['logo'] = f"{GITHUB_URL_CONTENT}main/icons/{project_folder}.png"
             else:
                 data['logo'] = ''
         
@@ -184,9 +188,9 @@ def cookbook(type_id):
                 
             if env_element.get('name') == 'TZ' and env_element.get('label') == 'Time-Zone':
                 if data.get('note'):
-                    data['note'] = f"{data['note']} <br> <br> <a href=\"https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones"
+                    data['note'] = f"{data['note']} <br> <br> <a href=\"{GITHUB_URL_CONTENT}main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones"
                 else:
-                    data['note'] = "<br><a href=\"https://raw.githubusercontent.com/azdolinski/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones"
+                    data['note'] = "<br><a href=\"{GITHUB_URL_CONTENT}main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones"
         
         # Categories
         data['categories'] = capitalize_first_letter(data['categories'])

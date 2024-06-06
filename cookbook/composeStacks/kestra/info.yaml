@@ -1,6 +1,6 @@
 ---
-description: Langflow-AI is a visual framework for building multi-agent and RAG applications. It's open-source, Python-powered, fully customizable, model and vector store agnostic.
-title: Langflow-AI
+description: Infinitely scalable, event-driven, language-agnostic orchestration and scheduling platform to manage millions of workflows declaratively in code.
+title: Kestra
 categories: [ai, lowcode]
 platform: linux
 note:
@@ -30,9 +30,6 @@ env:
   label: POSTGRES_DB
   default: langflow
   description: Specifies a name for your database or defaults to the POSTGRES_USER value when left blank. 
-- name: LANGFLOW_PORT
-  default: 7860
-  description: The port to run the Langflow server on. Default is 7860.
 - name: LANGFLOW_AUTO_LOGIN
   default: True
   description: Determines whether Langflow should automatically log users in. Default is True.
