@@ -23,6 +23,8 @@ services:
             username: ${POSTGRES_USER:-kestra}
             password: ${POSTGRES_PASSWORD:-k3str4}
         kestra:
+          #tutorial-flows:
+          #  enabled: true # true by default, can be set to false for production
           server:
             basic-auth:
               enabled: false
