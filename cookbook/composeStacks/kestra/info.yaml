@@ -1,7 +1,7 @@
 ---
 description: Infinitely scalable, event-driven, language-agnostic orchestration and scheduling platform to manage millions of workflows declaratively in code.
 title: Kestra
-categories: [ai, lowcode]
+categories: [lowcode]
 platform: linux
 note:
   <a href="https://www.docker.com/blog/how-to-use-the-postgres-docker-official-image/" target="_blank">Postgres Docker Info</a> <br>
@@ -18,47 +18,18 @@ env:
   label: Time-Zone
   description: Time Zone. Default is UTC.
   default: UTC
+- name: POSTGRES_DB
+  label: POSTGRES_DB
+  default: kestra
+  description: Specifies a name for your database or defaults to the POSTGRES_USER value when left blank. 
 - name: POSTGRES_USER
   label: POSTGRES_USER
-  default: langflow
+  default: kestra
   description: Specifies a user with superuser privileges and a database with the same name. Postgres uses the default user when this is empty.
 - name: POSTGRES_PASSWORD
   label: POSTGRES_PASSWORD
-  default: langflow345
+  default: k3str4
   description: Password used by the POSTGRES_USER.
-- name: POSTGRES_DB
-  label: POSTGRES_DB
-  default: langflow
-  description: Specifies a name for your database or defaults to the POSTGRES_USER value when left blank. 
-- name: LANGFLOW_AUTO_LOGIN
-  default: True
-  description: Determines whether Langflow should automatically log users in. Default is True.
-- name: LANGFLOW_SUPERUSER
-  description: The username of the superuser.
-  default: admin
-- name: LANGFLOW_SUPERUSER_PASSWORD
-  description: The password for the superuser.
-- name: LANGFLOW_SECRET_KEY
-  description: A key used for encrypting the superuser's password.
-  default: -fernet-
-- name: LANGFLOW_NEW_USER_IS_ACTIVE
-  default: False
-  description: Determines whether new users are automatically activated. Default is False.
-- name: LANGFLOW_ACCESS_SAME_SITE
-  description: Sets the SameSite attribute of the access token cookie. Options are "lax" (default), "strict," and "none."
-  select:
-    - text: Lax
-      value: lax
-      default: true
-    - text: Strict
-      value: strict
-    - text: None
-      value: none
-- name: LANGFLOW_ACCESS_SECURE
-  description: Enables or disables the Secure attribute of the access token cookie (default is disabled).
-  default: False
-- name: LANGFLOW_ACCESS_HTTPONLY
-  description: Enables or disables the HttpOnly attribute of the access token cookie (default is disabled).
-  default: False
-
-# https://github.com/langflow-ai/langflow/issues/1692#issuecomment-2066739799
+- name: KESTRA_PORT
+  default: 8080
+  description: Port to expose kestra. Default is 8080.

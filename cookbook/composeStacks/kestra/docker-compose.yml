@@ -12,6 +12,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - /tmp/kestra-wd:/tmp/kestra-wd
     environment:
+      TZ: ${TZ:-UTC}
       KESTRA_CONFIGURATION: |
         datasources:
           postgres:
@@ -59,7 +60,6 @@ services:
       - "traefik.http.services.kestra-s.loadbalancer.server.port=8080"
       - "traefik.http.services.kestra-s.loadbalancer.sticky.cookie.name=stickycookie"
       - "traefik.http.services.kestra-s.loadbalancer.sticky.cookie.secure=true"
-
   postgres:
     hostname: postgres
     container_name: kestra-postgres
@@ -67,6 +67,8 @@ services:
     volumes:
       - kestra-postgres-data:/var/lib/postgresql/data
     environment:
+      TZ: ${TZ:-UTC}
+      PGTZ: ${TZ:-UTC}
       POSTGRES_DB: ${POSTGRES_DB:-kestra}
       POSTGRES_USER: ${POSTGRES_USER:-kestra}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-k3str4}
