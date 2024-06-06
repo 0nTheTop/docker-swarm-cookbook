@@ -30795,7 +30795,7 @@
                 {
                     "name": "LANGFLOW_SECRET_KEY",
                     "description": "A key used for encrypting the superuser's password.",
-                    "default": "NfVZKvwvf5nGBCmk8jszjTXkEsASECC0L0CQmuSRHok=",
+                    "default": "FAT1kJpc-GEmgu77GnW8pC3_Rt6oMUVJppldA0KAyEQ=",
                     "label": "LANGFLOW_SECRET_KEY"
                 },
                 {
@@ -30923,7 +30923,7 @@
             },
             "name": "kestra",
             "type": 3,
-            "logo": "",
+            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/kestra.png",
             "id": 855
         }
     ]
