@@ -6,6 +6,11 @@ platform: linux
 note:
   <a href="https://kestra.io/docs" target="_blank">Kestra Docs</a><br>
   <a href="https://www.docker.com/blog/how-to-use-the-postgres-docker-official-image/" target="_blank">Postgres Docker Info</a> <br>
+  <br>
+  <b>Note:</b><br>
+  Remember to create on host tmp folder<br>
+  - mkdir /tmp/kestra-wd/ <br>
+  - chmod -R 0777 /tmp/kestra-wd/ <br>
 env:
 - name: TZ
   label: Time-Zone
