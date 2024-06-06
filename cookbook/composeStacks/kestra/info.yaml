@@ -5,6 +5,8 @@ categories: [lowcode]
 platform: linux
 note:
   <a href="https://kestra.io/docs" target="_blank">Kestra Docs</a><br>
+  <a href="https://github.com/kestra-io/kestra" target="_blank">Kestra Github</a> | Report <a href="https://github.com/kestra-io/kestra/issues" target="_blank">Issue</a><br>
+  <a href="https://hub.docker.com/r/kestra/kestra" target="_blank">Kestra Docker Hub</a><br>
   <a href="https://www.docker.com/blog/how-to-use-the-postgres-docker-official-image/" target="_blank">Postgres Docker Info</a> <br>
   <br>
   <b>Note:</b><br>
