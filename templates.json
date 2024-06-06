@@ -30795,7 +30795,7 @@
                 {
                     "name": "LANGFLOW_SECRET_KEY",
                     "description": "A key used for encrypting the superuser's password.",
-                    "default": "EVBB_Uc3x9SoMZ6_cwLfq7-ObyqCIO-gp07YEkWhlyg=",
+                    "default": "NfVZKvwvf5nGBCmk8jszjTXkEsASECC0L0CQmuSRHok=",
                     "label": "LANGFLOW_SECRET_KEY"
                 },
                 {
@@ -30880,7 +30880,6 @@
             "description": "Infinitely scalable, event-driven, language-agnostic orchestration and scheduling platform to manage millions of workflows declaratively in code.",
             "title": "Kestra (Cookbook)",
             "categories": [
-                "Ai",
                 "Lowcode",
                 "Cookbook"
             ],
@@ -30894,123 +30893,28 @@
                     "default": "UTC"
                 },
                 {
+                    "name": "POSTGRES_DB",
+                    "label": "POSTGRES_DB",
+                    "default": "kestra",
+                    "description": "Specifies a name for your database or defaults to the POSTGRES_USER value when left blank."
+                },
+                {
                     "name": "POSTGRES_USER",
                     "label": "POSTGRES_USER",
-                    "default": "langflow",
+                    "default": "kestra",
                     "description": "Specifies a user with superuser privileges and a database with the same name. Postgres uses the default user when this is empty."
                 },
                 {
                     "name": "POSTGRES_PASSWORD",
                     "label": "POSTGRES_PASSWORD",
-                    "default": "langflow345",
+                    "default": "k3str4",
                     "description": "Password used by the POSTGRES_USER."
                 },
                 {
-                    "name": "POSTGRES_DB",
-                    "label": "POSTGRES_DB",
-                    "default": "langflow",
-                    "description": "Specifies a name for your database or defaults to the POSTGRES_USER value when left blank."
-                },
-                {
-                    "name": "LANGFLOW_AUTO_LOGIN",
-                    "description": "Determines whether Langflow should automatically log users in. Default is True.",
-                    "select": [
-                        {
-                            "text": "True",
-                            "value": "true",
-                            "default": true
-                        },
-                        {
-                            "text": "False",
-                            "value": "false"
-                        }
-                    ],
-                    "label": "LANGFLOW_AUTO_LOGIN"
-                },
-                {
-                    "name": "LANGFLOW_SUPERUSER",
-                    "description": "The username of the superuser.",
-                    "default": "admin",
-                    "label": "LANGFLOW_SUPERUSER"
-                },
-                {
-                    "name": "LANGFLOW_SUPERUSER_PASSWORD",
-                    "description": "The password for the superuser.",
-                    "label": "LANGFLOW_SUPERUSER_PASSWORD"
-                },
-                {
-                    "name": "LANGFLOW_SECRET_KEY",
-                    "description": "A key used for encrypting the superuser's password.",
-                    "default": "aSNdhwXl-H8vBg5hIsQ5ty3_axYUgo1Doj_xWte3uHw=",
-                    "label": "LANGFLOW_SECRET_KEY"
-                },
-                {
-                    "name": "LANGFLOW_NEW_USER_IS_ACTIVE",
-                    "description": "Determines whether new users are automatically activated. Default is False.",
-                    "select": [
-                        {
-                            "text": "True",
-                            "value": "true"
-                        },
-                        {
-                            "text": "False",
-                            "value": "false",
-                            "default": true
-                        }
-                    ],
-                    "label": "LANGFLOW_NEW_USER_IS_ACTIVE"
-                },
-                {
-                    "name": "LANGFLOW_ACCESS_SAME_SITE",
-                    "description": "Sets the SameSite attribute of the access token cookie. Options are \"lax\" (default), \"strict,\" and \"none.\"",
-                    "select": [
-                        {
-                            "text": "Lax",
-                            "value": "lax",
-                            "default": true
-                        },
-                        {
-                            "text": "Strict",
-                            "value": "strict"
-                        },
-                        {
-                            "text": "None",
-                            "value": "none"
-                        }
-                    ],
-                    "label": "LANGFLOW_ACCESS_SAME_SITE"
-                },
-                {
-                    "name": "LANGFLOW_ACCESS_SECURE",
-                    "description": "Enables or disables the Secure attribute of the access token cookie (default is disabled).",
-                    "select": [
-                        {
-                            "text": "True",
-                            "value": "true"
-                        },
-                        {
-                            "text": "False",
-                            "value": "false",
-                            "default": true
-                        }
-                    ],
-                    "label": "LANGFLOW_ACCESS_SECURE"
-                },
-                {
-                    "name": "LANGFLOW_ACCESS_HTTPONLY",
-                    "description": "Enables or disables the HttpOnly attribute of the access token cookie (default is disabled).",
-                    "select": [
-                        {
-                            "text": "True",
-                            "value": "true"
-                        },
-                        {
-                            "text": "False",
-                            "value": "false",
-                            "default": true
-                        }
-                    ],
-                    "label": "LANGFLOW_ACCESS_HTTPONLY"
+                    "name": "KESTRA_PORT",
+                    "default": "8080",
+                    "description": "Port to expose kestra. Default is 8080.",
+                    "label": "KESTRA_PORT"
                 }
             ],
             "repository": {
