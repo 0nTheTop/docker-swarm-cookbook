@@ -15,6 +15,7 @@ from cryptography.fernet import Fernet
 cr = ConfigReader()
 GITHUB_URL = cr.read_config("github.yaml")['github_url']
 GITHUB_URL_CONTENT = cr.read_config("github.yaml")['github_url_content']
+REF_CATEGORIES = cr.read_config("categories.yaml")
 
 
 def generate_key(key_type):
@@ -42,7 +43,18 @@ def read_config(file_path):
         return data
 
 
-
+def standardize_categories(categories):
+  correct_categories = []
+  for category in categories:
+    found = False
+    for correct_name, variations in REF_CATEGORIES.items():
+      if category in variations:
+        correct_categories.append(correct_name)
+        found = True
+        break
+    if not found:
+      correct_categories.append(category)
+  return correct_categories
 
 
 class PortainerRepos():
@@ -115,7 +127,9 @@ def cookbook(type_id):
         if 'title' not in data:
             # This field must consist of lower-case alphanumeric characters, '_' or '-'
             data['title'] = '-'.join(word.capitalize() or '_' for word in project_folder.split('_|-')).replace('_', ' ').replace('-', ' ')
-        
+        else:
+            data['title'] = str(data['title'])
+            
         # Repository
         if 'repository' not in data:
             data['repository'] = {}
@@ -124,13 +138,15 @@ def cookbook(type_id):
         
         # Name
         if 'name' not in data:
-            data['name'] = data['title'].lower().replace(' ', '_').replace('_', '-')
+            data['name'] = str(data['title']).lower().replace(' ', '_').replace('_', '-')
         
         # Categories
         if 'categories' not in data:
             data['categories'] = []
+        data['categories'] = standardize_categories(data['categories'])
         if 'Cookbook' not in data['categories']:
             data['categories'].append("Cookbook")
+
         
         # Type
         if 'type' not in data:
@@ -240,6 +256,7 @@ if __name__ == "__main__":
             if "Cookbook" not in template['categories']:
                 template['categories'].append(ext_repo['name'])
             template['categories'] = capitalize_first_letter(template['categories'])
+            template['categories'] = standardize_categories(template['categories'])
             repo['templates'].append(template)
             id = id + 1
 
@@ -285,3 +302,5 @@ if __name__ == "__main__":
             
     with open('templates_cookbook.json', 'w') as f:
         json.dump(cookbook_repo, f, indent=4)
+        
+    

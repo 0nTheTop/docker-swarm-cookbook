@@ -86,7 +86,7 @@
             "title": "Nginx (portainer)",
             "description": "High performance web server",
             "categories": [
-                "Webserver",
+                "Web",
                 "Portainer"
             ],
             "platform": "linux",
@@ -111,7 +111,7 @@
             "title": "Httpd (portainer)",
             "description": "Open-source HTTP server",
             "categories": [
-                "Webserver",
+                "Web",
                 "Portainer"
             ],
             "platform": "linux",
@@ -132,7 +132,7 @@
             "title": "Caddy (portainer)",
             "description": "Open-source web server with automatic HTTPS written in Go",
             "categories": [
-                "Webserver",
+                "Web",
                 "Portainer"
             ],
             "platform": "linux",
@@ -639,7 +639,7 @@
             "title": "Joomla (portainer)",
             "description": "Another free and open-source CMS",
             "categories": [
-                "Cms",
+                "CMS",
                 "Portainer"
             ],
             "platform": "linux",
@@ -671,7 +671,7 @@
             "title": "Drupal (portainer)",
             "description": "Open-source content management framework",
             "categories": [
-                "Cms",
+                "CMS",
                 "Portainer"
             ],
             "platform": "linux",
@@ -693,7 +693,7 @@
             "description": "A free and open-source CMS built on top of Zope",
             "note": "Default user and password are admin/admin",
             "categories": [
-                "Cms",
+                "CMS",
                 "Portainer"
             ],
             "platform": "linux",
@@ -859,7 +859,7 @@
             "description": "A web file manager",
             "note": "Default credentials: admin/admin",
             "categories": [
-                "Filesystem",
+                "Files",
                 "Storage",
                 "Portainer"
             ],
@@ -909,7 +909,7 @@
             "title": "ContentBox (portainer)",
             "description": "Open-source modular CMS",
             "categories": [
-                "Cms",
+                "CMS",
                 "Portainer"
             ],
             "platform": "linux",
@@ -951,7 +951,7 @@
             "title": "Dokku (portainer)",
             "description": "Dokku setup as a container",
             "categories": [
-                "Paas",
+                "PaaS",
                 "Portainer"
             ],
             "platform": "linux",
@@ -1083,7 +1083,7 @@
             "description": "WordPress setup with a MySQL database",
             "note": "Deploys a WordPress instance connected to a MySQL database.",
             "categories": [
-                "Cms",
+                "CMS",
                 "Portainer"
             ],
             "platform": "linux",
@@ -1107,7 +1107,7 @@
             "description": "WordPress setup with a MySQL database",
             "note": "Deploys a WordPress instance connected to a MySQL database.",
             "categories": [
-                "Cms",
+                "CMS",
                 "Portainer"
             ],
             "platform": "linux",
@@ -1180,7 +1180,7 @@
             "title": "Microsoft OMS Agent (portainer)",
             "description": "Microsoft Operations Management Suite Linux agent.",
             "categories": [
-                "Ops",
+                "OPS",
                 "Portainer"
             ],
             "platform": "linux",
@@ -1282,7 +1282,7 @@
             "title": "Dokku (portainer)",
             "description": "Dokku setup as a compose file",
             "categories": [
-                "Paas",
+                "PaaS",
                 "Portainer"
             ],
             "platform": "linux",
@@ -4706,7 +4706,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "AdGuard Home is a network-wide software for blocking ads & tracking.",
@@ -4748,7 +4748,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "Alpine xfce4 novnc",
@@ -4814,7 +4814,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Games",
                 "Lissy93"
             ],
@@ -4861,7 +4861,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "ArchiveBox is a powerful, self-hosted internet archiving solution to collect, save, and view sites you want to preserve offline.",
@@ -4960,7 +4960,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Authentication",
                 "Lissy93"
             ],
@@ -5047,9 +5047,9 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Web",
-                "Webserver",
+                "Web",
                 "Lissy93"
             ],
             "description": "Caddy - The Ultimate Server with Automatic HTTPS.  Need to run tools/install_caddy.sh before installing the template.",
@@ -5085,7 +5085,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "chrony is a versatile implementation of the Network Time Protocol (NTP). It can synchronise the system clock with NTP servers, reference clocks (e.g. GPS receiver), and manual input using wristwatch and keyboard. It can also operate as an NTPv4 (RFC 5905) server and peer to provide a time service to other computers in the network.",
@@ -5155,8 +5155,8 @@
         },
         {
             "categories": [
-                "Dns",
-                "Tools",
+                "DNS",
+                "Tool",
                 "Lissy93"
             ],
             "description": "Cloudflare DDNS - A small and fast DDNS updater for Cloudflare.",
@@ -5200,7 +5200,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "Another application bookmark dashboard, with fun features.",
@@ -5350,7 +5350,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "Dozzle is a real-time log viewer for docker containers.",
@@ -5376,7 +5376,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "Eclipse Mosquitto is an open source message broker that implements the MQTT protocol versions 5.0, 3.1.1 and 3.1. Mosquitto is lightweight and is suitable for use on all devices from low power single board computers to full servers.\r\nHave a look on https://mosquitto.org/man/mosquitto_passwd-1.html",
@@ -5411,7 +5411,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "Web File Browser which can be used as a middleware or standalone app.",
@@ -5445,7 +5445,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "[arm][s6-version] Web File Browser which can be used as a middleware or standalone app.",
@@ -5491,7 +5491,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "Flame is self-hosted startpage for your server. Its design is inspired (heavily) by SUI. Flame is very easy to setup and use. With built-in editors, it allows you to setup your very own application hub in no time - no file editing necessary.",
@@ -5528,7 +5528,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "FlareSolverr is a proxy server to bypass Cloudflare and DDoS-GUARD protection.",
@@ -5618,7 +5618,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "Ghost is a free and open source blogging platform written in JavaScript and distributed under the MIT License, designed to simplify the process of online publishing for individual bloggers as well as online publications.",
@@ -5726,7 +5726,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "A simple server for sending and receiving messages",
@@ -5768,8 +5768,8 @@
         },
         {
             "categories": [
-                "Monitor",
-                "Tools",
+                "Monitoring",
+                "Tool",
                 "Lissy93"
             ],
             "description": "Grafana Dashboard anything. Observe everything.  Query, visualize, alert on, and understand your data no matter where it\u2019s stored. With Grafana you can create, explore, and share all of your data through beautiful, flexible dashboards.",
@@ -5792,7 +5792,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "A clientless remote desktop gateway.",
@@ -5817,7 +5817,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Web",
                 "Other",
                 "Lissy93"
@@ -5864,7 +5864,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Web",
                 "Other",
                 "Lissy93"
@@ -5931,7 +5931,7 @@
         },
         {
             "categories": [
-                "Homeautomation",
+                "Automation",
                 "Lissy93"
             ],
             "description": "Homebridge allows you to integrate with smart home devices that do not natively support HomeKit. There are over 2,000 Homebridge plugins supporting thousands of different smart accessories.",
@@ -5982,7 +5982,7 @@
         },
         {
             "categories": [
-                "Homeautomation",
+                "Automation",
                 "Lissy93"
             ],
             "description": "Debian Homebridge allows you to integrate with smart home devices that do not natively support HomeKit. There are over 2,000 Homebridge plugins supporting thousands of different smart accessories.",
@@ -6063,7 +6063,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "A dead simple static HOMepage for your servER to keep your services on hand, from a simple yaml configuration file.",
@@ -6101,7 +6101,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "Create agents that monitor and act on your behalf.",
@@ -6127,7 +6127,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "InfluxDB is an open source time series database for recording metrics, events, and analytics.",
@@ -6157,7 +6157,7 @@
         },
         {
             "categories": [
-                "Homeautomation",
+                "Automation",
                 "Lissy93"
             ],
             "description": "IoBroker is a open source IoT platform written in JavaScript that easily connects smarthome components from different manufactures. With the help of plugins (called: adapters) ioBroker is able to communicate with a big variety of IoT hardware and services using different protocols and APIs.",
@@ -6194,8 +6194,8 @@
         },
         {
             "categories": [
-                "Downloaders",
-                "Tools",
+                "Downloader",
+                "Tool",
                 "Lissy93"
             ],
             "description": "JDownloader docker image",
@@ -6243,7 +6243,7 @@
             "categories": [
                 "Video",
                 "Music",
-                "Photos",
+                "Photography",
                 "Management",
                 "Lissy93"
             ],
@@ -6325,8 +6325,8 @@
         {
             "categories": [
                 "Other",
-                "3dprinters",
-                "Tools",
+                "3D Printers",
+                "Tool",
                 "Lissy93"
             ],
             "description": "Klipper is a 3d-Printer firmware. It combines the power of a general purpose computer with one or more micro-controllers. See the features document for more information on why you should use Klipper.",
@@ -6353,7 +6353,7 @@
         {
             "categories": [
                 "Books",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "Komga is a free and open source comics/mangas/magazines server.",
@@ -6388,7 +6388,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "An alternative private front-end to Reddit",
@@ -6413,7 +6413,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Productivity",
                 "Lissy93"
             ],
@@ -6495,7 +6495,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "A self-hosted recipe manager and meal planner",
@@ -6615,7 +6615,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Games",
                 "Lissy93"
             ],
@@ -6649,7 +6649,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "command": "server --console-address ':9090' /data",
@@ -6762,7 +6762,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "n8n is an extendable workflow automation tool.",
@@ -6805,7 +6805,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "Troubleshoot slowdowns and anomalies in your infrastructure with thousands of per-second metrics, meaningful visualizations, and insightful health alarms with zero configuration.",
@@ -6867,7 +6867,7 @@
         {
             "categories": [
                 "Proxy",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "Nginx Proxy Manager v2 with sqlite and Goaccess Charts enables you to easily forward to your websites running at home or otherwise, including free SSL, without having to know too much about Nginx or Letsencrypt.  Please see the install document at https://github.com/pi-hosted/pi-hosted/tree/master/docs installing the template",
@@ -6934,7 +6934,7 @@
         {
             "categories": [
                 "Proxy",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "Nginx Proxy Manager v2 with Sqlite enables you to easily forward to your websites running at home or otherwise, including free SSL, without having to know too much about Nginx or Letsencrypt.  Please see the install document at https://github.com/pi-hosted/pi-hosted/tree/master/docs installing the template",
@@ -6983,7 +6983,7 @@
         {
             "categories": [
                 "Proxy",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "[DEVEL] Not ready for production.  Nginx Proxy Manager v3 Develop enables you to easily forward to your websites running at home or otherwise, including free SSL, without having to know too much about Nginx or Letsencrypt.  Please see the install document at https://github.com/pi-hosted/pi-hosted/tree/master/docs installing the template",
@@ -7028,7 +7028,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Web",
                 "Lissy93"
             ],
@@ -7050,7 +7050,7 @@
             "categories": [
                 "Other",
                 "Web",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.  It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-click.",
@@ -7152,7 +7152,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "The purpose of NUT Server is to monitor a UPS attached device",
@@ -7209,7 +7209,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "OctoPrint is an open source 3D printer controller application, which provides a web interface for the connected printers.",
@@ -7252,7 +7252,7 @@
         {
             "categories": [
                 "Management",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "TP-Link Omada is a software-defined network solution. The EAP Controller is used to manage multiple EAPs. Raspberry Pi 1 and Zero are not supported.",
@@ -7297,7 +7297,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "Organizr allows you to setup Tabs that will be loaded all in one webpage. You can then work on your server with ease.",
@@ -7406,7 +7406,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "Passbolt is a free and open source password manager designed for collaboration. With Passbolt you can securely generate, store, manage and monitor your team credentials. Get access to all of your logins and passwords from multiple browsers or even your mobile phone.",
@@ -7524,7 +7524,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "PGAdmin is a web-based GUI tool used to interact with the Postgres database sessions, both locally and remote servers as well. You can use PGAdmin to perform any sort of database administration required for a Postgres database.",
@@ -7577,7 +7577,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "A Linux network-level advertisement and Internet tracker blocking application which acts as a DNS sinkhole.",
@@ -7611,7 +7611,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "A Linux network-level advertisement and Internet tracker blocking application which acts as a DNS sinkhole with both DoH (DNS over HTTPS) and DoT (DNS over TLS) clients.",
@@ -7645,7 +7645,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "A Linux network-level advertisement and Internet tracker blocking application which acts as a DNS sinkhole. This version has Ubound software installed on it so you don't need to rely on external DNS providers. When the installation is complete, navigate to your.ip.goes.here:1010/admin. Follow the article <a href='https://medium.com/@niktrix/getting-rid-of-systemd-resolved-consuming-port-53-605f0234f32f'>here</a>",
@@ -7755,7 +7755,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "PostgreSQL, also known as Postgres, is a free and open-source relational database management system emphasizing extensibility and SQL compliance.",
@@ -7804,7 +7804,7 @@
             "categories": [
                 "Cloud",
                 "Productivity",
-                "Tools",
+                "Tool",
                 "Web",
                 "Lissy93"
             ],
@@ -7847,7 +7847,7 @@
         },
         {
             "categories": [
-                "Downloaders",
+                "Downloader",
                 "Lissy93"
             ],
             "description": "A docker image with qBittorrent and the Flood UI, also optional WireGuard VPN support. See the official documentation for WireGuard VPN support at https://hotio.dev/containers/qflood/",
@@ -7904,8 +7904,8 @@
         },
         {
             "categories": [
-                "Monitor",
-                "Tools",
+                "Monitoring",
+                "Tool",
                 "Lissy93"
             ],
             "description": "Monitor your Raspberry Pi and Dockers using Grafana developed by oijkn. Please download grafana configs from his git https://github.com/oijkn/Docker-Raspberry-PI-Monitoring",
@@ -7935,7 +7935,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "A remote desktop software, the open source TeamViewer alternative, works out of the box, no configuration required. You have full control of your data, with no concerns about security.",
@@ -7980,7 +7980,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "command": "",
@@ -8046,7 +8046,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "Open-Source Privacy-respecting metasearch engine",
@@ -8084,7 +8084,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "Shiori is a simple bookmarks manager written in Go language. Intended as a simple clone of Pocket. You can use it as command line application or as web application.",
@@ -8110,7 +8110,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "Snippet Box is a simple self-hosted app for organizing your code snippets.",
@@ -8135,7 +8135,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Web",
                 "Other",
                 "Lissy93"
@@ -8169,7 +8169,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Web",
                 "Lissy93"
             ],
@@ -8228,7 +8228,7 @@
         },
         {
             "categories": [
-                "Monitor",
+                "Monitoring",
                 "Other",
                 "Lissy93"
             ],
@@ -8270,7 +8270,7 @@
         {
             "categories": [
                 "Other",
-                "Vpn",
+                "VPN",
                 "Lissy93"
             ],
             "command": "tailscale up --authkey=$AUTH_KEY",
@@ -8306,7 +8306,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "A unique, non-linear notebook wiki.",
@@ -8333,7 +8333,7 @@
             "categories": [
                 "Proxy",
                 "Security",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "Cloud-Native Networking Stack That Just Works.",
@@ -8373,8 +8373,8 @@
         {
             "categories": [
                 "Other",
-                "Vpn",
-                "Tools",
+                "VPN",
+                "Tool",
                 "Lissy93"
             ],
             "description": "This container contains OpenVPN and Transmission with a configuration\nwhere Transmission is running only when OpenVPN has an active tunnel.\nIt bundles configuration files for many popular VPN providers to make the setup easier.",
@@ -8453,8 +8453,8 @@
         {
             "categories": [
                 "Other",
-                "Vpn",
-                "Tools",
+                "VPN",
+                "Tool",
                 "Lissy93"
             ],
             "description": "This container contains OpenVPN and Transmission with a configuration\nwhere Transmission is running only when OpenVPN has an active tunnel.\nIt bundles configuration files for many popular VPN providers to make the setup easier.",
@@ -8532,7 +8532,7 @@
         },
         {
             "categories": [
-                "Cctv",
+                "CCTV",
                 "Lissy93"
             ],
             "description": "UniFi Video is a powerful and flexible, integrated IP video management surveillance system designed to work with Ubiquiti\u2019s UniFi Video Camera product line. UniFi Video has an intuitive, configurable, and feature\u2011packed user interface with advanced features such as motion detection, auto\u2011discovery, user\u2011level security, storage management, reporting, and mobile device support.",
@@ -8591,7 +8591,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "Unmanic is a simple tool for optimising your file library. You can use it to convert your files into a single, uniform format, manage file movements based on timestamps, or execute custom commands against a file based on its file size.",
@@ -8637,7 +8637,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "It is a self-hosted monitoring tool like 'Uptime Robot'.",
@@ -8705,7 +8705,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "This is a Bitwarden server API implementation written in Rust compatible with upstream Bitwarden clients*, perfect for self-hosted deployment where running the official resource-heavy service might not be ideal..",
@@ -8732,7 +8732,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "This is a replacement for Microsoft's KMS server.",
@@ -8752,7 +8752,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Maintenance",
                 "Lissy93"
             ],
@@ -8777,7 +8777,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "Self-hosted, ad-free, privacy-respecting Google metasearch engine.",
@@ -8803,7 +8803,7 @@
         {
             "categories": [
                 "Other",
-                "Vpn",
+                "VPN",
                 "Lissy93"
             ],
             "description": "Fast VPN Server with easy to use User Interface",
@@ -8894,7 +8894,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "A web interface for managing docker containers with an emphasis on templating to provide 1 click deployments. Think of it like a decentralized app store for servers that anyone can make packages for.",
@@ -8981,7 +8981,7 @@
         {
             "categories": [
                 "Other",
-                "Downloaders",
+                "Downloader",
                 "Lissy93"
             ],
             "description": "YoutubeDL-Material is a Material Design frontend for youtube-dl. It's coded using Angular 9 for the frontend, and Node.js on the backend.",
@@ -9025,7 +9025,7 @@
             "title": "Immich {shmolf} (lissy93)",
             "name": "immich",
             "categories": [
-                "Photos",
+                "Photography",
                 "Backup",
                 "Lissy93"
             ],
@@ -9194,8 +9194,8 @@
             "title": "Stirling PDF {shmolf} (lissy93)",
             "name": "stirling-pdf",
             "categories": [
-                "Tools",
-                "Pdf",
+                "Tool",
+                "PDF Tools",
                 "Lissy93"
             ],
             "description": "Your locally hosted one-stop-shop for all your PDF needs.",
@@ -9294,7 +9294,7 @@
             "title": "Cockpit {shmolf} (lissy93)",
             "name": "cockpit-cms",
             "categories": [
-                "Cms",
+                "CMS",
                 "Lissy93"
             ],
             "description": "Cockpit is a headless CMS with an API-first approach that puts content first.",
@@ -9313,7 +9313,7 @@
             "title": "Asciinema {shmolf} (lissy93)",
             "name": "asciinema",
             "categories": [
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "Self-hosted terminal recording and playback",
@@ -9439,7 +9439,7 @@
             "title": "Httpd (lissy93)",
             "description": "Open-source HTTP server",
             "categories": [
-                "Webserver",
+                "Web",
                 "Lissy93"
             ],
             "platform": "linux",
@@ -9559,7 +9559,7 @@
             "note": "Default username is <b>root</b>. Check the <a href=\"https://docs.gitlab.com/ee/install/docker.html\" target=\"_blank\">GitLab documentation</a> to get started.",
             "categories": [
                 "Development",
-                "Projectmanagement",
+                "Project management",
                 "Lissy93"
             ],
             "platform": "linux",
@@ -9683,7 +9683,7 @@
             "title": "Solr (lissy93)",
             "description": "Open-source enterprise search platform",
             "categories": [
-                "Searchengine",
+                "Search",
                 "Lissy93"
             ],
             "platform": "linux",
@@ -9797,7 +9797,7 @@
             "title": "Joomla (lissy93)",
             "description": "Another free and open-source CMS",
             "categories": [
-                "Cms",
+                "CMS",
                 "Lissy93"
             ],
             "platform": "linux",
@@ -9829,7 +9829,7 @@
             "title": "Drupal (lissy93)",
             "description": "Open-source content management framework",
             "categories": [
-                "Cms",
+                "CMS",
                 "Lissy93"
             ],
             "platform": "linux",
@@ -9851,7 +9851,7 @@
             "description": "A free and open-source CMS built on top of Zope",
             "note": "Default user and password are admin/admin",
             "categories": [
-                "Cms",
+                "CMS",
                 "Lissy93"
             ],
             "platform": "linux",
@@ -9872,7 +9872,7 @@
             "title": "Sematext Docker Agent (lissy93)",
             "description": "Collect logs, metrics and docker events",
             "categories": [
-                "Logmanagement",
+                "Log Management",
                 "Monitoring",
                 "Lissy93"
             ],
@@ -9972,7 +9972,7 @@
             "title": "Jenkins (lissy93)",
             "description": "Open-source continuous integration tool",
             "categories": [
-                "Continuousintegration",
+                "CI",
                 "Lissy93"
             ],
             "platform": "linux",
@@ -9995,7 +9995,7 @@
             "description": "Open-source project management tool",
             "note": "Default user and password are admin/admin",
             "categories": [
-                "Projectmanagement",
+                "Project management",
                 "Lissy93"
             ],
             "platform": "linux",
@@ -10017,7 +10017,7 @@
             "description": "A web file manager",
             "note": "Default credentials: admin/admin",
             "categories": [
-                "Filesystem",
+                "Files",
                 "Storage",
                 "Lissy93"
             ],
@@ -10067,7 +10067,7 @@
             "title": "ContentBox (lissy93)",
             "description": "Open-source modular CMS",
             "categories": [
-                "Cms",
+                "CMS",
                 "Lissy93"
             ],
             "platform": "linux",
@@ -10109,7 +10109,7 @@
             "title": "Dokku (lissy93)",
             "description": "Dokku setup as a container",
             "categories": [
-                "Paas",
+                "PaaS",
                 "Lissy93"
             ],
             "platform": "linux",
@@ -10460,7 +10460,7 @@
             "title": "Microsoft OMS Agent (lissy93)",
             "description": "Microsoft Operations Management Suite Linux agent.",
             "categories": [
-                "Ops",
+                "OPS",
                 "Lissy93"
             ],
             "platform": "linux",
@@ -10646,8 +10646,8 @@
             "logo": "https://mediadepot.github.io/templates/img/baserow.png",
             "image": "baserow/baserow:1.22.3",
             "categories": [
-                "Downloaders",
-                "Tools",
+                "Downloader",
+                "Tool",
                 "Lissy93"
             ],
             "ports": [
@@ -10694,7 +10694,7 @@
             "logo": "https://mediadepot.github.io/templates/img/cardigann.png",
             "image": "linuxserver/cardigann:latest",
             "categories": [
-                "Downloaders",
+                "Downloader",
                 "Lissy93"
             ],
             "ports": [
@@ -10748,9 +10748,9 @@
             "logo": "https://mediadepot.github.io/templates/img/changedetection.jpg",
             "image": "ghcr.io/dgtlmoon/changedetection.io:latest",
             "categories": [
-                "Documents",
-                "Networkother",
-                "Tools",
+                "Documentation",
+                "Network",
+                "Tool",
                 "Lissy93"
             ],
             "ports": [
@@ -10791,9 +10791,9 @@
             "logo": "https://mediadepot.github.io/templates/img/cloudcmd-logo.png",
             "image": "coderaiser/cloudcmd",
             "categories": [
-                "Documents",
-                "Networkother",
-                "Tools",
+                "Documentation",
+                "Network",
+                "Tool",
                 "Lissy93"
             ],
             "ports": [
@@ -10917,9 +10917,9 @@
             "logo": "https://mediadepot.github.io/templates/img/filebrowser-icon.png",
             "image": "silverwind/droppy:latest",
             "categories": [
-                "Tools",
-                "Networkweb",
-                "Networkother",
+                "Tool",
+                "Network",
+                "Network",
                 "Lissy93"
             ],
             "ports": [
@@ -11017,9 +11017,9 @@
             "description": "access your files anywhere through self-hosted secure cloud storage, file backup and sharing for your photos, videos, files and more.",
             "logo": "https://mediadepot.github.io/templates/img/filerun-logo.png",
             "categories": [
-                "Documents",
-                "Networkother",
-                "Tools",
+                "Documentation",
+                "Network",
+                "Tool",
                 "Lissy93"
             ],
             "env": [],
@@ -11037,9 +11037,9 @@
             "logo": "https://mediadepot.github.io/templates/img/plex-icon.png",
             "image": "housewrecker/gaps:latest",
             "categories": [
-                "Tools",
-                "Networkweb",
-                "Networkother",
+                "Tool",
+                "Network",
+                "Network",
                 "Lissy93"
             ],
             "ports": [
@@ -11081,9 +11081,9 @@
             "logo": "https://mediadepot.github.io/templates/img/healthchecks-logo.png",
             "image": "linuxserver/healthchecks",
             "categories": [
-                "Tools",
-                "Networkweb",
-                "Networkother",
+                "Tool",
+                "Network",
+                "Network",
                 "Statusstable",
                 "Lissy93"
             ],
@@ -11182,9 +11182,9 @@
             "description": "Klaxon is a free, quick to set up and easy to use robot that checks websites regularly so you don't have to.",
             "logo": "https://mediadepot.github.io/templates/img/klaxon-logo.png",
             "categories": [
-                "Documents",
-                "Networkother",
-                "Tools",
+                "Documentation",
+                "Network",
+                "Tool",
                 "Lissy93"
             ],
             "env": [
@@ -11333,7 +11333,7 @@
             "logo": "https://mediadepot.github.io/templates/img/logzio-icon.png",
             "image": "logzio/docker-collector-logs",
             "categories": [
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "ports": [],
@@ -11372,7 +11372,7 @@
             "logo": "https://mediadepot.github.io/templates/img/logzio-icon.png",
             "image": "logzio/docker-collector-metrics",
             "categories": [
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "ports": [],
@@ -11421,8 +11421,8 @@
             "description": "Mayan EDMS is an electronic vault for your documents.",
             "logo": "https://mediadepot.github.io/templates/img/mayan-logo.png",
             "categories": [
-                "Documents",
-                "Tools",
+                "Documentation",
+                "Tool",
                 "Lissy93"
             ],
             "repository": {
@@ -11439,9 +11439,9 @@
             "logo": "https://mediadepot.github.io/templates/img/netbootxyz.jpg",
             "image": "linuxserver/netbootxyz:latest",
             "categories": [
-                "Downloaders",
-                "Networkother",
-                "Tools",
+                "Downloader",
+                "Network",
+                "Tool",
                 "Lissy93"
             ],
             "ports": [
@@ -11505,10 +11505,10 @@
             "logo": "https://mediadepot.github.io/templates/img/overseerr.png",
             "image": "lscr.io/linuxserver/overseerr:latest",
             "categories": [
-                "Downloaders",
-                "Networkother",
-                "Mediaappvideo",
-                "Tools",
+                "Downloader",
+                "Network",
+                "Media",
+                "Tool",
                 "Lissy93"
             ],
             "ports": [
@@ -11573,9 +11573,9 @@
             "image": "linuxserver/plex:latest",
             "network": "host",
             "categories": [
-                "Mediaservervideo",
-                "Mediaservermusic",
-                "Mediaserverphotos",
+                "Media",
+                "Media",
+                "Media",
                 "Lissy93"
             ],
             "privileged": true,
@@ -11644,8 +11644,8 @@
             "description": "A python script that syncs the movies, shows and ratings between trakt and Plex",
             "logo": "https://mediadepot.github.io/templates/img/plex-icon.png",
             "categories": [
-                "Documents",
-                "Tools",
+                "Documentation",
+                "Tool",
                 "Lissy93"
             ],
             "repository": {
@@ -11662,10 +11662,10 @@
             "logo": "https://mediadepot.github.io/templates/img/plex-requests-logo.jpeg",
             "image": "linuxserver/plexrequests:latest",
             "categories": [
-                "Downloaders",
-                "Networkother",
-                "Mediaappvideo",
-                "Tools",
+                "Downloader",
+                "Network",
+                "Media",
+                "Tool",
                 "Lissy93"
             ],
             "ports": [
@@ -11724,8 +11724,8 @@
             "logo": "https://mediadepot.github.io/templates/img/prowlarr-banner.png",
             "image": "ghcr.io/linuxserver/prowlarr:develop",
             "categories": [
-                "Downloaders",
-                "Tools",
+                "Downloader",
+                "Tool",
                 "Lissy93"
             ],
             "ports": [
@@ -11791,7 +11791,7 @@
             "image": "stilliard/pure-ftpd:hardened",
             "network": "host",
             "categories": [
-                "Networkother",
+                "Network",
                 "Utilities",
                 "Lissy93"
             ],
@@ -11968,8 +11968,8 @@
             "logo": "https://mediadepot.github.io/templates/img/readarr-logo.png",
             "image": "ghcr.io/linuxserver/readarr:nightly",
             "categories": [
-                "Downloaders",
-                "Mediaappbooks",
+                "Downloader",
+                "Media",
                 "Lissy93"
             ],
             "ports": [
@@ -12047,8 +12047,8 @@
             "categories": [
                 "Backup",
                 "Cloud",
-                "Networkother",
-                "Tools",
+                "Network",
+                "Tool",
                 "Lissy93"
             ],
             "ports": [],
@@ -12118,8 +12118,8 @@
             "logo": "https://mediadepot.github.io/templates/img/sickrage-icon.png",
             "image": "linuxserver/sickrage:latest",
             "categories": [
-                "Downloaders",
-                "Mediaappvideo",
+                "Downloader",
+                "Media",
                 "Lissy93"
             ],
             "ports": [
@@ -12190,7 +12190,7 @@
             "logo": "https://mediadepot.github.io/templates/img/firefox-logo.png",
             "image": "mozilla/syncserver:latest",
             "categories": [
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "ports": [
@@ -12262,7 +12262,7 @@
             "logo": "https://mediadepot.github.io/templates/img/urlwatch.png",
             "image": "mediadepot/urlwatch:master",
             "categories": [
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "ports": [
@@ -12309,7 +12309,7 @@
             "image": "delfer/alpine-ftp-server",
             "network": "host",
             "categories": [
-                "Networkother",
+                "Network",
                 "Utilities",
                 "Lissy93"
             ],
@@ -12391,7 +12391,7 @@
             "logo": "https://mediadepot.github.io/templates/img/wizarr-logo.png",
             "image": "ghcr.io/wizarrrr/wizarr",
             "categories": [
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "ports": [
@@ -13580,7 +13580,7 @@
             "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/ddclient/config</p>",
             "description": "[Ddclient](https://github.com/ddclient/ddclient) is a Perl client used to update dynamic DNS entries for accounts on Dynamic DNS Network Service Provider. It was originally written by Paul Burry and is now mostly by wimpunk. It has the capability to update more than just dyndns and it can fetch your WAN-ipaddress in a few different ways.",
             "categories": [
-                "Networking",
+                "Network",
                 "Lissy93"
             ],
             "platform": "linux",
@@ -13942,7 +13942,7 @@
             "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/doublecommander/config<br>mkdir -p /volume1/docker/doublecommander/data</p>",
             "description": "[Double Commander](https://doublecmd.sourceforge.io/) is a free cross platform open source file manager with two panels side by side. It is inspired by Total Commander and features some new ideas.",
             "categories": [
-                "Filemanagement",
+                "File Management",
                 "Lissy93"
             ],
             "platform": "linux",
@@ -13992,7 +13992,7 @@
             "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/emby/config<br>mkdir -p /volume1/docker/emby/data/tvshows<br>mkdir -p /volume1/docker/emby/data/movies<br></p>",
             "description": "[Emby](https://emby.media/) organizes video, music, live TV, and photos from personal media libraries and streams them to smart TVs, streaming boxes and mobile devices. This container is packaged as a standalone emby Media Server.",
             "categories": [
-                "Homemedia",
+                "Media",
                 "Lissy93"
             ],
             "platform": "linux",
@@ -14983,7 +14983,7 @@
             "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/grav/config</p>",
             "description": "[Grav](https://github.com/getgrav/grav/) is a Fast, Simple, and Flexible, file-based Web-platform.",
             "categories": [
-                "Webplatform",
+                "Web",
                 "Lissy93"
             ],
             "platform": "linux",
@@ -17309,7 +17309,7 @@
             "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/phpmyadmin/config</p>",
             "description": "[Phpmyadmin](https://github.com/phpmyadmin/phpmyadmin/) is a free software tool written in PHP, intended to handle the administration of MySQL over the Web. phpMyAdmin supports a wide range of operations on MySQL and MariaDB.",
             "categories": [
-                "Systemtools",
+                "System",
                 "Lissy93"
             ],
             "platform": "linux",
@@ -17491,7 +17491,7 @@
             "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/plex-meta-manager/config</p>",
             "description": "[Plex-meta-manager](https://github.com/Kometa-Team/Kometa) is a Python 3 script that can be continuously run using YAML configuration files to update on a schedule the metadata of the movies, shows, and collections in your libraries as well as automatically build collections based on various methods all detailed in the wiki.",
             "categories": [
-                "Mediamanagement",
+                "Media",
                 "Lissy93"
             ],
             "platform": "linux",
@@ -18853,7 +18853,7 @@
             "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/syslog-ng/config<br></p>",
             "description": "[syslog-ng](https://www.syslog-ng.com/products/open-source-log-management/) allows you to flexibly collect, parse, classify, rewrite and correlate logs from across your infrastructure and store or route them to log analysis tools.",
             "categories": [
-                "Systemtools",
+                "System",
                 "Lissy93"
             ],
             "platform": "linux",
@@ -19686,7 +19686,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "This is a Bitwarden server API implementation written in Rust compatible with upstream Bitwarden clients*, perfect for self-hosted deployment where running the official resource-heavy service might not be ideal..",
@@ -19712,7 +19712,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "ave recipes in seconds with plain text formatting and create beatiful recipe pages with automated ease.",
@@ -19738,7 +19738,7 @@
             "categories": [
                 "Cloud",
                 "Productivity",
-                "Tools",
+                "Tool",
                 "Other",
                 "Web",
                 "Lissy93"
@@ -19835,7 +19835,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Web",
                 "Lissy93"
             ],
@@ -19911,7 +19911,7 @@
             "title": "Magento 2 (lissy93)",
             "description": "Open-source e-commerce platform",
             "categories": [
-                "Cms",
+                "CMS",
                 "Lissy93"
             ],
             "platform": "linux",
@@ -19997,7 +19997,7 @@
         {
             "categories": [
                 "Proxy",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "Nginx Proxy Manager enables you to easily forward to your websites running at home or otherwise, including free SSL, without having to know too much about Nginx or Letsencrypt.",
@@ -20037,7 +20037,7 @@
             "title": "Odoo (lissy93)",
             "description": "Open-source business apps",
             "categories": [
-                "Projectmanagement",
+                "Project management",
                 "Lissy93"
             ],
             "platform": "linux",
@@ -20119,7 +20119,7 @@
             "title": "Plesk (lissy93)",
             "description": "WebOps platform and hosting control panel",
             "categories": [
-                "Cms",
+                "CMS",
                 "Lissy93"
             ],
             "platform": "linux",
@@ -20140,7 +20140,7 @@
             "categories": [
                 "Email",
                 "Productivity",
-                "Tools",
+                "Tool",
                 "Other",
                 "Lissy93"
             ],
@@ -20167,7 +20167,7 @@
         },
         {
             "categories": [
-                "Messenger",
+                "Messaging",
                 "Lissy93"
             ],
             "description": "Quassel IRC is a modern, cross-platform, distributed IRC client, meaning that one (or multiple) client(s) can attach to and detach from a central core -- much like the popular combination of screen and a text-based IRC client such as WeeChat, but graphical. Blowfish support and optional web-ui included.",
@@ -20204,7 +20204,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "A one-of-a-kind resume builder that's not out to get your data. Completely secure, customizable, portable, open-source and free forever.",
@@ -20229,7 +20229,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "Self-hosted snippet manager.",
@@ -20291,8 +20291,8 @@
         {
             "categories": [
                 "Other",
-                "Vpn",
-                "Tools",
+                "VPN",
+                "Tool",
                 "Lissy93"
             ],
             "description": "This container contains OpenVPN and Transmission with a configuration\nwhere Transmission is running only when OpenVPN has an active tunnel.\nIt bundles configuration files for many popular VPN providers to make the setup easier.",
@@ -20591,7 +20591,7 @@
         },
         {
             "categories": [
-                "Authenticationserver",
+                "Authentication",
                 "Lissy93"
             ],
             "description": "Authentik is an open-source Identity Provider focused on flexibility and versatility",
@@ -20624,7 +20624,7 @@
         },
         {
             "categories": [
-                "Managementutilityserver",
+                "Management",
                 "Lissy93"
             ],
             "description": "Remote Management Server",
@@ -20668,7 +20668,7 @@
         },
         {
             "categories": [
-                "Dashboardserver",
+                "Dashboard",
                 "Lissy93"
             ],
             "description": "Freeboard is a turn-key HTML-based 'engine' for dashboards. Besides a nice looking layout engine, it provides a plugin architecture for creating datasources (which fetch data) and widgets (which display data)\u2014 freeboard then does all the work to connect the two together.",
@@ -20689,7 +20689,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "A self-hosted bookmark management tool.",
@@ -20710,7 +20710,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "wallabag is a web application allowing you to save web pages for later reading. Click, save and read it when you want.",
@@ -20731,7 +20731,7 @@
         },
         {
             "categories": [
-                "Networkserver",
+                "Network",
                 "Lissy93"
             ],
             "description": "WIFI / LAN intruder detector",
@@ -20802,7 +20802,7 @@
         },
         {
             "categories": [
-                "Smarthome",
+                "Smart Home",
                 "Lissy93"
             ],
             "description": "A complete and local NVR designed for Home Assistant with AI object detection. Uses OpenCV and Tensorflow to perform realtime object detection locally for IP cameras.",
@@ -20819,7 +20819,7 @@
         },
         {
             "categories": [
-                "Dashboardserver",
+                "Dashboard",
                 "Lissy93"
             ],
             "description": "Fenrus is a Node application and requires NodeJS to run. Once NodeJS is installed you can run Fenrus",
@@ -20852,7 +20852,7 @@
         },
         {
             "categories": [
-                "Libraryserver",
+                "Library",
                 "Lissy93"
             ],
             "description": "Audiobook Server",
@@ -20900,7 +20900,7 @@
         },
         {
             "categories": [
-                "Familyappserver",
+                "Family",
                 "Lissy93"
             ],
             "description": "Vikunja is a self hosted, open-source to-do list application",
@@ -20929,7 +20929,7 @@
         },
         {
             "categories": [
-                "Mediaserver",
+                "Media",
                 "Lissy93"
             ],
             "description": "Helps you organize your *Ahem* ...more MATURE Media material....",
@@ -20953,7 +20953,7 @@
         },
         {
             "categories": [
-                "Chatserver",
+                "Chat",
                 "Lissy93"
             ],
             "description": "Rocket.Chat Server",
@@ -20999,7 +20999,7 @@
         },
         {
             "categories": [
-                "Dashboardserver",
+                "Dashboard",
                 "Lissy93"
             ],
             "description": "MagicMirror2 Server",
@@ -21041,7 +21041,7 @@
         },
         {
             "categories": [
-                "Managementutilityserver",
+                "Management",
                 "Lissy93"
             ],
             "description": "draw.io (formerly Diagramly) is free online diagram software. You can use it as a flowchart maker, network diagram software, to create UML online, as an ER diagram tool, to design database schema, to build BPMN online, as a circuit diagram maker, and more. draw.io can import .vsdx, Gliffy\u2122 and Lucidchart\u2122 files.",
@@ -21059,7 +21059,7 @@
         },
         {
             "categories": [
-                "Musicserver",
+                "Music",
                 "Lissy93"
             ],
             "description": "Navidrome is an open source web-based music collection server and streamer. It gives you freedom to listen to your music collection from any browser or mobile device. It's like your personal Spotify!",
@@ -21092,7 +21092,7 @@
         },
         {
             "categories": [
-                "Dashboardserver",
+                "Dashboard",
                 "Lissy93"
             ],
             "description": "Flame is self-hosted startpage for your server. Its design is inspired (heavily) by SUI. Flame is very easy to setup and use. With built-in editors, it allows you to setup your very own application hub in no time - no file editing necessary.",
@@ -21116,7 +21116,7 @@
         },
         {
             "categories": [
-                "Familyappserver",
+                "Family",
                 "Lissy93"
             ],
             "description": "ownCloud is a self-hosted file sync and share server. It provides access to your data through a web interface, sync clients or WebDAV while providing a platform to view, sync and share across devices easily\u2014all under your control. ownCloud\u2019s open architecture is extensible via a simple but powerful API for applications and plugins and it works with any storage.",
@@ -21170,7 +21170,7 @@
         },
         {
             "categories": [
-                "Mediaserver",
+                "Media",
                 "Lissy93"
             ],
             "description": "Petio is a third party companion app available to Plex server owners to allow their users to request, review and discover content.",
@@ -21279,7 +21279,7 @@
         {
             "type": 1,
             "categories": [
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "title": "Endlessh (lissy93)",
@@ -21354,7 +21354,7 @@
         {
             "type": 1,
             "categories": [
-                "Mediaserver",
+                "Media",
                 "Lissy93"
             ],
             "title": "Kanzi (lissy93)",
@@ -21411,7 +21411,7 @@
         {
             "type": 1,
             "categories": [
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "title": "Nano (lissy93)",
@@ -21500,7 +21500,7 @@
         {
             "type": 1,
             "categories": [
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "title": "Nano-wallet (lissy93)",
@@ -21519,7 +21519,7 @@
         {
             "type": 1,
             "categories": [
-                "Familyappserver",
+                "Family",
                 "Lissy93"
             ],
             "title": "Paperless-ng (lissy93)",
@@ -21574,7 +21574,7 @@
         {
             "type": 1,
             "categories": [
-                "Familyappserver",
+                "Family",
                 "Lissy93"
             ],
             "title": "Papermerge (lissy93)",
@@ -21633,7 +21633,7 @@
             "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/pixapop/config<br>mkdir -p /volume1/docker/pixapop/photos</p>",
             "description": "[Pixapop](https://github.com/bierdok/pixapop) is an open-source single page application to view your photos in the easiest way possible.",
             "categories": [
-                "Photos",
+                "Photography",
                 "Lissy93"
             ],
             "platform": "linux",
@@ -21689,8 +21689,8 @@
         },
         {
             "categories": [
-                "Vpn",
-                "Tools",
+                "VPN",
+                "Tool",
                 "Other",
                 "Web",
                 "Lissy93"
@@ -21732,8 +21732,8 @@
         {
             "categories": [
                 "Other",
-                "Vpn",
-                "Tools",
+                "VPN",
+                "Tool",
                 "Lissy93"
             ],
             "description": "This container contains OpenVPN and Deluge with a configuration where Deluge is running only when OpenVPN has an active tunnel. It bundles configuration files for many popular VPN providers to make the setup easier.",
@@ -21809,7 +21809,7 @@
         {
             "categories": [
                 "Web",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "Git with a cup of tea! Painless self-hosted all-in-one software development service, including Git hosting, code review, team collaboration, package registry and CI/CD.",
@@ -21856,7 +21856,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "Jellyseer is a free and open source software application for managing requests for your media library.",
@@ -21893,7 +21893,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "Passky is a simple, modern, lightweight, open-source and secure password manager.",
@@ -21912,7 +21912,7 @@
         {
             "categories": [
                 "Other",
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "Passky is a simple, modern, lightweight, open-source and secure password manager.",
@@ -21948,7 +21948,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Other",
                 "Lissy93"
             ],
@@ -22039,7 +22039,7 @@
         },
         {
             "categories": [
-                "Feedreader",
+                "Feed Reader",
                 "Lissy93"
             ],
             "description": "Miniflux is a minimalist and opinionated feed reader.",
@@ -22056,7 +22056,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "Koillection is a self-hosted collection manager created to keep track of physical (mostly) collections of any kind like books, DVDs, stamps, games..",
@@ -22089,7 +22089,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "Eufy Security Web Socket. Edit container and add username & password.",
@@ -22142,7 +22142,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "Teleport allows engineers and security professionals to unify access for SSH servers, Kubernetes clusters, web applications, and databases across all environments.",
@@ -22256,7 +22256,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "Your Budgets, Calendars, Meals, Inventory, Tasks, and so much more in one simple app.For everyone in your household.On all of your devices.In the cloud or self-hosted",
@@ -22273,7 +22273,7 @@
         },
         {
             "categories": [
-                "Messenger",
+                "Messaging",
                 "Lissy93"
             ],
             "description": "Ferdi is a messaging browser that allows you to combine your favourite messaging services into one application",
@@ -22327,7 +22327,7 @@
         },
         {
             "categories": [
-                "Downloaders",
+                "Downloader",
                 "Lissy93"
             ],
             "description": "A perfect Aria2 Docker image. Out of the box, just add download tasks and don't need to think about anything else.",
@@ -22344,7 +22344,7 @@
         },
         {
             "categories": [
-                "Downloaders",
+                "Downloader",
                 "Lissy93"
             ],
             "description": "A docker image with qBittorrent and the Flood UI, also optional WireGuard VPN support.",
@@ -22361,8 +22361,8 @@
         },
         {
             "categories": [
-                "Photos",
-                "Ai",
+                "Photography",
+                "AI",
                 "Lissy93"
             ],
             "description": "PhotoPrism is an AI-powered app for browsing, organizing & sharing your photo collection. It makes use of the latest technologies to tag and find pictures automatically without getting in your way.| Copy as Custom stack and EDIT environment variables.",
@@ -22379,8 +22379,8 @@
         },
         {
             "categories": [
-                "Photos",
-                "Ai",
+                "Photography",
+                "AI",
                 "Lissy93"
             ],
             "description": "Immich is a high performance self-hosted photo and video backup solution.",
@@ -22397,7 +22397,7 @@
         },
         {
             "categories": [
-                "Filebrowsers",
+                "File Browsers",
                 "Lissy93"
             ],
             "description": "Pingvin Share is self-hosted file sharing platform and an alternative for WeTransfer.",
@@ -22414,7 +22414,7 @@
         },
         {
             "categories": [
-                "Pdftools",
+                "PDF Tools",
                 "Productivity",
                 "Lissy93"
             ],
@@ -22450,7 +22450,7 @@
         {
             "categories": [
                 "Productivity",
-                "Timerelated",
+                "Time Tracking",
                 "Lissy93"
             ],
             "description": "Open source time-tracker with an interactive user experience and powerful reporting.",
@@ -22484,7 +22484,7 @@
         },
         {
             "categories": [
-                "Filebrowsers",
+                "File Browsers",
                 "Lissy93"
             ],
             "description": "Chibisafe is a modern and self-hosted take on file uploading services that can handle anything you throw at it thanks to it's robust and fast API, chunked uploads support and more.",
@@ -22518,7 +22518,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Lissy93"
             ],
             "description": "The recipe manager that allows you to manage your ever growing collection of digital recipes.",
@@ -22621,7 +22621,7 @@
         },
         {
             "categories": [
-                "Timetracking",
+                "Time Tracking",
                 "Lissy93"
             ],
             "description": "Traggo is a tag-based time tracking tool. In Traggo there are no tasks, only tagged time spans.",
@@ -22844,7 +22844,7 @@
         },
         {
             "categories": [
-                "Cms",
+                "CMS",
                 "Lissy93"
             ],
             "description": "Silverstripe CMS is a free and open source Content Management System (CMS) and Framework for creating and maintaining websites and web applications.",
@@ -22913,7 +22913,7 @@
         {
             "categories": [
                 "Productivity",
-                "Lowcode",
+                "Low Code",
                 "Lissy93"
             ],
             "description": "OpnForm is an open-source form builder. It's an alternative to products like Typeform, JotForm, Tally etc.",
@@ -22931,7 +22931,7 @@
         {
             "categories": [
                 "Automation",
-                "Ai",
+                "AI",
                 "Lissy93"
             ],
             "description": "Automate your marketing, sales and operations",
@@ -22999,7 +22999,7 @@
         },
         {
             "categories": [
-                "Projectmanagement",
+                "Project management",
                 "Productivity",
                 "Lissy93"
             ],
@@ -23017,7 +23017,7 @@
         },
         {
             "categories": [
-                "Linksharing",
+                "Link Sharing",
                 "Lissy93"
             ],
             "description": "The personal, minimalist, super fast, database-free, bookmarking service.",
@@ -23034,8 +23034,8 @@
         },
         {
             "categories": [
-                "Ai",
-                "Llm",
+                "AI",
+                "LLM",
                 "Lissy93"
             ],
             "description": "Open source UI visual tool to build your customized LLM flow using LangchainJS, written in Node Typescript/Javascript",
@@ -23138,7 +23138,7 @@
         },
         {
             "categories": [
-                "Downloaders",
+                "Downloader",
                 "Multimedia",
                 "Lissy93"
             ],
@@ -23174,7 +23174,7 @@
         {
             "categories": [
                 "Wiki",
-                "Knowledgebase",
+                "Knowledge Base",
                 "Lissy93"
             ],
             "description": "Documize Community is an open source, modern, self-hosted, enterprise-grade knowledge management solution.",
@@ -23191,7 +23191,7 @@
         },
         {
             "categories": [
-                "Remotecontrol",
+                "Remote Control",
                 "Lissy93"
             ],
             "description": "RPort is free remote access and remote management, now acquired by RealVNC",
@@ -23208,7 +23208,7 @@
         },
         {
             "categories": [
-                "Remotecontrol",
+                "Remote Control",
                 "Lissy93"
             ],
             "description": "Remotely is a remote control and remote scripting solution, built with .NET 6, Blazor, and SignalR Core.",
@@ -23226,7 +23226,7 @@
         {
             "categories": [
                 "Productivity",
-                "Devtools",
+                "DevTools",
                 "Lissy93"
             ],
             "description": "Tabby is an infinitely customizable cross-platform terminal app for local shells, serial, SSH and Telnet connections.",
@@ -23279,8 +23279,8 @@
         {
             "categories": [
                 "Development",
-                "Lowcode",
-                "Nocode",
+                "Low Code",
+                "Low Code",
                 "Lissy93"
             ],
             "description": "Tooljet is an Open-source low-code application development platform for building and deploying business applications.",
@@ -23299,8 +23299,8 @@
             "categories": [
                 "Productivity",
                 "Development",
-                "Lowcode",
-                "Nocode",
+                "Low Code",
+                "Low Code",
                 "Lissy93"
             ],
             "description": "Budibase allows no-code users to build apps quickly, with more functionality available with a little bit of inline code.",
@@ -23334,8 +23334,8 @@
         },
         {
             "categories": [
-                "Identitymanagement",
-                "Accessproxy",
+                "Identity Management",
+                "Access Proxy",
                 "Lissy93"
             ],
             "description": "Ory Kratos with Oathkeeper is\u00a0_the_\u00a0developer-friendly, security-hardened and battle-test Identity, User Management and Authentication system for the Cloud.",
@@ -23352,7 +23352,7 @@
         },
         {
             "categories": [
-                "Identitymanagement",
+                "Identity Management",
                 "Security",
                 "Lissy93"
             ],
@@ -23372,7 +23372,7 @@
             "categories": [
                 "Productivity",
                 "Development",
-                "Lowcode",
+                "Low Code",
                 "Lissy93"
             ],
             "description": "Appsmith (www.appsmith.com) is the first open-source low-code tool that helps developers build dashboards and admin panels very quickly.",
@@ -23508,7 +23508,7 @@
         },
         {
             "categories": [
-                "Downloaders",
+                "Downloader",
                 "Lissy93"
             ],
             "description": "Peer-to-peer file transfers in your browser",
@@ -23646,7 +23646,7 @@
             "categories": [
                 "Productivity",
                 "Development",
-                "Nocode",
+                "Low Code",
                 "Lissy93"
             ],
             "description": "Turns any MySQL, PostgreSQL, SQL Server, SQLite & MariaDB into a smart-spreadsheet.",
@@ -23663,7 +23663,7 @@
         },
         {
             "categories": [
-                "Smarthome",
+                "Smart Home",
                 "Lissy93"
             ],
             "description": "BroadlinkManager is a Flask powerd, easy to use system that hepls you to work with Broadlink Devices.",
@@ -23754,7 +23754,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Authentication",
                 "Xneo1"
             ],
@@ -23900,7 +23900,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Xneo1"
             ],
             "description": "This is a Bitwarden server API implementation written in Rust compatible with upstream Bitwarden clients*, perfect for self-hosted deployment where running the official resource-heavy service might not be ideal.",
@@ -24177,8 +24177,8 @@
         },
         {
             "categories": [
-                "Tools",
-                "Photos",
+                "Tool",
+                "Photography",
                 "Xneo1"
             ],
             "description": "Chevereto is a powerful and fast image hosting script that allows you to create your very own full featured image hosting website in just minutes. Please note that this offers only the free Chevereto version.",
@@ -24238,7 +24238,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Xneo1"
             ],
             "description": "Have recipes in seconds with plain text formatting and create beatiful recipe pages with automated ease.",
@@ -24262,7 +24262,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Xneo1"
             ],
             "description": "Code-server is VS Code running on a remote server, accessible through the browser.",
@@ -24351,7 +24351,7 @@
         },
         {
             "categories": [
-                "Downloaders",
+                "Downloader",
                 "Video",
                 "Xneo1"
             ],
@@ -24433,7 +24433,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Dashboard",
                 "Xneo1"
             ],
@@ -24459,7 +24459,7 @@
         {
             "categories": [
                 "Ftp",
-                "Tools",
+                "Tool",
                 "Xneo1"
             ],
             "description": "davos is an FTP automation tool that periodically scans given host locations for new files. It can be configured for various purposes, including listening for specific files to appear in the host location, ready for it to download and then move, if required. It also supports completion notifications as well as downstream API calls, to further the workflow.",
@@ -24529,7 +24529,7 @@
         },
         {
             "categories": [
-                "Downloaders",
+                "Downloader",
                 "Xneo1"
             ],
             "description": "Deluge is a lightweight, Free Software, cross-platform BitTorrent client providing: Full Encryption, WebUI, Plugin System, Much more...",
@@ -24571,7 +24571,7 @@
         },
         {
             "categories": [
-                "Homeautomation",
+                "Automation",
                 "Management",
                 "Xneo1"
             ],
@@ -24610,8 +24610,8 @@
         },
         {
             "categories": [
-                "Dns",
-                "Tools",
+                "DNS",
+                "Tool",
                 "Xneo1"
             ],
             "description": "Duck DNS is a free service which will point a DNS (sub domains of duckdns.org) to an IP of your choice. The service is completely free, and doesn't require reactivation or forum posts to maintain its existence.",
@@ -24652,7 +24652,7 @@
                 "Backup",
                 "Cloud",
                 "Productivity",
-                "Tools",
+                "Tool",
                 "Xneo1"
             ],
             "description": "Free backup software to store encrypted backups online, Duplicati works with standard protocols like FTP, SSH, WebDAV as well as popular services like Microsoft OneDrive, Amazon Cloud Drive and S3, Google Drive, box.com, Mega, hubiC and many others.",
@@ -24699,7 +24699,7 @@
             "categories": [
                 "Video",
                 "Music",
-                "Photos",
+                "Photography",
                 "Xneo1"
             ],
             "description": "Emby organizes video, music, live TV, and photos from personal media libraries and streams them to smart TVs, streaming boxes and mobile devices. This container is packaged as a standalone emby Media Server.",
@@ -24748,7 +24748,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Xneo1"
             ],
             "description": "Embystat is a personal web server that can calculate all kinds of statistics from your (local) Emby server. Just install this on your server and let him calculate all kinds of fun stuff.",
@@ -24773,7 +24773,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Xneo1"
             ],
             "description": "Web File Browser which can be used as a middleware or standalone app.",
@@ -24857,7 +24857,7 @@
             "categories": [
                 "Web",
                 "Books",
-                "Tools",
+                "Tool",
                 "Xneo1"
             ],
             "description": "A WebApp Comic Reader for your favorite digital comics. Reach and read your comic library from any web connected device with a modern web browser.",
@@ -24898,7 +24898,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Xneo1"
             ],
             "description": "A clientless remote desktop gateway.",
@@ -24923,7 +24923,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Finance",
                 "Xneo1"
             ],
@@ -25045,7 +25045,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Web",
                 "Dashboard",
                 "Xneo1"
@@ -25084,7 +25084,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Dashboard",
                 "Xneo1"
             ],
@@ -25114,7 +25114,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Dashboard",
                 "Xneo1"
             ],
@@ -25148,7 +25148,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Xneo1"
             ],
             "description": "Koillection is a self-hosted collection manager created to keep track of physical (mostly) collections of any kind like books, DVDs, stamps, games..",
@@ -25181,7 +25181,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Productivity",
                 "Xneo1"
             ],
@@ -25249,7 +25249,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Dashboard",
                 "Xneo1"
             ],
@@ -25283,7 +25283,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Authentication",
                 "Xneo1"
             ],
@@ -25351,7 +25351,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Dashboard",
                 "Xneo1"
             ],
@@ -25376,7 +25376,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Xneo1"
             ],
             "description": "Create agents that monitor and act on your behalf.",
@@ -25400,7 +25400,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Xneo1"
             ],
             "description": "Eufy Security Web Socket. Edit container and add username & password.",
@@ -25438,7 +25438,7 @@
             "categories": [
                 "Cloud",
                 "Productivity",
-                "Tools",
+                "Tool",
                 "Web",
                 "Xneo1"
             ],
@@ -25484,8 +25484,8 @@
         },
         {
             "categories": [
-                "Downloaders",
-                "Tools",
+                "Downloader",
+                "Tool",
                 "Xneo1"
             ],
             "description": "Jackett works as a proxy server it translates queries from apps like Sonarr etc into tracker-site-specific http queries and parses the html response sending results back to the requesting software.",
@@ -25527,7 +25527,7 @@
             "categories": [
                 "Video",
                 "Music",
-                "Photos",
+                "Photography",
                 "Xneo1"
             ],
             "description": "Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media. It is an alternative to the proprietary Emby and Plex, to provide media from a dedicated server to end-user devices via multiple apps.",
@@ -25654,7 +25654,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Web",
                 "Xneo1"
             ],
@@ -25779,7 +25779,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Network",
                 "Xneo1"
             ],
@@ -25804,7 +25804,7 @@
         },
         {
             "categories": [
-                "Downloaders",
+                "Downloader",
                 "Music",
                 "Xneo1"
             ],
@@ -25852,7 +25852,7 @@
                 "Cloud",
                 "Web",
                 "Management",
-                "Photos",
+                "Photography",
                 "Xneo1"
             ],
             "description": "Lychee is a free photo-management tool, which runs on your server or web-space. Installing is a matter of seconds. Upload, manage and share photos like from a native application. Lychee comes with everything you need and all your photos are stored securely.",
@@ -25892,7 +25892,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Xneo1"
             ],
             "description": "An Enhanced drop in replacement for Mysql.",
@@ -25969,7 +25969,7 @@
         },
         {
             "categories": [
-                "Downloaders",
+                "Downloader",
                 "Video",
                 "Xneo1"
             ],
@@ -26086,7 +26086,7 @@
         {
             "categories": [
                 "Video",
-                "Tools",
+                "Tool",
                 "Xneo1"
             ],
             "description": "Minisatip is a multi-threaded satip server version 1.2 that runs under Linux and it was tested with DVB-S, DVB-S2, DVB-T, DVB-T2, DVB-C, DVB-C2, ATSC and ISDB-T cards. The application is designed to stream the requested data to multiple clients (even with one dvb card) at the same time while opening different pids.",
@@ -26201,7 +26201,7 @@
         {
             "categories": [
                 "Music",
-                "Tools",
+                "Tool",
                 "Xneo1"
             ],
             "description": "MusicBrainz is an open music encyclopedia that collects music metadata and makes it available to the public.",
@@ -26247,7 +26247,7 @@
         {
             "categories": [
                 "Web",
-                "Tools",
+                "Tool",
                 "Xneo1"
             ],
             "description": "A lightweight portal to view, manage your HTPC apps without having to run anything more than a PHP enabled webserver. With Muximux you don't need to keep multiple tabs open, or bookmark the URL to all of your apps.",
@@ -26283,7 +26283,7 @@
         },
         {
             "categories": [
-                "Downloaders",
+                "Downloader",
                 "Books",
                 "Xneo1"
             ],
@@ -26328,7 +26328,7 @@
         },
         {
             "categories": [
-                "Downloaders",
+                "Downloader",
                 "Xneo1"
             ],
             "description": "NZBGet is a usenet downloader, written in C++ and designed with performance in mind to achieve maximum download speed by using very little system resources. It supports all platforms including Windows, Mac, Linux and works on all devices including PC, NAS, WLAN routers and media players.",
@@ -26368,8 +26368,8 @@
         },
         {
             "categories": [
-                "Downloaders",
-                "Tools",
+                "Downloader",
+                "Tool",
                 "Xneo1"
             ],
             "description": "NZBHydra is a meta search for NZB indexers and the \"spiritual successor\" to NZBmegasearcH. It provides easy access to a number of raw and newznab based indexers.",
@@ -26411,7 +26411,7 @@
             "categories": [
                 "Cloud",
                 "Productivity",
-                "Tools",
+                "Tool",
                 "Web",
                 "Xneo1"
             ],
@@ -26497,7 +26497,7 @@
         {
             "categories": [
                 "Proxy",
-                "Tools",
+                "Tool",
                 "Network",
                 "Xneo1"
             ],
@@ -26557,9 +26557,9 @@
         },
         {
             "categories": [
-                "Downloaders",
+                "Downloader",
                 "Video",
-                "Tools",
+                "Tool",
                 "Xneo1"
             ],
             "description": "Ombi allows you to host your own Plex Request and user management system.",
@@ -26619,7 +26619,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Dashboard",
                 "Xneo1"
             ],
@@ -26637,7 +26637,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Xneo1"
             ],
             "description": "Overseerr is a free and open source software application for managing requests for your media library.",
@@ -26656,7 +26656,7 @@
             "categories": [
                 "Cloud",
                 "Productivity",
-                "Tools",
+                "Tool",
                 "Web",
                 "Xneo1"
             ],
@@ -26711,7 +26711,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Xneo1"
             ],
             "description": "Petio is a third party companion app available to Plex server owners to allow their users to request, review and discover content.",
@@ -26748,7 +26748,7 @@
         },
         {
             "categories": [
-                "Photos",
+                "Photography",
                 "Xneo1"
             ],
             "description": "A simple, easy way to turn a photo album into a webgallery.",
@@ -26792,7 +26792,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Adblocking",
                 "Xneo1"
             ],
@@ -26826,7 +26826,7 @@
         },
         {
             "categories": [
-                "Photos",
+                "Photography",
                 "Xneo1"
             ],
             "description": "Piwigo is photo gallery software for the web, built by an active community of users and developers.",
@@ -26864,7 +26864,7 @@
             "categories": [
                 "Video",
                 "Music",
-                "Photos",
+                "Photography",
                 "Xneo1"
             ],
             "description": "Your favorite movies, TV, music, web shows, podcasts, and more, all streamed to your favorite screens.",
@@ -26911,9 +26911,9 @@
         },
         {
             "categories": [
-                "Downloaders",
+                "Downloader",
                 "Video",
-                "Tools",
+                "Tool",
                 "Xneo1"
             ],
             "description": "Simple automated way for users to request new content for Plex.",
@@ -26956,7 +26956,7 @@
             "categories": [
                 "Cloud",
                 "Productivity",
-                "Tools",
+                "Tool",
                 "Xneo1"
             ],
             "description": "ProjectSend is a self-hosted application that lets you upload files and assign them to specific clients that you create yourself! Secure, private and easy. No more depending on external services or e-mail to send those files.",
@@ -26998,7 +26998,7 @@
             "categories": [
                 "Email",
                 "Productivity",
-                "Tools",
+                "Tool",
                 "Xneo1"
             ],
             "description": "This is an unofficial Docker container of the ProtonMail Bridge. Some of the scripts are based on Hendrik Meyer's work.",
@@ -27024,7 +27024,7 @@
         },
         {
             "categories": [
-                "Downloaders",
+                "Downloader",
                 "Video",
                 "Xneo1"
             ],
@@ -27101,7 +27101,7 @@
         },
         {
             "categories": [
-                "Downloaders",
+                "Downloader",
                 "Xneo1"
             ],
             "description": "The qBittorrent project aims to provide an open-source software alternative to \u00b5Torrent. qBittorrent is based on the Qt toolkit and libtorrent-rasterbar library.",
@@ -27143,7 +27143,7 @@
         },
         {
             "categories": [
-                "Messenger",
+                "Messaging",
                 "Xneo1"
             ],
             "description": "Quassel IRC is a modern, cross-platform, distributed IRC client, meaning that one (or multiple) client(s) can attach to and detach from a central core - much like the popular combination of screen and a text-based IRC client such as WeeChat, but graphical. Blowfish support and optional web-ui included.",
@@ -27179,7 +27179,7 @@
         },
         {
             "categories": [
-                "Downloaders",
+                "Downloader",
                 "Video",
                 "Xneo1"
             ],
@@ -27241,7 +27241,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Xneo1"
             ],
             "description": "A one-of-a-kind resume builder that's not out to get your data. Completely secure, customizable, portable, open-source and free forever.",
@@ -27267,7 +27267,7 @@
             "categories": [
                 "Backup",
                 "Cloud",
-                "Tools",
+                "Tool",
                 "Xneo1"
             ],
             "description": "Resilio Sync (formerly BitTorrent Sync) uses the BitTorrent protocol to sync files and folders between all of your devices. There are both free and paid versions, this container supports both.",
@@ -27307,7 +27307,7 @@
         },
         {
             "categories": [
-                "Downloaders",
+                "Downloader",
                 "Xneo1"
             ],
             "description": "Popular torrent client with a webui for ease of use.",
@@ -27349,7 +27349,7 @@
         },
         {
             "categories": [
-                "Downloaders",
+                "Downloader",
                 "Xneo1"
             ],
             "description": "SABnzbd makes Usenet as simple and streamlined as possible by automating everything we can. All you have to do is add an .nzb. SABnzbd takes over from there, where it will be automatically downloaded, verified, repaired, extracted and filed away with zero human interaction.",
@@ -27394,7 +27394,7 @@
         },
         {
             "categories": [
-                "Downloaders",
+                "Downloader",
                 "Video",
                 "Xneo1"
             ],
@@ -27439,7 +27439,7 @@
         },
         {
             "categories": [
-                "Downloaders",
+                "Downloader",
                 "Video",
                 "Xneo1"
             ],
@@ -27525,7 +27525,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Xneo1"
             ],
             "description": "Self-hosted snippet manager.Label-oriented interface with search. Supports various programming languages, markdown, plain text.",
@@ -27542,7 +27542,7 @@
         },
         {
             "categories": [
-                "Downloaders",
+                "Downloader",
                 "Video",
                 "Xneo1"
             ],
@@ -27591,7 +27591,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Xneo1"
             ],
             "description": "Tautulli is a 3rd party application that you can run along side your Plex Media Server to monitor activity and track various statistics. Most importantly, these statistics include what has been watched, who watched it, when and where they watched it, and how it was watched. All statistics are presented in a nice and clean interface with many tables and graphs, which makes it easy to brag about your server to everyone else.",
@@ -27632,7 +27632,7 @@
         },
         {
             "categories": [
-                "Messenger",
+                "Messaging",
                 "Xneo1"
             ],
             "description": "A self-hosted web IRC client.",
@@ -27668,7 +27668,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Wiki",
                 "Xneo1"
             ],
@@ -27729,7 +27729,7 @@
         },
         {
             "categories": [
-                "Downloaders",
+                "Downloader",
                 "Xneo1"
             ],
             "description": "Transmission is designed for easy, powerful use. Transmission has the features you want from a BitTorrent client: encryption, a web interface, peer exchange, magnet links, DHT, \u00b5TP, UPnP and NAT-PMP port forwarding, webseed support, watch directories, tracker editing, global and per-torrent speed limits, and more.",
@@ -27773,8 +27773,8 @@
         },
         {
             "categories": [
-                "Vpn",
-                "Tools",
+                "VPN",
+                "Tool",
                 "Xneo1"
             ],
             "description": "This container contains OpenVPN and Transmission with a configuration where Transmission is running only when OpenVPN has an active tunnel. It bundles configuration files for many popular VPN providers to make the setup easier.",
@@ -27926,7 +27926,7 @@
         {
             "categories": [
                 "Management",
-                "Tools",
+                "Tool",
                 "Xneo1"
             ],
             "description": "The Unifi-controller Controller software is a powerful, enterprise wireless software engine ideal for high-density client deployments requiring low latency and high uptime performance.",
@@ -27969,7 +27969,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Maintenance",
                 "Xneo1"
             ],
@@ -27992,7 +27992,7 @@
         },
         {
             "categories": [
-                "Downloaders",
+                "Downloader",
                 "Xneo1"
             ],
             "description": "WebGrab+Plus is a multi-site incremental xmltv epg grabber. It collects tv-program guide data from selected tvguide sites for your favourite channels.",
@@ -28030,7 +28030,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Xneo1"
             ],
             "description": "Self-hosted, ad-free, privacy-respecting Google metasearch engine.",
@@ -28054,7 +28054,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Wiki",
                 "Xneo1"
             ],
@@ -28083,7 +28083,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Xneo1"
             ],
             "description": "A web interface for managing docker containers with an emphasis on templating to provide 1 click deployments. Think of it like a decentralized app store for servers that anyone can make packages for.",
@@ -28111,7 +28111,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Network",
                 "Xneo1"
             ],
@@ -28129,7 +28129,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Xneo1"
             ],
             "description": "Dozzle is a small lightweight application with a web based interface to monitor Docker logs. It doesn\u2019t store any log files. It is for live monitoring of your container logs only.",
@@ -28231,7 +28231,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Xneo1"
             ],
             "description": "A self-hosted bookmark management tool.",
@@ -28252,7 +28252,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Xneo1"
             ],
             "description": "wallabag is a web application allowing you to save web pages for later reading. Click, save and read it when you want.",
@@ -28273,7 +28273,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Xneo1"
             ],
             "description": "Teleport allows engineers and security professionals to unify access for SSH servers, Kubernetes clusters, web applications, and databases across all environments.",
@@ -28443,7 +28443,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Xneo1"
             ],
             "description": "Your Budgets, Calendars, Meals, Inventory, Tasks, and so much more in one simple app.For everyone in your household.On all of your devices.In the cloud or self-hosted",
@@ -28500,7 +28500,7 @@
         },
         {
             "categories": [
-                "Messenger",
+                "Messaging",
                 "Xneo1"
             ],
             "description": "Ferdi is a messaging browser that allows you to combine your favourite messaging services into one application",
@@ -28517,7 +28517,7 @@
         },
         {
             "categories": [
-                "Messenger",
+                "Messaging",
                 "Xneo1"
             ],
             "description": "Ferdium is a messaging browser that allows you to combine your favourite messaging services into one application",
@@ -28588,7 +28588,7 @@
         },
         {
             "categories": [
-                "Downloaders",
+                "Downloader",
                 "Xneo1"
             ],
             "description": "A perfect Aria2 Docker image. Out of the box, just add download tasks and don't need to think about anything else.",
@@ -28605,7 +28605,7 @@
         },
         {
             "categories": [
-                "Downloaders",
+                "Downloader",
                 "Xneo1"
             ],
             "description": "A docker image with qBittorrent and the Flood UI, also optional WireGuard VPN support.",
@@ -28622,8 +28622,8 @@
         },
         {
             "categories": [
-                "Photos",
-                "Ai",
+                "Photography",
+                "AI",
                 "Xneo1"
             ],
             "description": "PhotoPrism is an AI-powered app for browsing, organizing & sharing your photo collection. It makes use of the latest technologies to tag and find pictures automatically without getting in your way.| Copy as Custom stack and EDIT environment variables.",
@@ -28640,8 +28640,8 @@
         },
         {
             "categories": [
-                "Photos",
-                "Ai",
+                "Photography",
+                "AI",
                 "Xneo1"
             ],
             "description": "Immich is a high performance self-hosted photo and video backup solution.",
@@ -28658,7 +28658,7 @@
         },
         {
             "categories": [
-                "Api",
+                "API",
                 "Xneo1"
             ],
             "description": "Apprise API was designed to easily fit into existing (and new) eco-systems that are looking for a simple notification solution.70+ services",
@@ -28745,7 +28745,7 @@
         {
             "categories": [
                 "Productivity",
-                "Time related",
+                "Time Tracking",
                 "Xneo1"
             ],
             "description": "Open source time-tracker with an interactive user experience and powerful reporting.",
@@ -28813,7 +28813,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Xneo1"
             ],
             "description": "The recipe manager that allows you to manage your ever growing collection of digital recipes.",
@@ -28848,7 +28848,7 @@
         {
             "categories": [
                 "Blog",
-                "Cms",
+                "CMS",
                 "Xneo1"
             ],
             "description": "WordPress is the simplest, most popular way to create your own website or blog.",
@@ -28882,7 +28882,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Xneo1"
             ],
             "description": "Grocy is an ERP system for your kitchen! Cut down on food waste, and manage your chores with this brilliant utility.",
@@ -28916,7 +28916,7 @@
         },
         {
             "categories": [
-                "Tools",
+                "Tool",
                 "Xneo1"
             ],
             "description": "Shiori is a simple bookmarks manager written in the Go language. Intended as a simple clone of Pocket.You can use it as command line application or as web application.",
@@ -29174,7 +29174,7 @@
         },
         {
             "categories": [
-                "Cms",
+                "CMS",
                 "Xneo1"
             ],
             "description": "Medusa is an open-source headless commerce engine that enables developers to create amazing digital commerce experiences.",
@@ -29280,7 +29280,7 @@
         },
         {
             "categories": [
-                "Cms",
+                "CMS",
                 "Xneo1"
             ],
             "description": "Silverstripe CMS is a free and open source Content Management System (CMS) and Framework for creating and maintaining websites and web applications.",
@@ -29418,7 +29418,7 @@
         {
             "categories": [
                 "Automation",
-                "Ai",
+                "AI",
                 "Xneo1"
             ],
             "description": "Automate your marketing, sales and operations",
@@ -29522,7 +29522,7 @@
         },
         {
             "categories": [
-                "Link sharing",
+                "Link Sharing",
                 "Xneo1"
             ],
             "description": "The personal, minimalist, super fast, database-free, bookmarking service.",
@@ -29539,8 +29539,8 @@
         },
         {
             "categories": [
-                "Ai",
-                "Llm",
+                "AI",
+                "LLM",
                 "Xneo1"
             ],
             "description": "Open source UI visual tool to build your customized LLM flow using LangchainJS, written in Node Typescript/Javascript",
@@ -29643,7 +29643,7 @@
         },
         {
             "categories": [
-                "Downloaders",
+                "Downloader",
                 "Multimedia",
                 "Xneo1"
             ],
@@ -29679,7 +29679,7 @@
         {
             "categories": [
                 "Network",
-                "Vpn",
+                "VPN",
                 "Xneo1"
             ],
             "description": "Tailscale lets you easily manage access to private resources, quickly SSH into devices on your network, and work securely from anywhere in the world.",
@@ -29800,7 +29800,7 @@
         {
             "categories": [
                 "Productivity",
-                "Devtools",
+                "DevTools",
                 "Xneo1"
             ],
             "description": "Tabby is an infinitely customizable cross-platform terminal app for local shells, serial, SSH and Telnet connections.",
@@ -29853,8 +29853,8 @@
         {
             "categories": [
                 "Development",
-                "Low-code",
-                "No-code",
+                "Low Code",
+                "Low Code",
                 "Xneo1"
             ],
             "description": "Tooljet is an Open-source low-code application development platform for building and deploying business applications.",
@@ -29874,7 +29874,7 @@
                 "Sync",
                 "Backup",
                 "Cloud",
-                "Tools",
+                "Tool",
                 "Xneo1"
             ],
             "description": "Syncthing replaces proprietary sync and cloud services with something open, trustworthy and decentralized. ",
@@ -29893,8 +29893,8 @@
             "categories": [
                 "Productivity",
                 "Development",
-                "Low-code",
-                "No-code",
+                "Low Code",
+                "Low Code",
                 "Xneo1"
             ],
             "description": "Budibase allows no-code users to build apps quickly, with more functionality available with a little bit of inline code.",
@@ -29929,7 +29929,7 @@
         {
             "categories": [
                 "Identity management",
-                "Access proxy",
+                "Access Proxy",
                 "Xneo1"
             ],
             "description": "Ory Kratos with Oathkeeper is\u00a0_the_\u00a0developer-friendly, security-hardened and battle-test Identity, User Management and Authentication system for the Cloud.",
@@ -29966,7 +29966,7 @@
             "categories": [
                 "Productivity",
                 "Development",
-                "Low-code",
+                "Low Code",
                 "Xneo1"
             ],
             "description": "Appsmith (www.appsmith.com) is the first open-source low-code tool that helps developers build dashboards and admin panels very quickly.",
@@ -30119,7 +30119,7 @@
         },
         {
             "categories": [
-                "Downloaders",
+                "Downloader",
                 "Xneo1"
             ],
             "description": "Peer-to-peer file transfers in your browser",
@@ -30257,7 +30257,7 @@
             "categories": [
                 "Productivity",
                 "Development",
-                "No-code",
+                "Low Code",
                 "Xneo1"
             ],
             "description": "Open source no-code database and Airtable alternative.Create your own online database without technical experience. Our user friendly no-code tool gives you the powers of a developer without leaving your browser.",
@@ -30276,7 +30276,7 @@
             "categories": [
                 "Productivity",
                 "Development",
-                "No-code",
+                "Low Code",
                 "Xneo1"
             ],
             "description": "Turns any MySQL, PostgreSQL, SQL Server, SQLite & MariaDB into a smart-spreadsheet.",
@@ -30328,7 +30328,7 @@
         {
             "categories": [
                 "Video",
-                "Ai",
+                "AI",
                 "Xneo1"
             ],
             "description": "A complete and local NVR designed for Home Assistant with AI object detection. Uses OpenCV and Tensorflow to perform realtime object detection locally for IP cameras.",
@@ -30419,7 +30419,7 @@
         },
         {
             "categories": [
-                "Downloaders",
+                "Downloader",
                 "Xneo1"
             ],
             "description": "YoutubeDL-Material is a Material Design frontend for youtube-dl. It's coded using Angular 9 for the frontend, and Node.js on the backend.",
@@ -30459,7 +30459,7 @@
         },
         {
             "categories": [
-                "Messenger",
+                "Messaging",
                 "Xneo1"
             ],
             "description": "ZNC is an IRC network bouncer or BNC. It can detach the client from the actual IRC server, and also from selected channels. Multiple clients from different locations can connect to a single ZNC account simultaneously and therefore appear under the same nickname on IRC.",
@@ -30499,7 +30499,7 @@
             "note": "Cloud Database Manager - Community Edition.<br> <br> CloudBeaver is a web server which provides rich web interface. Server itself is a Java application, web part is written on TypeScript and React.<br> It is free to use and open-source (licensed under Apache 2 license).<br> See out <a href=\"https://github.com/dbeaver/cloudbeaver/wiki\" target=\"_blank\">WIKI</a> for more details.<br> <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
             "categories": [
                 "Web",
-                "Tools",
+                "Tool",
                 "Database",
                 "Cookbook"
             ],
@@ -30574,7 +30574,7 @@
             "note": "<a href=\"https://lingva.thedaviddelta.com/\" target=\"_blank\">Lingva Translate</a> pagr.<br>",
             "categories": [
                 "Web",
-                "Tools",
+                "Tool",
                 "Database",
                 "Cookbook"
             ],
@@ -30753,7 +30753,7 @@
             "description": "Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.  It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-click.",
             "title": "Node-RED (Cookbook)",
             "categories": [
-                "Lowcode",
+                "Low code",
                 "Cookbook"
             ],
             "env": [
@@ -30816,7 +30816,7 @@
             "title": "Langflow-AI (Cookbook)",
             "categories": [
                 "Ai",
-                "Lowcode",
+                "Low code",
                 "Cookbook"
             ],
             "platform": "linux",
@@ -30882,7 +30882,7 @@
                 {
                     "name": "LANGFLOW_SECRET_KEY",
                     "description": "A key used for encrypting the superuser's password.",
-                    "default": "Xh1UippX4iOO1nWEWEBpdl1A5K-gQFHYPh7zprzd7-E=",
+                    "default": "2zTTGLIszjI3Tm6MK5GiAlB1ycmlq-LmCIkTOwYr2fM=",
                     "label": "LANGFLOW_SECRET_KEY"
                 },
                 {
@@ -30967,7 +30967,7 @@
             "description": "Infinitely scalable, event-driven, language-agnostic orchestration and scheduling platform to manage millions of workflows declaratively in code.",
             "title": "Kestra (Cookbook)",
             "categories": [
-                "Lowcode",
+                "Low code",
                 "Cookbook"
             ],
             "platform": "linux",
@@ -31017,7 +31017,7 @@
             "description": "Open source low-code tool for developers to build customized LLM orchestration flow & AI agents",
             "title": "FlowiseAI (Cookbook)",
             "categories": [
-                "Lowcode",
+                "Low code",
                 "Ai",
                 "Cookbook"
             ],
@@ -31080,7 +31080,7 @@
             "description": "The world's most popular workflow automation platform for technical teams",
             "title": "n8n (Cookbook)",
             "categories": [
-                "Lowcode",
+                "Low code",
                 "Automation",
                 "Cookbook"
             ],
@@ -31120,7 +31120,7 @@
                 },
                 {
                     "name": "N8N_ENCRYPTION_KEY",
-                    "default": "iJ1f6hR9v5Kr5WnLmu",
+                    "default": "1feQ1GxvkjFDZd1emm",
                     "description": "Encryption key used to encrypt sensitive data.",
                     "label": "N8N_ENCRYPTION_KEY"
                 },

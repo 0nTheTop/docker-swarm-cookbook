@@ -7,7 +7,7 @@
             "note": "Cloud Database Manager - Community Edition.<br> <br> CloudBeaver is a web server which provides rich web interface. Server itself is a Java application, web part is written on TypeScript and React.<br> It is free to use and open-source (licensed under Apache 2 license).<br> See out <a href=\"https://github.com/dbeaver/cloudbeaver/wiki\" target=\"_blank\">WIKI</a> for more details.<br> <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
             "categories": [
                 "Web",
-                "Tools",
+                "Tool",
                 "Database",
                 "Cookbook"
             ],
@@ -82,7 +82,7 @@
             "note": "<a href=\"https://lingva.thedaviddelta.com/\" target=\"_blank\">Lingva Translate</a> pagr.<br>",
             "categories": [
                 "Web",
-                "Tools",
+                "Tool",
                 "Database",
                 "Cookbook"
             ],
@@ -261,7 +261,7 @@
             "description": "Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.  It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-click.",
             "title": "Node-RED (Cookbook)",
             "categories": [
-                "Lowcode",
+                "Low code",
                 "Cookbook"
             ],
             "env": [
@@ -324,7 +324,7 @@
             "title": "Langflow-AI (Cookbook)",
             "categories": [
                 "Ai",
-                "Lowcode",
+                "Low code",
                 "Cookbook"
             ],
             "platform": "linux",
@@ -390,7 +390,7 @@
                 {
                     "name": "LANGFLOW_SECRET_KEY",
                     "description": "A key used for encrypting the superuser's password.",
-                    "default": "Xh1UippX4iOO1nWEWEBpdl1A5K-gQFHYPh7zprzd7-E=",
+                    "default": "2zTTGLIszjI3Tm6MK5GiAlB1ycmlq-LmCIkTOwYr2fM=",
                     "label": "LANGFLOW_SECRET_KEY"
                 },
                 {
@@ -475,7 +475,7 @@
             "description": "Infinitely scalable, event-driven, language-agnostic orchestration and scheduling platform to manage millions of workflows declaratively in code.",
             "title": "Kestra (Cookbook)",
             "categories": [
-                "Lowcode",
+                "Low code",
                 "Cookbook"
             ],
             "platform": "linux",
@@ -525,7 +525,7 @@
             "description": "Open source low-code tool for developers to build customized LLM orchestration flow & AI agents",
             "title": "FlowiseAI (Cookbook)",
             "categories": [
-                "Lowcode",
+                "Low code",
                 "Ai",
                 "Cookbook"
             ],
@@ -588,7 +588,7 @@
             "description": "The world's most popular workflow automation platform for technical teams",
             "title": "n8n (Cookbook)",
             "categories": [
-                "Lowcode",
+                "Low code",
                 "Automation",
                 "Cookbook"
             ],
@@ -628,7 +628,7 @@
                 },
                 {
                     "name": "N8N_ENCRYPTION_KEY",
-                    "default": "iJ1f6hR9v5Kr5WnLmu",
+                    "default": "1feQ1GxvkjFDZd1emm",
                     "description": "Encryption key used to encrypt sensitive data.",
                     "label": "N8N_ENCRYPTION_KEY"
                 },

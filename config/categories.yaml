@@ -1,0 +1,189 @@
+3D Printers:
+  - 3d-printers
+  - 3dprinters
+AI:
+  - Ai
+  - ai
+API:
+  - Api
+Access Proxy:
+  - Accessproxy
+  - Access proxy
+Adblocking: []
+Adult: []
+Analytics: []
+Anitvirus: []
+Audio: []
+Authentication:
+  - Authenticationserver
+Automation:
+  - Home Automation
+  - HomeAutomation
+  - Homeautomation
+Backup:
+  - utilitybackup
+Blog: []
+Books:
+  - ebooks
+Browsers: []
+CMS:
+  - Cms
+Calendar: []
+CCTV:
+  - Cctv
+Chat:
+  - Chatserver
+Cloud: []
+Codeserver: []
+Comics: []
+CI:
+  - continuous-integration
+  - Continuousintegration
+Crypto: []
+DNS:
+  - Dns
+Dashboard:
+  - Dashboardserver
+Database: []
+DevTools:
+  - Devtools
+Development: []
+Devops: []
+Docker: []
+Documentation:
+  - Documents
+Downloader:
+  - Downloaders
+Drawing: []
+Edge: []
+Email:
+  - mail
+Employee: []
+Entertainment: []
+FTP: []
+Family:
+  - Familyappserver
+Feed Reader:
+  - Feedreader
+File Browsers:
+  - Filebrowsers
+File Management:
+  - Filemanagement
+Files:
+  - Filesystem
+Finance: []
+Fitness: []
+Forum: []
+Games: []
+Graphicdesign: []
+Helpdesk: []
+Identity Management:
+  - Identitymanagement
+IoT: []
+Knowledge Base:
+  - Knowledgebase
+LLM:
+  - Llm
+  - llm
+Learning: []
+Library:
+  - Libraryserver
+Link Sharing:
+  - Link sharing
+  - Linksharing
+Log Management:
+  - Logmanagement
+Low Code:
+  - Low-Code
+  - Low-code
+  - Lowcode
+  - lowcode
+  - No-code
+  - Nocode
+Maintenance: []
+Management:
+  - Managementutilityserver
+Marketing: []
+Media:
+  - Homemedia
+  - Home Media
+  - Mediaappbooks
+  - Mediaappvideo
+  - Mediamanagement
+  - Mediaserver
+  - Mediaservermusic
+  - Mediaserverphotos
+  - Mediaservervideo
+Messaging:
+  - Messenger
+Metrics: []
+Monitoring:
+  - Monitor
+Multimedia: []
+Music:
+  - Musicserver
+Network:
+  - Networking
+  - Networkother
+  - Networkserver
+  - Networkweb
+News: []
+No-code:
+  - Nocode
+Notesserver: []
+Notifications: []
+OPS:
+  - Ops
+Offline: []
+Operatingsystem:
+  - operating-system
+Other: []
+PDF Tools:
+  - Pdftools
+  - Pdf
+PaaS:
+  - Paas
+Photography:
+  - Photos
+Podcast: []
+Portainer: []
+Presentation: []
+Productivity: []
+Project management:
+  - Projectmanagement
+Proxy: []
+Remote Control:
+  - Remotecontrol
+Research: []
+Search:
+  - Searchengine
+  - search-engine
+Security: []
+Serverless: []
+Smart Home:
+  - Smarthome
+Social: []
+Statusstable: []
+Storage: []
+Streaming: []
+Sync: []
+System:
+  - Systemtools
+Time Tracking:
+  - Timetracking
+  - Time related
+  - Timerelated
+Tool:
+  - Tools
+Tracking: []
+Utilities: []
+VPN:
+  - Vpn
+Video: []
+Visualization: []
+Voice: []
+Web:
+  - Webplatform
+  - Webserver
+Wiki: []
+Wordpress: []
