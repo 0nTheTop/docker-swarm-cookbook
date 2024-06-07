@@ -4,6 +4,7 @@ services:
   kestra:
     hostname: kestra
     container_name: kestra
+    restart: always
     image: kestra/kestra:latest-full
     pull_policy: always
     # Note that this is meant for development only. Refer to the documentation for production deployments of Kestra which runs without a root user.
@@ -42,6 +43,9 @@ services:
             tmp-dir:
               path: /tmp/kestra-wd/tmp
           url: http://localhost:8080/
+    networks:
+      - kestra
+      #- traefik
     ports:
       - mode: host
         published: ${KESTRA_PORT:-8080}
@@ -52,9 +56,6 @@ services:
     depends_on:
       postgres:
         condition: service_started
-    networks:
-      - kestra
-      # - traefik
     labels:
       - "traefik.enable=true"
       - "traefik.docker.network=traefik"
@@ -68,12 +69,12 @@ services:
   postgres:
     hostname: postgres
     container_name: kestra-postgres
+    restart: always
     image: postgres
     volumes:
       - kestra-postgres-data:/var/lib/postgresql/data
     networks:
       - kestra
-    restart: always
     #ports:
     #  - "5432:5432"
     environment:

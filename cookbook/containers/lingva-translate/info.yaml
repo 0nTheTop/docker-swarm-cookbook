@@ -1,0 +1,48 @@
+---
+title: lingva-translate
+description: Alternative front-end for Google Translate, serving as a Free and Open Source translator with over a hundred languages available
+note: 
+  <a href="https://lingva.thedaviddelta.com/" target="_blank">Lingva Translate</a> pagr.<br>
+categories: [ "Web", "Tools", "Database"]
+platform: linux
+name: lingva
+hostname: lingva
+container_name: lingva
+image: thedaviddelta/lingva-translate:latest
+ports: 
+  - 3000:3000/tcp
+restart_policy: always
+env: 
+  - name: site_domain
+    label: site_domain
+    description: Site domain.
+    default: lingva.ml
+  - name: force_default_theme
+    label: force_default_theme
+    description: Force default theme.
+    default: light
+  - name: default_source_lang
+    label: default_source_lang
+    description: Default source language.
+    default: auto
+  - name: default_target_lang
+    label: default_target_lang
+    description: Default target language.
+    default: en
+labels:
+  - name: traefik.enable
+    value: true
+  - name: traefik.docker.network
+    value: traefik
+  - name: traefik.http.routers.lingva.rule
+    value: HostRegexp(`^lingva\..*`)
+  - name: traefik.http.routers.lingva.service
+    value: lingva-s
+  - name: traefik.http.routers.lingva.entryPoints
+    value: web
+  - name: traefik.http.services.lingva-s.loadbalancer.server.port
+    value: 3000
+  - name: traefik.http.services.lingva-s.loadbalancer.sticky.cookie.name
+    value: stickycookie
+  - name: traefik.http.services.lingva-s.loadbalancer.sticky.cookie.secure
+    value: true

@@ -30569,6 +30569,93 @@
             "id": 846
         },
         {
+            "title": "lingva-translate (Cookbook)",
+            "description": "Alternative front-end for Google Translate, serving as a Free and Open Source translator with over a hundred languages available",
+            "note": "<a href=\"https://lingva.thedaviddelta.com/\" target=\"_blank\">Lingva Translate</a> pagr.<br>",
+            "categories": [
+                "Web",
+                "Tools",
+                "Database",
+                "Cookbook"
+            ],
+            "platform": "linux",
+            "name": "lingva",
+            "hostname": "lingva",
+            "container_name": "lingva",
+            "image": "thedaviddelta/lingva-translate:latest",
+            "ports": [
+                "3000:3000/tcp"
+            ],
+            "restart_policy": "always",
+            "env": [
+                {
+                    "name": "site_domain",
+                    "label": "site_domain",
+                    "description": "Site domain.",
+                    "default": "lingva.ml"
+                },
+                {
+                    "name": "force_default_theme",
+                    "label": "force_default_theme",
+                    "description": "Force default theme.",
+                    "default": "light"
+                },
+                {
+                    "name": "default_source_lang",
+                    "label": "default_source_lang",
+                    "description": "Default source language.",
+                    "default": "auto"
+                },
+                {
+                    "name": "default_target_lang",
+                    "label": "default_target_lang",
+                    "description": "Default target language.",
+                    "default": "en"
+                }
+            ],
+            "labels": [
+                {
+                    "name": "traefik.enable",
+                    "value": "true"
+                },
+                {
+                    "name": "traefik.docker.network",
+                    "value": "traefik"
+                },
+                {
+                    "name": "traefik.http.routers.lingva.rule",
+                    "value": "HostRegexp(`^lingva\\..*`)"
+                },
+                {
+                    "name": "traefik.http.routers.lingva.service",
+                    "value": "lingva-s"
+                },
+                {
+                    "name": "traefik.http.routers.lingva.entryPoints",
+                    "value": "web"
+                },
+                {
+                    "name": "traefik.http.services.lingva-s.loadbalancer.server.port",
+                    "value": "3000"
+                },
+                {
+                    "name": "traefik.http.services.lingva-s.loadbalancer.sticky.cookie.name",
+                    "value": "stickycookie"
+                },
+                {
+                    "name": "traefik.http.services.lingva-s.loadbalancer.sticky.cookie.secure",
+                    "value": "true"
+                }
+            ],
+            "repository": {
+                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
+                "stackfile": "cookbook/containers/lingva-translate/None"
+            },
+            "type": 1,
+            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/lingva-translate.png",
+            "id": 847
+        },
+        {
             "description": "3 Nodes MinIO Cluster",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/minio.png",
             "note": "Please remember that MINIO_ROOT_PASSWORD needs to have min **8** characters.",
@@ -30591,7 +30678,7 @@
             "name": "minio-cluster",
             "type": 2,
             "platform": "linux",
-            "id": 847
+            "id": 848
         },
         {
             "title": "Traefik (Cookbook)",
@@ -30608,7 +30695,7 @@
             "type": 2,
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/traefik.png",
             "env": [],
-            "id": 848
+            "id": 849
         },
         {
             "title": "Portainer Agent (Cookbook)",
@@ -30625,7 +30712,7 @@
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/portainer_agent.png",
             "description": "portainer agent",
             "env": [],
-            "id": 849
+            "id": 850
         },
         {
             "description": "2 Nodes MySQL Cluster",
@@ -30660,7 +30747,7 @@
             "type": 2,
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/mysql-cluster.png",
-            "id": 850
+            "id": 851
         },
         {
             "description": "Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.  It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-click.",
@@ -30686,7 +30773,7 @@
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/node-red.png",
             "note": "<br><a href=\"{GITHUB_URL_CONTENT}main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
-            "id": 851
+            "id": 852
         },
         {
             "description": "Qdrant is an Open-Source Vector Database and Vector Search Engine written in Rust. It provides fast and scalable vector similarity search service.",
@@ -30704,7 +30791,7 @@
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/qdrant.png",
             "env": [],
-            "id": 852
+            "id": 853
         },
         {
             "description": "Docker swarm service for automatically updating your services whenever their image is refreshed",
@@ -30722,7 +30809,7 @@
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/shepherd.png",
             "env": [],
-            "id": 853
+            "id": 854
         },
         {
             "description": "Langflow-AI is a visual framework for building multi-agent and RAG applications. It's open-source, Python-powered, fully customizable, model and vector store agnostic.",
@@ -30795,7 +30882,7 @@
                 {
                     "name": "LANGFLOW_SECRET_KEY",
                     "description": "A key used for encrypting the superuser's password.",
-                    "default": "CJTh_NtOKk40Ik43AEUn_6-75J9_j6U0rZu5W2Il_yg=",
+                    "default": "7vb6jQkR5geHMpYQTt53xhkiP69M87M_vHNTGlwuoD8=",
                     "label": "LANGFLOW_SECRET_KEY"
                 },
                 {
@@ -30874,7 +30961,7 @@
             "name": "langflow-ai",
             "type": 3,
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/langflow-ai.png",
-            "id": 854
+            "id": 855
         },
         {
             "description": "Infinitely scalable, event-driven, language-agnostic orchestration and scheduling platform to manage millions of workflows declaratively in code.",
@@ -30924,7 +31011,7 @@
             "name": "kestra",
             "type": 3,
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/kestra.png",
-            "id": 855
+            "id": 856
         },
         {
             "description": "Open source low-code tool for developers to build customized LLM orchestration flow & AI agents",
@@ -30987,7 +31074,7 @@
             },
             "type": 3,
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/flowiseai.png",
-            "id": 856
+            "id": 857
         }
     ]
 }
