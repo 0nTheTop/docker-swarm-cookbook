@@ -30882,7 +30882,7 @@
                 {
                     "name": "LANGFLOW_SECRET_KEY",
                     "description": "A key used for encrypting the superuser's password.",
-                    "default": "LcYpw_2TV_3M5BBztUfREhzF-kVYVzKvEIVMaPggRsU=",
+                    "default": "Xh1UippX4iOO1nWEWEBpdl1A5K-gQFHYPh7zprzd7-E=",
                     "label": "LANGFLOW_SECRET_KEY"
                 },
                 {
@@ -31117,6 +31117,78 @@
                     "default": "5678",
                     "description": "The port to run the n8n server on. Default is 5678.",
                     "label": "N8N_PORT"
+                },
+                {
+                    "name": "N8N_ENCRYPTION_KEY",
+                    "default": "iJ1f6hR9v5Kr5WnLmu",
+                    "description": "Encryption key used to encrypt sensitive data.",
+                    "label": "N8N_ENCRYPTION_KEY"
+                },
+                {
+                    "name": "N8N_SECURE_COOKIE",
+                    "description": "Enables or disables secure cookie.",
+                    "select": [
+                        {
+                            "text": "True",
+                            "value": "true"
+                        },
+                        {
+                            "text": "False",
+                            "value": "false",
+                            "default": true
+                        }
+                    ],
+                    "label": "N8N_SECURE_COOKIE"
+                },
+                {
+                    "name": "N8N_BASIC_AUTH_ACTIVE",
+                    "description": "Enables or disables basic auth.",
+                    "select": [
+                        {
+                            "text": "True",
+                            "value": "true",
+                            "default": true
+                        },
+                        {
+                            "text": "False",
+                            "value": "false"
+                        }
+                    ],
+                    "label": "N8N_BASIC_AUTH_ACTIVE"
+                },
+                {
+                    "name": "N8N_BASIC_AUTH_USER",
+                    "default": "user",
+                    "description": "Username for basic auth.",
+                    "label": "N8N_BASIC_AUTH_USER"
+                },
+                {
+                    "name": "N8N_BASIC_AUTH_PASSWORD",
+                    "default": "password",
+                    "description": "Password for basic auth.",
+                    "label": "N8N_BASIC_AUTH_PASSWORD"
+                },
+                {
+                    "name": "N8N_PROTOCOL",
+                    "description": "Protocol used. Default: https",
+                    "select": [
+                        {
+                            "text": "https",
+                            "value": "https",
+                            "default": true
+                        },
+                        {
+                            "text": "http",
+                            "value": "http"
+                        }
+                    ],
+                    "label": "N8N_PROTOCOL"
+                },
+                {
+                    "name": "WEBHOOK_URL",
+                    "default": "https://n8n.example.com/",
+                    "description": "Webhook URL.",
+                    "label": "WEBHOOK_URL"
                 }
             ],
             "repository": {

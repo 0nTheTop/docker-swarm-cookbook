@@ -26,3 +26,27 @@ env:
 - name: N8N_PORT
   default: 5678
   description: The port to run the n8n server on. Default is 5678.
+- name: N8N_ENCRYPTION_KEY
+  default: -random-18-
+  description: Encryption key used to encrypt sensitive data.
+- name: N8N_SECURE_COOKIE
+  default: false
+  description: Enables or disables secure cookie.
+- name: N8N_BASIC_AUTH_ACTIVE
+  default: true
+  description: Enables or disables basic auth.
+- name: N8N_BASIC_AUTH_USER
+  default: user
+  description: Username for basic auth.
+- name: N8N_BASIC_AUTH_PASSWORD
+  default: password
+  description: Password for basic auth.
+- name: N8N_PROTOCOL
+  default: https|http
+  description: Protocol used.
+- name: WEBHOOK_URL
+  default: https://n8n.example.com/
+  description: Webhook URL.
+
+
+# https://docs.n8n.io/hosting/configuration/environment-variables/deployment/

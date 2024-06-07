@@ -179,6 +179,17 @@ def cookbook(type_id):
                 if env_element['default'] is False:
                     env_element['select'] = [{ "text": "True", "value": "true" }, { "text": "False", "value": "false", "default": True  }]
                 del env_element['default']
+            
+            # if element contains | - then it is list where first element is default and rest are options
+            if "default" in env_element and type(env_element['default']) == str and '|' in env_element['default']:
+                list_elements = env_element['default'].split("|")
+                del env_element['default']
+                env_element['select'] = []
+                for option in list_elements:
+                    env_element['select'].append({ "text": option, "value": option })
+                env_element['select'][0]['default'] = True
+                if env_element.get('description'):
+                    env_element['description'] = f"{env_element['description']} Default: {env_element['select'][0]['text']}"
 
             if env_element.get('default') and env_element.get('default').startswith("-") and env_element.get('default').endswith("-"):
                 env_element['default'] = generate_key(env_element['default'])
