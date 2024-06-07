@@ -27,7 +27,6 @@ env:
   default: 5678
   description: The port to run the n8n server on. Default is 5678.
 - name: N8N_ENCRYPTION_KEY
-  default: -random-18-
   description: Encryption key used to encrypt sensitive data.
 - name: N8N_SECURE_COOKIE
   default: false

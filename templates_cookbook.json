@@ -390,7 +390,7 @@
                 {
                     "name": "LANGFLOW_SECRET_KEY",
                     "description": "A key used for encrypting the superuser's password.",
-                    "default": "e86zwdTIAqexagXPtQFnrTyBTPrhEpZJi2Rjplt26n4=",
+                    "default": "F_xv8AZJkIA_Dd_nsUPrJdBn3PXmsr2vEFGQpsNoMjY=",
                     "label": "LANGFLOW_SECRET_KEY"
                 },
                 {
@@ -628,7 +628,6 @@
                 },
                 {
                     "name": "N8N_ENCRYPTION_KEY",
-                    "default": "lgyHnVZDzJgM06yQnv",
                     "description": "Encryption key used to encrypt sensitive data.",
                     "label": "N8N_ENCRYPTION_KEY"
                 },
