@@ -23,7 +23,7 @@ services:
       SECRETKEY_PATH: /root/.flowise
       LOG_PATH: /root/.flowise/logs
       BLOB_STORAGE_PATH: /root/.flowise/storage
-
+      # ------ Database ------
       DATABASE_TYPE: postgres
       DATABASE_PORT: 5432
       DATABASE_HOST: postgres
@@ -32,30 +32,30 @@ services:
       DATABASE_PASSWORD: ${DATABASE_PASSWORD:-fl0wiser83632ai}
       # DATABASE_SSL: true
       # DATABASE_SSL_KEY_BASE64: <Self signed certificate in BASE64>
-
+      # ------ Flowise ------
       FLOWISE_USERNAME: ${FLOWISE_USERNAME:-user}
       FLOWISE_PASSWORD: ${FLOWISE_PASSWORD:-user}
       # FLOWISE_SECRETKEY_OVERWRITE: myencryptionkey
       # FLOWISE_FILE_SIZE_LIMIT: 50mb
-
+      # ------ Other ------
       # DISABLE_CHATFLOW_REUSE: true
-
-      # DEBUG: true
-      # LOG_LEVEL: debug (error | warn | info | verbose | debug)
       # TOOL_FUNCTION_BUILTIN_DEP: crypto,fs
       # TOOL_FUNCTION_EXTERNAL_DEP: moment,lodash
-
+      # ------ Debug ------
+      # DEBUG: true
+      # LOG_LEVEL: debug (error | warn | info | verbose | debug)
+      # ------ LangChain ------
       # LANGCHAIN_TRACING_V2: true
       # LANGCHAIN_ENDPOINT: https://api.smith.langchain.com
       # LANGCHAIN_API_KEY: your_api_key
       # LANGCHAIN_PROJECT: your_project
-
+      # ------ Telemetry ------
       DISABLE_FLOWISE_TELEMETRY: true
-
+      # ------ Model List ------
       # Uncomment the following line to enable model list config, load the list of models from your local config file
       # see https://raw.githubusercontent.com/FlowiseAI/Flowise/main/packages/components/models.json for the format
       # MODEL_LIST_CONFIG_JSON: /your_model_list_config_file_path
-
+      # ------ Storage ------
       # STORAGE_TYPE: local (local | s3)
       # BLOB_STORAGE_PATH: /your_storage_path/.flowise/storage
       # S3_STORAGE_BUCKET_NAME: flowise
@@ -64,7 +64,7 @@ services:
       # S3_STORAGE_REGION: us-west-2
     restart: on-failure
     depends_on:
-      flowise-db:
+      postgres:
         condition: service_healthy
     healthcheck:
       test: wget --no-verbose --tries=1 --spider http://localhost:3000
