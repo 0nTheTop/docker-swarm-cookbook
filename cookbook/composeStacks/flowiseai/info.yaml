@@ -1,0 +1,38 @@
+---
+description: Open source low-code tool for developers to build customized LLM orchestration flow & AI agents
+title: FlowiseAI
+categories: [lowcode, ai]
+platform: linux
+note:
+  <a href="https://flowiseai.com/" target="_blank">FlowiseAI Docs</a><br>
+  <a href="https://github.com/FlowiseAI/Flowise" target="_blank">FlowiseAI Github</a> | Report <a href="https://github.com/FlowiseAI/Flowise/issues" target="_blank">Issue</a><br>
+  <a href="https://www.docker.com/blog/how-to-use-the-postgres-docker-official-image/" target="_blank">Postgres Docker Info</a> <br>
+name: flowise
+env:
+- name: TZ
+  label: Time-Zone
+  description: Time Zone. Default is UTC.
+  default: UTC
+- name: POSTGRES_DB
+  label: POSTGRES_DB
+  default: flowise
+  description: Specifies a name for your database or defaults to the POSTGRES_USER value when left blank. 
+- name: POSTGRES_USER
+  label: POSTGRES_USER
+  default: flowiseuser
+  description: Specifies a user with superuser privileges and a database with the same name. Postgres uses the default user when this is empty.
+- name: POSTGRES_PASSWORD
+  label: POSTGRES_PASSWORD
+  default: fl0wiser83632ai
+  description: Password used by the POSTGRES_USER.
+- name: FLOWISE_PORT
+  default: 3080
+  description: Port to expose flowise server. Default is 3080.
+- name: FLOWISE_USERNAME
+  default: user
+  description: Username for flowise basic auth. Default is `user`.
+- name: FLOWISE_PASSWORD
+  default: 1234
+  description: Password for flowise basic auth. Default is 1234
+
+# https://docs.flowiseai.com/configuration/environment-variables

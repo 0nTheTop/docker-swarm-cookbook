@@ -21,3 +21,4 @@ volumes:
 networks:
   node-red:
     name: node-red
+    driver: bridge

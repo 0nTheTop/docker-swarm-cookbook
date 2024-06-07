@@ -1,0 +1,111 @@
+version: "3.8"
+
+services:
+  flowise:
+    hostname: flowise
+    container_name: flowise
+    image: flowiseai/flowise:latest
+    command: /bin/sh -c "sleep 3; flowise start"
+    mem_limit: 4g
+    cpu_shares: 768
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      - flowise
+    ports:
+      - ${FLOWISE_PORT:-3000}:3000
+    volumes:
+      - flowise-data:/root/.flowise:rw
+    environment:
+      PORT: 3000
+      DATABASE_PATH: /root/.flowise
+      APIKEY_PATH: /root/.flowise
+      SECRETKEY_PATH: /root/.flowise
+      LOG_PATH: /root/.flowise/logs
+      BLOB_STORAGE_PATH: /root/.flowise/storage
+
+      DATABASE_TYPE: postgres
+      DATABASE_PORT: 5432
+      DATABASE_HOST: postgres
+      DATABASE_NAME: ${POSTGRES_DB:-flowise}
+      DATABASE_USER: ${DATABASE_USER:-flowiseuser}
+      DATABASE_PASSWORD: ${DATABASE_PASSWORD:-fl0wiser83632ai}
+      # DATABASE_SSL: true
+      # DATABASE_SSL_KEY_BASE64: <Self signed certificate in BASE64>
+
+      FLOWISE_USERNAME: ${FLOWISE_USERNAME:-user}
+      FLOWISE_PASSWORD: ${FLOWISE_PASSWORD:-user}
+      # FLOWISE_SECRETKEY_OVERWRITE: myencryptionkey
+      # FLOWISE_FILE_SIZE_LIMIT: 50mb
+
+      # DISABLE_CHATFLOW_REUSE: true
+
+      # DEBUG: true
+      # LOG_LEVEL: debug (error | warn | info | verbose | debug)
+      # TOOL_FUNCTION_BUILTIN_DEP: crypto,fs
+      # TOOL_FUNCTION_EXTERNAL_DEP: moment,lodash
+
+      # LANGCHAIN_TRACING_V2: true
+      # LANGCHAIN_ENDPOINT: https://api.smith.langchain.com
+      # LANGCHAIN_API_KEY: your_api_key
+      # LANGCHAIN_PROJECT: your_project
+
+      DISABLE_FLOWISE_TELEMETRY: true
+
+      # Uncomment the following line to enable model list config, load the list of models from your local config file
+      # see https://raw.githubusercontent.com/FlowiseAI/Flowise/main/packages/components/models.json for the format
+      # MODEL_LIST_CONFIG_JSON: /your_model_list_config_file_path
+
+      # STORAGE_TYPE: local (local | s3)
+      # BLOB_STORAGE_PATH: /your_storage_path/.flowise/storage
+      # S3_STORAGE_BUCKET_NAME: flowise
+      # S3_STORAGE_ACCESS_KEY_ID: <your-access-key>
+      # S3_STORAGE_SECRET_ACCESS_KEY: <your-secret-key>
+      # S3_STORAGE_REGION: us-west-2
+    restart: on-failure
+    depends_on:
+      flowise-db:
+        condition: service_healthy
+    healthcheck:
+      test: wget --no-verbose --tries=1 --spider http://localhost:3000
+
+  postgres:
+    hostname: postgres
+    container_name: flowise-postgres
+    image: postgres
+    mem_limit: 1g
+    cpu_shares: 768
+    security_opt:
+      - no-new-privileges:true
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -q -d ${POSTGRES_DB:-flowise} -U ${POSTGRES_USER:-flowiseuser}"]
+      timeout: 20s
+      interval: 10s
+      retries: 5
+      start_period: 30s
+    volumes:
+      - flowise-postgres-data:/var/lib/postgresql/data:rw
+    networks:
+      - flowise
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-flowise}
+      POSTGRES_USER: ${POSTGRES_USER:-flowiseuser}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-fl0wiser83632ai}
+    restart: on-failure
+
+
+volumes:
+  flowise-postgres-data:
+    name: flowise-postgres-data
+    driver: local
+  flowise-data:
+    name: flowise-data
+    driver: local
+
+networks:
+  flowise:
+    name: flowise
+    driver: bridge
+    attachable: true
+#  traefik:
+#    external: true
