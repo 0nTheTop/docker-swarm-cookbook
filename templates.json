@@ -30882,7 +30882,7 @@
                 {
                     "name": "LANGFLOW_SECRET_KEY",
                     "description": "A key used for encrypting the superuser's password.",
-                    "default": "epQV9NTJ0fY86WE50dCUgare5ZuH4Fk1vvXyoK5jOzI=",
+                    "default": "LcYpw_2TV_3M5BBztUfREhzF-kVYVzKvEIVMaPggRsU=",
                     "label": "LANGFLOW_SECRET_KEY"
                 },
                 {
@@ -31124,7 +31124,7 @@
                 "stackfile": "cookbook/composeStacks/n8n/docker-compose.yml"
             },
             "type": 3,
-            "logo": "",
+            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/n8n.png",
             "id": 858
         }
     ]
