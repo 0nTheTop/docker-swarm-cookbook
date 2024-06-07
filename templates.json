@@ -56,7 +56,7 @@
             "title": "Ubuntu (portainer)",
             "description": "Debian-based Linux operating system",
             "categories": [
-                "Operating-system",
+                "Operatingsystem",
                 "Portainer"
             ],
             "platform": "linux",
@@ -310,7 +310,7 @@
             "note": "Default username is <b>root</b>. Check the <a href=\"https://docs.gitlab.com/ee/install/docker.html\" target=\"_blank\">GitLab documentation</a> to get started.",
             "categories": [
                 "Development",
-                "Project-management",
+                "Project Management",
                 "Portainer"
             ],
             "platform": "linux",
@@ -503,7 +503,7 @@
             "title": "Solr (portainer)",
             "description": "Open-source enterprise search platform",
             "categories": [
-                "Search-engine",
+                "Search Engine",
                 "Portainer"
             ],
             "platform": "linux",
@@ -814,7 +814,7 @@
             "title": "Jenkins (portainer)",
             "description": "Open-source continuous integration tool",
             "categories": [
-                "Continuous-integration",
+                "CI",
                 "Portainer"
             ],
             "platform": "linux",
@@ -837,7 +837,7 @@
             "description": "Open-source project management tool",
             "note": "Default user and password are admin/admin",
             "categories": [
-                "Project-management",
+                "Project Management",
                 "Portainer"
             ],
             "platform": "linux",
@@ -859,7 +859,7 @@
             "description": "A web file manager",
             "note": "Default credentials: admin/admin",
             "categories": [
-                "Files",
+                "File Management",
                 "Storage",
                 "Portainer"
             ],
@@ -9559,7 +9559,7 @@
             "note": "Default username is <b>root</b>. Check the <a href=\"https://docs.gitlab.com/ee/install/docker.html\" target=\"_blank\">GitLab documentation</a> to get started.",
             "categories": [
                 "Development",
-                "Project management",
+                "Project Management",
                 "Lissy93"
             ],
             "platform": "linux",
@@ -9683,7 +9683,7 @@
             "title": "Solr (lissy93)",
             "description": "Open-source enterprise search platform",
             "categories": [
-                "Search",
+                "Search Engine",
                 "Lissy93"
             ],
             "platform": "linux",
@@ -9995,7 +9995,7 @@
             "description": "Open-source project management tool",
             "note": "Default user and password are admin/admin",
             "categories": [
-                "Project management",
+                "Project Management",
                 "Lissy93"
             ],
             "platform": "linux",
@@ -10017,7 +10017,7 @@
             "description": "A web file manager",
             "note": "Default credentials: admin/admin",
             "categories": [
-                "Files",
+                "File Management",
                 "Storage",
                 "Lissy93"
             ],
@@ -20037,7 +20037,7 @@
             "title": "Odoo (lissy93)",
             "description": "Open-source business apps",
             "categories": [
-                "Project management",
+                "Project Management",
                 "Lissy93"
             ],
             "platform": "linux",
@@ -22397,7 +22397,7 @@
         },
         {
             "categories": [
-                "File Browsers",
+                "File Management",
                 "Lissy93"
             ],
             "description": "Pingvin Share is self-hosted file sharing platform and an alternative for WeTransfer.",
@@ -22484,7 +22484,7 @@
         },
         {
             "categories": [
-                "File Browsers",
+                "File Management",
                 "Lissy93"
             ],
             "description": "Chibisafe is a modern and self-hosted take on file uploading services that can handle anything you throw at it thanks to it's robust and fast API, chunked uploads support and more.",
@@ -22569,7 +22569,7 @@
         },
         {
             "categories": [
-                "Devops",
+                "DevTools",
                 "Lissy93"
             ],
             "description": "Modern UI for Ansible",
@@ -22827,7 +22827,7 @@
         },
         {
             "categories": [
-                "Files",
+                "File Management",
                 "Lissy93"
             ],
             "description": "A Dropbox-like file manager that let you manage your data anywhere it is located.",
@@ -22999,7 +22999,7 @@
         },
         {
             "categories": [
-                "Project management",
+                "Project Management",
                 "Productivity",
                 "Lissy93"
             ],
@@ -23317,7 +23317,7 @@
         },
         {
             "categories": [
-                "Search",
+                "Search Engine",
                 "Lissy93"
             ],
             "description": "Meilisearch is a\u00a0**RESTful search API**. It aims to be a\u00a0**ready-to-go solution**\u00a0for everyone who wants a\u00a0**fast and relevant search experience**\u00a0for their end-users",
@@ -24802,7 +24802,7 @@
         },
         {
             "categories": [
-                "Feed reader",
+                "Feed Reader",
                 "Xneo1"
             ],
             "description": "A free, self-hostable rss aggregator.",
@@ -24838,7 +24838,7 @@
         },
         {
             "categories": [
-                "Feed reader",
+                "Feed Reader",
                 "Xneo1"
             ],
             "description": "Miniflux is a minimalist and opinionated feed reader.",
@@ -28692,7 +28692,7 @@
         },
         {
             "categories": [
-                "File browsers",
+                "File Management",
                 "Xneo1"
             ],
             "description": "Pingvin Share is self-hosted file sharing platform and an alternative for WeTransfer.",
@@ -28709,7 +28709,7 @@
         },
         {
             "categories": [
-                "Pdf tools",
+                "PDF Tools",
                 "Productivity",
                 "Xneo1"
             ],
@@ -28779,7 +28779,7 @@
         },
         {
             "categories": [
-                "File browsers",
+                "File Management",
                 "Xneo1"
             ],
             "description": "Chibisafe is a modern and self-hosted take on file uploading services that can handle anything you throw at it thanks to it's robust and fast API, chunked uploads support and more.",
@@ -28899,7 +28899,7 @@
         },
         {
             "categories": [
-                "Devops",
+                "DevTools",
                 "Xneo1"
             ],
             "description": "Modern UI for Ansible",
@@ -28986,7 +28986,7 @@
         },
         {
             "categories": [
-                "Time tracking",
+                "Time Tracking",
                 "Xneo1"
             ],
             "description": "Traggo is a tag-based time tracking tool. In Traggo there are no tasks, only tagged time spans.",
@@ -29263,7 +29263,7 @@
         },
         {
             "categories": [
-                "Files",
+                "File Management",
                 "Xneo1"
             ],
             "description": "A Dropbox-like file manager that let you manage your data anywhere it is located.",
@@ -29400,7 +29400,7 @@
         {
             "categories": [
                 "Productivity",
-                "Low code",
+                "Low Code",
                 "Xneo1"
             ],
             "description": "OpnForm is an open-source form builder. It's an alternative to products like Typeform, JotForm, Tally etc.",
@@ -29504,7 +29504,7 @@
         },
         {
             "categories": [
-                "Project management",
+                "Project Management",
                 "Productivity",
                 "Xneo1"
             ],
@@ -29697,7 +29697,7 @@
         {
             "categories": [
                 "Wiki",
-                "Knowledge base",
+                "Knowledge Base",
                 "Xneo1"
             ],
             "description": "Documize Community is an open source, modern, self-hosted, enterprise-grade knowledge management solution.",
@@ -29731,7 +29731,7 @@
         },
         {
             "categories": [
-                "Remote control",
+                "Remote Control",
                 "Xneo1"
             ],
             "description": "MeshCentral is a full computer management web site. With MeshCentral, you can run your own web server to remotely manage and control computers on a local network or anywhere on the internet. ",
@@ -29748,7 +29748,7 @@
         },
         {
             "categories": [
-                "Remote control",
+                "Remote Control",
                 "Xneo1"
             ],
             "description": "Rust Desk is an Open source virtual or remote desktop infrastructure for everyone!",
@@ -29765,7 +29765,7 @@
         },
         {
             "categories": [
-                "Remote control",
+                "Remote Control",
                 "Xneo1"
             ],
             "description": "RPort is free remote access and remote management, now acquired by RealVNC",
@@ -29782,7 +29782,7 @@
         },
         {
             "categories": [
-                "Remote control",
+                "Remote Control",
                 "Xneo1"
             ],
             "description": "Remotely is a remote control and remote scripting solution, built with .NET 6, Blazor, and SignalR Core.",
@@ -29911,7 +29911,7 @@
         },
         {
             "categories": [
-                "Search",
+                "Search Engine",
                 "Xneo1"
             ],
             "description": "Meilisearch is a\u00a0**RESTful search API**. It aims to be a\u00a0**ready-to-go solution**\u00a0for everyone who wants a\u00a0**fast and relevant search experience**\u00a0for their end-users",
@@ -29928,7 +29928,7 @@
         },
         {
             "categories": [
-                "Identity management",
+                "Identity Management",
                 "Access Proxy",
                 "Xneo1"
             ],
@@ -29946,7 +29946,7 @@
         },
         {
             "categories": [
-                "Identity management",
+                "Identity Management",
                 "Security",
                 "Xneo1"
             ],
@@ -30293,7 +30293,7 @@
         },
         {
             "categories": [
-                "Smart home",
+                "Smart Home",
                 "Xneo1"
             ],
             "description": "BroadlinkManager is a Flask powerd, easy to use system that hepls you to work with Broadlink Devices.",
@@ -30310,7 +30310,7 @@
         },
         {
             "categories": [
-                "Smart home",
+                "Smart Home",
                 "Xneo1"
             ],
             "description": "HomeKit support for the impatient.",
@@ -30882,7 +30882,7 @@
                 {
                     "name": "LANGFLOW_SECRET_KEY",
                     "description": "A key used for encrypting the superuser's password.",
-                    "default": "2zTTGLIszjI3Tm6MK5GiAlB1ycmlq-LmCIkTOwYr2fM=",
+                    "default": "e86zwdTIAqexagXPtQFnrTyBTPrhEpZJi2Rjplt26n4=",
                     "label": "LANGFLOW_SECRET_KEY"
                 },
                 {
@@ -31120,7 +31120,7 @@
                 },
                 {
                     "name": "N8N_ENCRYPTION_KEY",
-                    "default": "1feQ1GxvkjFDZd1emm",
+                    "default": "lgyHnVZDzJgM06yQnv",
                     "description": "Encryption key used to encrypt sensitive data.",
                     "label": "N8N_ENCRYPTION_KEY"
                 },

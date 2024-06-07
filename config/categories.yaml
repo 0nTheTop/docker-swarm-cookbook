@@ -37,6 +37,7 @@ Cloud: []
 Codeserver: []
 Comics: []
 CI:
+  - Continuous-integration
   - continuous-integration
   - Continuousintegration
 Crypto: []
@@ -47,8 +48,8 @@ Dashboard:
 Database: []
 DevTools:
   - Devtools
+  - Devops
 Development: []
-Devops: []
 Docker: []
 Documentation:
   - Documents
@@ -65,11 +66,14 @@ Family:
   - Familyappserver
 Feed Reader:
   - Feedreader
-File Browsers:
-  - Filebrowsers
+  - Feed reader
+
 File Management:
   - Filemanagement
-Files:
+  - File Browsers
+  - File browsers
+  - Filebrowsers
+  - Files
   - Filesystem
 Finance: []
 Fitness: []
@@ -78,9 +82,11 @@ Games: []
 Graphicdesign: []
 Helpdesk: []
 Identity Management:
+  - Identity management
   - Identitymanagement
 IoT: []
 Knowledge Base:
+  - Knowledge base
   - Knowledgebase
 LLM:
   - Llm
@@ -94,6 +100,7 @@ Link Sharing:
 Log Management:
   - Logmanagement
 Low Code:
+  - Low code
   - Low-Code
   - Low-code
   - Lowcode
@@ -137,8 +144,10 @@ OPS:
 Offline: []
 Operatingsystem:
   - operating-system
+  - Operating-system
 Other: []
 PDF Tools:
+  - Pdf tools
   - Pdftools
   - Pdf
 PaaS:
@@ -149,18 +158,24 @@ Podcast: []
 Portainer: []
 Presentation: []
 Productivity: []
-Project management:
+Project Management:
+  - Project management
   - Projectmanagement
+  - Project-management
 Proxy: []
 Remote Control:
+  - Remote control
   - Remotecontrol
 Research: []
-Search:
+Search Engine:
+  - Search
+  - Search-engine
   - Searchengine
   - search-engine
 Security: []
 Serverless: []
 Smart Home:
+  - Smart home
   - Smarthome
 Social: []
 Statusstable: []
@@ -170,6 +185,7 @@ Sync: []
 System:
   - Systemtools
 Time Tracking:
+  - Time tracking
   - Timetracking
   - Time related
   - Timerelated
