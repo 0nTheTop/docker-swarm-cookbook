@@ -30795,7 +30795,7 @@
                 {
                     "name": "LANGFLOW_SECRET_KEY",
                     "description": "A key used for encrypting the superuser's password.",
-                    "default": "13-8MzaLKAUMJ9zgR8yW7mjT5VKx0UA1VlHwBQL6UuY=",
+                    "default": "CJTh_NtOKk40Ik43AEUn_6-75J9_j6U0rZu5W2Il_yg=",
                     "label": "LANGFLOW_SECRET_KEY"
                 },
                 {
@@ -30964,8 +30964,8 @@
                 },
                 {
                     "name": "FLOWISE_PORT",
-                    "default": "3080",
-                    "description": "Port to expose flowise server. Default is 3080.",
+                    "default": "3000",
+                    "description": "Port to expose flowise server. Default is 3000.",
                     "label": "FLOWISE_PORT"
                 },
                 {

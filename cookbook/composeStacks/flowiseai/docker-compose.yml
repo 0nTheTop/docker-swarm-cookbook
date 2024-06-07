@@ -12,6 +12,7 @@ services:
       - no-new-privileges:true
     networks:
       - flowise
+      #- traefik
     ports:
       - ${FLOWISE_PORT:-3000}:3000
     volumes:
@@ -68,6 +69,15 @@ services:
         condition: service_healthy
     healthcheck:
       test: wget --no-verbose --tries=1 --spider http://localhost:3000
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=traefik"
+      - "traefik.http.routers.flowise.rule=HostRegexp(`^flowise\\..*`)"
+      - "traefik.http.routers.flowise.service=flowise-s"
+      - "traefik.http.routers.flowise.entryPoints=web"
+      - "traefik.http.services.flowise-s.loadbalancer.server.port=${FLOWISE_PORT:-3000}"
+      - "traefik.http.services.flowise-s.loadbalancer.sticky.cookie.name=stickycookie"
+      - "traefik.http.services.flowise-s.loadbalancer.sticky.cookie.secure=true"
 
   postgres:
     hostname: postgres

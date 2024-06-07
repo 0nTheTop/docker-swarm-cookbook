@@ -26,8 +26,8 @@ env:
   default: fl0wiser83632ai
   description: Password used by the POSTGRES_USER.
 - name: FLOWISE_PORT
-  default: 3080
-  description: Port to expose flowise server. Default is 3080.
+  default: 3000
+  description: Port to expose flowise server. Default is 3000.
 - name: FLOWISE_USERNAME
   default: user
   description: Username for flowise basic auth. Default is `user`.

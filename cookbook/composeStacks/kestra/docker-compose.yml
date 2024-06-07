@@ -58,10 +58,10 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.docker.network=traefik"
-      - "traefik.http.routers.langflkestraow.rule=HostRegexp(`^kestra\\..*`)"
+      - "traefik.http.routers.kestra.rule=HostRegexp(`^kestra\\..*`)"
       - "traefik.http.routers.kestra.service=kestra-s"
       - "traefik.http.routers.kestra.entryPoints=web"
-      - "traefik.http.services.kestra-s.loadbalancer.server.port=8080"
+      - "traefik.http.services.kestra-s.loadbalancer.server.port=${KESTRA_PORT:-8080}"
       - "traefik.http.services.kestra-s.loadbalancer.sticky.cookie.name=stickycookie"
       - "traefik.http.services.kestra-s.loadbalancer.sticky.cookie.secure=true"
   
