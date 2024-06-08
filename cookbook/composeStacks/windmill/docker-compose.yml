@@ -114,7 +114,7 @@ services:
     expose:
       - 3001
     volumes:
-      - lsp_cache:/root/.cache
+      - windmil-lsp-cache:/root/.cache
 
   multiplayer:
     image: ghcr.io/windmill-labs/windmill-multiplayer:latest
@@ -156,6 +156,8 @@ volumes:
     name: windmill-worker-dependency-cache
   windmil-postgres-data:
     name: windmil-postgres-data
+  windmil-lsp-cache:
+    name: windmil-lsp-cache
 
 
 networks:
