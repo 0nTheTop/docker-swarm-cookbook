@@ -7,8 +7,7 @@ services:
     networks:
       - windmill
       #- traefik
-    deploy:
-      replicas: 1
+
     restart: unless-stopped
     expose:
       - ${WM_PORT}
@@ -20,15 +19,17 @@ services:
         condition: service_healthy
     volumes:
       - windmill-worker-logs:/tmp/windmill/logs
-    labels:
-      - "traefik.enable=true"
-      - "traefik.docker.network=traefik"
-      - "traefik.http.routers.windmill.rule=HostRegexp(`^windmill\\..*`)"
-      - "traefik.http.routers.windmill.service=windmill-s"
-      - "traefik.http.routers.windmill13203eiGht.entryPoints=web"
-      - "traefik.http.services.windmill-s.loadbalancer.server.port=${WM_PORT:-${WM_PORT}}"
-      - "traefik.http.services.windmill-s.loadbalancer.sticky.cookie.name=stickycookie"
-      - "traefik.http.services.windmill-s.loadbalancer.sticky.cookie.secure=true"
+    deploy:
+      replicas: 1
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=traefik"
+        - "traefik.http.routers.windmill.rule=HostRegexp(`^windmill\\..*`)"
+        - "traefik.http.routers.windmill.service=windmill-s"
+        - "traefik.http.routers.windmill13203eiGht.entryPoints=web"
+        - "traefik.http.services.windmill-s.loadbalancer.server.port=${WM_PORT:-${WM_PORT}}"
+        - "traefik.http.services.windmill-s.loadbalancer.sticky.cookie.name=stickycookie"
+        - "traefik.http.services.windmill-s.loadbalancer.sticky.cookie.secure=true"
 
   worker:
     image: ${WM_IMAGE}

@@ -258,6 +258,73 @@
             "id": 6
         },
         {
+            "description": "Windmill is the most popular workflow automation platform for technical teams",
+            "title": "Windmill (Cookbook)",
+            "categories": [
+                "Low code",
+                "Automation",
+                "Cookbook"
+            ],
+            "platform": "linux",
+            "name": "Windmill",
+            "note": "<a href=\"https://www.windmill.dev/\" target=\"_blank\">Windmill Docs</a><br> <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
+            "env": [
+                {
+                    "name": "TZ",
+                    "label": "Time-Zone",
+                    "description": "Time Zone. Default is UTC.",
+                    "default": "UTC"
+                },
+                {
+                    "name": "POSTGRES_DB",
+                    "label": "POSTGRES_DB",
+                    "default": "windmill",
+                    "description": "Specifies a name for your database or defaults to the POSTGRES_USER value when left blank."
+                },
+                {
+                    "name": "POSTGRES_USER",
+                    "label": "POSTGRES_USER",
+                    "default": "windmill",
+                    "description": "Specifies a user with superuser privileges and a database with the same name. Postgres uses the default user when this is empty."
+                },
+                {
+                    "name": "POSTGRES_PASSWORD",
+                    "label": "POSTGRES_PASSWORD",
+                    "default": "windmill156b3eiGht",
+                    "description": "Password used by the POSTGRES_USER."
+                },
+                {
+                    "name": "WM_PORT",
+                    "default": "5678",
+                    "description": "The port to run the windmill server on. Default is 5678.",
+                    "label": "WM_PORT"
+                },
+                {
+                    "name": "WM_IMAGE",
+                    "description": "The image to use for the windmill server. Default is ghcr.io/windmill-labs/windmill:main. Default: ghcr.io/windmill-labs/windmill:main",
+                    "select": [
+                        {
+                            "text": "ghcr.io/windmill-labs/windmill:main",
+                            "value": "ghcr.io/windmill-labs/windmill:main",
+                            "default": true
+                        },
+                        {
+                            "text": "ghcr.io/windmill-labs/windmill-ee:main",
+                            "value": "ghcr.io/windmill-labs/windmill-ee:main"
+                        }
+                    ],
+                    "label": "WM_IMAGE"
+                }
+            ],
+            "repository": {
+                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
+                "stackfile": "cookbook/swarmStacks/windmill/docker-stack.yml"
+            },
+            "type": 2,
+            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/windmill.png",
+            "id": 7
+        },
+        {
             "description": "Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.  It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-click.",
             "title": "Node-RED (Cookbook)",
             "categories": [
@@ -281,7 +348,7 @@
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/node-red.png",
             "note": "<br><a href=\"{GITHUB_URL_CONTENT}main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
-            "id": 7
+            "id": 8
         },
         {
             "description": "Qdrant is an Open-Source Vector Database and Vector Search Engine written in Rust. It provides fast and scalable vector similarity search service.",
@@ -299,7 +366,7 @@
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/qdrant.png",
             "env": [],
-            "id": 8
+            "id": 9
         },
         {
             "description": "Docker swarm service for automatically updating your services whenever their image is refreshed",
@@ -317,7 +384,7 @@
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/shepherd.png",
             "env": [],
-            "id": 9
+            "id": 10
         },
         {
             "description": "Langflow-AI is a visual framework for building multi-agent and RAG applications. It's open-source, Python-powered, fully customizable, model and vector store agnostic.",
@@ -390,7 +457,7 @@
                 {
                     "name": "LANGFLOW_SECRET_KEY",
                     "description": "A key used for encrypting the superuser's password.",
-                    "default": "SI_RFgVA15UBH1DSqCiG0nfK-qK6RwhuGxFTngO_YJk=",
+                    "default": "3l51MUmpvixQPswey-ZnHihM4iMudMQ9zcfuOM0IGrM=",
                     "label": "LANGFLOW_SECRET_KEY"
                 },
                 {
@@ -469,7 +536,7 @@
             "name": "langflow-ai",
             "type": 3,
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/langflow-ai.png",
-            "id": 10
+            "id": 11
         },
         {
             "description": "Infinitely scalable, event-driven, language-agnostic orchestration and scheduling platform to manage millions of workflows declaratively in code.",
@@ -519,7 +586,7 @@
             "name": "kestra",
             "type": 3,
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/kestra.png",
-            "id": 11
+            "id": 12
         },
         {
             "description": "Open source low-code tool for developers to build customized LLM orchestration flow & AI agents",
@@ -582,7 +649,7 @@
             },
             "type": 3,
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/flowiseai.png",
-            "id": 12
+            "id": 13
         },
         {
             "description": "The world's most popular workflow automation platform for technical teams",
@@ -704,73 +771,6 @@
             },
             "type": 3,
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/n8n.png",
-            "id": 13
-        },
-        {
-            "description": "Windmill is the most popular workflow automation platform for technical teams",
-            "title": "Windmill (Cookbook)",
-            "categories": [
-                "Low code",
-                "Automation",
-                "Cookbook"
-            ],
-            "platform": "linux",
-            "name": "Windmill",
-            "note": "<a href=\"https://www.windmill.dev/\" target=\"_blank\">Windmil Docs</a><br> <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
-            "env": [
-                {
-                    "name": "TZ",
-                    "label": "Time-Zone",
-                    "description": "Time Zone. Default is UTC.",
-                    "default": "UTC"
-                },
-                {
-                    "name": "POSTGRES_DB",
-                    "label": "POSTGRES_DB",
-                    "default": "windmil",
-                    "description": "Specifies a name for your database or defaults to the POSTGRES_USER value when left blank."
-                },
-                {
-                    "name": "POSTGRES_USER",
-                    "label": "POSTGRES_USER",
-                    "default": "windmil",
-                    "description": "Specifies a user with superuser privileges and a database with the same name. Postgres uses the default user when this is empty."
-                },
-                {
-                    "name": "POSTGRES_PASSWORD",
-                    "label": "POSTGRES_PASSWORD",
-                    "default": "windmil156b3eiGht",
-                    "description": "Password used by the POSTGRES_USER."
-                },
-                {
-                    "name": "WM_PORT",
-                    "default": "5678",
-                    "description": "The port to run the windmil server on. Default is 5678.",
-                    "label": "WM_PORT"
-                },
-                {
-                    "name": "WM_IMAGE",
-                    "description": "The image to use for the windmil server. Default is ghcr.io/windmill-labs/windmill:main. Default: ghcr.io/windmill-labs/windmill:main",
-                    "select": [
-                        {
-                            "text": "ghcr.io/windmill-labs/windmill:main",
-                            "value": "ghcr.io/windmill-labs/windmill:main",
-                            "default": true
-                        },
-                        {
-                            "text": "ghcr.io/windmill-labs/windmill-ee:main",
-                            "value": "ghcr.io/windmill-labs/windmill-ee:main"
-                        }
-                    ],
-                    "label": "WM_IMAGE"
-                }
-            ],
-            "repository": {
-                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
-                "stackfile": "cookbook/composeStacks/windmill/docker-compose.yml"
-            },
-            "type": 3,
-            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/windmill.png",
             "id": 14
         }
     ]
