@@ -155,10 +155,10 @@ volumes:
     name: windmill-worker-logs
   windmill-worker-dependency-cache:
     name: windmill-worker-dependency-cache
-  windmil-postgres-data:
-    name: windmil-postgres-data
-  windmil-lsp-cache:
-    name: windmil-lsp-cache
+  windmill-postgres-data:
+    name: windmill-postgres-data
+  windmill-lsp-cache:
+    name: windmill-lsp-cache
 
 
 networks:
