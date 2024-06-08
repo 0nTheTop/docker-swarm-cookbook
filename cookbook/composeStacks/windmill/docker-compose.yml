@@ -6,6 +6,7 @@ services:
     pull_policy: always
     networks:
       - windmil
+      #- traefik
     deploy:
       replicas: 1
     restart: unless-stopped
