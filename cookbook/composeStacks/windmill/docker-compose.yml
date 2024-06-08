@@ -5,7 +5,7 @@ services:
     image: ${WM_IMAGE}
     pull_policy: always
     networks:
-      - windmil
+      - windmill
       #- traefik
     deploy:
       replicas: 1
@@ -13,7 +13,7 @@ services:
     expose:
       - ${WM_PORT}
     environment:
-      DATABASE_URL: postgres://${POSTGRES_USER:-windmil}:${POSTGRES_PASSWORD:-windmil13203eiGht}@postgres/${POSTGRES_DB:-windmil}?sslmode=disable
+      DATABASE_URL: postgres://${POSTGRES_USER:-windmill}:${POSTGRES_PASSWORD:-windmill13203eiGht}@postgres/${POSTGRES_DB:-windmill}?sslmode=disable
       MODE: server
     depends_on:
       postgres:
@@ -23,18 +23,18 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.docker.network=traefik"
-      - "traefik.http.routers.windmil.rule=HostRegexp(`^windmil\\..*`)"
-      - "traefik.http.routers.windmil.service=windmil-s"
-      - "traefik.http.routers.windmil.entryPoints=web"
-      - "traefik.http.services.windmil-s.loadbalancer.server.port=${WM_PORT:-${WM_PORT}}"
-      - "traefik.http.services.windmil-s.loadbalancer.sticky.cookie.name=stickycookie"
-      - "traefik.http.services.windmil-s.loadbalancer.sticky.cookie.secure=true"
+      - "traefik.http.routers.windmill.rule=HostRegexp(`^windmill\\..*`)"
+      - "traefik.http.routers.windmill.service=windmill-s"
+      - "traefik.http.routers.windmill13203eiGht.entryPoints=web"
+      - "traefik.http.services.windmill-s.loadbalancer.server.port=${WM_PORT:-${WM_PORT}}"
+      - "traefik.http.services.windmill-s.loadbalancer.sticky.cookie.name=stickycookie"
+      - "traefik.http.services.windmill-s.loadbalancer.sticky.cookie.secure=true"
 
   windmill_worker:
     image: ${WM_IMAGE}
     pull_policy: always
     networks:
-      - windmil
+      - windmill
     deploy:
       replicas: 3
       resources:
@@ -43,7 +43,7 @@ services:
           memory: 2048M
     restart: unless-stopped
     environment:
-      DATABASE_URL: postgres://${POSTGRES_USER:-windmil}:${POSTGRES_PASSWORD:-windmil13203eiGht}@postgres/${POSTGRES_DB:-windmil}?sslmode=disable
+      DATABASE_URL: postgres://${POSTGRES_USER:-windmilwindmil}:${POSTGRES_PASSWORD:-windmiwindmill13203eiGht}@postgres/${POSTGRES_DB:-windmiwindmill}?sslmode=disable
       MODE: worker
       WORKER_GROUP: default
     depends_on:
@@ -62,7 +62,7 @@ services:
     image: ${WM_IMAGE}
     pull_policy: always
     networks:
-      - windmil
+      - windmill
     deploy:
       replicas: 2
       resources:
@@ -71,7 +71,7 @@ services:
           memory: 128M
     restart: unless-stopped
     environment:
-      DATABASE_URL: postgres://${POSTGRES_USER:-windmil}:${POSTGRES_PASSWORD:-windmil13203eiGht}@postgres/${POSTGRES_DB:-windmil}?sslmode=disable
+      DATABASE_URL: postgres://${POSTGRES_USER:-windmill}:${POSTGRES_PASSWORD:-windmill3203eiGht}@postgres/${POSTGRES_DB:-windmill}?sslmode=disable
       MODE: worker
       WORKER_GROUP: native
     depends_on:
@@ -85,7 +85,7 @@ services:
   #   image: ${WM_IMAGE}
   #   pull_policy: always
   #   networks:
-  #     - windmil
+  #     - windmill
   #   deploy:
   #     replicas: 1
   #     resources:
@@ -94,7 +94,7 @@ services:
   #         memory: 2048M
   #   restart: unless-stopped
   #   environment:
-  #     - DATABASE_URL=postgres://${POSTGRES_USER:-windmil}:${POSTGRES_PASSWORD:-windmil13203eiGht}@postgres/${POSTGRES_DB:-windmil}?sslmode=disable
+  #     - DATABASE_URL=postgres://${POSTGRES_USER:-windmill}:${POSTGRES_PASSWORD:-windmill13203eiGht}@postgres/${POSTGRES_DB:-windmill}?sslmode=disable
   #     - MODE=worker
   #     - WORKER_GROUP=reports
   #   depends_on:
@@ -110,17 +110,17 @@ services:
     image: ghcr.io/windmill-labs/windmill-lsp:latest
     pull_policy: always
     networks:
-      - windmil
+      - windmill
     restart: unless-stopped
     expose:
       - 3001
     volumes:
-      - windmil-lsp-cache:/root/.cache
+      - windmill-lsp-cache:/root/.cache
 
   multiplayer:
     image: ghcr.io/windmill-labs/windmill-multiplayer:latest
     networks:
-      - windmil
+      - windmill
     deploy:
       replicas: 0 # Set to 1 to enable multiplayer, only available on Enterprise Edition
     restart: unless-stopped
@@ -129,22 +129,22 @@ services:
 
   postgres:
     hostname: postgres
-    container_name: windmil-postgres
+    container_name: windmill-postgres
     image: postgres:16
     environment:
       TZ: ${TZ}
-      POSTGRES_DB: ${POSTGRES_DB:-windmil}
-      POSTGRES_USER: ${POSTGRES_USER:-windmil}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-windmil13203eiGht}
+      POSTGRES_DB: ${POSTGRES_DB:-windmill}
+      POSTGRES_USER: ${POSTGRES_USER:-windmill}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-windmill13203eiGht}
     restart: always
     #ports:
     #  - "5432:5432"
     volumes:
-      - windmil-postgres-data:/var/lib/postgresql/data
+      - windmill-postgres-data:/var/lib/postgresql/data
     networks:
-      - windmil
+      - windmill
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-windmil} -d ${POSTGRES_DB:-windmil}"]
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-windmill} -d ${POSTGRES_DB:-windmill}"]
       timeout: 20s
       interval: 10s
       retries: 5
@@ -162,8 +162,8 @@ volumes:
 
 
 networks:
-  windmil:
-    name: windmil
+  windmill:
+    name: windmill
     driver: overlay
     attachable: true
 #  traefik:
