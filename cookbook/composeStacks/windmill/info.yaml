@@ -1,0 +1,31 @@
+---
+description: Windmill is the most popular workflow automation platform for technical teams
+title: Windmill
+categories: [lowcode, automation]
+platform: linux
+name: Windmill
+note:
+  <a href="https://www.windmill.dev/" target="_blank">Windmil Docs</a><br>
+env:
+- name: TZ
+  label: Time-Zone
+  description: Time Zone. Default is UTC.
+  default: UTC
+- name: POSTGRES_DB
+  label: POSTGRES_DB
+  default: windmil
+  description: Specifies a name for your database or defaults to the POSTGRES_USER value when left blank. 
+- name: POSTGRES_USER
+  label: POSTGRES_USER
+  default: windmil
+  description: Specifies a user with superuser privileges and a database with the same name. Postgres uses the default user when this is empty.
+- name: POSTGRES_PASSWORD
+  label: POSTGRES_PASSWORD
+  default: windmil156b3eiGht
+  description: Password used by the POSTGRES_USER.
+- name: WM_PORT
+  default: 5678
+  description: The port to run the windmil server on. Default is 5678.
+- name: WM_IMAGE
+  default: ghcr.io/windmill-labs/windmill:main|ghcr.io/windmill-labs/windmill-ee:main
+  description: The image to use for the windmil server. Default is ghcr.io/windmill-labs/windmill:main.

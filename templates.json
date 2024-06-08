@@ -30882,7 +30882,7 @@
                 {
                     "name": "LANGFLOW_SECRET_KEY",
                     "description": "A key used for encrypting the superuser's password.",
-                    "default": "F_xv8AZJkIA_Dd_nsUPrJdBn3PXmsr2vEFGQpsNoMjY=",
+                    "default": "SI_RFgVA15UBH1DSqCiG0nfK-qK6RwhuGxFTngO_YJk=",
                     "label": "LANGFLOW_SECRET_KEY"
                 },
                 {
@@ -31197,6 +31197,73 @@
             "type": 3,
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/n8n.png",
             "id": 858
+        },
+        {
+            "description": "Windmill is the most popular workflow automation platform for technical teams",
+            "title": "Windmill (Cookbook)",
+            "categories": [
+                "Low code",
+                "Automation",
+                "Cookbook"
+            ],
+            "platform": "linux",
+            "name": "Windmill",
+            "note": "<a href=\"https://www.windmill.dev/\" target=\"_blank\">Windmil Docs</a><br> <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
+            "env": [
+                {
+                    "name": "TZ",
+                    "label": "Time-Zone",
+                    "description": "Time Zone. Default is UTC.",
+                    "default": "UTC"
+                },
+                {
+                    "name": "POSTGRES_DB",
+                    "label": "POSTGRES_DB",
+                    "default": "windmil",
+                    "description": "Specifies a name for your database or defaults to the POSTGRES_USER value when left blank."
+                },
+                {
+                    "name": "POSTGRES_USER",
+                    "label": "POSTGRES_USER",
+                    "default": "windmil",
+                    "description": "Specifies a user with superuser privileges and a database with the same name. Postgres uses the default user when this is empty."
+                },
+                {
+                    "name": "POSTGRES_PASSWORD",
+                    "label": "POSTGRES_PASSWORD",
+                    "default": "windmil156b3eiGht",
+                    "description": "Password used by the POSTGRES_USER."
+                },
+                {
+                    "name": "WM_PORT",
+                    "default": "5678",
+                    "description": "The port to run the windmil server on. Default is 5678.",
+                    "label": "WM_PORT"
+                },
+                {
+                    "name": "WM_IMAGE",
+                    "description": "The image to use for the windmil server. Default is ghcr.io/windmill-labs/windmill:main. Default: ghcr.io/windmill-labs/windmill:main",
+                    "select": [
+                        {
+                            "text": "ghcr.io/windmill-labs/windmill:main",
+                            "value": "ghcr.io/windmill-labs/windmill:main",
+                            "default": true
+                        },
+                        {
+                            "text": "ghcr.io/windmill-labs/windmill-ee:main",
+                            "value": "ghcr.io/windmill-labs/windmill-ee:main"
+                        }
+                    ],
+                    "label": "WM_IMAGE"
+                }
+            ],
+            "repository": {
+                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
+                "stackfile": "cookbook/composeStacks/windmill/docker-compose.yml"
+            },
+            "type": 3,
+            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/windmill.png",
+            "id": 859
         }
     ]
 }

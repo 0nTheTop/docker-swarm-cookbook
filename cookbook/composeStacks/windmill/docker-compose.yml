@@ -1,0 +1,167 @@
+version: "3.8"
+
+services:
+  windmill_server:
+    image: ${WM_IMAGE}
+    pull_policy: always
+    networks:
+      - windmil
+    deploy:
+      replicas: 1
+    restart: unless-stopped
+    expose:
+      - ${WM_PORT}
+    environment:
+      DATABASE_URL: postgres://${POSTGRES_USER:-windmil}:${POSTGRES_PASSWORD:-windmil13203eiGht}@postgres/${POSTGRES_DB:-windmil}?sslmode=disable
+      MODE: server
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - windmill-worker-logs:/tmp/windmill/logs
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=traefik"
+      - "traefik.http.routers.windmil.rule=HostRegexp(`^windmil\\..*`)"
+      - "traefik.http.routers.windmil.service=windmil-s"
+      - "traefik.http.routers.windmil.entryPoints=web"
+      - "traefik.http.services.windmil-s.loadbalancer.server.port=${WM_PORT:-${WM_PORT}}"
+      - "traefik.http.services.windmil-s.loadbalancer.sticky.cookie.name=stickycookie"
+      - "traefik.http.services.windmil-s.loadbalancer.sticky.cookie.secure=true"
+
+  windmill_worker:
+    image: ${WM_IMAGE}
+    pull_policy: always
+    networks:
+      - windmil
+    deploy:
+      replicas: 3
+      resources:
+        limits:
+          cpus: "1"
+          memory: 2048M
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: postgres://${POSTGRES_USER:-windmil}:${POSTGRES_PASSWORD:-windmil13203eiGht}@postgres/${POSTGRES_DB:-windmil}?sslmode=disable
+      MODE: worker
+      WORKER_GROUP: default
+    depends_on:
+      postgres:
+        condition: service_healthy
+    # to mount the worker folder to debug, KEEP_JOB_DIR=true and mount /tmp/windmill
+    volumes:
+      # mount the docker socket to allow to run docker containers from within the workers
+      - /var/run/docker.sock:/var/run/docker.sock
+      - windmill-worker-dependency-cache:/tmp/windmill/cache
+      - windmill-worker-logs:/tmp/windmill/logs
+
+  ## This worker is specialized for "native" jobs. Native jobs run in-process and thus are much more lightweight than other jobs
+  windmill_worker_native:
+    # Use ghcr.io/windmill-labs/windmill-ee:main for the ee
+    image: ${WM_IMAGE}
+    pull_policy: always
+    networks:
+      - windmil
+    deploy:
+      replicas: 2
+      resources:
+        limits:
+          cpus: "0.1"
+          memory: 128M
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: postgres://${POSTGRES_USER:-windmil}:${POSTGRES_PASSWORD:-windmil13203eiGht}@postgres/${POSTGRES_DB:-windmil}?sslmode=disable
+      MODE: worker
+      WORKER_GROUP: native
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - windmill-worker-logs:/tmp/windmill/logs
+  
+  ## This worker is specialized for reports or scraping jobs. It is assigned the "reports" worker group which has an init script that installs chromium and can be targeted by using the "chromium" worker tag.
+  # windmill_worker_reports:
+  #   image: ${WM_IMAGE}
+  #   pull_policy: always
+  #   networks:
+  #     - windmil
+  #   deploy:
+  #     replicas: 1
+  #     resources:
+  #       limits:
+  #         cpus: "1"
+  #         memory: 2048M
+  #   restart: unless-stopped
+  #   environment:
+  #     - DATABASE_URL=postgres://${POSTGRES_USER:-windmil}:${POSTGRES_PASSWORD:-windmil13203eiGht}@postgres/${POSTGRES_DB:-windmil}?sslmode=disable
+  #     - MODE=worker
+  #     - WORKER_GROUP=reports
+  #   depends_on:
+  #     db:
+  #       condition: service_healthy
+  #   # to mount the worker folder to debug, KEEP_JOB_DIR=true and mount /tmp/windmill
+  #   volumes:
+  #     # mount the docker socket to allow to run docker containers from within the workers
+  #     - /var/run/docker.sock:/var/run/docker.sock
+  #     - windmill-worker-dependency-cache:/tmp/windmill/cache
+
+  lsp:
+    image: ghcr.io/windmill-labs/windmill-lsp:latest
+    pull_policy: always
+    networks:
+      - windmil
+    restart: unless-stopped
+    expose:
+      - 3001
+    volumes:
+      - lsp_cache:/root/.cache
+
+  multiplayer:
+    image: ghcr.io/windmill-labs/windmill-multiplayer:latest
+    networks:
+      - windmil
+    deploy:
+      replicas: 0 # Set to 1 to enable multiplayer, only available on Enterprise Edition
+    restart: unless-stopped
+    expose:
+      - 3002
+
+  postgres:
+    hostname: postgres
+    container_name: windmil-postgres
+    image: postgres:16
+    environment:
+      TZ: ${TZ}
+      POSTGRES_DB: ${POSTGRES_DB:-windmil}
+      POSTGRES_USER: ${POSTGRES_USER:-windmil}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-windmil13203eiGht}
+    restart: always
+    #ports:
+    #  - "5432:5432"
+    volumes:
+      - windmil-postgres-data:/var/lib/postgresql/data
+    networks:
+      - windmil
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-windmil} -d ${POSTGRES_DB:-windmil}"]
+      timeout: 20s
+      interval: 10s
+      retries: 5
+      start_period: 30s
+
+volumes:
+  windmill-worker-logs:
+    name: windmill-worker-logs
+  windmill-worker-dependency-cache:
+    name: windmill-worker-dependency-cache
+  windmil-postgres-data:
+    name: windmil-postgres-data
+
+
+networks:
+  windmil:
+    name: windmil
+    driver: overlay
+    attachable: true
+#  traefik:
+#    external: true
