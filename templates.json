@@ -9357,6 +9357,87 @@
         },
         {
             "type": 1,
+            "title": "Code-server {shmolf} (lissy93)",
+            "name": "code-server",
+            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>This will bind to the following directory on the host filesystem:</p><p><code>/portainer/Files/AppData/Config/code-server</code></p><ul><li>Proxy Domain: See <a href='https://github.com/cdr/code-server/blob/master/docs/FAQ.md#sub-domains' target='_blank'>Documentation \ud83d\uddd7</a></li><li>Timezones: See <a href='https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List' target='_blank'>list \ud83d\uddd7</a></li></ul>",
+            "description": "Code-server (https://coder.com) is VS Code running on a remote server, accessible through the browser. - Code on your Chromebook, tablet, and laptop with a consistent dev environment. - If you have a Windows or Mac workstation, more easily develop for Linux. - Take advantage of large cloud servers to speed up tests, compilations, downloads, and more. - Preserve battery life when you're on the go. - All intensive computation runs on your server. - You're no longer running excess instances of Chrome.",
+            "categories": [
+                "Development",
+                "Lissy93"
+            ],
+            "platform": "linux",
+            "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/code-server-banner.png",
+            "image": "linuxserver/code-server:latest",
+            "env": [
+                {
+                    "name": "PUID",
+                    "label": "PUID",
+                    "default": "1000",
+                    "description": "for UserID"
+                },
+                {
+                    "name": "PGID",
+                    "label": "PGID",
+                    "default": "1000",
+                    "description": "for GroupID"
+                },
+                {
+                    "name": "TZ",
+                    "label": "TZ",
+                    "default": "Europe/Amsterdam",
+                    "description": "specify a timezone to use"
+                },
+                {
+                    "name": "PASSWORD",
+                    "label": "PASSWORD",
+                    "default": "password",
+                    "description": "Optional web gui password, if `PASSWORD` or `HASHED_PASSWORD` is not provided, there will be no auth."
+                },
+                {
+                    "name": "HASHED_PASSWORD",
+                    "label": "HASHED_PASSWORD",
+                    "default": "",
+                    "description": "Optional web gui password, overrides `PASSWORD`, instructions on how to create it is below."
+                },
+                {
+                    "name": "SUDO_PASSWORD",
+                    "label": "SUDO_PASSWORD",
+                    "default": "password",
+                    "description": "If this optional variable is set, user will have sudo access in the code-server terminal with the specified password."
+                },
+                {
+                    "name": "SUDO_PASSWORD_HASH",
+                    "label": "SUDO_PASSWORD_HASH",
+                    "default": "",
+                    "description": "Optionally set sudo password via hash (takes priority over `SUDO_PASSWORD` var). Format is `$type$salt$hashed`."
+                },
+                {
+                    "name": "PROXY_DOMAIN",
+                    "label": "PROXY_DOMAIN",
+                    "default": "code-server.my.domain",
+                    "description": "If this optional variable is set, this domain will be proxied for subdomain proxying."
+                },
+                {
+                    "name": "DEFAULT_WORKSPACE",
+                    "label": "DEFAULT_WORKSPACE",
+                    "default": "/config/workspace",
+                    "description": "If this optional variable is set, code-server will open this directory by default"
+                }
+            ],
+            "ports": [
+                "8443:8443/tcp"
+            ],
+            "volumes": [
+                {
+                    "container": "/config",
+                    "bind": "/portainer/Files/AppData/Config/code-server"
+                }
+            ],
+            "restart_policy": "unless-stopped",
+            "id": 240
+        },
+        {
+            "type": 1,
             "title": "Registry (lissy93)",
             "description": "Docker image registry",
             "categories": [
@@ -9374,7 +9455,7 @@
                     "container": "/var/lib/registry"
                 }
             ],
-            "id": 240
+            "id": 241
         },
         {
             "type": 1,
@@ -9402,7 +9483,7 @@
                     "preset": true
                 }
             ],
-            "id": 241
+            "id": 242
         },
         {
             "type": 1,
@@ -9417,7 +9498,7 @@
             "image": "ubuntu:latest",
             "interactive": true,
             "command": "/bin/bash",
-            "id": 242
+            "id": 243
         },
         {
             "type": 1,
@@ -9432,7 +9513,7 @@
             "image": "node:latest",
             "interactive": true,
             "command": "/bin/bash",
-            "id": 243
+            "id": 244
         },
         {
             "type": 1,
@@ -9453,7 +9534,7 @@
                     "container": "/usr/local/apache2/htdocs/"
                 }
             ],
-            "id": 244
+            "id": 245
         },
         {
             "type": 1,
@@ -9485,7 +9566,7 @@
                     "container": "/var/lib/mysql"
                 }
             ],
-            "id": 245
+            "id": 246
         },
         {
             "type": 1,
@@ -9506,7 +9587,7 @@
                     "container": "/data/db"
                 }
             ],
-            "id": 246
+            "id": 247
         },
         {
             "type": 1,
@@ -9528,7 +9609,7 @@
                     "container": "/data"
                 }
             ],
-            "id": 247
+            "id": 248
         },
         {
             "type": 1,
@@ -9550,7 +9631,7 @@
                     "container": "/usr/share/elasticsearch/data"
                 }
             ],
-            "id": 248
+            "id": 249
         },
         {
             "type": 1,
@@ -9581,7 +9662,7 @@
                     "container": "/var/opt/gitlab"
                 }
             ],
-            "id": 249
+            "id": 250
         },
         {
             "type": 1,
@@ -9615,7 +9696,7 @@
                     "container": "/usr/src/app/localMetadata"
                 }
             ],
-            "id": 250
+            "id": 251
         },
         {
             "type": 1,
@@ -9643,7 +9724,7 @@
                     "label": "SA password"
                 }
             ],
-            "id": 251
+            "id": 252
         },
         {
             "type": 1,
@@ -9676,7 +9757,7 @@
                     "container": "C:/temp/"
                 }
             ],
-            "id": 252
+            "id": 253
         },
         {
             "type": 1,
@@ -9697,7 +9778,7 @@
                     "container": "/opt/solr/mydata"
                 }
             ],
-            "id": 253
+            "id": 254
         },
         {
             "type": 1,
@@ -9718,7 +9799,7 @@
                     "container": "/data"
                 }
             ],
-            "id": 254
+            "id": 255
         },
         {
             "type": 2,
@@ -9746,7 +9827,7 @@
                     "label": "Grafana admin password"
                 }
             ],
-            "id": 255
+            "id": 256
         },
         {
             "type": 2,
@@ -9768,7 +9849,7 @@
                     "label": "Redis password"
                 }
             ],
-            "id": 256
+            "id": 257
         },
         {
             "type": 1,
@@ -9790,7 +9871,7 @@
                     "container": "/var/lib/rabbitmq"
                 }
             ],
-            "id": 257
+            "id": 258
         },
         {
             "type": 1,
@@ -9822,7 +9903,7 @@
                     "container": "/var/www/html"
                 }
             ],
-            "id": 258
+            "id": 259
         },
         {
             "type": 1,
@@ -9843,7 +9924,7 @@
                     "container": "/var/www/html"
                 }
             ],
-            "id": 259
+            "id": 260
         },
         {
             "type": 1,
@@ -9865,7 +9946,7 @@
                     "container": "/data"
                 }
             ],
-            "id": 260
+            "id": 261
         },
         {
             "type": 1,
@@ -9897,7 +9978,7 @@
                     "bind": "/var/run/docker.sock"
                 }
             ],
-            "id": 261
+            "id": 262
         },
         {
             "type": 1,
@@ -9933,7 +10014,7 @@
                     "readonly": true
                 }
             ],
-            "id": 262
+            "id": 263
         },
         {
             "type": 1,
@@ -9965,7 +10046,7 @@
                     "container": "/var/www/html"
                 }
             ],
-            "id": 263
+            "id": 264
         },
         {
             "type": 1,
@@ -9987,7 +10068,7 @@
                     "container": "/var/jenkins_home"
                 }
             ],
-            "id": 264
+            "id": 265
         },
         {
             "type": 1,
@@ -10009,7 +10090,7 @@
                     "container": "/usr/src/redmine/files"
                 }
             ],
-            "id": 265
+            "id": 266
         },
         {
             "type": 1,
@@ -10036,7 +10117,7 @@
                 }
             ],
             "command": "--port 80 --database /data/database.db --root /srv",
-            "id": 266
+            "id": 267
         },
         {
             "type": 1,
@@ -10060,7 +10141,7 @@
                 "8080/tcp",
                 "8443/tcp"
             ],
-            "id": 267
+            "id": 268
         },
         {
             "type": 1,
@@ -10102,7 +10183,7 @@
                     "container": "/app/includes/shared/media"
                 }
             ],
-            "id": 268
+            "id": 269
         },
         {
             "type": 1,
@@ -10143,7 +10224,7 @@
                     "description": "Image build cache path. Generally set to <data dir> + '/home/dokku'"
                 }
             ],
-            "id": 269
+            "id": 270
         },
         {
             "type": 1,
@@ -10194,7 +10275,7 @@
                     "container": "/var/log/opcrouter"
                 }
             ],
-            "id": 270
+            "id": 271
         },
         {
             "type": 1,
@@ -10216,7 +10297,7 @@
                     "container": "/licsrv/licenses"
                 }
             ],
-            "id": 271
+            "id": 272
         },
         {
             "type": 1,
@@ -10234,7 +10315,7 @@
                 "8099/tcp",
                 "4897/tcp"
             ],
-            "id": 272
+            "id": 273
         },
         {
             "type": 1,
@@ -10252,7 +10333,7 @@
                 "8099/tcp",
                 "4897/tcp"
             ],
-            "id": 273
+            "id": 274
         },
         {
             "type": 1,
@@ -10270,7 +10351,7 @@
                 "8099/tcp",
                 "4897/tcp"
             ],
-            "id": 274
+            "id": 275
         },
         {
             "type": 1,
@@ -10302,7 +10383,7 @@
                     "container": "/mqtt"
                 }
             ],
-            "id": 275
+            "id": 276
         },
         {
             "type": 1,
@@ -10334,7 +10415,7 @@
                     "container": "/mqtt"
                 }
             ],
-            "id": 276
+            "id": 277
         },
         {
             "type": 2,
@@ -10351,7 +10432,7 @@
                 "url": "https://github.com/portainer/templates",
                 "stackfile": "stacks/portainer-agent/docker-stack.yml"
             },
-            "id": 277
+            "id": 278
         },
         {
             "type": 2,
@@ -10369,7 +10450,7 @@
                 "url": "https://github.com/openfaas/faas",
                 "stackfile": "docker-compose.yml"
             },
-            "id": 278
+            "id": 279
         },
         {
             "type": 2,
@@ -10386,7 +10467,7 @@
                 "url": "https://github.com/portainer/templates",
                 "stackfile": "stacks/ironfunctions/docker-stack.yml"
             },
-            "id": 279
+            "id": 280
         },
         {
             "type": 2,
@@ -10403,7 +10484,7 @@
                 "url": "https://github.com/portainer/templates",
                 "stackfile": "stacks/cockroachdb/docker-stack.yml"
             },
-            "id": 280
+            "id": 281
         },
         {
             "type": 3,
@@ -10453,7 +10534,7 @@
                     "description": "Secret token used to log into Vault (don't include '.' character)."
                 }
             ],
-            "id": 281
+            "id": 282
         },
         {
             "type": 2,
@@ -10481,7 +10562,7 @@
                     "description": "Azure primary key"
                 }
             ],
-            "id": 282
+            "id": 283
         },
         {
             "type": 3,
@@ -10506,7 +10587,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 283
+            "id": 284
         },
         {
             "type": 2,
@@ -10528,7 +10609,7 @@
                     "label": "Postgres password"
                 }
             ],
-            "id": 284
+            "id": 285
         },
         {
             "type": 3,
@@ -10550,7 +10631,7 @@
                     "label": "License key"
                 }
             ],
-            "id": 285
+            "id": 286
         },
         {
             "type": 3,
@@ -10586,7 +10667,7 @@
                     "label": "Management Center password"
                 }
             ],
-            "id": 286
+            "id": 287
         },
         {
             "type": 4,
@@ -10596,7 +10677,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 287
+            "id": 288
         },
         {
             "type": 4,
@@ -10606,7 +10687,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 288
+            "id": 289
         },
         {
             "type": 4,
@@ -10616,7 +10697,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 289
+            "id": 290
         },
         {
             "type": 4,
@@ -10626,7 +10707,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 290
+            "id": 291
         },
         {
             "type": 4,
@@ -10636,7 +10717,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 291
+            "id": 292
         },
         {
             "type": 1,
@@ -10684,7 +10765,7 @@
                     "value": "mydnschallenge"
                 }
             ],
-            "id": 292
+            "id": 293
         },
         {
             "type": 1,
@@ -10738,7 +10819,7 @@
                     "value": "mydnschallenge"
                 }
             ],
-            "id": 293
+            "id": 294
         },
         {
             "type": 1,
@@ -10781,7 +10862,7 @@
                     "value": "mydnschallenge"
                 }
             ],
-            "id": 294
+            "id": 295
         },
         {
             "type": 1,
@@ -10844,7 +10925,7 @@
                     "value": "true"
                 }
             ],
-            "id": 295
+            "id": 296
         },
         {
             "type": 1,
@@ -10907,7 +10988,7 @@
                     "value": "mydnschallenge"
                 }
             ],
-            "id": 296
+            "id": 297
         },
         {
             "type": 1,
@@ -11008,7 +11089,7 @@
                     "value": "mydnschallenge"
                 }
             ],
-            "id": 297
+            "id": 298
         },
         {
             "type": 3,
@@ -11027,7 +11108,7 @@
                 "url": "https://github.com/mediadepot/templates",
                 "stackfile": "stacks/filerun/docker-compose.yml"
             },
-            "id": 298
+            "id": 299
         },
         {
             "type": 1,
@@ -11071,7 +11152,7 @@
                     "value": "mydnschallenge"
                 }
             ],
-            "id": 299
+            "id": 300
         },
         {
             "type": 1,
@@ -11173,7 +11254,7 @@
                     "value": "mydnschallenge"
                 }
             ],
-            "id": 300
+            "id": 301
         },
         {
             "type": 3,
@@ -11213,7 +11294,7 @@
                 "url": "https://github.com/mediadepot/templates",
                 "stackfile": "stacks/klaxon/docker-compose.yml"
             },
-            "id": 301
+            "id": 302
         },
         {
             "type": 1,
@@ -11323,7 +11404,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 302
+            "id": 303
         },
         {
             "type": 1,
@@ -11362,7 +11443,7 @@
                 }
             ],
             "labels": [],
-            "id": 303
+            "id": 304
         },
         {
             "type": 1,
@@ -11412,7 +11493,7 @@
                 }
             ],
             "labels": [],
-            "id": 304
+            "id": 305
         },
         {
             "type": 3,
@@ -11429,7 +11510,7 @@
                 "url": "https://github.com/mediadepot/templates",
                 "stackfile": "stacks/mayan/docker-compose.yml"
             },
-            "id": 305
+            "id": 306
         },
         {
             "type": 1,
@@ -11495,7 +11576,7 @@
                     "value": "mydnschallenge"
                 }
             ],
-            "id": 306
+            "id": 307
         },
         {
             "type": 1,
@@ -11562,7 +11643,7 @@
                     "value": "mydnschallenge"
                 }
             ],
-            "id": 307
+            "id": 308
         },
         {
             "type": 1,
@@ -11635,7 +11716,7 @@
                     "value": "32400"
                 }
             ],
-            "id": 308
+            "id": 309
         },
         {
             "type": 3,
@@ -11652,7 +11733,7 @@
                 "url": "https://github.com/mediadepot/templates",
                 "stackfile": "stacks/plextraktsync/docker-compose.yml"
             },
-            "id": 309
+            "id": 310
         },
         {
             "type": 1,
@@ -11714,7 +11795,7 @@
                     "value": "mydnschallenge"
                 }
             ],
-            "id": 310
+            "id": 311
         },
         {
             "type": 1,
@@ -11780,7 +11861,7 @@
                     "value": "mydnschallenge"
                 }
             ],
-            "id": 311
+            "id": 312
         },
         {
             "type": 1,
@@ -11896,7 +11977,7 @@
                 }
             ],
             "labels": [],
-            "id": 312
+            "id": 313
         },
         {
             "type": 1,
@@ -11958,7 +12039,7 @@
                     "value": "mydnschallenge"
                 }
             ],
-            "id": 313
+            "id": 314
         },
         {
             "type": 1,
@@ -12035,7 +12116,7 @@
                     "value": "mydnschallenge"
                 }
             ],
-            "id": 314
+            "id": 315
         },
         {
             "type": 1,
@@ -12062,7 +12143,7 @@
                     "bind": "/opt/mediadepot/apps"
                 }
             ],
-            "id": 315
+            "id": 316
         },
         {
             "type": 1,
@@ -12108,7 +12189,7 @@
                     "value": "mydnschallenge"
                 }
             ],
-            "id": 316
+            "id": 317
         },
         {
             "type": 1,
@@ -12180,7 +12261,7 @@
                     "value": "mydnschallenge"
                 }
             ],
-            "id": 317
+            "id": 318
         },
         {
             "type": 1,
@@ -12252,7 +12333,7 @@
                     "value": "mydnschallenge"
                 }
             ],
-            "id": 318
+            "id": 319
         },
         {
             "type": 1,
@@ -12298,7 +12379,7 @@
                     "value": "mydnschallenge"
                 }
             ],
-            "id": 319
+            "id": 320
         },
         {
             "type": 1,
@@ -12381,7 +12462,7 @@
                 }
             ],
             "labels": [],
-            "id": 320
+            "id": 321
         },
         {
             "type": 1,
@@ -12433,7 +12514,7 @@
                     "value": "mydnschallenge"
                 }
             ],
-            "id": 321
+            "id": 322
         },
         {
             "type": 1,
@@ -12483,7 +12564,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 322
+            "id": 323
         },
         {
             "type": 1,
@@ -12555,7 +12636,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 323
+            "id": 324
         },
         {
             "type": 1,
@@ -12600,7 +12681,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 324
+            "id": 325
         },
         {
             "type": 1,
@@ -12645,7 +12726,7 @@
                 }
             ],
             "restart_policy": "unless-stopped",
-            "id": 325
+            "id": 326
         },
         {
             "type": 1,
@@ -12696,7 +12777,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 326
+            "id": 327
         },
         {
             "type": 1,
@@ -12741,7 +12822,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 327
+            "id": 328
         },
         {
             "type": 1,
@@ -12791,7 +12872,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 328
+            "id": 329
         },
         {
             "type": 1,
@@ -12836,7 +12917,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 329
+            "id": 330
         },
         {
             "type": 1,
@@ -12889,7 +12970,7 @@
                 }
             ],
             "restart_policy": "unless-stopped",
-            "id": 330
+            "id": 331
         },
         {
             "type": 1,
@@ -12940,7 +13021,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 331
+            "id": 332
         },
         {
             "type": 1,
@@ -12992,7 +13073,7 @@
                 }
             ],
             "restart_policy": "unless-stopped",
-            "id": 332
+            "id": 333
         },
         {
             "type": 1,
@@ -13055,7 +13136,7 @@
                 }
             ],
             "restart_policy": "unless-stopped",
-            "id": 333
+            "id": 334
         },
         {
             "type": 1,
@@ -13100,7 +13181,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 334
+            "id": 335
         },
         {
             "type": 1,
@@ -13144,7 +13225,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 335
+            "id": 336
         },
         {
             "type": 1,
@@ -13203,7 +13284,7 @@
                 }
             ],
             "restart_policy": "unless-stopped",
-            "id": 336
+            "id": 337
         },
         {
             "type": 1,
@@ -13248,7 +13329,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 337
+            "id": 338
         },
         {
             "type": 1,
@@ -13304,7 +13385,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 338
+            "id": 339
         },
         {
             "type": 1,
@@ -13355,7 +13436,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 339
+            "id": 340
         },
         {
             "type": 1,
@@ -13399,7 +13480,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 340
+            "id": 341
         },
         {
             "type": 1,
@@ -13480,7 +13561,7 @@
                 }
             ],
             "restart_policy": "unless-stopped",
-            "id": 341
+            "id": 342
         },
         {
             "type": 1,
@@ -13525,7 +13606,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 342
+            "id": 343
         },
         {
             "type": 1,
@@ -13571,7 +13652,7 @@
                 }
             ],
             "restart_policy": "unless-stopped",
-            "id": 343
+            "id": 344
         },
         {
             "type": 1,
@@ -13613,7 +13694,7 @@
                 }
             ],
             "restart_policy": "unless-stopped",
-            "id": 344
+            "id": 345
         },
         {
             "type": 1,
@@ -13665,7 +13746,7 @@
                 }
             ],
             "restart_policy": "unless-stopped",
-            "id": 345
+            "id": 346
         },
         {
             "type": 1,
@@ -13738,7 +13819,7 @@
                 }
             ],
             "restart_policy": "unless-stopped",
-            "id": 346
+            "id": 347
         },
         {
             "type": 1,
@@ -13784,7 +13865,7 @@
                 }
             ],
             "restart_policy": "unless-stopped",
-            "id": 347
+            "id": 348
         },
         {
             "type": 1,
@@ -13933,7 +14014,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 348
+            "id": 349
         },
         {
             "type": 1,
@@ -13983,7 +14064,7 @@
                 }
             ],
             "restart_policy": "unless-stopped",
-            "id": 349
+            "id": 350
         },
         {
             "type": 1,
@@ -14041,7 +14122,7 @@
                 }
             ],
             "restart_policy": "unless-stopped",
-            "id": 350
+            "id": 351
         },
         {
             "type": 1,
@@ -14085,7 +14166,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 351
+            "id": 352
         },
         {
             "type": 1,
@@ -14141,7 +14222,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 352
+            "id": 353
         },
         {
             "type": 1,
@@ -14264,7 +14345,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 353
+            "id": 354
         },
         {
             "type": 1,
@@ -14326,7 +14407,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 354
+            "id": 355
         },
         {
             "type": 1,
@@ -14373,7 +14454,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 355
+            "id": 356
         },
         {
             "type": 1,
@@ -14418,7 +14499,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 356
+            "id": 357
         },
         {
             "type": 1,
@@ -14462,7 +14543,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 357
+            "id": 358
         },
         {
             "type": 1,
@@ -14507,7 +14588,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 358
+            "id": 359
         },
         {
             "type": 1,
@@ -14558,7 +14639,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 359
+            "id": 360
         },
         {
             "type": 1,
@@ -14632,7 +14713,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 360
+            "id": 361
         },
         {
             "type": 1,
@@ -14704,7 +14785,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 361
+            "id": 362
         },
         {
             "type": 1,
@@ -14733,6 +14814,12 @@
                     "label": "TZ",
                     "default": "Europe/Amsterdam",
                     "description": "specify a timezone to use, see this [list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List)."
+                },
+                {
+                    "name": "CLI_ARGS",
+                    "label": "CLI_ARGS",
+                    "default": "",
+                    "description": "Optionally pass additional cli arguments to `FAHClient` on container start."
                 }
             ],
             "ports": [
@@ -14749,7 +14836,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 362
+            "id": 363
         },
         {
             "type": 1,
@@ -14794,7 +14881,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 363
+            "id": 364
         },
         {
             "type": 1,
@@ -14839,7 +14926,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 364
+            "id": 365
         },
         {
             "type": 1,
@@ -14884,7 +14971,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 365
+            "id": 366
         },
         {
             "type": 1,
@@ -14929,7 +15016,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 366
+            "id": 367
         },
         {
             "type": 1,
@@ -14974,7 +15061,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 367
+            "id": 368
         },
         {
             "type": 1,
@@ -15019,7 +15106,7 @@
                 }
             ],
             "restart_policy": "unless-stopped",
-            "id": 368
+            "id": 369
         },
         {
             "type": 1,
@@ -15063,7 +15150,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 369
+            "id": 370
         },
         {
             "type": 1,
@@ -15114,7 +15201,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 370
+            "id": 371
         },
         {
             "type": 1,
@@ -15219,7 +15306,7 @@
                 }
             ],
             "restart_policy": "unless-stopped",
-            "id": 371
+            "id": 372
         },
         {
             "type": 1,
@@ -15275,7 +15362,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 372
+            "id": 373
         },
         {
             "type": 1,
@@ -15320,7 +15407,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 373
+            "id": 374
         },
         {
             "type": 1,
@@ -15381,7 +15468,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 374
+            "id": 375
         },
         {
             "type": 1,
@@ -15425,7 +15512,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 375
+            "id": 376
         },
         {
             "type": 1,
@@ -15489,7 +15576,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 376
+            "id": 377
         },
         {
             "type": 1,
@@ -15540,7 +15627,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 377
+            "id": 378
         },
         {
             "type": 1,
@@ -15585,7 +15672,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 378
+            "id": 379
         },
         {
             "type": 1,
@@ -15630,7 +15717,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 379
+            "id": 380
         },
         {
             "type": 1,
@@ -15681,7 +15768,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 380
+            "id": 381
         },
         {
             "type": 1,
@@ -15752,7 +15839,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 381
+            "id": 382
         },
         {
             "type": 1,
@@ -15797,7 +15884,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 382
+            "id": 383
         },
         {
             "type": 1,
@@ -15836,7 +15923,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 383
+            "id": 384
         },
         {
             "type": 1,
@@ -15882,7 +15969,7 @@
                 }
             ],
             "restart_policy": "unless-stopped",
-            "id": 384
+            "id": 385
         },
         {
             "type": 1,
@@ -15933,7 +16020,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 385
+            "id": 386
         },
         {
             "type": 1,
@@ -15977,7 +16064,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 386
+            "id": 387
         },
         {
             "type": 1,
@@ -16022,7 +16109,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 387
+            "id": 388
         },
         {
             "type": 1,
@@ -16272,7 +16359,7 @@
                 }
             ],
             "restart_policy": "unless-stopped",
-            "id": 388
+            "id": 389
         },
         {
             "type": 1,
@@ -16317,7 +16404,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 389
+            "id": 390
         },
         {
             "type": 1,
@@ -16416,7 +16503,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 390
+            "id": 391
         },
         {
             "type": 1,
@@ -16467,7 +16554,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 391
+            "id": 392
         },
         {
             "type": 1,
@@ -16515,7 +16602,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 392
+            "id": 393
         },
         {
             "type": 1,
@@ -16566,7 +16653,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 393
+            "id": 394
         },
         {
             "type": 1,
@@ -16618,7 +16705,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 394
+            "id": 395
         },
         {
             "type": 1,
@@ -16663,7 +16750,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 395
+            "id": 396
         },
         {
             "type": 1,
@@ -16739,7 +16826,7 @@
                     "name": "DB_PORT",
                     "label": "DB_PORT",
                     "default": "",
-                    "description": "Database port (defaul: 5432)"
+                    "description": "Database port (default: 5432)"
                 },
                 {
                     "name": "REDIS_HOST",
@@ -16827,7 +16914,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 396
+            "id": 397
         },
         {
             "type": 1,
@@ -16871,7 +16958,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 397
+            "id": 398
         },
         {
             "type": 1,
@@ -16919,7 +17006,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 398
+            "id": 399
         },
         {
             "type": 1,
@@ -16964,7 +17051,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 399
+            "id": 400
         },
         {
             "type": 1,
@@ -17068,7 +17155,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 400
+            "id": 401
         },
         {
             "type": 1,
@@ -17136,7 +17223,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 401
+            "id": 402
         },
         {
             "type": 1,
@@ -17187,7 +17274,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 402
+            "id": 403
         },
         {
             "type": 1,
@@ -17232,7 +17319,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 403
+            "id": 404
         },
         {
             "type": 1,
@@ -17300,7 +17387,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 404
+            "id": 405
         },
         {
             "type": 1,
@@ -17357,7 +17444,7 @@
                 }
             ],
             "restart_policy": "unless-stopped",
-            "id": 405
+            "id": 406
         },
         {
             "type": 1,
@@ -17402,7 +17489,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 406
+            "id": 407
         },
         {
             "type": 1,
@@ -17482,7 +17569,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 407
+            "id": 408
         },
         {
             "type": 1,
@@ -17554,7 +17641,7 @@
                 }
             ],
             "restart_policy": "unless-stopped",
-            "id": 408
+            "id": 409
         },
         {
             "type": 1,
@@ -17604,7 +17691,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 409
+            "id": 410
         },
         {
             "type": 1,
@@ -17660,7 +17747,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 410
+            "id": 411
         },
         {
             "type": 1,
@@ -17709,7 +17796,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 411
+            "id": 412
         },
         {
             "type": 1,
@@ -17775,7 +17862,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 412
+            "id": 413
         },
         {
             "type": 1,
@@ -17819,7 +17906,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 413
+            "id": 414
         },
         {
             "type": 1,
@@ -17888,7 +17975,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 414
+            "id": 415
         },
         {
             "type": 1,
@@ -17932,7 +18019,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 415
+            "id": 416
         },
         {
             "type": 1,
@@ -17984,7 +18071,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 416
+            "id": 417
         },
         {
             "type": 1,
@@ -18028,7 +18115,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 417
+            "id": 418
         },
         {
             "type": 1,
@@ -18073,7 +18160,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 418
+            "id": 419
         },
         {
             "type": 1,
@@ -18118,7 +18205,7 @@
                 }
             ],
             "restart_policy": "unless-stopped",
-            "id": 419
+            "id": 420
         },
         {
             "type": 1,
@@ -18170,7 +18257,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 420
+            "id": 421
         },
         {
             "type": 1,
@@ -18215,7 +18302,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 421
+            "id": 422
         },
         {
             "type": 1,
@@ -18260,7 +18347,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 422
+            "id": 423
         },
         {
             "type": 1,
@@ -18312,7 +18399,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 423
+            "id": 424
         },
         {
             "type": 1,
@@ -18357,7 +18444,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 424
+            "id": 425
         },
         {
             "type": 1,
@@ -18497,7 +18584,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 425
+            "id": 426
         },
         {
             "type": 1,
@@ -18541,7 +18628,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 426
+            "id": 427
         },
         {
             "type": 1,
@@ -18586,7 +18673,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 427
+            "id": 428
         },
         {
             "type": 1,
@@ -18631,7 +18718,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 428
+            "id": 429
         },
         {
             "type": 1,
@@ -18713,7 +18800,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 429
+            "id": 430
         },
         {
             "type": 1,
@@ -18818,7 +18905,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 430
+            "id": 431
         },
         {
             "type": 1,
@@ -18844,7 +18931,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 431
+            "id": 432
         },
         {
             "type": 1,
@@ -18895,7 +18982,7 @@
                 }
             ],
             "restart_policy": "unless-stopped",
-            "id": 432
+            "id": 433
         },
         {
             "type": 1,
@@ -18921,7 +19008,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 433
+            "id": 434
         },
         {
             "type": 1,
@@ -19027,7 +19114,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 434
+            "id": 435
         },
         {
             "type": 1,
@@ -19071,7 +19158,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 435
+            "id": 436
         },
         {
             "type": 1,
@@ -19116,7 +19203,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 436
+            "id": 437
         },
         {
             "type": 1,
@@ -19161,7 +19248,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 437
+            "id": 438
         },
         {
             "type": 1,
@@ -19223,7 +19310,7 @@
                 }
             ],
             "restart_policy": "unless-stopped",
-            "id": 438
+            "id": 439
         },
         {
             "type": 1,
@@ -19307,7 +19394,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 439
+            "id": 440
         },
         {
             "type": 1,
@@ -19403,7 +19490,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 440
+            "id": 441
         },
         {
             "type": 1,
@@ -19449,7 +19536,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 441
+            "id": 442
         },
         {
             "type": 1,
@@ -19494,7 +19581,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 442
+            "id": 443
         },
         {
             "type": 1,
@@ -19539,7 +19626,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 443
+            "id": 444
         },
         {
             "type": 1,
@@ -19583,7 +19670,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 444
+            "id": 445
         },
         {
             "type": 1,
@@ -19628,7 +19715,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 445
+            "id": 446
         },
         {
             "categories": [
@@ -19681,7 +19768,7 @@
                     "container": "/opt/adguardhome/conf"
                 }
             ],
-            "id": 446
+            "id": 447
         },
         {
             "categories": [
@@ -19707,7 +19794,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 447
+            "id": 448
         },
         {
             "categories": [
@@ -19732,7 +19819,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 448
+            "id": 449
         },
         {
             "categories": [
@@ -19781,7 +19868,7 @@
             },
             "title": "Invoice Ninja (lissy93)",
             "type": 2,
-            "id": 449
+            "id": 450
         },
         {
             "type": 1,
@@ -19803,7 +19890,7 @@
                 }
             ],
             "privileged": true,
-            "id": 450
+            "id": 451
         },
         {
             "type": 1,
@@ -19831,7 +19918,7 @@
                 }
             ],
             "privileged": true,
-            "id": 451
+            "id": 452
         },
         {
             "categories": [
@@ -19904,7 +19991,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 452
+            "id": 453
         },
         {
             "type": 1,
@@ -19927,7 +20014,7 @@
                     "container": "/var/www/html/"
                 }
             ],
-            "id": 453
+            "id": 454
         },
         {
             "categories": [
@@ -19963,7 +20050,7 @@
                     "container": "/minecraft"
                 }
             ],
-            "id": 454
+            "id": 455
         },
         {
             "type": 2,
@@ -19992,7 +20079,7 @@
                     "description": "root password for sql"
                 }
             ],
-            "id": 455
+            "id": 456
         },
         {
             "categories": [
@@ -20030,7 +20117,7 @@
                     "container": "/etc/letsencrypt"
                 }
             ],
-            "id": 456
+            "id": 457
         },
         {
             "type": 1,
@@ -20069,7 +20156,7 @@
                     "container": "/mnt/extra-addons"
                 }
             ],
-            "id": 457
+            "id": 458
         },
         {
             "categories": [
@@ -20112,7 +20199,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 458
+            "id": 459
         },
         {
             "type": 1,
@@ -20134,7 +20221,7 @@
                 "8443/tcp",
                 "8447/tcp"
             ],
-            "id": 459
+            "id": 460
         },
         {
             "categories": [
@@ -20163,7 +20250,7 @@
                     "container": "/root"
                 }
             ],
-            "id": 460
+            "id": 461
         },
         {
             "categories": [
@@ -20199,7 +20286,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 461
+            "id": 462
         },
         {
             "categories": [
@@ -20224,7 +20311,7 @@
                     "container": "/usr/src/app"
                 }
             ],
-            "id": 462
+            "id": 463
         },
         {
             "categories": [
@@ -20250,7 +20337,7 @@
                     "container": "/app/db/database"
                 }
             ],
-            "id": 463
+            "id": 464
         },
         {
             "categories": [
@@ -20286,7 +20373,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 464
+            "id": 465
         },
         {
             "categories": [
@@ -20350,7 +20437,7 @@
                     "container": "/etc/localtime"
                 }
             ],
-            "id": 465
+            "id": 466
         },
         {
             "type": 1,
@@ -20385,7 +20472,7 @@
                     "container": "/var/lib/wowza"
                 }
             ],
-            "id": 466
+            "id": 467
         },
         {
             "categories": [
@@ -20587,7 +20674,7 @@
             "restart_policy": "unless-stopped",
             "title": "Outline (lissy93)",
             "type": 3,
-            "id": 467
+            "id": 468
         },
         {
             "categories": [
@@ -20620,7 +20707,7 @@
             },
             "title": "Authentik (lissy93)",
             "type": 3,
-            "id": 468
+            "id": 469
         },
         {
             "categories": [
@@ -20664,7 +20751,7 @@
             },
             "title": "MeshCentral (lissy93)",
             "type": 3,
-            "id": 469
+            "id": 470
         },
         {
             "categories": [
@@ -20685,7 +20772,7 @@
             "restart_policy": "always",
             "title": "Freeboard (lissy93)",
             "type": 3,
-            "id": 470
+            "id": 471
         },
         {
             "categories": [
@@ -20706,7 +20793,7 @@
             "restart_policy": "always",
             "title": "Servas (lissy93)",
             "type": 3,
-            "id": 471
+            "id": 472
         },
         {
             "categories": [
@@ -20727,7 +20814,7 @@
             "restart_policy": "always",
             "title": "Wallabag (lissy93)",
             "type": 3,
-            "id": 472
+            "id": 473
         },
         {
             "categories": [
@@ -20763,7 +20850,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 473
+            "id": 474
         },
         {
             "categories": [
@@ -20798,7 +20885,7 @@
                     "container": "/home/node/trilium-data"
                 }
             ],
-            "id": 474
+            "id": 475
         },
         {
             "categories": [
@@ -20815,7 +20902,7 @@
             },
             "title": "Frigate NVR (lissy93)",
             "type": 3,
-            "id": 475
+            "id": 476
         },
         {
             "categories": [
@@ -20848,7 +20935,7 @@
             },
             "title": "Fenrus (lissy93)",
             "type": 3,
-            "id": 476
+            "id": 477
         },
         {
             "categories": [
@@ -20896,7 +20983,7 @@
                     "container": "/metadata"
                 }
             ],
-            "id": 477
+            "id": 478
         },
         {
             "categories": [
@@ -20925,7 +21012,7 @@
             },
             "title": "Vikunja (lissy93)",
             "type": 3,
-            "id": 478
+            "id": 479
         },
         {
             "categories": [
@@ -20949,7 +21036,7 @@
             },
             "title": "Stash (lissy93)",
             "type": 3,
-            "id": 479
+            "id": 480
         },
         {
             "categories": [
@@ -20966,7 +21053,7 @@
             },
             "title": "Rocket Chat (lissy93)",
             "type": 3,
-            "id": 480
+            "id": 481
         },
         {
             "categories": [
@@ -20995,7 +21082,7 @@
             },
             "title": "Joplin (lissy93)",
             "type": 3,
-            "id": 481
+            "id": 482
         },
         {
             "categories": [
@@ -21037,7 +21124,7 @@
                     "container": "/opt/magic_mirror/css"
                 }
             ],
-            "id": 482
+            "id": 483
         },
         {
             "categories": [
@@ -21055,7 +21142,7 @@
             "restart_policy": "unless-stopped",
             "title": "draw.io (lissy93)",
             "type": 1,
-            "id": 483
+            "id": 484
         },
         {
             "categories": [
@@ -21088,7 +21175,7 @@
             },
             "title": "Navidrome (lissy93)",
             "type": 3,
-            "id": 484
+            "id": 485
         },
         {
             "categories": [
@@ -21112,7 +21199,7 @@
                     "container": "/app/data"
                 }
             ],
-            "id": 485
+            "id": 486
         },
         {
             "categories": [
@@ -21166,7 +21253,7 @@
             },
             "title": "Owncloud (lissy93)",
             "type": 3,
-            "id": 486
+            "id": 487
         },
         {
             "categories": [
@@ -21203,7 +21290,7 @@
             },
             "title": "Petio (lissy93)",
             "type": 3,
-            "id": 487
+            "id": 488
         },
         {
             "type": 1,
@@ -21274,7 +21361,7 @@
                 }
             ],
             "restart_policy": "unless-stopped",
-            "id": 488
+            "id": 489
         },
         {
             "type": 1,
@@ -21349,7 +21436,7 @@
                 }
             ],
             "restart_policy": "unless-stopped",
-            "id": 489
+            "id": 490
         },
         {
             "type": 1,
@@ -21406,7 +21493,7 @@
                 }
             ],
             "restart_policy": "unless-stopped",
-            "id": 490
+            "id": 491
         },
         {
             "type": 1,
@@ -21495,7 +21582,7 @@
                 }
             ],
             "restart_policy": "unless-stopped",
-            "id": 491
+            "id": 492
         },
         {
             "type": 1,
@@ -21514,7 +21601,7 @@
                 "80:80/tcp"
             ],
             "restart_policy": "unless-stopped",
-            "id": 492
+            "id": 493
         },
         {
             "type": 1,
@@ -21569,7 +21656,7 @@
                 }
             ],
             "restart_policy": "unless-stopped",
-            "id": 493
+            "id": 494
         },
         {
             "type": 1,
@@ -21624,7 +21711,7 @@
                 }
             ],
             "restart_policy": "unless-stopped",
-            "id": 494
+            "id": 495
         },
         {
             "type": 1,
@@ -21685,7 +21772,7 @@
                 }
             ],
             "restart_policy": "unless-stopped",
-            "id": 495
+            "id": 496
         },
         {
             "categories": [
@@ -21727,7 +21814,7 @@
             },
             "title": "Pritunl (lissy93)",
             "type": 3,
-            "id": 496
+            "id": 497
         },
         {
             "categories": [
@@ -21786,7 +21873,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 497
+            "id": 498
         },
         {
             "categories": [
@@ -21804,7 +21891,7 @@
             "restart_policy": "unless-stopped",
             "title": "Dradis (lissy93)",
             "type": 1,
-            "id": 498
+            "id": 499
         },
         {
             "categories": [
@@ -21851,7 +21938,7 @@
                     "container": "/etc/localtime:ro"
                 }
             ],
-            "id": 499
+            "id": 500
         },
         {
             "categories": [
@@ -21888,7 +21975,7 @@
                     "container": "/app/config"
                 }
             ],
-            "id": 500
+            "id": 501
         },
         {
             "categories": [
@@ -21907,7 +21994,7 @@
             "restart_policy": "unless-stopped",
             "title": "Passky Client (lissy93)",
             "type": 1,
-            "id": 501
+            "id": 502
         },
         {
             "categories": [
@@ -21944,7 +22031,7 @@
                     "container": "/var/www/html/databases"
                 }
             ],
-            "id": 502
+            "id": 503
         },
         {
             "categories": [
@@ -21982,7 +22069,7 @@
                     "container": "/usr/src/app/analytics"
                 }
             ],
-            "id": 503
+            "id": 504
         },
         {
             "categories": [
@@ -22019,7 +22106,7 @@
                     "container": "/zusam/data"
                 }
             ],
-            "id": 504
+            "id": 505
         },
         {
             "categories": [
@@ -22035,7 +22122,7 @@
             },
             "title": "ProxiTok (lissy93)",
             "type": 3,
-            "id": 505
+            "id": 506
         },
         {
             "categories": [
@@ -22052,7 +22139,7 @@
             },
             "title": "Miniflux (lissy93)",
             "type": 3,
-            "id": 506
+            "id": 507
         },
         {
             "categories": [
@@ -22085,7 +22172,7 @@
             },
             "title": "Koillection (lissy93)",
             "type": 3,
-            "id": 507
+            "id": 508
         },
         {
             "categories": [
@@ -22121,7 +22208,7 @@
                     "container": "/data"
                 }
             ],
-            "id": 508
+            "id": 509
         },
         {
             "categories": [
@@ -22138,7 +22225,7 @@
             },
             "title": "Tdarr (lissy93)",
             "type": 3,
-            "id": 509
+            "id": 510
         },
         {
             "categories": [
@@ -22156,7 +22243,7 @@
             "restart_policy": "always",
             "title": "Teleport (lissy93)",
             "type": 3,
-            "id": 510
+            "id": 511
         },
         {
             "categories": [
@@ -22176,7 +22263,7 @@
             "restart_policy": "always",
             "title": "Cryptofolio (lissy93)",
             "type": 1,
-            "id": 511
+            "id": 512
         },
         {
             "categories": [
@@ -22204,7 +22291,7 @@
                     "container": "/resources"
                 }
             ],
-            "id": 512
+            "id": 513
         },
         {
             "categories": [
@@ -22228,7 +22315,7 @@
                     "container": "/app"
                 }
             ],
-            "id": 513
+            "id": 514
         },
         {
             "categories": [
@@ -22252,7 +22339,7 @@
                     "container": "/app"
                 }
             ],
-            "id": 514
+            "id": 515
         },
         {
             "categories": [
@@ -22269,7 +22356,7 @@
             },
             "title": "Homechart (lissy93)",
             "type": 3,
-            "id": 515
+            "id": 516
         },
         {
             "categories": [
@@ -22286,7 +22373,7 @@
             },
             "title": "Ferdi Server (lissy93)",
             "type": 3,
-            "id": 516
+            "id": 517
         },
         {
             "categories": [
@@ -22306,7 +22393,7 @@
             ],
             "title": "Littlelink Server (lissy93)",
             "type": 3,
-            "id": 517
+            "id": 518
         },
         {
             "categories": [
@@ -22323,7 +22410,7 @@
             },
             "title": "Linkstack (lissy93)",
             "type": 3,
-            "id": 518
+            "id": 519
         },
         {
             "categories": [
@@ -22340,7 +22427,7 @@
             },
             "title": "Aria2 Pro (lissy93)",
             "type": 3,
-            "id": 519
+            "id": 520
         },
         {
             "categories": [
@@ -22357,7 +22444,7 @@
             },
             "title": "Flood (lissy93)",
             "type": 3,
-            "id": 520
+            "id": 521
         },
         {
             "categories": [
@@ -22375,7 +22462,7 @@
             },
             "title": "Photoprism (lissy93)",
             "type": 3,
-            "id": 521
+            "id": 522
         },
         {
             "categories": [
@@ -22393,7 +22480,7 @@
             },
             "title": "Immich (lissy93)",
             "type": 3,
-            "id": 522
+            "id": 523
         },
         {
             "categories": [
@@ -22410,7 +22497,7 @@
             },
             "title": "Pingvin (lissy93)",
             "type": 3,
-            "id": 523
+            "id": 524
         },
         {
             "categories": [
@@ -22428,7 +22515,7 @@
             },
             "title": "Stirling-PDF (lissy93)",
             "type": 3,
-            "id": 524
+            "id": 525
         },
         {
             "categories": [
@@ -22445,7 +22532,7 @@
             },
             "title": "NetAlertX (lissy93)",
             "type": 3,
-            "id": 525
+            "id": 526
         },
         {
             "categories": [
@@ -22463,7 +22550,7 @@
             },
             "title": "TimeTagger (lissy93)",
             "type": 3,
-            "id": 526
+            "id": 527
         },
         {
             "categories": [
@@ -22480,7 +22567,7 @@
             },
             "title": "Invidious (lissy93)",
             "type": 3,
-            "id": 527
+            "id": 528
         },
         {
             "categories": [
@@ -22497,7 +22584,7 @@
             },
             "title": "Chibisafe (lissy93)",
             "type": 3,
-            "id": 528
+            "id": 529
         },
         {
             "categories": [
@@ -22514,7 +22601,7 @@
             },
             "title": "Kiwix (lissy93)",
             "type": 3,
-            "id": 529
+            "id": 530
         },
         {
             "categories": [
@@ -22531,7 +22618,7 @@
             },
             "title": "Tandoor (lissy93)",
             "type": 3,
-            "id": 530
+            "id": 531
         },
         {
             "categories": [
@@ -22548,7 +22635,7 @@
             },
             "title": "Webtrees (lissy93)",
             "type": 3,
-            "id": 531
+            "id": 532
         },
         {
             "categories": [
@@ -22565,7 +22652,7 @@
             },
             "title": "pve-exporter (lissy93)",
             "type": 3,
-            "id": 532
+            "id": 533
         },
         {
             "categories": [
@@ -22582,7 +22669,7 @@
             },
             "title": "Ansible-semaphore (lissy93)",
             "type": 3,
-            "id": 533
+            "id": 534
         },
         {
             "categories": [
@@ -22600,7 +22687,7 @@
             },
             "title": "Funkwhale (lissy93)",
             "type": 3,
-            "id": 534
+            "id": 535
         },
         {
             "categories": [
@@ -22617,7 +22704,7 @@
             },
             "title": "Gokapi (lissy93)",
             "type": 3,
-            "id": 535
+            "id": 536
         },
         {
             "categories": [
@@ -22634,7 +22721,7 @@
             },
             "title": "Traggo (lissy93)",
             "type": 3,
-            "id": 536
+            "id": 537
         },
         {
             "categories": [
@@ -22651,7 +22738,7 @@
             },
             "title": "Moodle (lissy93)",
             "type": 3,
-            "id": 537
+            "id": 538
         },
         {
             "categories": [
@@ -22668,7 +22755,7 @@
             },
             "title": "Freescout (lissy93)",
             "type": 3,
-            "id": 538
+            "id": 539
         },
         {
             "categories": [
@@ -22685,7 +22772,7 @@
             },
             "title": "Wger (lissy93)",
             "type": 3,
-            "id": 539
+            "id": 540
         },
         {
             "categories": [
@@ -22702,7 +22789,7 @@
             },
             "title": "Docker Container Stats (lissy93)",
             "type": 3,
-            "id": 540
+            "id": 541
         },
         {
             "categories": [
@@ -22719,7 +22806,7 @@
             },
             "title": "Codex (lissy93)",
             "type": 3,
-            "id": 541
+            "id": 542
         },
         {
             "categories": [
@@ -22737,7 +22824,7 @@
             },
             "title": "Kapowarr (lissy93)",
             "type": 3,
-            "id": 542
+            "id": 543
         },
         {
             "categories": [
@@ -22754,7 +22841,7 @@
             },
             "title": "Signal Proxy (lissy93)",
             "type": 3,
-            "id": 543
+            "id": 544
         },
         {
             "categories": [
@@ -22771,7 +22858,7 @@
             },
             "title": "Chiefonboarding (lissy93)",
             "type": 3,
-            "id": 544
+            "id": 545
         },
         {
             "categories": [
@@ -22788,7 +22875,7 @@
             },
             "title": "Castopod (lissy93)",
             "type": 3,
-            "id": 545
+            "id": 546
         },
         {
             "categories": [
@@ -22806,7 +22893,7 @@
             },
             "title": "Influxdb & Telegraf (lissy93)",
             "type": 3,
-            "id": 546
+            "id": 547
         },
         {
             "categories": [
@@ -22823,7 +22910,7 @@
             },
             "title": "Influxdb (lissy93)",
             "type": 3,
-            "id": 547
+            "id": 548
         },
         {
             "categories": [
@@ -22840,7 +22927,7 @@
             },
             "title": "Filestash (lissy93)",
             "type": 3,
-            "id": 548
+            "id": 549
         },
         {
             "categories": [
@@ -22857,7 +22944,7 @@
             },
             "title": "Silverstripe (lissy93)",
             "type": 3,
-            "id": 549
+            "id": 550
         },
         {
             "categories": [
@@ -22874,7 +22961,7 @@
             },
             "title": "Whisparr (lissy93)",
             "type": 3,
-            "id": 550
+            "id": 551
         },
         {
             "categories": [
@@ -22891,7 +22978,7 @@
             },
             "title": "Midarr (lissy93)",
             "type": 3,
-            "id": 551
+            "id": 552
         },
         {
             "categories": [
@@ -22908,7 +22995,7 @@
             },
             "title": "Appwrite (lissy93)",
             "type": 3,
-            "id": 552
+            "id": 553
         },
         {
             "categories": [
@@ -22926,7 +23013,7 @@
             },
             "title": "OpnForm (lissy93)",
             "type": 3,
-            "id": 553
+            "id": 554
         },
         {
             "categories": [
@@ -22944,7 +23031,7 @@
             },
             "title": "Activepieces (lissy93)",
             "type": 3,
-            "id": 554
+            "id": 555
         },
         {
             "categories": [
@@ -22961,7 +23048,7 @@
             },
             "title": "Dockge (lissy93)",
             "type": 3,
-            "id": 555
+            "id": 556
         },
         {
             "categories": [
@@ -22978,7 +23065,7 @@
             },
             "title": "Dokemon (lissy93)",
             "type": 3,
-            "id": 556
+            "id": 557
         },
         {
             "categories": [
@@ -22995,7 +23082,7 @@
             },
             "title": "Hauk (lissy93)",
             "type": 3,
-            "id": 557
+            "id": 558
         },
         {
             "categories": [
@@ -23013,7 +23100,7 @@
             },
             "title": "Plane (lissy93)",
             "type": 3,
-            "id": 558
+            "id": 559
         },
         {
             "categories": [
@@ -23030,7 +23117,7 @@
             },
             "title": "Shaarli (lissy93)",
             "type": 3,
-            "id": 559
+            "id": 560
         },
         {
             "categories": [
@@ -23048,7 +23135,7 @@
             },
             "title": "Flowiseai (lissy93)",
             "type": 3,
-            "id": 560
+            "id": 561
         },
         {
             "categories": [
@@ -23065,7 +23152,7 @@
             },
             "title": "Feedcord (lissy93)",
             "type": 3,
-            "id": 561
+            "id": 562
         },
         {
             "categories": [
@@ -23082,7 +23169,7 @@
             },
             "title": "Fetchcord (lissy93)",
             "type": 3,
-            "id": 562
+            "id": 563
         },
         {
             "categories": [
@@ -23099,7 +23186,7 @@
             },
             "title": "Tubearchivist (lissy93)",
             "type": 3,
-            "id": 563
+            "id": 564
         },
         {
             "categories": [
@@ -23116,7 +23203,7 @@
             },
             "title": "Actual (lissy93)",
             "type": 3,
-            "id": 564
+            "id": 565
         },
         {
             "categories": [
@@ -23134,7 +23221,7 @@
             },
             "title": "Baikal (lissy93)",
             "type": 3,
-            "id": 565
+            "id": 566
         },
         {
             "categories": [
@@ -23152,7 +23239,7 @@
             },
             "title": "Autobrr (lissy93)",
             "type": 3,
-            "id": 566
+            "id": 567
         },
         {
             "categories": [
@@ -23169,7 +23256,7 @@
             },
             "title": "Glances (lissy93)",
             "type": 3,
-            "id": 567
+            "id": 568
         },
         {
             "categories": [
@@ -23187,7 +23274,7 @@
             },
             "title": "Documize (lissy93)",
             "type": 3,
-            "id": 568
+            "id": 569
         },
         {
             "categories": [
@@ -23204,7 +23291,7 @@
             },
             "title": "Rport (lissy93)",
             "type": 3,
-            "id": 569
+            "id": 570
         },
         {
             "categories": [
@@ -23221,7 +23308,7 @@
             },
             "title": "Remotely (lissy93)",
             "type": 3,
-            "id": 570
+            "id": 571
         },
         {
             "categories": [
@@ -23239,7 +23326,7 @@
             },
             "title": "Tabby (lissy93)",
             "type": 3,
-            "id": 571
+            "id": 572
         },
         {
             "categories": [
@@ -23257,7 +23344,7 @@
             },
             "title": "Excalidraw (lissy93)",
             "type": 3,
-            "id": 572
+            "id": 573
         },
         {
             "categories": [
@@ -23274,7 +23361,7 @@
             },
             "title": "Upsnap (lissy93)",
             "type": 3,
-            "id": 573
+            "id": 574
         },
         {
             "categories": [
@@ -23293,7 +23380,7 @@
             },
             "title": "Tooljet (lissy93)",
             "type": 3,
-            "id": 574
+            "id": 575
         },
         {
             "categories": [
@@ -23313,7 +23400,7 @@
             },
             "title": "Budibase (lissy93)",
             "type": 3,
-            "id": 575
+            "id": 576
         },
         {
             "categories": [
@@ -23330,7 +23417,7 @@
             },
             "title": "Meilisearch (lissy93)",
             "type": 3,
-            "id": 576
+            "id": 577
         },
         {
             "categories": [
@@ -23348,7 +23435,7 @@
             },
             "title": "Ory Kratos (Standalone) (lissy93)",
             "type": 3,
-            "id": 577
+            "id": 578
         },
         {
             "categories": [
@@ -23366,7 +23453,7 @@
             },
             "title": "Ory Kratos (Oathkeeper) (lissy93)",
             "type": 3,
-            "id": 578
+            "id": 579
         },
         {
             "categories": [
@@ -23385,7 +23472,7 @@
             },
             "title": "Appsmith (lissy93)",
             "type": 3,
-            "id": 579
+            "id": 580
         },
         {
             "categories": [
@@ -23402,7 +23489,7 @@
             },
             "title": "Mailpile (lissy93)",
             "type": 3,
-            "id": 580
+            "id": 581
         },
         {
             "categories": [
@@ -23419,7 +23506,7 @@
             },
             "title": "Poste.io (lissy93)",
             "type": 3,
-            "id": 581
+            "id": 582
         },
         {
             "categories": [
@@ -23436,7 +23523,7 @@
             },
             "title": "iperf (lissy93)",
             "type": 3,
-            "id": 582
+            "id": 583
         },
         {
             "categories": [
@@ -23453,7 +23540,7 @@
             },
             "title": "Lazytainer (lissy93)",
             "type": 3,
-            "id": 583
+            "id": 584
         },
         {
             "categories": [
@@ -23470,7 +23557,7 @@
             },
             "title": "I hate money (lissy93)",
             "type": 3,
-            "id": 584
+            "id": 585
         },
         {
             "categories": [
@@ -23487,7 +23574,7 @@
             },
             "title": "OpenBudgeteer (lissy93)",
             "type": 3,
-            "id": 585
+            "id": 586
         },
         {
             "categories": [
@@ -23504,7 +23591,7 @@
             },
             "title": "Fireshare (lissy93)",
             "type": 3,
-            "id": 586
+            "id": 587
         },
         {
             "categories": [
@@ -23521,7 +23608,7 @@
             },
             "title": "Filepizza (lissy93)",
             "type": 3,
-            "id": 587
+            "id": 588
         },
         {
             "categories": [
@@ -23538,7 +23625,7 @@
             },
             "title": "Jump (lissy93)",
             "type": 3,
-            "id": 588
+            "id": 589
         },
         {
             "categories": [
@@ -23555,7 +23642,7 @@
             },
             "title": "Hasty-Paste (lissy93)",
             "type": 3,
-            "id": 589
+            "id": 590
         },
         {
             "categories": [
@@ -23572,7 +23659,7 @@
             },
             "title": "Xwiki (lissy93)",
             "type": 3,
-            "id": 590
+            "id": 591
         },
         {
             "categories": [
@@ -23589,7 +23676,7 @@
             },
             "title": "Leantime (lissy93)",
             "type": 3,
-            "id": 591
+            "id": 592
         },
         {
             "categories": [
@@ -23606,7 +23693,7 @@
             },
             "title": "Jellyseer (lissy93)",
             "type": 3,
-            "id": 592
+            "id": 593
         },
         {
             "categories": [
@@ -23623,7 +23710,7 @@
             },
             "title": "Trudesk (lissy93)",
             "type": 3,
-            "id": 593
+            "id": 594
         },
         {
             "categories": [
@@ -23640,7 +23727,7 @@
             },
             "title": "Dashdot (lissy93)",
             "type": 3,
-            "id": 594
+            "id": 595
         },
         {
             "categories": [
@@ -23659,7 +23746,7 @@
             },
             "title": "NocoDB (lissy93)",
             "type": 3,
-            "id": 595
+            "id": 596
         },
         {
             "categories": [
@@ -23676,7 +23763,7 @@
             },
             "title": "Broadlink Manager (lissy93)",
             "type": 3,
-            "id": 596
+            "id": 597
         },
         {
             "categories": [
@@ -23696,7 +23783,7 @@
             ],
             "title": "Umami.is (lissy93)",
             "type": 3,
-            "id": 597
+            "id": 598
         },
         {
             "categories": [
@@ -23716,7 +23803,7 @@
             ],
             "title": "Matomo (lissy93)",
             "type": 3,
-            "id": 598
+            "id": 599
         },
         {
             "categories": [
@@ -23733,7 +23820,7 @@
             },
             "title": "Neko (lissy93)",
             "type": 3,
-            "id": 599
+            "id": 600
         },
         {
             "categories": [
@@ -23750,7 +23837,7 @@
             },
             "title": "Adguard Home (xneo1)",
             "type": 3,
-            "id": 600
+            "id": 601
         },
         {
             "categories": [
@@ -23782,7 +23869,7 @@
                     "container": "/etc/authelia/"
                 }
             ],
-            "id": 601
+            "id": 602
         },
         {
             "categories": [
@@ -23799,7 +23886,7 @@
             },
             "title": "Bazarr (xneo1)",
             "type": 3,
-            "id": 602
+            "id": 603
         },
         {
             "categories": [
@@ -23836,7 +23923,7 @@
                     "container": "/zusam/data"
                 }
             ],
-            "id": 603
+            "id": 604
         },
         {
             "categories": [
@@ -23852,7 +23939,7 @@
             },
             "title": "ProxiTok (xneo1)",
             "type": 3,
-            "id": 604
+            "id": 605
         },
         {
             "categories": [
@@ -23896,7 +23983,7 @@
                     "container": "/music"
                 }
             ],
-            "id": 605
+            "id": 606
         },
         {
             "categories": [
@@ -23921,7 +24008,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 606
+            "id": 607
         },
         {
             "categories": [
@@ -23970,7 +24057,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 607
+            "id": 608
         },
         {
             "categories": [
@@ -24015,7 +24102,7 @@
             },
             "title": "Bookstack (xneo1)",
             "type": 3,
-            "id": 608
+            "id": 609
         },
         {
             "categories": [
@@ -24050,7 +24137,7 @@
                     "container": "/home/node/trilium-data"
                 }
             ],
-            "id": 609
+            "id": 610
         },
         {
             "categories": [
@@ -24091,7 +24178,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 610
+            "id": 611
         },
         {
             "categories": [
@@ -24131,7 +24218,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 611
+            "id": 612
         },
         {
             "categories": [
@@ -24173,7 +24260,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 612
+            "id": 613
         },
         {
             "categories": [
@@ -24234,7 +24321,7 @@
                     "container": "/var/www/html/images"
                 }
             ],
-            "id": 613
+            "id": 614
         },
         {
             "categories": [
@@ -24258,7 +24345,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 614
+            "id": 615
         },
         {
             "categories": [
@@ -24311,7 +24398,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 615
+            "id": 616
         },
         {
             "categories": [
@@ -24347,7 +24434,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 616
+            "id": 617
         },
         {
             "categories": [
@@ -24392,7 +24479,7 @@
                     "container": "/movies"
                 }
             ],
-            "id": 617
+            "id": 618
         },
         {
             "categories": [
@@ -24429,7 +24516,7 @@
                     "container": "/music"
                 }
             ],
-            "id": 618
+            "id": 619
         },
         {
             "categories": [
@@ -24454,7 +24541,7 @@
                     "container": "/dashmachine/dashmachine/user_data"
                 }
             ],
-            "id": 619
+            "id": 620
         },
         {
             "categories": [
@@ -24496,7 +24583,7 @@
                     "container": "/downloads"
                 }
             ],
-            "id": 620
+            "id": 621
         },
         {
             "categories": [
@@ -24525,7 +24612,7 @@
                     "container": "/downloads"
                 }
             ],
-            "id": 621
+            "id": 622
         },
         {
             "categories": [
@@ -24567,7 +24654,7 @@
                     "container": "/downloads"
                 }
             ],
-            "id": 622
+            "id": 623
         },
         {
             "categories": [
@@ -24606,7 +24693,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 623
+            "id": 624
         },
         {
             "categories": [
@@ -24645,7 +24732,7 @@
             "restart_policy": "unless-stopped",
             "title": "Duck DNS (xneo1)",
             "type": 1,
-            "id": 624
+            "id": 625
         },
         {
             "categories": [
@@ -24693,7 +24780,7 @@
                     "container": "/source"
                 }
             ],
-            "id": 625
+            "id": 626
         },
         {
             "categories": [
@@ -24744,7 +24831,7 @@
                     "container": "/data/movies"
                 }
             ],
-            "id": 626
+            "id": 627
         },
         {
             "categories": [
@@ -24769,7 +24856,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 627
+            "id": 628
         },
         {
             "categories": [
@@ -24798,7 +24885,7 @@
                     "container": "/myfiles"
                 }
             ],
-            "id": 628
+            "id": 629
         },
         {
             "categories": [
@@ -24834,7 +24921,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 629
+            "id": 630
         },
         {
             "categories": [
@@ -24851,7 +24938,7 @@
             },
             "title": "Miniflux (xneo1)",
             "type": 3,
-            "id": 630
+            "id": 631
         },
         {
             "categories": [
@@ -24894,7 +24981,7 @@
                     "container": "/mylar"
                 }
             ],
-            "id": 631
+            "id": 632
         },
         {
             "categories": [
@@ -24919,7 +25006,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 632
+            "id": 633
         },
         {
             "categories": [
@@ -24960,7 +25047,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 633
+            "id": 634
         },
         {
             "categories": [
@@ -24997,7 +25084,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 634
+            "id": 635
         },
         {
             "categories": [
@@ -25041,7 +25128,7 @@
                     "container": "/music"
                 }
             ],
-            "id": 635
+            "id": 636
         },
         {
             "categories": [
@@ -25080,7 +25167,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 636
+            "id": 637
         },
         {
             "categories": [
@@ -25110,7 +25197,7 @@
                     "container": "/www/config.yml"
                 }
             ],
-            "id": 637
+            "id": 638
         },
         {
             "categories": [
@@ -25144,7 +25231,7 @@
             },
             "title": "Dashy (xneo1)",
             "type": 3,
-            "id": 638
+            "id": 639
         },
         {
             "categories": [
@@ -25177,7 +25264,7 @@
             },
             "title": "Koillection (xneo1)",
             "type": 3,
-            "id": 639
+            "id": 640
         },
         {
             "categories": [
@@ -25211,7 +25298,7 @@
             },
             "title": "Vikunja (xneo1)",
             "type": 3,
-            "id": 640
+            "id": 641
         },
         {
             "categories": [
@@ -25245,7 +25332,7 @@
             },
             "title": "Audiobookshelf (xneo1)",
             "type": 3,
-            "id": 641
+            "id": 642
         },
         {
             "categories": [
@@ -25279,7 +25366,7 @@
             },
             "title": "Fenrus (xneo1)",
             "type": 3,
-            "id": 642
+            "id": 643
         },
         {
             "categories": [
@@ -25313,7 +25400,7 @@
             },
             "title": "Authentik (xneo1)",
             "type": 3,
-            "id": 643
+            "id": 644
         },
         {
             "categories": [
@@ -25347,7 +25434,7 @@
             },
             "title": "Navidrome (xneo1)",
             "type": 3,
-            "id": 644
+            "id": 645
         },
         {
             "categories": [
@@ -25372,7 +25459,7 @@
                     "container": "/app/data"
                 }
             ],
-            "id": 645
+            "id": 646
         },
         {
             "categories": [
@@ -25396,7 +25483,7 @@
                     "container": "/var/lib/mysql"
                 }
             ],
-            "id": 646
+            "id": 647
         },
         {
             "categories": [
@@ -25432,7 +25519,7 @@
                     "container": "/data"
                 }
             ],
-            "id": 647
+            "id": 648
         },
         {
             "categories": [
@@ -25480,7 +25567,7 @@
             },
             "title": "Invoice Ninja (xneo1)",
             "type": 3,
-            "id": 648
+            "id": 649
         },
         {
             "categories": [
@@ -25521,7 +25608,7 @@
                     "container": "/downloads"
                 }
             ],
-            "id": 649
+            "id": 650
         },
         {
             "categories": [
@@ -25572,7 +25659,7 @@
                     "container": "/data/movies"
                 }
             ],
-            "id": 650
+            "id": 651
         },
         {
             "categories": [
@@ -25609,7 +25696,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 651
+            "id": 652
         },
         {
             "categories": [
@@ -25650,7 +25737,7 @@
                     "container": "/books"
                 }
             ],
-            "id": 652
+            "id": 653
         },
         {
             "categories": [
@@ -25775,7 +25862,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 653
+            "id": 654
         },
         {
             "categories": [
@@ -25800,7 +25887,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 654
+            "id": 655
         },
         {
             "categories": [
@@ -25845,7 +25932,7 @@
                     "container": "/music"
                 }
             ],
-            "id": 655
+            "id": 656
         },
         {
             "categories": [
@@ -25888,7 +25975,7 @@
                     "container": "/pictures"
                 }
             ],
-            "id": 656
+            "id": 657
         },
         {
             "categories": [
@@ -25929,7 +26016,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 657
+            "id": 658
         },
         {
             "categories": [
@@ -25965,7 +26052,7 @@
                     "container": "/minecraft"
                 }
             ],
-            "id": 658
+            "id": 659
         },
         {
             "categories": [
@@ -26010,7 +26097,7 @@
                     "container": "/downloads"
                 }
             ],
-            "id": 659
+            "id": 660
         },
         {
             "categories": [
@@ -26045,7 +26132,7 @@
                     "container": "/config/.minetest"
                 }
             ],
-            "id": 660
+            "id": 661
         },
         {
             "categories": [
@@ -26081,7 +26168,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 661
+            "id": 662
         },
         {
             "categories": [
@@ -26114,7 +26201,7 @@
             "restart_policy": "unless-stopped",
             "title": "Minisatip (xneo1)",
             "type": 1,
-            "id": 662
+            "id": 663
         },
         {
             "categories": [
@@ -26142,7 +26229,7 @@
                     "container": "/music"
                 }
             ],
-            "id": 663
+            "id": 664
         },
         {
             "categories": [
@@ -26196,7 +26283,7 @@
                     "container": "/opt/murmur/log"
                 }
             ],
-            "id": 664
+            "id": 665
         },
         {
             "categories": [
@@ -26242,7 +26329,7 @@
                     "container": "/data"
                 }
             ],
-            "id": 665
+            "id": 666
         },
         {
             "categories": [
@@ -26279,7 +26366,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 666
+            "id": 667
         },
         {
             "categories": [
@@ -26324,7 +26411,7 @@
                     "container": "/comics"
                 }
             ],
-            "id": 667
+            "id": 668
         },
         {
             "categories": [
@@ -26364,7 +26451,7 @@
                     "container": "/downloads"
                 }
             ],
-            "id": 668
+            "id": 669
         },
         {
             "categories": [
@@ -26405,7 +26492,7 @@
                     "container": "/downloads"
                 }
             ],
-            "id": 669
+            "id": 670
         },
         {
             "categories": [
@@ -26454,7 +26541,7 @@
             },
             "title": "Nextcloud (xneo1)",
             "type": 3,
-            "id": 670
+            "id": 671
         },
         {
             "categories": [
@@ -26492,7 +26579,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 671
+            "id": 672
         },
         {
             "categories": [
@@ -26516,7 +26603,7 @@
             "restart_policy": "always",
             "title": "Nginx Proxy Manager (xneo1)",
             "type": 3,
-            "id": 672
+            "id": 673
         },
         {
             "categories": [
@@ -26553,7 +26640,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 673
+            "id": 674
         },
         {
             "categories": [
@@ -26572,7 +26659,7 @@
             },
             "title": "Ombi (xneo1)",
             "type": 3,
-            "id": 674
+            "id": 675
         },
         {
             "categories": [
@@ -26615,7 +26702,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 675
+            "id": 676
         },
         {
             "categories": [
@@ -26633,7 +26720,7 @@
             },
             "title": "Organizr (xneo1)",
             "type": 3,
-            "id": 676
+            "id": 677
         },
         {
             "categories": [
@@ -26650,7 +26737,7 @@
             },
             "title": "Overseerr (xneo1)",
             "type": 3,
-            "id": 677
+            "id": 678
         },
         {
             "categories": [
@@ -26707,7 +26794,7 @@
             },
             "title": "Owncloud (xneo1)",
             "type": 3,
-            "id": 678
+            "id": 679
         },
         {
             "categories": [
@@ -26744,7 +26831,7 @@
             },
             "title": "Petio (xneo1)",
             "type": 3,
-            "id": 679
+            "id": 680
         },
         {
             "categories": [
@@ -26788,7 +26875,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 680
+            "id": 681
         },
         {
             "categories": [
@@ -26822,7 +26909,7 @@
                     "container": "/etc/dnsmasq.d"
                 }
             ],
-            "id": 681
+            "id": 682
         },
         {
             "categories": [
@@ -26858,7 +26945,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 682
+            "id": 683
         },
         {
             "categories": [
@@ -26907,7 +26994,7 @@
                     "container": "/movies"
                 }
             ],
-            "id": 683
+            "id": 684
         },
         {
             "categories": [
@@ -26950,7 +27037,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 684
+            "id": 685
         },
         {
             "categories": [
@@ -26992,7 +27079,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 685
+            "id": 686
         },
         {
             "categories": [
@@ -27020,7 +27107,7 @@
                     "container": "/root"
                 }
             ],
-            "id": 686
+            "id": 687
         },
         {
             "categories": [
@@ -27057,7 +27144,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 687
+            "id": 688
         },
         {
             "categories": [
@@ -27097,7 +27184,7 @@
                     "container": "/data"
                 }
             ],
-            "id": 688
+            "id": 689
         },
         {
             "categories": [
@@ -27139,7 +27226,7 @@
                     "container": "/downloads"
                 }
             ],
-            "id": 689
+            "id": 690
         },
         {
             "categories": [
@@ -27175,7 +27262,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 690
+            "id": 691
         },
         {
             "categories": [
@@ -27220,7 +27307,7 @@
                     "container": "/movies"
                 }
             ],
-            "id": 691
+            "id": 692
         },
         {
             "categories": [
@@ -27237,7 +27324,7 @@
             },
             "title": "Tdarr (xneo1)",
             "type": 3,
-            "id": 692
+            "id": 693
         },
         {
             "categories": [
@@ -27261,7 +27348,7 @@
                     "container": "/usr/src/app"
                 }
             ],
-            "id": 693
+            "id": 694
         },
         {
             "categories": [
@@ -27303,7 +27390,7 @@
                     "container": "/downloads"
                 }
             ],
-            "id": 694
+            "id": 695
         },
         {
             "categories": [
@@ -27345,7 +27432,7 @@
                     "container": "/downloads"
                 }
             ],
-            "id": 695
+            "id": 696
         },
         {
             "categories": [
@@ -27390,7 +27477,7 @@
                     "container": "/incomplete-downloads"
                 }
             ],
-            "id": 696
+            "id": 697
         },
         {
             "categories": [
@@ -27435,7 +27522,7 @@
                     "container": "/tv"
                 }
             ],
-            "id": 697
+            "id": 698
         },
         {
             "categories": [
@@ -27480,7 +27567,7 @@
                     "container": "/downloads"
                 }
             ],
-            "id": 698
+            "id": 699
         },
         {
             "categories": [
@@ -27521,7 +27608,7 @@
                     "container": "/data"
                 }
             ],
-            "id": 699
+            "id": 700
         },
         {
             "categories": [
@@ -27538,7 +27625,7 @@
             },
             "title": "Snibox (xneo1)",
             "type": 3,
-            "id": 700
+            "id": 701
         },
         {
             "categories": [
@@ -27587,7 +27674,7 @@
                     "container": "/downloads"
                 }
             ],
-            "id": 701
+            "id": 702
         },
         {
             "categories": [
@@ -27628,7 +27715,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 702
+            "id": 703
         },
         {
             "categories": [
@@ -27664,7 +27751,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 703
+            "id": 704
         },
         {
             "categories": [
@@ -27689,7 +27776,7 @@
                     "container": "/var/lib/tiddlywiki"
                 }
             ],
-            "id": 704
+            "id": 705
         },
         {
             "categories": [
@@ -27725,7 +27812,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 705
+            "id": 706
         },
         {
             "categories": [
@@ -27769,7 +27856,7 @@
                     "container": "/watch"
                 }
             ],
-            "id": 706
+            "id": 707
         },
         {
             "categories": [
@@ -27832,7 +27919,7 @@
                     "container": "/etc/localtime"
                 }
             ],
-            "id": 707
+            "id": 708
         },
         {
             "categories": [
@@ -27873,7 +27960,7 @@
                     "container": "/recordings"
                 }
             ],
-            "id": 708
+            "id": 709
         },
         {
             "categories": [
@@ -27921,7 +28008,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 709
+            "id": 710
         },
         {
             "categories": [
@@ -27965,7 +28052,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 710
+            "id": 711
         },
         {
             "categories": [
@@ -27988,7 +28075,7 @@
                     "container": "/var/run/docker.sock"
                 }
             ],
-            "id": 711
+            "id": 712
         },
         {
             "categories": [
@@ -28026,7 +28113,7 @@
                     "container": "/data"
                 }
             ],
-            "id": 712
+            "id": 713
         },
         {
             "categories": [
@@ -28050,7 +28137,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 713
+            "id": 714
         },
         {
             "categories": [
@@ -28079,7 +28166,7 @@
                     "container": "/data"
                 }
             ],
-            "id": 714
+            "id": 715
         },
         {
             "categories": [
@@ -28107,7 +28194,7 @@
                     "container": "/var/run/docker.sock"
                 }
             ],
-            "id": 715
+            "id": 716
         },
         {
             "categories": [
@@ -28125,7 +28212,7 @@
             },
             "title": "Uptime Kuma (xneo1)",
             "type": 3,
-            "id": 716
+            "id": 717
         },
         {
             "categories": [
@@ -28149,7 +28236,7 @@
                     "container": "/var/run/docker.sock"
                 }
             ],
-            "id": 717
+            "id": 718
         },
         {
             "categories": [
@@ -28166,7 +28253,7 @@
             },
             "title": "Monica (xneo1)",
             "type": 3,
-            "id": 718
+            "id": 719
         },
         {
             "categories": [
@@ -28184,7 +28271,7 @@
             "restart_policy": "always",
             "title": "Netbox (xneo1)",
             "type": 1,
-            "id": 719
+            "id": 720
         },
         {
             "categories": [
@@ -28206,7 +28293,7 @@
             "restart_policy": "always",
             "title": "Freeboard (xneo1)",
             "type": 3,
-            "id": 720
+            "id": 721
         },
         {
             "categories": [
@@ -28227,7 +28314,7 @@
             "restart_policy": "always",
             "title": "Ghostfolio (xneo1)",
             "type": 3,
-            "id": 721
+            "id": 722
         },
         {
             "categories": [
@@ -28248,7 +28335,7 @@
             "restart_policy": "always",
             "title": "Servas (xneo1)",
             "type": 3,
-            "id": 722
+            "id": 723
         },
         {
             "categories": [
@@ -28269,7 +28356,7 @@
             "restart_policy": "always",
             "title": "Wallabag (xneo1)",
             "type": 3,
-            "id": 723
+            "id": 724
         },
         {
             "categories": [
@@ -28287,7 +28374,7 @@
             "restart_policy": "always",
             "title": "Teleport (xneo1)",
             "type": 3,
-            "id": 724
+            "id": 725
         },
         {
             "categories": [
@@ -28307,7 +28394,7 @@
             "restart_policy": "always",
             "title": "Cryptofolio (xneo1)",
             "type": 1,
-            "id": 725
+            "id": 726
         },
         {
             "categories": [
@@ -28325,7 +28412,7 @@
             },
             "title": "Nodered (xneo1)",
             "type": 3,
-            "id": 726
+            "id": 727
         },
         {
             "categories": [
@@ -28346,7 +28433,7 @@
                     "container": "/datastore"
                 }
             ],
-            "id": 727
+            "id": 728
         },
         {
             "categories": [
@@ -28374,7 +28461,7 @@
                     "container": "/resources"
                 }
             ],
-            "id": 728
+            "id": 729
         },
         {
             "categories": [
@@ -28398,7 +28485,7 @@
                     "container": "/app"
                 }
             ],
-            "id": 729
+            "id": 730
         },
         {
             "categories": [
@@ -28422,7 +28509,7 @@
                     "container": "/app"
                 }
             ],
-            "id": 730
+            "id": 731
         },
         {
             "categories": [
@@ -28439,7 +28526,7 @@
             },
             "title": "Firefox (xneo1)",
             "type": 3,
-            "id": 731
+            "id": 732
         },
         {
             "categories": [
@@ -28456,7 +28543,7 @@
             },
             "title": "Homechart (xneo1)",
             "type": 3,
-            "id": 732
+            "id": 733
         },
         {
             "categories": [
@@ -28496,7 +28583,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 733
+            "id": 734
         },
         {
             "categories": [
@@ -28513,7 +28600,7 @@
             },
             "title": "Ferdi Server (xneo1)",
             "type": 3,
-            "id": 734
+            "id": 735
         },
         {
             "categories": [
@@ -28530,7 +28617,7 @@
             },
             "title": "Ferdium (xneo1)",
             "type": 3,
-            "id": 735
+            "id": 736
         },
         {
             "categories": [
@@ -28547,7 +28634,7 @@
             },
             "title": "Snippet Box (xneo1)",
             "type": 3,
-            "id": 736
+            "id": 737
         },
         {
             "categories": [
@@ -28567,7 +28654,7 @@
             ],
             "title": "Littlelink Server (xneo1)",
             "type": 3,
-            "id": 737
+            "id": 738
         },
         {
             "categories": [
@@ -28584,7 +28671,7 @@
             },
             "title": "Linkstack (xneo1)",
             "type": 3,
-            "id": 738
+            "id": 739
         },
         {
             "categories": [
@@ -28601,7 +28688,7 @@
             },
             "title": "Aria2 Pro (xneo1)",
             "type": 3,
-            "id": 739
+            "id": 740
         },
         {
             "categories": [
@@ -28618,7 +28705,7 @@
             },
             "title": "Flood (xneo1)",
             "type": 3,
-            "id": 740
+            "id": 741
         },
         {
             "categories": [
@@ -28636,7 +28723,7 @@
             },
             "title": "Photoprism (xneo1)",
             "type": 3,
-            "id": 741
+            "id": 742
         },
         {
             "categories": [
@@ -28654,7 +28741,7 @@
             },
             "title": "Immich (xneo1)",
             "type": 3,
-            "id": 742
+            "id": 743
         },
         {
             "categories": [
@@ -28671,7 +28758,7 @@
             },
             "title": "Apprise-API (xneo1)",
             "type": 3,
-            "id": 743
+            "id": 744
         },
         {
             "categories": [
@@ -28688,7 +28775,7 @@
             },
             "title": "Netboot.xyz (xneo1)",
             "type": 3,
-            "id": 744
+            "id": 745
         },
         {
             "categories": [
@@ -28705,7 +28792,7 @@
             },
             "title": "Pingvin (xneo1)",
             "type": 3,
-            "id": 745
+            "id": 746
         },
         {
             "categories": [
@@ -28723,7 +28810,7 @@
             },
             "title": "Stirling-PDF (xneo1)",
             "type": 3,
-            "id": 746
+            "id": 747
         },
         {
             "categories": [
@@ -28740,7 +28827,7 @@
             },
             "title": "NetAlertX (xneo1)",
             "type": 3,
-            "id": 747
+            "id": 748
         },
         {
             "categories": [
@@ -28758,7 +28845,7 @@
             },
             "title": "TimeTagger (xneo1)",
             "type": 3,
-            "id": 748
+            "id": 749
         },
         {
             "categories": [
@@ -28775,7 +28862,7 @@
             },
             "title": "Invidious (xneo1)",
             "type": 3,
-            "id": 749
+            "id": 750
         },
         {
             "categories": [
@@ -28792,7 +28879,7 @@
             },
             "title": "Chibisafe (xneo1)",
             "type": 3,
-            "id": 750
+            "id": 751
         },
         {
             "categories": [
@@ -28809,7 +28896,7 @@
             },
             "title": "Kiwix (xneo1)",
             "type": 3,
-            "id": 751
+            "id": 752
         },
         {
             "categories": [
@@ -28826,7 +28913,7 @@
             },
             "title": "Tandoor (xneo1)",
             "type": 3,
-            "id": 752
+            "id": 753
         },
         {
             "categories": [
@@ -28843,7 +28930,7 @@
             },
             "title": "Webtrees (xneo1)",
             "type": 3,
-            "id": 753
+            "id": 754
         },
         {
             "categories": [
@@ -28861,7 +28948,7 @@
             },
             "title": "Wordpress (xneo1)",
             "type": 3,
-            "id": 754
+            "id": 755
         },
         {
             "categories": [
@@ -28878,7 +28965,7 @@
             },
             "title": "pve-exporter (xneo1)",
             "type": 3,
-            "id": 755
+            "id": 756
         },
         {
             "categories": [
@@ -28895,7 +28982,7 @@
             },
             "title": "Grocy (xneo1)",
             "type": 3,
-            "id": 756
+            "id": 757
         },
         {
             "categories": [
@@ -28912,7 +28999,7 @@
             },
             "title": "Ansible-semaphore (xneo1)",
             "type": 3,
-            "id": 757
+            "id": 758
         },
         {
             "categories": [
@@ -28929,7 +29016,7 @@
             },
             "title": "Shiori (xneo1)",
             "type": 3,
-            "id": 758
+            "id": 759
         },
         {
             "categories": [
@@ -28947,7 +29034,7 @@
             },
             "title": "Airsonic (xneo1)",
             "type": 3,
-            "id": 759
+            "id": 760
         },
         {
             "categories": [
@@ -28965,7 +29052,7 @@
             },
             "title": "Funkwhale (xneo1)",
             "type": 3,
-            "id": 760
+            "id": 761
         },
         {
             "categories": [
@@ -28982,7 +29069,7 @@
             },
             "title": "Gokapi (xneo1)",
             "type": 3,
-            "id": 761
+            "id": 762
         },
         {
             "categories": [
@@ -28999,7 +29086,7 @@
             },
             "title": "Traggo (xneo1)",
             "type": 3,
-            "id": 762
+            "id": 763
         },
         {
             "categories": [
@@ -29016,7 +29103,7 @@
             },
             "title": "Moodle (xneo1)",
             "type": 3,
-            "id": 763
+            "id": 764
         },
         {
             "categories": [
@@ -29033,7 +29120,7 @@
             },
             "title": "Freescout (xneo1)",
             "type": 3,
-            "id": 764
+            "id": 765
         },
         {
             "categories": [
@@ -29050,7 +29137,7 @@
             },
             "title": "Wger (xneo1)",
             "type": 3,
-            "id": 765
+            "id": 766
         },
         {
             "categories": [
@@ -29067,7 +29154,7 @@
             },
             "title": "Docker Container Stats (xneo1)",
             "type": 3,
-            "id": 766
+            "id": 767
         },
         {
             "categories": [
@@ -29084,7 +29171,7 @@
             },
             "title": "Codex (xneo1)",
             "type": 3,
-            "id": 767
+            "id": 768
         },
         {
             "categories": [
@@ -29102,7 +29189,7 @@
             },
             "title": "Kapowarr (xneo1)",
             "type": 3,
-            "id": 768
+            "id": 769
         },
         {
             "categories": [
@@ -29119,7 +29206,7 @@
             },
             "title": "Signal Proxy (xneo1)",
             "type": 3,
-            "id": 769
+            "id": 770
         },
         {
             "categories": [
@@ -29136,7 +29223,7 @@
             },
             "title": "Chiefonboarding (xneo1)",
             "type": 3,
-            "id": 770
+            "id": 771
         },
         {
             "categories": [
@@ -29153,7 +29240,7 @@
             },
             "title": "Castopod (xneo1)",
             "type": 3,
-            "id": 771
+            "id": 772
         },
         {
             "categories": [
@@ -29170,7 +29257,7 @@
             },
             "title": "Mautic (xneo1)",
             "type": 3,
-            "id": 772
+            "id": 773
         },
         {
             "categories": [
@@ -29187,7 +29274,7 @@
             },
             "title": "Medusa (xneo1)",
             "type": 3,
-            "id": 773
+            "id": 774
         },
         {
             "categories": [
@@ -29205,7 +29292,7 @@
             },
             "title": "Your_spotify (xneo1)",
             "type": 3,
-            "id": 774
+            "id": 775
         },
         {
             "categories": [
@@ -29223,7 +29310,7 @@
             },
             "title": "Influxdb & Telegraf (xneo1)",
             "type": 3,
-            "id": 775
+            "id": 776
         },
         {
             "categories": [
@@ -29240,7 +29327,7 @@
             },
             "title": "Influxdb (xneo1)",
             "type": 3,
-            "id": 776
+            "id": 777
         },
         {
             "categories": [
@@ -29259,7 +29346,7 @@
             },
             "title": "Grafana (xneo1)",
             "type": 3,
-            "id": 777
+            "id": 778
         },
         {
             "categories": [
@@ -29276,7 +29363,7 @@
             },
             "title": "Filestash (xneo1)",
             "type": 3,
-            "id": 778
+            "id": 779
         },
         {
             "categories": [
@@ -29293,7 +29380,7 @@
             },
             "title": "Silverstripe (xneo1)",
             "type": 3,
-            "id": 779
+            "id": 780
         },
         {
             "categories": [
@@ -29310,7 +29397,7 @@
             },
             "title": "Readarr (xneo1)",
             "type": 3,
-            "id": 780
+            "id": 781
         },
         {
             "categories": [
@@ -29327,7 +29414,7 @@
             },
             "title": "Whisparr (xneo1)",
             "type": 3,
-            "id": 781
+            "id": 782
         },
         {
             "categories": [
@@ -29344,7 +29431,7 @@
             },
             "title": "Midarr (xneo1)",
             "type": 3,
-            "id": 782
+            "id": 783
         },
         {
             "categories": [
@@ -29361,7 +29448,7 @@
             },
             "title": "Mastodon (xneo1)",
             "type": 3,
-            "id": 783
+            "id": 784
         },
         {
             "categories": [
@@ -29378,7 +29465,7 @@
             },
             "title": "Appwrite (xneo1)",
             "type": 3,
-            "id": 784
+            "id": 785
         },
         {
             "categories": [
@@ -29395,7 +29482,7 @@
             },
             "title": "Speedtest Tracker (xneo1)",
             "type": 3,
-            "id": 785
+            "id": 786
         },
         {
             "categories": [
@@ -29413,7 +29500,7 @@
             },
             "title": "OpnForm (xneo1)",
             "type": 3,
-            "id": 786
+            "id": 787
         },
         {
             "categories": [
@@ -29431,7 +29518,7 @@
             },
             "title": "Activepieces (xneo1)",
             "type": 3,
-            "id": 787
+            "id": 788
         },
         {
             "categories": [
@@ -29448,7 +29535,7 @@
             },
             "title": "Dockge (xneo1)",
             "type": 3,
-            "id": 788
+            "id": 789
         },
         {
             "categories": [
@@ -29465,7 +29552,7 @@
             },
             "title": "Dokemon (xneo1)",
             "type": 3,
-            "id": 789
+            "id": 790
         },
         {
             "categories": [
@@ -29483,7 +29570,7 @@
             },
             "title": "Draw.io (xneo1)",
             "type": 3,
-            "id": 790
+            "id": 791
         },
         {
             "categories": [
@@ -29500,7 +29587,7 @@
             },
             "title": "Hauk (xneo1)",
             "type": 3,
-            "id": 791
+            "id": 792
         },
         {
             "categories": [
@@ -29518,7 +29605,7 @@
             },
             "title": "Plane (xneo1)",
             "type": 3,
-            "id": 792
+            "id": 793
         },
         {
             "categories": [
@@ -29535,7 +29622,7 @@
             },
             "title": "Shaarli (xneo1)",
             "type": 3,
-            "id": 793
+            "id": 794
         },
         {
             "categories": [
@@ -29553,7 +29640,7 @@
             },
             "title": "Flowiseai (xneo1)",
             "type": 3,
-            "id": 794
+            "id": 795
         },
         {
             "categories": [
@@ -29570,7 +29657,7 @@
             },
             "title": "Feedcord (xneo1)",
             "type": 3,
-            "id": 795
+            "id": 796
         },
         {
             "categories": [
@@ -29587,7 +29674,7 @@
             },
             "title": "Fetchcord (xneo1)",
             "type": 3,
-            "id": 796
+            "id": 797
         },
         {
             "categories": [
@@ -29604,7 +29691,7 @@
             },
             "title": "Tubearchivist (xneo1)",
             "type": 3,
-            "id": 797
+            "id": 798
         },
         {
             "categories": [
@@ -29621,7 +29708,7 @@
             },
             "title": "Actual (xneo1)",
             "type": 3,
-            "id": 798
+            "id": 799
         },
         {
             "categories": [
@@ -29639,7 +29726,7 @@
             },
             "title": "Baikal (xneo1)",
             "type": 3,
-            "id": 799
+            "id": 800
         },
         {
             "categories": [
@@ -29657,7 +29744,7 @@
             },
             "title": "Autobrr (xneo1)",
             "type": 3,
-            "id": 800
+            "id": 801
         },
         {
             "categories": [
@@ -29674,7 +29761,7 @@
             },
             "title": "Glances (xneo1)",
             "type": 3,
-            "id": 801
+            "id": 802
         },
         {
             "categories": [
@@ -29692,7 +29779,7 @@
             },
             "title": "Tailscale (xneo1)",
             "type": 3,
-            "id": 802
+            "id": 803
         },
         {
             "categories": [
@@ -29710,7 +29797,7 @@
             },
             "title": "Documize (xneo1)",
             "type": 3,
-            "id": 803
+            "id": 804
         },
         {
             "categories": [
@@ -29727,7 +29814,7 @@
             },
             "title": "Homarr (xneo1)",
             "type": 3,
-            "id": 804
+            "id": 805
         },
         {
             "categories": [
@@ -29744,7 +29831,7 @@
             },
             "title": "Meshcentral (xneo1)",
             "type": 3,
-            "id": 805
+            "id": 806
         },
         {
             "categories": [
@@ -29761,7 +29848,7 @@
             },
             "title": "Rust Desk (xneo1)",
             "type": 3,
-            "id": 806
+            "id": 807
         },
         {
             "categories": [
@@ -29778,7 +29865,7 @@
             },
             "title": "Rport (xneo1)",
             "type": 3,
-            "id": 807
+            "id": 808
         },
         {
             "categories": [
@@ -29795,7 +29882,7 @@
             },
             "title": "Remotely (xneo1)",
             "type": 3,
-            "id": 808
+            "id": 809
         },
         {
             "categories": [
@@ -29813,7 +29900,7 @@
             },
             "title": "Tabby (xneo1)",
             "type": 3,
-            "id": 809
+            "id": 810
         },
         {
             "categories": [
@@ -29831,7 +29918,7 @@
             },
             "title": "Excalidraw (xneo1)",
             "type": 3,
-            "id": 810
+            "id": 811
         },
         {
             "categories": [
@@ -29848,7 +29935,7 @@
             },
             "title": "Upsnap (xneo1)",
             "type": 3,
-            "id": 811
+            "id": 812
         },
         {
             "categories": [
@@ -29867,7 +29954,7 @@
             },
             "title": "Tooljet (xneo1)",
             "type": 3,
-            "id": 812
+            "id": 813
         },
         {
             "categories": [
@@ -29887,7 +29974,7 @@
             },
             "title": "Syncthing (xneo1)",
             "type": 3,
-            "id": 813
+            "id": 814
         },
         {
             "categories": [
@@ -29907,7 +29994,7 @@
             },
             "title": "Budibase (xneo1)",
             "type": 3,
-            "id": 814
+            "id": 815
         },
         {
             "categories": [
@@ -29924,7 +30011,7 @@
             },
             "title": "Meilisearch (xneo1)",
             "type": 3,
-            "id": 815
+            "id": 816
         },
         {
             "categories": [
@@ -29942,7 +30029,7 @@
             },
             "title": "Ory Kratos (Standalone) (xneo1)",
             "type": 3,
-            "id": 816
+            "id": 817
         },
         {
             "categories": [
@@ -29960,7 +30047,7 @@
             },
             "title": "Ory Kratos (Oathkeeper) (xneo1)",
             "type": 3,
-            "id": 817
+            "id": 818
         },
         {
             "categories": [
@@ -29979,7 +30066,7 @@
             },
             "title": "Appsmith (xneo1)",
             "type": 3,
-            "id": 818
+            "id": 819
         },
         {
             "categories": [
@@ -29996,7 +30083,7 @@
             },
             "title": "Mailpile (xneo1)",
             "type": 3,
-            "id": 819
+            "id": 820
         },
         {
             "categories": [
@@ -30013,7 +30100,7 @@
             },
             "title": "Poste.io (xneo1)",
             "type": 3,
-            "id": 820
+            "id": 821
         },
         {
             "categories": [
@@ -30030,7 +30117,7 @@
             },
             "title": "iperf (xneo1)",
             "type": 3,
-            "id": 821
+            "id": 822
         },
         {
             "categories": [
@@ -30047,7 +30134,7 @@
             },
             "title": "Lazytainer (xneo1)",
             "type": 3,
-            "id": 822
+            "id": 823
         },
         {
             "categories": [
@@ -30064,7 +30151,7 @@
             },
             "title": "Homepage (xneo1)",
             "type": 3,
-            "id": 823
+            "id": 824
         },
         {
             "categories": [
@@ -30081,7 +30168,7 @@
             },
             "title": "I hate money (xneo1)",
             "type": 3,
-            "id": 824
+            "id": 825
         },
         {
             "categories": [
@@ -30098,7 +30185,7 @@
             },
             "title": "OpenBudgeteer (xneo1)",
             "type": 3,
-            "id": 825
+            "id": 826
         },
         {
             "categories": [
@@ -30115,7 +30202,7 @@
             },
             "title": "Fireshare (xneo1)",
             "type": 3,
-            "id": 826
+            "id": 827
         },
         {
             "categories": [
@@ -30132,7 +30219,7 @@
             },
             "title": "Filepizza (xneo1)",
             "type": 3,
-            "id": 827
+            "id": 828
         },
         {
             "categories": [
@@ -30149,7 +30236,7 @@
             },
             "title": "Jump (xneo1)",
             "type": 3,
-            "id": 828
+            "id": 829
         },
         {
             "categories": [
@@ -30166,7 +30253,7 @@
             },
             "title": "Hasty-Paste (xneo1)",
             "type": 3,
-            "id": 829
+            "id": 830
         },
         {
             "categories": [
@@ -30183,7 +30270,7 @@
             },
             "title": "Xwiki (xneo1)",
             "type": 3,
-            "id": 830
+            "id": 831
         },
         {
             "categories": [
@@ -30200,7 +30287,7 @@
             },
             "title": "Leantime (xneo1)",
             "type": 3,
-            "id": 831
+            "id": 832
         },
         {
             "categories": [
@@ -30217,7 +30304,7 @@
             },
             "title": "Jellyseer (xneo1)",
             "type": 3,
-            "id": 832
+            "id": 833
         },
         {
             "categories": [
@@ -30234,7 +30321,7 @@
             },
             "title": "Trudesk (xneo1)",
             "type": 3,
-            "id": 833
+            "id": 834
         },
         {
             "categories": [
@@ -30251,7 +30338,7 @@
             },
             "title": "Dashdot (xneo1)",
             "type": 3,
-            "id": 834
+            "id": 835
         },
         {
             "categories": [
@@ -30270,7 +30357,7 @@
             },
             "title": "Baserow (xneo1)",
             "type": 3,
-            "id": 835
+            "id": 836
         },
         {
             "categories": [
@@ -30289,7 +30376,7 @@
             },
             "title": "NocoDB (xneo1)",
             "type": 3,
-            "id": 836
+            "id": 837
         },
         {
             "categories": [
@@ -30306,7 +30393,7 @@
             },
             "title": "Broadlink Manager (xneo1)",
             "type": 3,
-            "id": 837
+            "id": 838
         },
         {
             "categories": [
@@ -30323,7 +30410,7 @@
             },
             "title": "Homebridge (xneo1)",
             "type": 3,
-            "id": 838
+            "id": 839
         },
         {
             "categories": [
@@ -30341,7 +30428,7 @@
             },
             "title": "Frigate NVR (xneo1)",
             "type": 3,
-            "id": 839
+            "id": 840
         },
         {
             "categories": [
@@ -30361,7 +30448,7 @@
             ],
             "title": "Umami.is (xneo1)",
             "type": 3,
-            "id": 840
+            "id": 841
         },
         {
             "categories": [
@@ -30381,7 +30468,7 @@
             ],
             "title": "Matomo (xneo1)",
             "type": 3,
-            "id": 841
+            "id": 842
         },
         {
             "categories": [
@@ -30398,7 +30485,7 @@
             },
             "title": "Neko (xneo1)",
             "type": 3,
-            "id": 842
+            "id": 843
         },
         {
             "categories": [
@@ -30415,7 +30502,7 @@
             },
             "title": "Ghost (xneo1)",
             "type": 3,
-            "id": 843
+            "id": 844
         },
         {
             "categories": [
@@ -30455,7 +30542,7 @@
                     "container": "/app/audio"
                 }
             ],
-            "id": 844
+            "id": 845
         },
         {
             "categories": [
@@ -30491,7 +30578,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 845
+            "id": 846
         },
         {
             "title": "Cloudbeaver (Cookbook)",
@@ -30566,7 +30653,7 @@
             },
             "type": 1,
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/cloudbeaver.png",
-            "id": 846
+            "id": 847
         },
         {
             "title": "lingva-translate (Cookbook)",
@@ -30653,7 +30740,96 @@
             },
             "type": 1,
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/lingva-translate.png",
-            "id": 847
+            "id": 848
+        },
+        {
+            "title": "openedai-speech (Cookbook)",
+            "description": "openedai-speech",
+            "note": "My Note On The Top <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
+            "categories": [
+                "Ai",
+                "Tool",
+                "Cookbook"
+            ],
+            "platform": "linux",
+            "name": "openedai-speech",
+            "hostname": "openedai-speech",
+            "image": "ghcr.io/matatonic/openedai-speech",
+            "ports": [
+                "8000:8000/tcp"
+            ],
+            "network": "bridge",
+            "restart_policy": "unless-stopped|always|on-failure|none",
+            "env": [
+                {
+                    "name": "TZ",
+                    "label": "Time-Zone",
+                    "description": "Time Zone. Default is UTC.",
+                    "default": "UTC"
+                },
+                {
+                    "name": "TTS_HOME",
+                    "default": "voices",
+                    "label": "TTS_HOME"
+                },
+                {
+                    "name": "HF_HOME",
+                    "description": "HF_HOME",
+                    "default": "voices",
+                    "label": "HF_HOME"
+                }
+            ],
+            "volumes": [
+                {
+                    "container": "/voices",
+                    "bind": "/app/voices"
+                },
+                {
+                    "container": "/config",
+                    "bind": "/app/config"
+                }
+            ],
+            "labels": [
+                {
+                    "name": "traefik.enable",
+                    "value": "true"
+                },
+                {
+                    "name": "traefik.docker.network",
+                    "value": "traefik"
+                },
+                {
+                    "name": "traefik.http.routers.openedai-speech.rule",
+                    "value": "HostRegexp(`^openedai-speech\\..*`)"
+                },
+                {
+                    "name": "traefik.http.routers.openedai-speech.service",
+                    "value": "openedai-speech-s"
+                },
+                {
+                    "name": "traefik.http.routers.openedai-speech.entryPoints",
+                    "value": "web"
+                },
+                {
+                    "name": "traefik.http.services.openedai-speech-s.loadbalancer.server.port",
+                    "value": "8000"
+                },
+                {
+                    "name": "traefik.http.services.openedai-speech-s.loadbalancer.sticky.cookie.name",
+                    "value": "stickycookie"
+                },
+                {
+                    "name": "traefik.http.services.openedai-speech-s.loadbalancer.sticky.cookie.secure",
+                    "value": "true"
+                }
+            ],
+            "repository": {
+                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
+                "stackfile": "cookbook/containers/openedai-speech/None"
+            },
+            "type": 1,
+            "logo": "",
+            "id": 849
         },
         {
             "description": "3 Nodes MinIO Cluster",
@@ -30678,7 +30854,7 @@
             "name": "minio-cluster",
             "type": 2,
             "platform": "linux",
-            "id": 848
+            "id": 850
         },
         {
             "title": "Traefik (Cookbook)",
@@ -30695,7 +30871,7 @@
             "type": 2,
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/traefik.png",
             "env": [],
-            "id": 849
+            "id": 851
         },
         {
             "title": "Portainer Agent (Cookbook)",
@@ -30712,7 +30888,7 @@
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/portainer_agent.png",
             "description": "portainer agent",
             "env": [],
-            "id": 850
+            "id": 852
         },
         {
             "description": "2 Nodes MySQL Cluster",
@@ -30747,7 +30923,7 @@
             "type": 2,
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/mysql-cluster.png",
-            "id": 851
+            "id": 853
         },
         {
             "description": "Windmill is the most popular workflow automation platform for technical teams",
@@ -30814,7 +30990,7 @@
             },
             "type": 2,
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/windmill.png",
-            "id": 852
+            "id": 854
         },
         {
             "description": "Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.  It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-click.",
@@ -30840,7 +31016,7 @@
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/node-red.png",
             "note": "<br><a href=\"{GITHUB_URL_CONTENT}main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
-            "id": 853
+            "id": 855
         },
         {
             "description": "Qdrant is an Open-Source Vector Database and Vector Search Engine written in Rust. It provides fast and scalable vector similarity search service.",
@@ -30858,7 +31034,7 @@
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/qdrant.png",
             "env": [],
-            "id": 854
+            "id": 856
         },
         {
             "description": "Docker swarm service for automatically updating your services whenever their image is refreshed",
@@ -30876,7 +31052,7 @@
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/shepherd.png",
             "env": [],
-            "id": 855
+            "id": 857
         },
         {
             "description": "Langflow-AI is a visual framework for building multi-agent and RAG applications. It's open-source, Python-powered, fully customizable, model and vector store agnostic.",
@@ -30949,7 +31125,7 @@
                 {
                     "name": "LANGFLOW_SECRET_KEY",
                     "description": "A key used for encrypting the superuser's password.",
-                    "default": "3l51MUmpvixQPswey-ZnHihM4iMudMQ9zcfuOM0IGrM=",
+                    "default": "ImMGWOw5ss0MmM1b0i7P7F5aiSxjKr7EKmL6uYJVL6E=",
                     "label": "LANGFLOW_SECRET_KEY"
                 },
                 {
@@ -31028,7 +31204,7 @@
             "name": "langflow-ai",
             "type": 3,
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/langflow-ai.png",
-            "id": 856
+            "id": 858
         },
         {
             "description": "Infinitely scalable, event-driven, language-agnostic orchestration and scheduling platform to manage millions of workflows declaratively in code.",
@@ -31078,7 +31254,7 @@
             "name": "kestra",
             "type": 3,
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/kestra.png",
-            "id": 857
+            "id": 859
         },
         {
             "description": "Open source low-code tool for developers to build customized LLM orchestration flow & AI agents",
@@ -31141,7 +31317,7 @@
             },
             "type": 3,
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/flowiseai.png",
-            "id": 858
+            "id": 860
         },
         {
             "description": "The world's most popular workflow automation platform for technical teams",
@@ -31263,7 +31439,7 @@
             },
             "type": 3,
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/n8n.png",
-            "id": 859
+            "id": 861
         }
     ]
 }

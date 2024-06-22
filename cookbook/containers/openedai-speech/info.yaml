@@ -1,0 +1,50 @@
+---
+title: openedai-speech
+description: openedai-speech
+note: My Note On The Top
+categories: [ "AI", "Tools" ]
+platform: linux
+name: openedai-speech
+hostname: openedai-speech
+image: ghcr.io/matatonic/openedai-speech
+ports: 
+  - 8000:8000/tcp
+network: "bridge"
+restart_policy: unless-stopped|always|on-failure|none
+
+env: 
+
+  - name: TZ
+    label: Time-Zone
+    description: Time Zone. Default is UTC.
+    default: UTC
+  - name: TTS_HOME
+    default: voices
+    label: TTS_HOME
+  - name: HF_HOME
+    description: HF_HOME
+    default: voices
+    
+volumes: 
+  - container: /voices
+    bind: /app/voices
+  - container: /config
+    bind: /app/config
+
+labels:
+  - name: traefik.enable
+    value: true
+  - name: traefik.docker.network
+    value: traefik
+  - name: traefik.http.routers.openedai-speech.rule
+    value: HostRegexp(`^openedai-speech\..*`)
+  - name: traefik.http.routers.openedai-speech.service
+    value: openedai-speech-s
+  - name: traefik.http.routers.openedai-speech.entryPoints
+    value: web
+  - name: traefik.http.services.openedai-speech-s.loadbalancer.server.port
+    value: 8000
+  - name: traefik.http.services.openedai-speech-s.loadbalancer.sticky.cookie.name
+    value: stickycookie
+  - name: traefik.http.services.openedai-speech-s.loadbalancer.sticky.cookie.secure
+    value: true
