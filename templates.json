@@ -30759,7 +30759,7 @@
                 "8000:8000/tcp"
             ],
             "network": "bridge",
-            "restart_policy": "unless-stopped|always|on-failure|none",
+            "restart_policy": "unless-stopped",
             "env": [
                 {
                     "name": "TZ",
@@ -31125,7 +31125,7 @@
                 {
                     "name": "LANGFLOW_SECRET_KEY",
                     "description": "A key used for encrypting the superuser's password.",
-                    "default": "ImMGWOw5ss0MmM1b0i7P7F5aiSxjKr7EKmL6uYJVL6E=",
+                    "default": "Zsx1JNlUEzx0x3IEXXj_7eWqAhro0FwFHNbuamFyxzw=",
                     "label": "LANGFLOW_SECRET_KEY"
                 },
                 {

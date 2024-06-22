@@ -10,10 +10,9 @@ image: ghcr.io/matatonic/openedai-speech
 ports: 
   - 8000:8000/tcp
 network: "bridge"
-restart_policy: unless-stopped|always|on-failure|none
+restart_policy: unless-stopped
 
 env: 
-
   - name: TZ
     label: Time-Zone
     description: Time Zone. Default is UTC.
@@ -24,7 +23,7 @@ env:
   - name: HF_HOME
     description: HF_HOME
     default: voices
-    
+
 volumes: 
   - container: /voices
     bind: /app/voices
