@@ -166,9 +166,9 @@
         {
             "title": "openedai-speech (Cookbook)",
             "description": "openedai-speech",
-            "note": "My Note On The Top <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
+            "note": "<a href=\"https://github.com/matatonic/openedai-speech\" target=\"_blank\">GithHub</a> <a href=\"https://github.com/matatonic/openedai-speech/tree/main/config\" target=\"_blank\">Config Files</a> <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
             "categories": [
-                "Ai",
+                "AI",
                 "Tool",
                 "Cookbook"
             ],
@@ -198,6 +198,10 @@
                     "description": "HF_HOME",
                     "default": "voices",
                     "label": "HF_HOME"
+                },
+                {
+                    "name": "PRELOAD_MODEL",
+                    "label": "PRELOAD_MODEL"
                 }
             ],
             "volumes": [
@@ -350,7 +354,7 @@
             "description": "Windmill is the most popular workflow automation platform for technical teams",
             "title": "Windmill (Cookbook)",
             "categories": [
-                "Low code",
+                "Low Code",
                 "Automation",
                 "Cookbook"
             ],
@@ -417,7 +421,7 @@
             "description": "Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.  It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-click.",
             "title": "Node-RED (Cookbook)",
             "categories": [
-                "Low code",
+                "Low Code",
                 "Cookbook"
             ],
             "env": [
@@ -460,15 +464,17 @@
         {
             "description": "Docker swarm service for automatically updating your services whenever their image is refreshed",
             "note": "Check the <a href=\"https://github.com/containrrr/shepherd\" target=\"_blank\">GitLab documentation</a> to get started.",
+            "categories": [
+                "Automation",
+                "Messaging",
+                "Cookbook"
+            ],
             "title": "Shepherd (Cookbook)",
             "repository": {
                 "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
                 "stackfile": "cookbook/composeStacks/shepherd/docker-compose.yml"
             },
             "name": "shepherd",
-            "categories": [
-                "Cookbook"
-            ],
             "type": 3,
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/shepherd.png",
@@ -479,8 +485,8 @@
             "description": "Langflow-AI is a visual framework for building multi-agent and RAG applications. It's open-source, Python-powered, fully customizable, model and vector store agnostic.",
             "title": "Langflow-AI (Cookbook)",
             "categories": [
-                "Ai",
-                "Low code",
+                "AI",
+                "Low Code",
                 "Cookbook"
             ],
             "platform": "linux",
@@ -546,7 +552,7 @@
                 {
                     "name": "LANGFLOW_SECRET_KEY",
                     "description": "A key used for encrypting the superuser's password.",
-                    "default": "Zsx1JNlUEzx0x3IEXXj_7eWqAhro0FwFHNbuamFyxzw=",
+                    "default": "WZuInmYHDCVBEEcD26rGo60d_CUrJ2bRfqBsFx3eUQY=",
                     "label": "LANGFLOW_SECRET_KEY"
                 },
                 {
@@ -631,7 +637,7 @@
             "description": "Infinitely scalable, event-driven, language-agnostic orchestration and scheduling platform to manage millions of workflows declaratively in code.",
             "title": "Kestra (Cookbook)",
             "categories": [
-                "Low code",
+                "Low Code",
                 "Cookbook"
             ],
             "platform": "linux",
@@ -681,8 +687,8 @@
             "description": "Open source low-code tool for developers to build customized LLM orchestration flow & AI agents",
             "title": "FlowiseAI (Cookbook)",
             "categories": [
-                "Low code",
-                "Ai",
+                "Low Code",
+                "AI",
                 "Cookbook"
             ],
             "platform": "linux",
@@ -744,7 +750,7 @@
             "description": "The world's most popular workflow automation platform for technical teams",
             "title": "n8n (Cookbook)",
             "categories": [
-                "Low code",
+                "Low Code",
                 "Automation",
                 "Cookbook"
             ],
@@ -861,6 +867,24 @@
             "type": 3,
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/n8n.png",
             "id": 15
+        },
+        {
+            "description": "Zigbee to MQTT bridge, get rid of your proprietary Zigbee bridges",
+            "note": "Check the <a href=\"https://www.zigbee2mqtt.io/\" target=\"_blank\">Main Zigbee2MQTT Page</a> to get started.",
+            "title": "Zigbee2mqtt (Cookbook)",
+            "repository": {
+                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
+                "stackfile": "cookbook/composeStacks/zigbee2mqtt/docker-compose.yml"
+            },
+            "name": "zigbee2mqtt",
+            "categories": [
+                "Cookbook"
+            ],
+            "type": 3,
+            "platform": "linux",
+            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/zigbee2mqtt.png",
+            "env": [],
+            "id": 16
         }
     ]
 }

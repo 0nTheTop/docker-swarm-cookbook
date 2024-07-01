@@ -54,6 +54,8 @@ def standardize_categories(categories):
         break
     if not found:
       correct_categories.append(category)
+
+  print(correct_categories) 
   return correct_categories
 
 
@@ -143,10 +145,10 @@ def cookbook(type_id):
         # Categories
         if 'categories' not in data:
             data['categories'] = []
+        data['categories'] = capitalize_first_letter(data['categories'])
         data['categories'] = standardize_categories(data['categories'])
         if 'Cookbook' not in data['categories']:
             data['categories'].append("Cookbook")
-
         
         # Type
         if 'type' not in data:
@@ -219,8 +221,7 @@ def cookbook(type_id):
                 else:
                     data['note'] = "<br><a href=\"{GITHUB_URL_CONTENT}main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones"
         
-        # Categories
-        data['categories'] = capitalize_first_letter(data['categories'])
+
         
         # Title
         data['title'] = f"{data['title']} (Cookbook)"

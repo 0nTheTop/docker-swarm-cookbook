@@ -4,6 +4,7 @@
 AI:
   - Ai
   - ai
+  - AI
 API:
   - Api
 Access Proxy:
@@ -20,6 +21,7 @@ Automation:
   - Home Automation
   - HomeAutomation
   - Homeautomation
+  - automation
 Backup:
   - utilitybackup
 Blog: []
@@ -45,7 +47,8 @@ DNS:
   - Dns
 Dashboard:
   - Dashboardserver
-Database: []
+Database:
+  - database
 DevTools:
   - Devtools
   - Devops

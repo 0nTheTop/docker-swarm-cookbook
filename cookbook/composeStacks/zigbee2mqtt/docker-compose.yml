@@ -1,0 +1,38 @@
+---
+version: '3.9'
+
+services:
+  zigbee2mqtt:
+    container_name: zigbee2mqtt
+    hostname: zigbee2mqtt
+    image: koenkk/zigbee2mqtt
+    networks:
+      - zigbee2mqtt
+    volumes:
+      - zigbee2mqtt:/app/data
+    #devices:
+      # CC251
+      #- /dev/ttyUSB_cc2531:/dev/ttyACM0
+      # CC2530 / GBAN GB2530S
+      #- /dev/ttyUSB_cc2530:/dev/ttyACM0
+    ulimits:
+      nofile: 10000
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=traefik"
+      - "traefik.http.routers.zigbee2mqtt.rule=HostRegexp(`^zigbee2mqtt\\..*`)"
+      - "traefik.http.routers.zigbee2mqtt.service=zigbee2mqtt-s"
+      - "traefik.http.routers.zigbee2mqtt.entryPoints=web"
+      - "traefik.http.services.zigbee2mqtt-s.loadbalancer.server.port=8080"
+      - "traefik.http.services.zigbee2mqtt-s.loadbalancer.sticky.cookie.name=stickycookie"
+      - "traefik.http.services.zigbee2mqtt-s.loadbalancer.sticky.cookie.secure=true"
+
+volumes:
+  zigbee2mqtt_data:
+    name: zigbee2mqtt_data
+
+networks:
+  zigbee2mqtt:
+    name: zigbee2mqtt
+    driver: bridge
+    attachable: true
