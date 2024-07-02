@@ -6,6 +6,7 @@ services:
     container_name: zigbee2mqtt
     hostname: zigbee2mqtt
     image: koenkk/zigbee2mqtt
+    restart: always
     networks:
       - zigbee2mqtt
     volumes:
@@ -26,7 +27,18 @@ services:
       - "traefik.http.services.zigbee2mqtt-s.loadbalancer.server.port=8080"
       - "traefik.http.services.zigbee2mqtt-s.loadbalancer.sticky.cookie.name=stickycookie"
       - "traefik.http.services.zigbee2mqtt-s.loadbalancer.sticky.cookie.secure=true"
-
+    cap_drop:
+      - NET_ADMIN
+      - SYS_ADMIN
+    deploy:
+      resources:
+#        limits:
+#          cpus: '1'
+#          memory: 500M
+        reservations:
+          cpus: '2.5'
+          memory: 300M
+    
 volumes:
   zigbee2mqtt_data:
     name: zigbee2mqtt_data

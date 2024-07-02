@@ -55,7 +55,7 @@ def standardize_categories(categories):
     if not found:
       correct_categories.append(category)
 
-  print(correct_categories) 
+  #print(correct_categories) 
   return correct_categories
 
 

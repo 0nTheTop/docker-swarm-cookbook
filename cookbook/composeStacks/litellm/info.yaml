@@ -1,0 +1,34 @@
+---
+description: Call all LLM APIs using the OpenAI format. Use Bedrock, Azure, OpenAI, Cohere, Anthropic, Ollama, Sagemaker, HuggingFace, Replicate (100+ LLMs)
+title: litellm
+categories: [ai]
+platform: linux
+name: litellm
+note:
+  <a href="https://github.com/BerriAI/litellm/" target="_blank">LiteLLM GitHub</a><br>
+  <a href="https://docs.litellm.ai/docs/" target="_blank">Litellm Docs</a><br>
+env:
+- name: TZ
+  label: Time-Zone
+  description: Time Zone. Default is UTC.
+  default: UTC
+- name: POSTGRES_DB
+  label: POSTGRES_DB
+  default: litellm
+  description: Specifies a name for your database or defaults to the POSTGRES_USER value when left blank. 
+- name: POSTGRES_USER
+  label: POSTGRES_USER
+  default: litellm
+  description: Specifies a user with superuser privileges and a database with the same name. Postgres uses the default user when this is empty.
+- name: POSTGRES_PASSWORD
+  label: POSTGRES_PASSWORD
+  default: LITELLM13203eiGht
+  description: Password used by the POSTGRES_USER.
+- name: LITELLM_PORT
+  default: 4000
+  description: The port to run the LiteLLM server on. Default is 4000.
+- name: REDIS_PWD
+  label: REDIS_PWD
+  default: litellm
+  description: Password used by the Redis Cache.
+

@@ -1,0 +1,91 @@
+version: "3.8"
+
+services:
+  litellm:
+    hostname: litellm
+    container_name: litellm
+    image: ghcr.io/berriai/litellm-database:main-latest
+    ports:
+      - mode: host
+        published: ${LITELLM_PORT:-4000}
+        target: 4000
+    restart: always
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      TZ: ${TZ}
+      DATABASE_URL: "postgresql://${POSTGRES_USER:-litellm}:${DB_POSTGRESDB_PASSWORD:-LITELLM13203eiGht}@postgres:5432/${DB_POSTGRESDB_DATABASE:-litellm}"
+      STORE_MODEL_IN_DB: "True" # allows adding models to proxy via UI
+    volumes:
+      - litellm-data:/home/node/.LITELLM
+    networks:
+      - litellm
+      # - traefik
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=traefik"
+      - "traefik.http.routers.LITELLM.rule=HostRegexp(`^LITELLM\\..*`)"
+      - "traefik.http.routers.LITELLM.service=LITELLM-s"
+      - "traefik.http.routers.LITELLM.entryPoints=web"
+      - "traefik.http.services.LITELLM-s.loadbalancer.server.port=${LITELLM_PORT:-5678}"
+      - "traefik.http.services.LITELLM-s.loadbalancer.sticky.cookie.name=stickycookie"
+      - "traefik.http.services.LITELLM-s.loadbalancer.sticky.cookie.secure=true"
+
+  postgres:
+    hostname: postgres
+    container_name: litellm-postgres
+    image: postgres:16
+    environment:
+      TZ: ${TZ}
+      POSTGRES_DB: ${POSTGRES_DB:-litellm}
+      POSTGRES_USER: ${POSTGRES_USER:-litellm}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-LITELLM13203eiGht}
+    restart: always
+    #ports:
+    #  - "5432:5432"
+    volumes:
+      - litellm-postgres-data:/var/lib/postgresql/data
+    networks:
+      - litellm
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-litellm} -d ${POSTGRES_DB:-litellm}"]
+      timeout: 20s
+      interval: 10s
+      retries: 5
+      start_period: 30s
+
+
+  redis:
+    hostname: redis
+    container_name: litellm-redis
+    restart: always
+    networks:
+      - litellm
+    image: redis:6-alpine
+    command: redis-server --save 20 1 --loglevel warning --requirepass "${REDIS_PWD:-litellm}"
+    healthcheck:
+      test: ["CMD-SHELL", "redis-cli ping | grep PONG"]
+      interval: 2s
+      timeout: 3s
+      retries: 5
+    ports:
+      - '6379:6379'
+    volumes:
+      - litellm-redis-cache:/data
+    environment:
+      REDIS_PWD: '${REDIS_PWD:-litellm}'
+    
+volumes:
+  litellm-data:
+    name: litellm-data
+  litellm-postgres-data:
+    name: litellm-postgres-data
+  litellm-redis-cache:
+    name: litellm-redis-cache
+
+networks:
+  litellm:
+    name: litellm
+    driver: bridge
+    attachable: true
