@@ -30589,7 +30589,7 @@
                 {
                     "name": "LANGFLOW_SECRET_KEY",
                     "description": "A key used for encrypting the superuser's password.",
-                    "default": "L-uO751RhJNZR9olXI-MrbFGOYwizZcs0sT4QiYCTDc=",
+                    "default": "DXMsPWkhI7GkA5pXREgiK_-EE_5KD_Hx9iit1tTZWaE=",
                     "label": "LANGFLOW_SECRET_KEY"
                 },
                 {
@@ -30963,6 +30963,12 @@
                     "default": "4000",
                     "description": "The port to run the LiteLLM server on. Default is 4000.",
                     "label": "LITELLM_PORT"
+                },
+                {
+                    "name": "LITELLM_MASTER_KEY",
+                    "label": "LITELLM_MASTER_KEY",
+                    "default": "sk-1234",
+                    "description": "Access Master Key to LiteLLM - make this unique. must start with `sk-`. Default is 'sk-1234'."
                 },
                 {
                     "name": "REDIS_PWD",
