@@ -30589,7 +30589,7 @@
                 {
                     "name": "LANGFLOW_SECRET_KEY",
                     "description": "A key used for encrypting the superuser's password.",
-                    "default": "_WTEt_4T_EbTN5mlxOCz19Lx9iVACVBxpjgV88-dnho=",
+                    "default": "L-uO751RhJNZR9olXI-MrbFGOYwizZcs0sT4QiYCTDc=",
                     "label": "LANGFLOW_SECRET_KEY"
                 },
                 {

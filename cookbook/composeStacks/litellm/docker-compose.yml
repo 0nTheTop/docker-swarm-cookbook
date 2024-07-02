@@ -55,14 +55,13 @@ services:
       retries: 5
       start_period: 30s
 
-
   redis:
     hostname: redis
     container_name: litellm-redis
     restart: always
     networks:
       - litellm
-    image: redis:6-alpine
+    image: redis:alpine
     command: redis-server --save 20 1 --loglevel warning --requirepass "${REDIS_PWD:-litellm}"
     healthcheck:
       test: ["CMD-SHELL", "redis-cli ping | grep PONG"]
@@ -75,7 +74,10 @@ services:
       - litellm-redis-cache:/data
     environment:
       REDIS_PWD: '${REDIS_PWD:-litellm}'
-    
+    # Run as privileged to allow the container to change the vm.overcommit_memory setting
+    # https://medium.com/@akhshyganesh/redis-enabling-memory-overcommit-is-a-crucial-configuration-68dbb77dae5f
+    privileged: true
+
 volumes:
   litellm-data:
     name: litellm-data
