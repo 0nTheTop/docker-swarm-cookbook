@@ -552,7 +552,7 @@
                 {
                     "name": "LANGFLOW_SECRET_KEY",
                     "description": "A key used for encrypting the superuser's password.",
-                    "default": "FjlQAGixfrjudMdHvu4yRotn7xvjdRn8GC8a1nvqG4M=",
+                    "default": "_WTEt_4T_EbTN5mlxOCz19Lx9iVACVBxpjgV88-dnho=",
                     "label": "LANGFLOW_SECRET_KEY"
                 },
                 {
@@ -939,7 +939,7 @@
                 "stackfile": "cookbook/composeStacks/litellm/docker-compose.yml"
             },
             "type": 3,
-            "logo": "",
+            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/litellm.png",
             "id": 17
         }
     ]
