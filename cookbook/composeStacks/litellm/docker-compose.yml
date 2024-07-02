@@ -64,7 +64,7 @@ services:
     image: redis:alpine
     command: redis-server --save 20 1 --loglevel warning --requirepass "${REDIS_PWD:-litellm}"
     healthcheck:
-      test: ["CMD-SHELL", "redis-cli ping | grep PONG"]
+      test: ["CMD-SHELL", "redis-cli --no-auth-warning -a '${REDIS_PWD:-litellm}' ping | grep PONG"]
       interval: 2s
       timeout: 3s
       retries: 5
