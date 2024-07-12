@@ -4,9 +4,11 @@ title: litellm
 categories: [ai]
 platform: linux
 name: litellm
-note:
+note: |
   <a href="https://github.com/BerriAI/litellm/" target="_blank">LiteLLM GitHub</a><br>
   <a href="https://docs.litellm.ai/docs/" target="_blank">Litellm Docs</a><br>
+  <br>
+  WebUI: http://litellm:4000/ui
 env:
 - name: TZ
   label: Time-Zone

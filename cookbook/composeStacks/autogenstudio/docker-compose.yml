@@ -1,0 +1,40 @@
+version: "3.8"
+
+services:
+  autogen-studio:
+    hostname: autogen-studio
+    container_name: autogen-studio
+    image: ghcr.io/lludlow/autogen-studio
+    environment:
+      TZ: ${TZ}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-sk-1234}
+      OPENAI_BASE_URL: ${OPENAI_BASE_URL:-https://api.openai.com/v1} 
+    restart: always
+    ports:
+      - mode: host
+        published: ${AUTOGEN_PORT:-8081}
+        target: 8081
+    volumes:
+      - autogen-data:/app/.autogenstudio
+    networks:
+      - autogen
+      # - traefik
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=traefik"
+      - "traefik.http.routers.AUTOGEN.rule=HostRegexp(`^AUTOGEN\\..*`)"
+      - "traefik.http.routers.AUTOGEN.service=AUTOGEN-s"
+      - "traefik.http.routers.AUTOGEN.entryPoints=web"
+      - "traefik.http.services.AUTOGEN-s.loadbalancer.server.port=${AUTOGEN_PORT:-8081}"
+      - "traefik.http.services.AUTOGEN-s.loadbalancer.sticky.cookie.name=stickycookie"
+      - "traefik.http.services.AUTOGEN-s.loadbalancer.sticky.cookie.secure=true"
+
+volumes:
+  autogen-data:
+    name: autogen-data
+
+networks:
+  autogen:
+    name: autogen
+    driver: bridge
+    attachable: true

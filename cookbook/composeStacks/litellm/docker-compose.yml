@@ -16,9 +16,13 @@ services:
     environment:
       TZ: ${TZ}
       DATABASE_URL: "postgresql://${POSTGRES_USER:-litellm}:${DB_POSTGRESDB_PASSWORD:-LITELLM13203eiGht}@postgres:5432/${DB_POSTGRESDB_DATABASE:-litellm}"
-      STORE_MODEL_IN_DB: "True" # allows adding models to proxy via UI
+      STORE_MODEL_IN_DB: "True"
       LITELLM_MASTER_KEY: "${LITELLM_MASTER_KEY:-sk-1234}" 
       PORT: ${LITELLM_PORT:-4000}
+      # Redis Cache
+      REDIS_HOST: "redis"
+      REDIS_PORT: "6379" 
+      REDIS_PASSWORD: "${REDIS_PWD:-litellm}"
     volumes:
       - litellm-data:/home/node/.LITELLM
     networks:

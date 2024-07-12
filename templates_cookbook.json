@@ -552,7 +552,7 @@
                 {
                     "name": "LANGFLOW_SECRET_KEY",
                     "description": "A key used for encrypting the superuser's password.",
-                    "default": "DXMsPWkhI7GkA5pXREgiK_-EE_5KD_Hx9iit1tTZWaE=",
+                    "default": "h0yAjot7K3SLWa7Op5QBXK7LJTPCIwkzlaWmF-3fHuQ=",
                     "label": "LANGFLOW_SECRET_KEY"
                 },
                 {
@@ -895,7 +895,7 @@
             ],
             "platform": "linux",
             "name": "litellm",
-            "note": "<a href=\"https://github.com/BerriAI/litellm/\" target=\"_blank\">LiteLLM GitHub</a><br> <a href=\"https://docs.litellm.ai/docs/\" target=\"_blank\">Litellm Docs</a><br> <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
+            "note": "<a href=\"https://github.com/BerriAI/litellm/\" target=\"_blank\">LiteLLM GitHub</a><br>\n<a href=\"https://docs.litellm.ai/docs/\" target=\"_blank\">Litellm Docs</a><br>\n<br>\nWebUI: http://litellm:4000/ui\n <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
             "env": [
                 {
                     "name": "TZ",
@@ -947,6 +947,51 @@
             "type": 3,
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/litellm.png",
             "id": 17
+        },
+        {
+            "description": "Call all LLM APIs using the OpenAI format. Use Bedrock, Azure, OpenAI, Cohere, Anthropic, Ollama, Sagemaker, HuggingFace, Replicate (100+ LLMs)",
+            "title": "autogen-studio (Cookbook)",
+            "categories": [
+                "AI",
+                "Cookbook"
+            ],
+            "platform": "linux",
+            "name": "autogen-studio",
+            "note": "<a href=\"https://autogen-studio.com/\" target=\"_blank\">AutoGen Studio Official Page</a><br>\n<a href=\"https://github.com/lludlow/autogen-studio\" target=\"_blank\">Larry Ludlow Github Docker container for Autogen Studio</a><br>\n<br>\nWebUI: http://autogen-studio:8081/\n <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
+            "env": [
+                {
+                    "name": "TZ",
+                    "label": "Time-Zone",
+                    "description": "Time Zone. Default is UTC.",
+                    "default": "UTC"
+                },
+                {
+                    "name": "AUTOGEN_PORT",
+                    "default": "8081",
+                    "description": "The port to run the AutoGen Studio server on. Default is 8081.",
+                    "label": "AUTOGEN_PORT"
+                },
+                {
+                    "name": "OPENAI_API_KEY",
+                    "default": "sk-1234",
+                    "description": "The API key used for the OpenAI connector.",
+                    "required": true,
+                    "label": "OPENAI_API_KEY"
+                },
+                {
+                    "name": "OPENAI_BASE_URL",
+                    "default": "https://api.openai.com/v1",
+                    "description": "The Base URL used for the OpenAI connector.",
+                    "label": "OPENAI_BASE_URL"
+                }
+            ],
+            "repository": {
+                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
+                "stackfile": "cookbook/composeStacks/autogenstudio/docker-compose.yml"
+            },
+            "type": 3,
+            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/autogenstudio.png",
+            "id": 18
         }
     ]
 }

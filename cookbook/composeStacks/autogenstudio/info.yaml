@@ -1,0 +1,26 @@
+---
+description: Call all LLM APIs using the OpenAI format. Use Bedrock, Azure, OpenAI, Cohere, Anthropic, Ollama, Sagemaker, HuggingFace, Replicate (100+ LLMs)
+title: autogen-studio
+categories: [ai]
+platform: linux
+name: autogen-studio
+note: |
+  <a href="https://autogen-studio.com/" target="_blank">AutoGen Studio Official Page</a><br>
+  <a href="https://github.com/lludlow/autogen-studio" target="_blank">Larry Ludlow Github Docker container for Autogen Studio</a><br>
+  <br>
+  WebUI: http://autogen-studio:8081/
+env:
+- name: TZ
+  label: Time-Zone
+  description: Time Zone. Default is UTC.
+  default: UTC
+- name: AUTOGEN_PORT
+  default: 8081
+  description: The port to run the AutoGen Studio server on. Default is 8081.
+- name: OPENAI_API_KEY
+  default: sk-1234
+  description: The API key used for the OpenAI connector.
+  required: true
+- name: OPENAI_BASE_URL
+  default: https://api.openai.com/v1
+  description: The Base URL used for the OpenAI connector.
