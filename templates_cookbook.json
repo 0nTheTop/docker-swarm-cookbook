@@ -552,7 +552,7 @@
                 {
                     "name": "LANGFLOW_SECRET_KEY",
                     "description": "A key used for encrypting the superuser's password.",
-                    "default": "0WpJIfneSXHtrw3KDGc9tPxtpB5qZ_4GVO6CT9acwfI=",
+                    "default": "ySJw4MWR8JPPe3UfAciv6Gs259kM19PNdFpJJBEkpUg=",
                     "label": "LANGFLOW_SECRET_KEY"
                 },
                 {
@@ -949,7 +949,7 @@
             "id": 17
         },
         {
-            "description": "Call all LLM APIs using the OpenAI format. Use Bedrock, Azure, OpenAI, Cohere, Anthropic, Ollama, Sagemaker, HuggingFace, Replicate (100+ LLMs)",
+            "description": "AutoGen Studio is an interface powered by AutoGen, designed to simplify the process of creating and managing multi-agent solutions. It\u2019s a user-friendly platform that allows even beginners to declaratively define and modify agents and multi-agent workflows through an intuitive interface.",
             "title": "autogen-studio (Cookbook)",
             "categories": [
                 "AI",
