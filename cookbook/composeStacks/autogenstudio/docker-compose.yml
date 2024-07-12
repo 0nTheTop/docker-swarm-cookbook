@@ -5,6 +5,7 @@ services:
     hostname: autogen-studio
     container_name: autogen-studio
     image: ghcr.io/lludlow/autogen-studio
+    user: "${UID}:${GID}"
     environment:
       TZ: ${TZ}
       OPENAI_API_KEY: ${OPENAI_API_KEY:-sk-1234}

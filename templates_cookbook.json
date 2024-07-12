@@ -552,7 +552,7 @@
                 {
                     "name": "LANGFLOW_SECRET_KEY",
                     "description": "A key used for encrypting the superuser's password.",
-                    "default": "h0yAjot7K3SLWa7Op5QBXK7LJTPCIwkzlaWmF-3fHuQ=",
+                    "default": "0WpJIfneSXHtrw3KDGc9tPxtpB5qZ_4GVO6CT9acwfI=",
                     "label": "LANGFLOW_SECRET_KEY"
                 },
                 {
