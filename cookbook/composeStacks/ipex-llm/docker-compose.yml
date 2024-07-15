@@ -9,7 +9,6 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '48'
           memory: 32G
     mem_limit: 32G
     shm_size: '16g'

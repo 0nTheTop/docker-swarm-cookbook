@@ -12,8 +12,8 @@ env:
   description: Time Zone. Default is UTC.
   default: UTC
 - name: IMAGE_TAPE
-  default: ipex-llm-serving-cpu|ipex-llm-serving-xpu
-  description: Image Type (CPU or GPU Serving)
+  default: ipex-llm-serving-xpu|ipex-llm-serving-cpu
+  description: Image Type (GPU or only CPU Serving)
 - name: IMAGE_VERSION
   default: latest|2.1.0-SNAPSHOT
   description: Image Vesion.

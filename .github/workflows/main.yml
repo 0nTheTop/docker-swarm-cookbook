@@ -2,7 +2,7 @@ name: Generate Cookbook Portainer Data
 on:
   push:
     branches:
-      - master
+      - main
     paths:
       - 'cookbook/**/info.yaml'
       - 'cookbook/**'
