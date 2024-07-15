@@ -17,8 +17,8 @@ services:
       # https://docs.nocodb.com/getting-started/self-hosted/environment-variables
       NC_DB: "mysql2://mysql:3306?u=${MYSQL_USER:-noco}&p=${MYSQL_PASSWORD:-mysqlpassword}&d=${MYSQL_DATABASE:-noco_db}"
       NC_DISABLE_TELE: true   # Disables the telemetry to prevent sending anonymous usage data. 
-      NC_ADMIN_EMAIL: admin@localhost
-      NC_ADMIN_PASSWORD: nocoadmin
+      NC_ADMIN_EMAIL: ${NC_ADMIN_EMAIL:-admin@localhost}   
+      NC_ADMIN_PASSWORD: ${NC_ADMIN_PASSWORD:-nocoadmin}   
     labels:
       - "traefik.enable=true"
       - "traefik.docker.network=traefik"
@@ -67,4 +67,5 @@ networks:
     attachable: true
 # traefik:
 #   external: true
+
 

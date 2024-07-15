@@ -29695,7 +29695,7 @@
                 {
                     "name": "LANGFLOW_SECRET_KEY",
                     "description": "A key used for encrypting the superuser's password.",
-                    "default": "vlL7Couy_m9txDTWu4MA77trsFN5HNgTtQ06y8oqmKw=",
+                    "default": "CmrEbpEV63KcabfpYZRGIKRPda0_AGE22NH-s6bRIhI=",
                     "label": "LANGFLOW_SECRET_KEY"
                 },
                 {
@@ -30307,60 +30307,58 @@
             "id": 870
         },
         {
-            "description": "NocoDB is an open-source alternative to Airtable, allowing you to turn any database into a smart spreadsheet.",
-            "title": "NocoDB (Cookbook)",
+            "description": "Nocodb",
+            "title": "Nocodb (Cookbook)",
             "categories": [
-                "Low Code",
                 "Database",
-                "Productivity",
-                "Development",
+                "Low Code",
                 "Cookbook"
             ],
             "platform": "linux",
+            "note": "<a href=\"https://nocodb.com/\" target=\"_blank\">Nocodb Docs</a><br> <a href=\"https://github.com/nocodb/nocodb\" target=\"_blank\">Nocodb Github</a> | Report <a href=\"https://github.com/nocodb/nocodb/issues\" target=\"_blank\">Issue</a><br>",
             "name": "nocodb",
-            "note": "<a href=\"https://docs.nocodb.com/\" target=\"_blank\">NocoDB Docs</a><br>",
             "env": [
                 {
-                    "name": "NOCODB_HTTP_PORT",
-                    "label": "NocoDB HTTP Port",
-                    "description": "The HTTP port to expose NocoDB on.",
-                    "default": "8585"
+                    "name": "NC_DB_USERNAME",
+                    "label": "Database Username",
+                    "default": "nocodb",
+                    "description": "Username for the Nocodb database."
                 },
                 {
-                    "name": "NOCODB_PORT",
-                    "label": "NocoDB Port",
-                    "description": "The port NocoDB runs on within its container.",
-                    "default": "8080"
+                    "name": "NC_DB_PASSWORD",
+                    "label": "Database Password",
+                    "default": "nocodb123",
+                    "description": "Password for the Nocodb database."
                 },
                 {
-                    "name": "MYSQL_USER",
-                    "label": "MySQL User",
-                    "description": "Username for MySQL database.",
-                    "default": "noco"
+                    "name": "NC_DB_HOST",
+                    "label": "Database Host",
+                    "default": "postgres",
+                    "description": "Hostname of the PostgreSQL database."
                 },
                 {
-                    "name": "MYSQL_PASSWORD",
-                    "label": "MySQL Password",
-                    "description": "Password for MySQL database.",
-                    "default": "mysqlpassword"
+                    "name": "NC_DB_PORT",
+                    "label": "Database Port",
+                    "default": "5432",
+                    "description": "Port number for the PostgreSQL database."
                 },
                 {
-                    "name": "MYSQL_ROOT_PASSWORD",
-                    "label": "MySQL Root Password",
-                    "description": "Root password for MySQL database.",
-                    "default": "mysqlrootpassword"
+                    "name": "NC_ADMIN_EMAIL",
+                    "label": "Admin Email",
+                    "default": "admin@example.com",
+                    "description": "Email address for the Nocodb administrator."
                 },
                 {
-                    "name": "MYSQL_DATABASE",
-                    "label": "MySQL Database",
-                    "description": "Name of the MySQL database.",
-                    "default": "noco_db"
+                    "name": "NC_PORT",
+                    "label": "Nocodb Port",
+                    "default": "8080",
+                    "description": "Port number for the Nocodb server."
                 },
                 {
                     "name": "TZ",
                     "label": "Time Zone",
-                    "description": "Time Zone.",
-                    "default": "UTC"
+                    "default": "UTC",
+                    "description": "Time zone for the Nocodb server."
                 }
             ],
             "repository": {
