@@ -11,3 +11,4 @@ composer.phar
 downloaded*
 #baker_download_collection.py
 __pycache*
+template*
