@@ -527,13 +527,14 @@
                 },
                 {
                     "name": "LANGFLOW_SUPERUSER_PASSWORD",
+                    "default": "langsuperuser",
                     "description": "The password for the superuser.",
                     "label": "LANGFLOW_SUPERUSER_PASSWORD"
                 },
                 {
                     "name": "LANGFLOW_SECRET_KEY",
                     "description": "A key used for encrypting the superuser's password.",
-                    "default": "mOdSDVGFxaSlEURbawUhn1WMEoOP4bx7hsvDmZqFn08=",
+                    "default": "FsMt3MAeB21PrCCU5uMCfmLRpPNDTvT1309ZyDCPf_M=",
                     "label": "LANGFLOW_SECRET_KEY"
                 },
                 {
