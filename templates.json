@@ -29695,7 +29695,7 @@
                 {
                     "name": "LANGFLOW_SECRET_KEY",
                     "description": "A key used for encrypting the superuser's password.",
-                    "default": "rHovUQ8b3CO3Kr1zYwCjSH5rUMQpw-dardlXVwOCQcA=",
+                    "default": "TtVT4gsvU7lC8iYDYJQRbo097MUS1_0slBNK5o37mRg=",
                     "label": "LANGFLOW_SECRET_KEY"
                 },
                 {
@@ -30149,15 +30149,27 @@
             "note": "<a href=\"https://baserow.io/docs/\" target=\"_blank\">Baserow Docs</a><br> <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
             "env": [
                 {
+                    "name": "BASEROW_HTTP_PORT",
+                    "label": "Published Baserow HTTP Port",
+                    "description": "The HTTP port for Baserow. Default is 80.",
+                    "default": "80"
+                },
+                {
+                    "name": "BASEROW_HTTPS_PORT",
+                    "label": "Published Baserow HTTPS Port",
+                    "description": "The HTTPS port for Baserow. Default is 443.",
+                    "default": "443"
+                },
+                {
                     "name": "WEB_FRONTEND_PORT",
-                    "label": "Web Frontend Port",
-                    "description": "The port for the web frontend. Default is 80.",
+                    "label": "Web Frontend Port (container)",
+                    "description": "The port for the web frontend hosted on container side. Default is 80.",
                     "default": "80"
                 },
                 {
                     "name": "WEB_FRONTEND_SSL_PORT",
-                    "label": "Web Frontend SSL Port",
-                    "description": "The port for the web frontend SSL. Default is 443.",
+                    "label": "Web Frontend SSL Port (container)",
+                    "description": "The port for the web frontend SSL hosted on container side. Default is 443.",
                     "default": "443"
                 },
                 {
@@ -30209,18 +30221,6 @@
                     "label": "Secret Key",
                     "description": "The secret key for Baserow. Default is baserow.",
                     "default": "baserow"
-                },
-                {
-                    "name": "BASEROW_HTTP_PORT",
-                    "label": "Baserow HTTP Port",
-                    "description": "The HTTP port for Baserow. Default is 80.",
-                    "default": "80"
-                },
-                {
-                    "name": "BASEROW_HTTPS_PORT",
-                    "label": "Baserow HTTPS Port",
-                    "description": "The HTTPS port for Baserow. Default is 443.",
-                    "default": "443"
                 },
                 {
                     "name": "TZ",
