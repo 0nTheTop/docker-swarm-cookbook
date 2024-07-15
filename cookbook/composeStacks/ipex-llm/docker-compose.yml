@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  ipex-llm:
+    hostname: ipex-llm
+    image: intelanalytics/${IMAGE_TAPE:-ipex-llm-serving-xpu}:${IMAGE_VERSION:-latest} 
+    container_name: ipex-llm
+    network_mode: host
+    deploy:
+      resources:
+        limits:
+          cpus: '48'
+          memory: 32G
+    mem_limit: 32G
+    shm_size: '16g'
+    stdin_open: true
+    tty: true

@@ -1,0 +1,19 @@
+---
+description: IPEX-LLM is a PyTorch library for running LLM on Intel CPU and GPU (e.g., local PC with iGPU, discrete GPU such as Arc A-Series, Flex and Max) with very low latency.
+title: IPEX-LLM
+name: ipex-llm
+categories: [ai]
+platform: linux
+note:
+  <a href="https://github.com/intel-analytics/ipex-llm" target="_blank">IPEX-LLM Github</a><br>
+env:
+- name: TZ
+  label: Time-Zone
+  description: Time Zone. Default is UTC.
+  default: UTC
+- name: IMAGE_TAPE
+  default: ipex-llm-serving-cpu|ipex-llm-serving-xpu
+  description: Image Type (CPU or GPU Serving)
+- name: IMAGE_VERSION
+  default: latest|2.1.0-SNAPSHOT
+  description: Image Vesion.
