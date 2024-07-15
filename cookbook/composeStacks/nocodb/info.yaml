@@ -14,7 +14,7 @@ env:
   description: Username for the Nocodb database.
 - name: NC_DB_PASSWORD
   label: Database Password
-  default: nocodb123
+  default: nocoadmin123
   description: Password for the Nocodb database.
 - name: NC_DB_HOST
   label: Database Host
@@ -26,7 +26,7 @@ env:
   description: Port number for the PostgreSQL database.
 - name: NC_ADMIN_EMAIL
   label: Admin Email
-  default: admin@example.com
+  default: admin@localhost
   description: Email address for the Nocodb administrator.
 - name: NC_PORT
   label: Nocodb Port
