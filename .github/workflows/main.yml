@@ -47,4 +47,4 @@ jobs:
           git add templates_cookbook.json
           git add templates.json
           git commit -m "Generated new files"
-          git push -u origin master
+          git push -u origin main
