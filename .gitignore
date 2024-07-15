@@ -9,5 +9,5 @@ composer.phar
 # Ignore .hidden files
 .*
 downloaded*
-baker_download_collection.py
+#baker_download_collection.py
 __pycache*
