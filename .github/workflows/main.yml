@@ -30,7 +30,7 @@ jobs:
         with:
           version: '2.14.2'
       - name: ⚠️ Check docker-compose files and syntax
-        run: bash tests/test_docker_compose.sh
+        run: bash tools/test_docker_compose.sh
       - name: ⚙️ Setup Python 3.10
         uses: actions/setup-python@v5
         with:
