@@ -552,7 +552,7 @@
                 {
                     "name": "LANGFLOW_SECRET_KEY",
                     "description": "A key used for encrypting the superuser's password.",
-                    "default": "TtVT4gsvU7lC8iYDYJQRbo097MUS1_0slBNK5o37mRg=",
+                    "default": "KEOYIZCWYLvI000PYAFdbs8AYxAuN9f1tzxT4bBaHjQ=",
                     "label": "LANGFLOW_SECRET_KEY"
                 },
                 {
@@ -1007,25 +1007,25 @@
             "env": [
                 {
                     "name": "BASEROW_HTTP_PORT",
-                    "label": "Published Baserow HTTP Port",
+                    "label": "Published HTTP Port",
                     "description": "The HTTP port for Baserow. Default is 80.",
                     "default": "80"
                 },
                 {
                     "name": "BASEROW_HTTPS_PORT",
-                    "label": "Published Baserow HTTPS Port",
+                    "label": "Published HTTPS Port",
                     "description": "The HTTPS port for Baserow. Default is 443.",
                     "default": "443"
                 },
                 {
                     "name": "WEB_FRONTEND_PORT",
-                    "label": "Web Frontend Port (container)",
+                    "label": "Container HTTP Port",
                     "description": "The port for the web frontend hosted on container side. Default is 80.",
                     "default": "80"
                 },
                 {
                     "name": "WEB_FRONTEND_SSL_PORT",
-                    "label": "Web Frontend SSL Port (container)",
+                    "label": "Container HTTPS Port",
                     "description": "The port for the web frontend SSL hosted on container side. Default is 443.",
                     "default": "443"
                 },
