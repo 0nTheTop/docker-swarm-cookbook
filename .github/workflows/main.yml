@@ -20,14 +20,17 @@ on:
 jobs:
   run:
     runs-on: ubuntu-latest
-    #runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout code v4
         uses: actions/checkout@v4
-      - name: Setup Python
+      - name: Setup Python 3.10
         uses: actions/setup-python@v5
         with:
           python-version: "3.10"
+      - name: Install python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
       - name: Run Python Portainer Collection Downloader
         run: python baker_download_collection.py
       - name: Run Python Portainer Generator
@@ -39,7 +42,7 @@ jobs:
           git config --global user.email "${GITHUB_ACTOR_ID}+${GITHUB_ACTOR}@users.noreply.github.com"
           git config --global user.name "$(gh api /users/${GITHUB_ACTOR} | jq .name -r)"
           git config -l
-      - name: Commit and push new files
+      - name: Commit and push new files JSON templates
         run: |
           git add templates_cookbook.json
           git add templates.json
