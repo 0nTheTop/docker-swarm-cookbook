@@ -3,6 +3,17 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch:
+    inputs:
+      forceRun:
+        description: 'Force Run Option'
+        required: true
+        default: 'false'
+        type: choice
+        options:
+          - 'true'
+          - 'false'
+          
 jobs:
   run:
     runs-on: ubuntu-latest
