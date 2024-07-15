@@ -552,7 +552,7 @@
                 {
                     "name": "LANGFLOW_SECRET_KEY",
                     "description": "A key used for encrypting the superuser's password.",
-                    "default": "ySJw4MWR8JPPe3UfAciv6Gs259kM19PNdFpJJBEkpUg=",
+                    "default": "rHovUQ8b3CO3Kr1zYwCjSH5rUMQpw-dardlXVwOCQcA=",
                     "label": "LANGFLOW_SECRET_KEY"
                 },
                 {
@@ -992,6 +992,107 @@
             "type": 3,
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/autogenstudio.png",
             "id": 18
+        },
+        {
+            "description": "Baserow is an open-source online database that allows you to create tables, forms, and views with a minimal amount of code.",
+            "title": "Baserow (Cookbook)",
+            "categories": [
+                "Low Code",
+                "Database",
+                "Cookbook"
+            ],
+            "platform": "linux",
+            "name": "baserow",
+            "note": "<a href=\"https://baserow.io/docs/\" target=\"_blank\">Baserow Docs</a><br> <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
+            "env": [
+                {
+                    "name": "WEB_FRONTEND_PORT",
+                    "label": "Web Frontend Port",
+                    "description": "The port for the web frontend. Default is 80.",
+                    "default": "80"
+                },
+                {
+                    "name": "WEB_FRONTEND_SSL_PORT",
+                    "label": "Web Frontend SSL Port",
+                    "description": "The port for the web frontend SSL. Default is 443.",
+                    "default": "443"
+                },
+                {
+                    "name": "BASEROW_PUBLIC_URL",
+                    "label": "Baserow Public URL",
+                    "description": "The public URL for Baserow. Default is http://localhost.",
+                    "default": "http://localhost"
+                },
+                {
+                    "name": "MIGRATE_ON_STARTUP",
+                    "label": "Migrate on Startup",
+                    "description": "Whether to migrate the database on startup. Default is True.",
+                    "select": [
+                        {
+                            "text": "True",
+                            "value": "true",
+                            "default": true
+                        },
+                        {
+                            "text": "False",
+                            "value": "false"
+                        }
+                    ]
+                },
+                {
+                    "name": "BASEROW_TRIGGER_SYNC_TEMPLATES_AFTER_MIGRATION",
+                    "label": "Trigger Sync Templates After Migration",
+                    "description": "Whether to trigger syncing of templates after migration. Default is True.",
+                    "select": [
+                        {
+                            "text": "True",
+                            "value": "true",
+                            "default": true
+                        },
+                        {
+                            "text": "False",
+                            "value": "false"
+                        }
+                    ]
+                },
+                {
+                    "name": "DATABASE_PASSWORD",
+                    "label": "Database Password",
+                    "description": "The password for the database. Default is baserow.",
+                    "default": "baserow"
+                },
+                {
+                    "name": "SECRET_KEY",
+                    "label": "Secret Key",
+                    "description": "The secret key for Baserow. Default is baserow.",
+                    "default": "baserow"
+                },
+                {
+                    "name": "BASEROW_HTTP_PORT",
+                    "label": "Baserow HTTP Port",
+                    "description": "The HTTP port for Baserow. Default is 80.",
+                    "default": "80"
+                },
+                {
+                    "name": "BASEROW_HTTPS_PORT",
+                    "label": "Baserow HTTPS Port",
+                    "description": "The HTTPS port for Baserow. Default is 443.",
+                    "default": "443"
+                },
+                {
+                    "name": "TZ",
+                    "label": "Time-Zone",
+                    "description": "Time Zone. Default is UTC.",
+                    "default": "UTC"
+                }
+            ],
+            "repository": {
+                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
+                "stackfile": "cookbook/composeStacks/baserow/docker-compose.yml"
+            },
+            "type": 3,
+            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/baserow.png",
+            "id": 19
         }
     ]
 }
