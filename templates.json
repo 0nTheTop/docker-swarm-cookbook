@@ -29676,7 +29676,7 @@
                 {
                     "name": "LANGFLOW_SECRET_KEY",
                     "description": "A key used for encrypting the superuser's password.",
-                    "default": "e3eDa8l0JeJdZToEaBmeZEScWWAUNSIqFJmDRveQJCg=",
+                    "default": "mOdSDVGFxaSlEURbawUhn1WMEoOP4bx7hsvDmZqFn08=",
                     "label": "LANGFLOW_SECRET_KEY"
                 },
                 {
@@ -29946,6 +29946,64 @@
             "id": 863
         },
         {
+            "description": "IPEX-LLM is a PyTorch library for running LLM on Intel CPU and GPU (e.g., local PC with iGPU, discrete GPU such as Arc A-Series, Flex and Max) with very low latency.",
+            "title": "IPEX-LLM (Cookbook)",
+            "name": "ipex-llm",
+            "categories": [
+                "AI",
+                "Cookbook"
+            ],
+            "platform": "linux",
+            "note": "<a href=\"https://github.com/intel-analytics/ipex-llm\" target=\"_blank\">IPEX-LLM Github</a><br> <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
+            "env": [
+                {
+                    "name": "TZ",
+                    "label": "Time-Zone",
+                    "description": "Time Zone. Default is UTC.",
+                    "default": "UTC"
+                },
+                {
+                    "name": "IMAGE_TAPE",
+                    "description": "Image Type (GPU or only CPU Serving) Default: ipex-llm-serving-xpu",
+                    "select": [
+                        {
+                            "text": "ipex-llm-serving-xpu",
+                            "value": "ipex-llm-serving-xpu",
+                            "default": true
+                        },
+                        {
+                            "text": "ipex-llm-serving-cpu",
+                            "value": "ipex-llm-serving-cpu"
+                        }
+                    ],
+                    "label": "IMAGE_TAPE"
+                },
+                {
+                    "name": "IMAGE_VERSION",
+                    "description": "Image Vesion. Default: latest",
+                    "select": [
+                        {
+                            "text": "latest",
+                            "value": "latest",
+                            "default": true
+                        },
+                        {
+                            "text": "2.1.0-SNAPSHOT",
+                            "value": "2.1.0-SNAPSHOT"
+                        }
+                    ],
+                    "label": "IMAGE_VERSION"
+                }
+            ],
+            "repository": {
+                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
+                "stackfile": "cookbook/composeStacks/ipex-llm/docker-compose.yml"
+            },
+            "type": 3,
+            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/ipex-llm.png",
+            "id": 864
+        },
+        {
             "description": "Docker swarm service for automatically updating your services whenever their image is refreshed",
             "note": "Check the <a href=\"https://github.com/containrrr/shepherd\" target=\"_blank\">GitLab documentation</a> to get started.",
             "categories": [
@@ -29963,7 +30021,7 @@
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/shepherd.png",
             "env": [],
-            "id": 864
+            "id": 865
         },
         {
             "description": "The world's most popular workflow automation platform for technical teams",
@@ -30085,7 +30143,7 @@
             },
             "type": 3,
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/n8n.png",
-            "id": 865
+            "id": 866
         },
         {
             "description": "Zigbee to MQTT bridge, get rid of your proprietary Zigbee bridges",
@@ -30103,11 +30161,12 @@
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/zigbee2mqtt.png",
             "env": [],
-            "id": 866
+            "id": 867
         },
         {
             "description": "Infinitely scalable, event-driven, language-agnostic orchestration and scheduling platform to manage millions of workflows declaratively in code.",
             "title": "Kestra (Cookbook)",
+            "name": "kestra",
             "categories": [
                 "Low Code",
                 "Cookbook"
@@ -30150,10 +30209,9 @@
                 "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
                 "stackfile": "cookbook/composeStacks/kestra/docker-compose.yml"
             },
-            "name": "kestra",
             "type": 3,
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/kestra.png",
-            "id": 867
+            "id": 868
         },
         {
             "description": "Call all LLM APIs using the OpenAI format. Use Bedrock, Azure, OpenAI, Cohere, Anthropic, Ollama, Sagemaker, HuggingFace, Replicate (100+ LLMs)",
@@ -30215,7 +30273,7 @@
             },
             "type": 3,
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/litellm.png",
-            "id": 868
+            "id": 869
         },
         {
             "description": "Open source low-code tool for developers to build customized LLM orchestration flow & AI agents",
@@ -30278,7 +30336,7 @@
             },
             "type": 3,
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/flowiseai.png",
-            "id": 869
+            "id": 870
         },
         {
             "description": "Nocodb",
@@ -30341,7 +30399,7 @@
             },
             "type": 3,
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/nocodb.png",
-            "id": 870
+            "id": 871
         },
         {
             "description": "Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.  It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-click.",
@@ -30367,7 +30425,7 @@
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/node-red.png",
             "note": "<br><a href=\"{GITHUB_URL_CONTENT}main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
-            "id": 871
+            "id": 872
         }
     ]
 }
