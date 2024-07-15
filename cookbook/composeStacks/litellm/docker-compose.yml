@@ -14,7 +14,7 @@ services:
       postgres:
         condition: service_healthy
     environment:
-      TZ: ${TZ}
+      TZ: ${TZ:-UTC}
       DATABASE_URL: "postgresql://${POSTGRES_USER:-litellm}:${DB_POSTGRESDB_PASSWORD:-LITELLM13203eiGht}@postgres:5432/${DB_POSTGRESDB_DATABASE:-litellm}"
       STORE_MODEL_IN_DB: "True"
       LITELLM_MASTER_KEY: "${LITELLM_MASTER_KEY:-sk-1234}" 
@@ -43,7 +43,7 @@ services:
     container_name: litellm-postgres
     image: postgres:16
     environment:
-      TZ: ${TZ}
+      TZ: ${TZ:-UTC}
       POSTGRES_DB: ${POSTGRES_DB:-litellm}
       POSTGRES_USER: ${POSTGRES_USER:-litellm}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-LITELLM13203eiGht}

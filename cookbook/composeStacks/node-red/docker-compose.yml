@@ -6,7 +6,7 @@ services:
     container_name: node-red
     image: nodered/node-red:latest
     environment:
-      TZ: ${TZ}
+      TZ: ${TZ:-UTC}
     ports:
       - "1880:1880"
     networks:

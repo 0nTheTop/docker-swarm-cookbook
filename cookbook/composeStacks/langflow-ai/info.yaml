@@ -40,6 +40,7 @@ env:
   description: The username of the superuser.
   default: admin
 - name: LANGFLOW_SUPERUSER_PASSWORD
+  default: langsuperuser
   description: The password for the superuser.
 - name: LANGFLOW_SECRET_KEY
   description: A key used for encrypting the superuser's password.

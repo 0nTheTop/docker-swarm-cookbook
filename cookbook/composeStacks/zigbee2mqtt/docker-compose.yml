@@ -10,7 +10,7 @@ services:
     networks:
       - zigbee2mqtt
     volumes:
-      - zigbee2mqtt:/app/data
+      - zigbee2mqtt-data:/app/data
     #devices:
       # CC251
       #- /dev/ttyUSB_cc2531:/dev/ttyACM0
@@ -40,8 +40,8 @@ services:
           memory: 300M
     
 volumes:
-  zigbee2mqtt_data:
-    name: zigbee2mqtt_data
+  zigbee2mqtt-data:
+    name: zigbee2mqtt-data
 
 networks:
   zigbee2mqtt:

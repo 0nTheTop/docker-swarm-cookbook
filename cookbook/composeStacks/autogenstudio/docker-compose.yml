@@ -5,9 +5,9 @@ services:
     hostname: autogen-studio
     container_name: autogen-studio
     image: ghcr.io/lludlow/autogen-studio
-    user: "${UID}:${GID}"
+    user: "${UID:-0}:${GID:-0}"
     environment:
-      TZ: ${TZ}
+      TZ: ${TZ:-UTC}
       OPENAI_API_KEY: ${OPENAI_API_KEY:-sk-1234}
       OPENAI_BASE_URL: ${OPENAI_BASE_URL:-https://api.openai.com/v1} 
     restart: always

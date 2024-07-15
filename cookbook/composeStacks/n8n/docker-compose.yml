@@ -14,14 +14,14 @@ services:
       postgres:
         condition: service_healthy
     environment:
-      TZ: ${TZ}
-      N8N_ENCRYPTION_KEY: ${N8N_ENCRYPTION_KEY}
+      TZ: ${TZ:-UTC}
+      N8N_ENCRYPTION_KEY: ${N8N_ENCRYPTION_KEY:-verysecretkey}
       N8N_SECURE_COOKIE: ${N8N_SECURE_COOKIE:-false}
       N8N_BASIC_AUTH_ACTIVE: ${N8N_BASIC_AUTH_ACTIVE:-true}
       N8N_BASIC_AUTH_USER: ${N8N_BASIC_AUTH_USER:-user}
       N8N_BASIC_AUTH_PASSWORD: ${N8N_BASIC_AUTH_PASSWORD:-password}
       N8N_PROTOCOL: ${N8N_PROTOCOL:-https}
-      WEBHOOK_URL: ${WEBHOOK_URL}
+      WEBHOOK_URL: ${WEBHOOK_URL:-http://localhost:5678/webhook}
       DB_TYPE: postgresdb
       DB_POSTGRESDB_DATABASE: ${DB_POSTGRESDB_DATABASE:-n8n}
       DB_POSTGRESDB_HOST: postgres
@@ -49,7 +49,7 @@ services:
     container_name: n8n-postgres
     image: postgres:16
     environment:
-      TZ: ${TZ}
+      TZ: ${TZ:-UTC}
       POSTGRES_DB: ${POSTGRES_DB:-n8n}
       POSTGRES_USER: ${POSTGRES_USER:-n8n}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-n8N13203eiGht}

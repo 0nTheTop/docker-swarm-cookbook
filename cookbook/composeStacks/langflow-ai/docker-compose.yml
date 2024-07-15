@@ -14,14 +14,14 @@ services:
       postgres:
         condition: service_healthy
     environment:
-      TZ: ${TZ}
+      TZ: ${TZ:-UTC}
       LANGFLOW_DATABASE_URL: postgresql://${POSTGRES_USER:-langflow}:${POSTGRES_PASSWORD:-langflow345}@postgres:5432/${POSTGRES_DB:-langflow}
       # This variable defines where the logs, file storage, monitor data and secret keys are stored.
       LANGFLOW_CONFIG_DIR: /var/lib/langflow
       LANGFLOW_AUTO_LOGIN: ${LANGFLOW_AUTO_LOGIN:-True}
-      LANGFLOW_SUPERUSER: ${LANGFLOW_SUPERUSER}
-      LANGFLOW_SUPERUSER_PASSWORD: ${LANGFLOW_SUPERUSER_PASSWORD}
-      LANGFLOW_SECRET_KEY: ${LANGFLOW_SECRET_KEY}
+      LANGFLOW_SUPERUSER: ${LANGFLOW_SUPERUSER:-superuser}
+      LANGFLOW_SUPERUSER_PASSWORD: ${LANGFLOW_SUPERUSER_PASSWORD:-langsuperuser}
+      LANGFLOW_SECRET_KEY: ${LANGFLOW_SECRET_KEY:-secretkey}
       LANGFLOW_NEW_USER_IS_ACTIVE: ${LANGFLOW_NEW_USER_IS_ACTIVE:-False}
       LANGFLOW_ACCESS_SAME_SITE: ${LANGFLOW_ACCESS_SAME_SITE:-lax}
       LANGFLOW_ACCESS_SECURE: ${LANGFLOW_ACCESS_SECURE:-False}
@@ -46,7 +46,7 @@ services:
     container_name: langflow-postgres
     image: postgres:16
     environment:
-      TZ: ${TZ}
+      TZ: ${TZ:-UTC}
       POSTGRES_USER: ${POSTGRES_USER:-langflow}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-langflow345}
       POSTGRES_DB: ${POSTGRES_DB:-langflow}

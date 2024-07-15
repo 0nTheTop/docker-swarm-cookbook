@@ -25,6 +25,12 @@ jobs:
     steps:
       - name: 📂 Checkout code v4
         uses: actions/checkout@v4
+      - name: 🐳 Setup Docker
+        uses: KengoTODA/actions-setup-docker-compose@v1
+        with:
+          version: '2.14.2'
+      - name: ⚠️ Check docker-compose files and syntax
+        run: bash test_docker_compose.sh
       - name: ⚙️ Setup Python 3.10
         uses: actions/setup-python@v5
         with:

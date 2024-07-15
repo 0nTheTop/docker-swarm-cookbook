@@ -22,14 +22,14 @@ services:
       # URL without the http(s) protocol
       BASE_URL: ${BASE_URL:-localhost:7654}
       # URL with the http(s) protocol
-      NEXTAUTH_URL: http://${BASE_URL}
+      NEXTAUTH_URL: http://${BASE_URL:-localhost:7654}
 
       # Change this for production
       NEXT_PUBLIC_APP_ENV: development
 
       # Generate a secret using `openssl rand -hex 32`
       SECRET:
-      TZ: ${TZ}
+      TZ: ${TZ:-UTC}
 
       # host.docker.internal uses your localhost as db host
       DATABASE_URL: postgresql://${POSTGRES_USER:-basetool}:${POSTGRES_PASSWORD:-basetool13203eiGht}@${POSTGRES_HOSTNAME:-postgres}/${POSTGRES_DB:-basetool}
@@ -92,7 +92,7 @@ services:
     container_name: basetool-postgres
     image: postgres:16
     environment:
-      TZ: ${TZ}
+      TZ: ${TZ:-UTC}
       POSTGRES_DB: ${POSTGRES_DB:-basetool}
       POSTGRES_USER: ${POSTGRES_USER:-basetool}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-basetool13203eiGht}
