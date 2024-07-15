@@ -1,0 +1,66 @@
+---
+version: "3.9"
+
+services:
+  nocodb:
+    hostname: nocodb
+    container_name: nocodb
+    image: "nocodb/nocodb:latest"
+    ports:
+      - mode: host
+        published: ${NOCODB_HTTP_PORT:-8585}
+        target: ${NOCODB_PORT:-8080}
+    networks:
+      - nocodb
+      #- traefik
+    environment:
+      NC_DB: "mysql2://mysql:3306?u=${MYSQL_USER:-noco}&p=${MYSQL_PASSWORD:-mysqlpassword}&d=${MYSQL_DATABASE:-noco_db}"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=traefik"
+      - "traefik.http.routers.nocodb.rule=HostRegexp(`^nocodb\\..*`)"
+      - "traefik.http.routers.nocodb.service=nocodb-s"
+      - "traefik.http.routers.nocodb.entryPoints=web"
+      - "traefik.http.services.nocodb-s.loadbalancer.server.port=${NOCODB_HTTP_PORT:-80}"
+      - "traefik.http.services.nocodb-s.loadbalancer.sticky.cookie.name=stickycookie"
+      - "traefik.http.services.nocodb-s.loadbalancer.sticky.cookie.secure=true"
+
+  mysql: 
+    container_name: nocodb-mysql
+    hostname: mysql
+    image: "mysql:5.7"
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-noco_db}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-mysqlpassword}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-mysqlrootpassword}
+      MYSQL_USER: ${MYSQL_USER:-noco}
+    networks:
+      - nocodb
+    healthcheck: 
+      retries: 10
+      test: 
+        - CMD
+        - mysqladmin
+        - ping
+        - "-h"
+        - localhost
+      timeout: 20s
+    restart: always
+    volumes: 
+      - nocodb-mysql-data:/var/lib/mysql
+    # below line shows how to change charset and collation
+    # uncomment it if necessary
+    #command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+
+volumes:
+  nocodb-mysql-data:
+    name: nocodb-mysql-data
+
+networks:
+  nocodb:
+    name: nocodb
+    driver: bridge
+    attachable: true
+# traefik:
+#   external: true
+

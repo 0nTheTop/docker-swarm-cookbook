@@ -552,7 +552,7 @@
                 {
                     "name": "LANGFLOW_SECRET_KEY",
                     "description": "A key used for encrypting the superuser's password.",
-                    "default": "BDU7FfLjfvjWxQ_B7sS0bqZthUmFG_d6rVHPiG0mCcw=",
+                    "default": "vlL7Couy_m9txDTWu4MA77trsFN5HNgTtQ06y8oqmKw=",
                     "label": "LANGFLOW_SECRET_KEY"
                 },
                 {
@@ -1162,6 +1162,71 @@
             "type": 3,
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/basetool.png",
             "id": 20
+        },
+        {
+            "description": "NocoDB is an open-source alternative to Airtable, allowing you to turn any database into a smart spreadsheet.",
+            "title": "NocoDB (Cookbook)",
+            "categories": [
+                "Low Code",
+                "Database",
+                "Productivity",
+                "Development",
+                "Cookbook"
+            ],
+            "platform": "linux",
+            "name": "nocodb",
+            "note": "<a href=\"https://docs.nocodb.com/\" target=\"_blank\">NocoDB Docs</a><br>",
+            "env": [
+                {
+                    "name": "NOCODB_HTTP_PORT",
+                    "label": "NocoDB HTTP Port",
+                    "description": "The HTTP port to expose NocoDB on.",
+                    "default": "8585"
+                },
+                {
+                    "name": "NOCODB_PORT",
+                    "label": "NocoDB Port",
+                    "description": "The port NocoDB runs on within its container.",
+                    "default": "8080"
+                },
+                {
+                    "name": "MYSQL_USER",
+                    "label": "MySQL User",
+                    "description": "Username for MySQL database.",
+                    "default": "noco"
+                },
+                {
+                    "name": "MYSQL_PASSWORD",
+                    "label": "MySQL Password",
+                    "description": "Password for MySQL database.",
+                    "default": "mysqlpassword"
+                },
+                {
+                    "name": "MYSQL_ROOT_PASSWORD",
+                    "label": "MySQL Root Password",
+                    "description": "Root password for MySQL database.",
+                    "default": "mysqlrootpassword"
+                },
+                {
+                    "name": "MYSQL_DATABASE",
+                    "label": "MySQL Database",
+                    "description": "Name of the MySQL database.",
+                    "default": "noco_db"
+                },
+                {
+                    "name": "TZ",
+                    "label": "Time Zone",
+                    "description": "Time Zone.",
+                    "default": "UTC"
+                }
+            ],
+            "repository": {
+                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
+                "stackfile": "cookbook/composeStacks/nocodb/docker-compose.yml"
+            },
+            "type": 3,
+            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/nocodb.png",
+            "id": 21
         }
     ]
 }
