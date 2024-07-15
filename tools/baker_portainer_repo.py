@@ -12,11 +12,13 @@ from config import ConfigReader
 import yaml, re, random, string
 from cryptography.fernet import Fernet
 
-cr = ConfigReader()
-GITHUB_URL = cr.read_config("github.yaml")['github_url']
-GITHUB_URL_CONTENT = cr.read_config("github.yaml")['github_url_content']
-REF_CATEGORIES = cr.read_config("categories.yaml")
+CURRENT_FILE_PATH = os.path.dirname(os.path.realpath(__file__))
 
+cr = ConfigReader(os.path.join(CURRENT_FILE_PATH, "config"))
+GITHUB_URL = cr.read_config("github.yaml")['github_url']
+GITHUB_URL_CONTENT = cr.read_config(os.path.join(CURRENT_FILE_PATH, "config", "github.yaml"))['github_url_content']
+REF_CATEGORIES = cr.read_config(os.path.join(CURRENT_FILE_PATH, "config", "categories.yaml"))
+WORKING_FOLDER = os.path.join(CURRENT_FILE_PATH, "..") 
 
 def generate_key(key_type):
   if key_type == "-fernet-":
@@ -62,8 +64,8 @@ def standardize_categories(categories):
 class PortainerRepos():
     def __init__(self) -> None:
         cr = ConfigReader()
-        self.templates_folder_path = os.path.join("downloaded-collections", "templates")
-        self.urls = cr.read_config("repos.yaml")['repos']
+        self.templates_folder_path = os.path.join(WORKING_FOLDER, "downloaded-collections", "templates")
+        self.urls = cr.read_config(os.path.join(CURRENT_FILE_PATH, "config", "repos.yaml"))['repos']
         
         
     def download(self):
@@ -102,15 +104,15 @@ def cookbook(type_id):
     ret = []
     if type_id == 1:
         cookbook_folder = "containers"
-        folder_path = os.path.join("cookbook", cookbook_folder)
+        folder_path = os.path.join(WORKING_FOLDER, "cookbook", cookbook_folder)
         stack_file_name = None
     if type_id == 2:
         cookbook_folder = "swarmStacks"
-        folder_path = os.path.join("cookbook", cookbook_folder)
+        folder_path = os.path.join(WORKING_FOLDER, "cookbook", cookbook_folder)
         stack_file_name = "docker-stack.yml"
     if type_id == 3:
         cookbook_folder = "composeStacks"
-        folder_path = os.path.join("cookbook", cookbook_folder)
+        folder_path = os.path.join(WORKING_FOLDER, "cookbook", cookbook_folder)
         stack_file_name = "docker-compose.yml"
     
     # list all folders
@@ -160,7 +162,7 @@ def cookbook(type_id):
         
         # Logo
         if 'logo' not in data:
-            if os.path.exists(os.path.join("icons", f"{project_folder}.png")):
+            if os.path.exists(os.path.join(WORKING_FOLDER, "icons", f"{project_folder}.png")):
                 data['logo'] = f"{GITHUB_URL_CONTENT}main/icons/{project_folder}.png"
             else:
                 data['logo'] = ''
@@ -217,9 +219,9 @@ def cookbook(type_id):
                 
             if env_element.get('name') == 'TZ' and env_element.get('label') == 'Time-Zone':
                 if data.get('note'):
-                    data['note'] = f"{data['note']} <br> <br> <a href=\"{GITHUB_URL_CONTENT}main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones"
+                    data['note'] = f"{data['note']} <br> <br> <a href=\"{GITHUB_URL_CONTENT}main/tz/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones"
                 else:
-                    data['note'] = "<br><a href=\"{GITHUB_URL_CONTENT}main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones"
+                    data['note'] = "<br><a href=\"{GITHUB_URL_CONTENT}main/tz/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones"
         
 
         
@@ -270,7 +272,6 @@ if __name__ == "__main__":
         repo['templates'].append(cbook)
         id = id + 1
 
-
     # add cookbooks(2)
     cbook_swarm = cookbook_swarmStack()
     print(f"Cookbook: swarmStack - {len(cbook_swarm)}")
@@ -288,7 +289,7 @@ if __name__ == "__main__":
         id = id + 1
 
     # write to file all repos
-    with open('templates.json', 'w') as f:
+    with open(os.path.join(WORKING_FOLDER, "templates.json"), 'w') as f:
         json.dump(repo, f, indent=4)
 
     # write to file only cookbooks records
@@ -301,7 +302,7 @@ if __name__ == "__main__":
             cookbook_repo['templates'].append(cbr)
             cookbook_repo_id+=1
             
-    with open('templates_cookbook.json', 'w') as f:
+    with open(os.path.join(WORKING_FOLDER, 'templates_cookbook.json') , 'w') as f:
         json.dump(cookbook_repo, f, indent=4)
         
     

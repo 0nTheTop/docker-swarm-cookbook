@@ -13,22 +13,28 @@ cookbooks=()
 for d in cookbook/composeStacks/*; do
   if [ -d "$d" ]; then
     cookbooks+=("$d")
-    echo "Starting $d"
+    #echo "Starting $d"
   fi
 done
 
 
 # Check if docker compose didn't return error
 # if return error - then brake script with exit 1
+count=0
 for path in "${cookbooks[@]}"; do
     if [ -d "$path" ]; then
         if [ -f "$path/docker-compose.yml" ]; then
-            echo "--------------------"
             echo "Exam path: $path"
             if ! docker-compose  -f "$path/docker-compose.yml" config > /dev/null; then
                 echo "Error: docker-compose config failed in $path"
                 exit 1
             fi
+            # add counter +!
+            count=$((count+1))
+            echo "--------------------"
         fi
     fi
 done
+echo "* DONE -------------"
+echo "* Total: $count"
+exit 0

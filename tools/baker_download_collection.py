@@ -11,11 +11,13 @@ from typing import List, Dict
 import yaml
 from config import ConfigReader
 
-cr = ConfigReader()
+CURRENT_FILE_PATH = os.path.dirname(os.path.realpath(__file__))
+
+cr = ConfigReader(os.path.join(CURRENT_FILE_PATH, "config"))
 GITHUB_URL = cr.read_config("github.yaml")['github_url']
 GITHUB_URL_CONTENT = cr.read_config("github.yaml")['github_url_content']
 LOGOS = f"{GITHUB_URL_CONTENT}main/icons/"
-DOWNLOADED_FOLDER = 'downloaded-collections'
+DOWNLOADED_FOLDER = '../downloaded-collections'
 
 class Volume(Dict[str, str]):
     container: str

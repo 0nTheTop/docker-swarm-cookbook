@@ -2,54 +2,36 @@
     "version": "3",
     "templates": [
         {
-            "title": "openedai-speech (Cookbook)",
-            "description": "openedai-speech",
-            "note": "<a href=\"https://github.com/matatonic/openedai-speech\" target=\"_blank\">GithHub</a> <a href=\"https://github.com/matatonic/openedai-speech/tree/main/config\" target=\"_blank\">Config Files</a> <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
+            "title": "Cloudbeaver (Cookbook)",
+            "description": "Cloud Database Manager - Community Edition",
+            "note": "Cloud Database Manager - Community Edition.<br> <br> CloudBeaver is a web server which provides rich web interface. Server itself is a Java application, web part is written on TypeScript and React.<br> It is free to use and open-source (licensed under Apache 2 license).<br> See out <a href=\"https://github.com/dbeaver/cloudbeaver/wiki\" target=\"_blank\">WIKI</a> for more details.<br> <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/tz/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
             "categories": [
-                "AI",
+                "Web",
                 "Tool",
+                "Database",
                 "Cookbook"
             ],
             "platform": "linux",
-            "name": "openedai-speech",
-            "hostname": "openedai-speech",
-            "image": "ghcr.io/matatonic/openedai-speech",
+            "name": "cloudbeaver",
+            "hostname": "cloudbeaver",
+            "container_name": "cloudbeaver",
+            "image": "dbeaver/cloudbeaver:latest",
             "ports": [
-                "8000:8000/tcp"
+                "8978:8978/tcp"
             ],
-            "network": "bridge",
-            "restart_policy": "unless-stopped",
+            "restart_policy": "always",
             "env": [
                 {
                     "name": "TZ",
                     "label": "Time-Zone",
                     "description": "Time Zone. Default is UTC.",
                     "default": "UTC"
-                },
-                {
-                    "name": "TTS_HOME",
-                    "default": "voices",
-                    "label": "TTS_HOME"
-                },
-                {
-                    "name": "HF_HOME",
-                    "description": "HF_HOME",
-                    "default": "voices",
-                    "label": "HF_HOME"
-                },
-                {
-                    "name": "PRELOAD_MODEL",
-                    "label": "PRELOAD_MODEL"
                 }
             ],
             "volumes": [
                 {
-                    "container": "/voices",
-                    "bind": "/app/voices"
-                },
-                {
-                    "container": "/config",
-                    "bind": "/app/config"
+                    "container": "/opt/cloudbeaver/workspace",
+                    "bind": "/opt/docker/cloudbeaver/workspace"
                 }
             ],
             "labels": [
@@ -62,36 +44,36 @@
                     "value": "traefik"
                 },
                 {
-                    "name": "traefik.http.routers.openedai-speech.rule",
-                    "value": "HostRegexp(`^openedai-speech\\..*`)"
+                    "name": "traefik.http.routers.cloudbeaver.rule",
+                    "value": "HostRegexp(`^cloudbeaver\\..*`)"
                 },
                 {
-                    "name": "traefik.http.routers.openedai-speech.service",
-                    "value": "openedai-speech-s"
+                    "name": "traefik.http.routers.cloudbeaver.service",
+                    "value": "cloudbeaver-s"
                 },
                 {
-                    "name": "traefik.http.routers.openedai-speech.entryPoints",
+                    "name": "traefik.http.routers.cloudbeaver.entryPoints",
                     "value": "web"
                 },
                 {
-                    "name": "traefik.http.services.openedai-speech-s.loadbalancer.server.port",
-                    "value": "8000"
+                    "name": "traefik.http.services.cloudbeaver-s.loadbalancer.server.port",
+                    "value": "8978"
                 },
                 {
-                    "name": "traefik.http.services.openedai-speech-s.loadbalancer.sticky.cookie.name",
+                    "name": "traefik.http.services.cloudbeaver-s.loadbalancer.sticky.cookie.name",
                     "value": "stickycookie"
                 },
                 {
-                    "name": "traefik.http.services.openedai-speech-s.loadbalancer.sticky.cookie.secure",
+                    "name": "traefik.http.services.cloudbeaver-s.loadbalancer.sticky.cookie.secure",
                     "value": "true"
                 }
             ],
             "repository": {
                 "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
-                "stackfile": "cookbook/containers/openedai-speech/None"
+                "stackfile": "cookbook/containers/cloudbeaver/None"
             },
             "type": 1,
-            "logo": "",
+            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/cloudbeaver.png",
             "id": 1
         },
         {
@@ -182,36 +164,54 @@
             "id": 2
         },
         {
-            "title": "Cloudbeaver (Cookbook)",
-            "description": "Cloud Database Manager - Community Edition",
-            "note": "Cloud Database Manager - Community Edition.<br> <br> CloudBeaver is a web server which provides rich web interface. Server itself is a Java application, web part is written on TypeScript and React.<br> It is free to use and open-source (licensed under Apache 2 license).<br> See out <a href=\"https://github.com/dbeaver/cloudbeaver/wiki\" target=\"_blank\">WIKI</a> for more details.<br> <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
+            "title": "openedai-speech (Cookbook)",
+            "description": "openedai-speech",
+            "note": "<a href=\"https://github.com/matatonic/openedai-speech\" target=\"_blank\">GithHub</a> <a href=\"https://github.com/matatonic/openedai-speech/tree/main/config\" target=\"_blank\">Config Files</a> <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/tz/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
             "categories": [
-                "Web",
+                "AI",
                 "Tool",
-                "Database",
                 "Cookbook"
             ],
             "platform": "linux",
-            "name": "cloudbeaver",
-            "hostname": "cloudbeaver",
-            "container_name": "cloudbeaver",
-            "image": "dbeaver/cloudbeaver:latest",
+            "name": "openedai-speech",
+            "hostname": "openedai-speech",
+            "image": "ghcr.io/matatonic/openedai-speech",
             "ports": [
-                "8978:8978/tcp"
+                "8000:8000/tcp"
             ],
-            "restart_policy": "always",
+            "network": "bridge",
+            "restart_policy": "unless-stopped",
             "env": [
                 {
                     "name": "TZ",
                     "label": "Time-Zone",
                     "description": "Time Zone. Default is UTC.",
                     "default": "UTC"
+                },
+                {
+                    "name": "TTS_HOME",
+                    "default": "voices",
+                    "label": "TTS_HOME"
+                },
+                {
+                    "name": "HF_HOME",
+                    "description": "HF_HOME",
+                    "default": "voices",
+                    "label": "HF_HOME"
+                },
+                {
+                    "name": "PRELOAD_MODEL",
+                    "label": "PRELOAD_MODEL"
                 }
             ],
             "volumes": [
                 {
-                    "container": "/opt/cloudbeaver/workspace",
-                    "bind": "/opt/docker/cloudbeaver/workspace"
+                    "container": "/voices",
+                    "bind": "/app/voices"
+                },
+                {
+                    "container": "/config",
+                    "bind": "/app/config"
                 }
             ],
             "labels": [
@@ -224,37 +224,62 @@
                     "value": "traefik"
                 },
                 {
-                    "name": "traefik.http.routers.cloudbeaver.rule",
-                    "value": "HostRegexp(`^cloudbeaver\\..*`)"
+                    "name": "traefik.http.routers.openedai-speech.rule",
+                    "value": "HostRegexp(`^openedai-speech\\..*`)"
                 },
                 {
-                    "name": "traefik.http.routers.cloudbeaver.service",
-                    "value": "cloudbeaver-s"
+                    "name": "traefik.http.routers.openedai-speech.service",
+                    "value": "openedai-speech-s"
                 },
                 {
-                    "name": "traefik.http.routers.cloudbeaver.entryPoints",
+                    "name": "traefik.http.routers.openedai-speech.entryPoints",
                     "value": "web"
                 },
                 {
-                    "name": "traefik.http.services.cloudbeaver-s.loadbalancer.server.port",
-                    "value": "8978"
+                    "name": "traefik.http.services.openedai-speech-s.loadbalancer.server.port",
+                    "value": "8000"
                 },
                 {
-                    "name": "traefik.http.services.cloudbeaver-s.loadbalancer.sticky.cookie.name",
+                    "name": "traefik.http.services.openedai-speech-s.loadbalancer.sticky.cookie.name",
                     "value": "stickycookie"
                 },
                 {
-                    "name": "traefik.http.services.cloudbeaver-s.loadbalancer.sticky.cookie.secure",
+                    "name": "traefik.http.services.openedai-speech-s.loadbalancer.sticky.cookie.secure",
                     "value": "true"
                 }
             ],
             "repository": {
                 "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
-                "stackfile": "cookbook/containers/cloudbeaver/None"
+                "stackfile": "cookbook/containers/openedai-speech/None"
             },
             "type": 1,
-            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/cloudbeaver.png",
+            "logo": "",
             "id": 3
+        },
+        {
+            "description": "3 Nodes MinIO Cluster",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/minio.png",
+            "note": "Please remember that MINIO_ROOT_PASSWORD needs to have min **8** characters.",
+            "categories": [
+                "Database",
+                "Cookbook"
+            ],
+            "env": [
+                {
+                    "name": "MINIO_ROOT_PASSWORD",
+                    "label": "MINIO_ROOT_PASSWORD",
+                    "description": "Password used by the MinIO root user. **It needs to have lenght min 8 characters.**"
+                }
+            ],
+            "title": "Minio cluster (Cookbook)",
+            "repository": {
+                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
+                "stackfile": "cookbook/swarmStacks/minio-cluster/docker-stack.yml"
+            },
+            "name": "minio-cluster",
+            "type": 2,
+            "platform": "linux",
+            "id": 4
         },
         {
             "title": "Traefik (Cookbook)",
@@ -271,7 +296,24 @@
             "type": 2,
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/traefik.png",
             "env": [],
-            "id": 4
+            "id": 5
+        },
+        {
+            "title": "Portainer Agent (Cookbook)",
+            "repository": {
+                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
+                "stackfile": "cookbook/swarmStacks/portainer_agent/docker-stack.yml"
+            },
+            "name": "portainer-agent",
+            "categories": [
+                "Cookbook"
+            ],
+            "type": 2,
+            "platform": "linux",
+            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/portainer_agent.png",
+            "description": "portainer agent",
+            "env": [],
+            "id": 6
         },
         {
             "description": "2 Nodes MySQL Cluster",
@@ -306,7 +348,7 @@
             "type": 2,
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/mysql-cluster.png",
-            "id": 5
+            "id": 7
         },
         {
             "description": "Windmill is the most popular workflow automation platform for technical teams",
@@ -318,7 +360,7 @@
             ],
             "platform": "linux",
             "name": "Windmill",
-            "note": "<a href=\"https://www.windmill.dev/\" target=\"_blank\">Windmill Docs</a><br> <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
+            "note": "<a href=\"https://www.windmill.dev/\" target=\"_blank\">Windmill Docs</a><br> <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/tz/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
             "env": [
                 {
                     "name": "TZ",
@@ -373,94 +415,71 @@
             },
             "type": 2,
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/windmill.png",
-            "id": 6
-        },
-        {
-            "description": "3 Nodes MinIO Cluster",
-            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/minio.png",
-            "note": "Please remember that MINIO_ROOT_PASSWORD needs to have min **8** characters.",
-            "categories": [
-                "Database",
-                "Cookbook"
-            ],
-            "env": [
-                {
-                    "name": "MINIO_ROOT_PASSWORD",
-                    "label": "MINIO_ROOT_PASSWORD",
-                    "description": "Password used by the MinIO root user. **It needs to have lenght min 8 characters.**"
-                }
-            ],
-            "title": "Minio cluster (Cookbook)",
-            "repository": {
-                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
-                "stackfile": "cookbook/swarmStacks/minio-cluster/docker-stack.yml"
-            },
-            "name": "minio-cluster",
-            "type": 2,
-            "platform": "linux",
-            "id": 7
-        },
-        {
-            "title": "Portainer Agent (Cookbook)",
-            "repository": {
-                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
-                "stackfile": "cookbook/swarmStacks/portainer_agent/docker-stack.yml"
-            },
-            "name": "portainer-agent",
-            "categories": [
-                "Cookbook"
-            ],
-            "type": 2,
-            "platform": "linux",
-            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/portainer_agent.png",
-            "description": "portainer agent",
-            "env": [],
             "id": 8
         },
         {
-            "description": "AutoGen Studio is an interface powered by AutoGen, designed to simplify the process of creating and managing multi-agent solutions. It\u2019s a user-friendly platform that allows even beginners to declaratively define and modify agents and multi-agent workflows through an intuitive interface.",
-            "title": "autogen-studio (Cookbook)",
+            "description": "Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.  It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-click.",
+            "title": "Node-RED (Cookbook)",
             "categories": [
-                "AI",
+                "Low Code",
                 "Cookbook"
             ],
-            "platform": "linux",
-            "name": "autogen-studio",
-            "note": "<a href=\"https://autogen-studio.com/\" target=\"_blank\">AutoGen Studio Official Page</a><br>\n<a href=\"https://github.com/lludlow/autogen-studio\" target=\"_blank\">Larry Ludlow Github Docker container for Autogen Studio</a><br>\n<br>\nWebUI: http://autogen-studio:8081/\n <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
             "env": [
                 {
                     "name": "TZ",
                     "label": "Time-Zone",
-                    "description": "Time Zone. Default is UTC.",
+                    "description": "Time Zone",
                     "default": "UTC"
-                },
-                {
-                    "name": "AUTOGEN_PORT",
-                    "default": "8081",
-                    "description": "The port to run the AutoGen Studio server on. Default is 8081.",
-                    "label": "AUTOGEN_PORT"
-                },
-                {
-                    "name": "OPENAI_API_KEY",
-                    "default": "sk-1234",
-                    "description": "The API key used for the OpenAI connector.",
-                    "required": true,
-                    "label": "OPENAI_API_KEY"
-                },
-                {
-                    "name": "OPENAI_BASE_URL",
-                    "default": "https://api.openai.com/v1",
-                    "description": "The Base URL used for the OpenAI connector.",
-                    "label": "OPENAI_BASE_URL"
                 }
             ],
             "repository": {
                 "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
-                "stackfile": "cookbook/composeStacks/autogenstudio/docker-compose.yml"
+                "stackfile": "cookbook/composeStacks/node-red/docker-compose.yml"
             },
+            "name": "node-red",
             "type": 3,
-            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/autogenstudio.png",
+            "platform": "linux",
+            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/node-red.png",
+            "note": "<br><a href=\"{GITHUB_URL_CONTENT}main/tz/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
             "id": 9
+        },
+        {
+            "description": "Qdrant is an Open-Source Vector Database and Vector Search Engine written in Rust. It provides fast and scalable vector similarity search service.",
+            "categories": [
+                "Database",
+                "Cookbook"
+            ],
+            "title": "Qdrant (Cookbook)",
+            "repository": {
+                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
+                "stackfile": "cookbook/composeStacks/qdrant/docker-compose.yml"
+            },
+            "name": "qdrant",
+            "type": 3,
+            "platform": "linux",
+            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/qdrant.png",
+            "env": [],
+            "id": 10
+        },
+        {
+            "description": "Docker swarm service for automatically updating your services whenever their image is refreshed",
+            "note": "Check the <a href=\"https://github.com/containrrr/shepherd\" target=\"_blank\">GitLab documentation</a> to get started.",
+            "categories": [
+                "Automation",
+                "Messaging",
+                "Cookbook"
+            ],
+            "title": "Shepherd (Cookbook)",
+            "repository": {
+                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
+                "stackfile": "cookbook/composeStacks/shepherd/docker-compose.yml"
+            },
+            "name": "shepherd",
+            "type": 3,
+            "platform": "linux",
+            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/shepherd.png",
+            "env": [],
+            "id": 11
         },
         {
             "description": "Langflow-AI is a visual framework for building multi-agent and RAG applications. It's open-source, Python-powered, fully customizable, model and vector store agnostic.",
@@ -471,7 +490,7 @@
                 "Cookbook"
             ],
             "platform": "linux",
-            "note": "<a href=\"https://www.docker.com/blog/how-to-use-the-postgres-docker-official-image/\" target=\"_blank\">Postgres Docker Info</a> <br> <a href=\"https://docs.langflow.org/\" target=\"_blank\">Langflow Docs</a><br> <br> <a href=\"https://github.com/langflow-ai/langflow/issues/1708\" target=\"_blank\">Issue 1708</a> In case of error <b>\"An error has occurred while fetching types\"</b> <br> Ensure that env variables are set correctly<br> LANGFLOW_ACCESS_SAME_SITE = <b>lax</b><br> LANGFLOW_ACCESS_SECURE = <b>false</b><br> <b>Note:</b> This error ocure when you access via http and not using SSL proxy. <br> <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
+            "note": "<a href=\"https://www.docker.com/blog/how-to-use-the-postgres-docker-official-image/\" target=\"_blank\">Postgres Docker Info</a> <br> <a href=\"https://docs.langflow.org/\" target=\"_blank\">Langflow Docs</a><br> <br> <a href=\"https://github.com/langflow-ai/langflow/issues/1708\" target=\"_blank\">Issue 1708</a> In case of error <b>\"An error has occurred while fetching types\"</b> <br> Ensure that env variables are set correctly<br> LANGFLOW_ACCESS_SAME_SITE = <b>lax</b><br> LANGFLOW_ACCESS_SECURE = <b>false</b><br> <b>Note:</b> This error ocure when you access via http and not using SSL proxy. <br> <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/tz/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
             "env": [
                 {
                     "name": "TZ",
@@ -613,206 +632,69 @@
             "name": "langflow-ai",
             "type": 3,
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/langflow-ai.png",
-            "id": 10
-        },
-        {
-            "description": "Qdrant is an Open-Source Vector Database and Vector Search Engine written in Rust. It provides fast and scalable vector similarity search service.",
-            "categories": [
-                "Database",
-                "Cookbook"
-            ],
-            "title": "Qdrant (Cookbook)",
-            "repository": {
-                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
-                "stackfile": "cookbook/composeStacks/qdrant/docker-compose.yml"
-            },
-            "name": "qdrant",
-            "type": 3,
-            "platform": "linux",
-            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/qdrant.png",
-            "env": [],
-            "id": 11
-        },
-        {
-            "description": "It's like Airtable for your database. Make your database a full-fledged collaborative app ready for any end-user.",
-            "title": "Basetool (Cookbook)",
-            "categories": [
-                "Low Code",
-                "Database",
-                "Cookbook"
-            ],
-            "platform": "linux",
-            "name": "basetool",
-            "note": "<a href=\"https://www.basetool.io\" target=\"_blank\">Basetool Docs</a><br>",
-            "env": [
-                {
-                    "name": "BASETOOL_HTTP_PORT",
-                    "label": "Basetool HTTP Port",
-                    "description": "The HTTP port to expose Basetool on.",
-                    "default": "7654"
-                },
-                {
-                    "name": "BASETOOL_PORT",
-                    "label": "Basetool Port",
-                    "description": "The port Basetool runs on within its container.",
-                    "default": "7654"
-                },
-                {
-                    "name": "BASE_URL",
-                    "label": "Base URL",
-                    "description": "Base URL for Basetool, without protocol (http/https).",
-                    "default": "localhost:7654"
-                },
-                {
-                    "name": "POSTGRES_USER",
-                    "label": "PostgreSQL User",
-                    "description": "Username for PostgreSQL database.",
-                    "default": "basetool"
-                },
-                {
-                    "name": "POSTGRES_PASSWORD",
-                    "label": "PostgreSQL Password",
-                    "description": "Password for PostgreSQL database.",
-                    "default": "basetool13203eiGht"
-                },
-                {
-                    "name": "POSTGRES_HOSTNAME",
-                    "label": "PostgreSQL Hostname",
-                    "description": "Hostname for PostgreSQL database.",
-                    "default": "postgres"
-                },
-                {
-                    "name": "POSTGRES_DB",
-                    "label": "PostgreSQL Database",
-                    "description": "Name of the PostgreSQL database.",
-                    "default": "basetool"
-                },
-                {
-                    "name": "TZ",
-                    "label": "Time Zone",
-                    "description": "Time Zone.",
-                    "default": "UTC"
-                }
-            ],
-            "repository": {
-                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
-                "stackfile": "cookbook/composeStacks/basetool/docker-compose.yml"
-            },
-            "type": 3,
-            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/basetool.png",
             "id": 12
         },
         {
-            "description": "Baserow is an open-source online database that allows you to create tables, forms, and views with a minimal amount of code.",
-            "title": "Baserow (Cookbook)",
+            "description": "Infinitely scalable, event-driven, language-agnostic orchestration and scheduling platform to manage millions of workflows declaratively in code.",
+            "title": "Kestra (Cookbook)",
+            "name": "kestra",
             "categories": [
                 "Low Code",
-                "Database",
                 "Cookbook"
             ],
             "platform": "linux",
-            "name": "baserow",
-            "note": "<a href=\"https://baserow.io/docs/\" target=\"_blank\">Baserow Docs</a><br> <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
+            "note": "<a href=\"https://kestra.io/docs\" target=\"_blank\">Kestra Docs</a><br> <a href=\"https://github.com/kestra-io/kestra\" target=\"_blank\">Kestra Github</a> | Report <a href=\"https://github.com/kestra-io/kestra/issues\" target=\"_blank\">Issue</a><br> <a href=\"https://hub.docker.com/r/kestra/kestra\" target=\"_blank\">Kestra Docker Hub</a><br> <a href=\"https://www.docker.com/blog/how-to-use-the-postgres-docker-official-image/\" target=\"_blank\">Postgres Docker Info</a> <br> <br> <b>Note:</b><br> Remember to create on host tmp folder<br> - mkdir /tmp/kestra-wd/ <br> - chmod -R 0777 /tmp/kestra-wd/ <br> <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/tz/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
             "env": [
-                {
-                    "name": "BASEROW_HTTP_PORT",
-                    "label": "Published HTTP Port",
-                    "description": "The HTTP port for Baserow. Default is 80.",
-                    "default": "80"
-                },
-                {
-                    "name": "BASEROW_HTTPS_PORT",
-                    "label": "Published HTTPS Port",
-                    "description": "The HTTPS port for Baserow. Default is 443.",
-                    "default": "443"
-                },
-                {
-                    "name": "WEB_FRONTEND_PORT",
-                    "label": "Container HTTP Port",
-                    "description": "The port for the web frontend hosted on container side. Default is 80.",
-                    "default": "80"
-                },
-                {
-                    "name": "WEB_FRONTEND_SSL_PORT",
-                    "label": "Container HTTPS Port",
-                    "description": "The port for the web frontend SSL hosted on container side. Default is 443.",
-                    "default": "443"
-                },
-                {
-                    "name": "BASEROW_PUBLIC_URL",
-                    "label": "Baserow Public URL",
-                    "description": "The public URL for Baserow. Default is http://localhost.",
-                    "default": "http://localhost"
-                },
-                {
-                    "name": "MIGRATE_ON_STARTUP",
-                    "label": "Migrate on Startup",
-                    "description": "Whether to migrate the database on startup. Default is True.",
-                    "select": [
-                        {
-                            "text": "True",
-                            "value": "true",
-                            "default": true
-                        },
-                        {
-                            "text": "False",
-                            "value": "false"
-                        }
-                    ]
-                },
-                {
-                    "name": "BASEROW_TRIGGER_SYNC_TEMPLATES_AFTER_MIGRATION",
-                    "label": "Trigger Sync Templates After Migration",
-                    "description": "Whether to trigger syncing of templates after migration. Default is True.",
-                    "select": [
-                        {
-                            "text": "True",
-                            "value": "true",
-                            "default": true
-                        },
-                        {
-                            "text": "False",
-                            "value": "false"
-                        }
-                    ]
-                },
-                {
-                    "name": "DATABASE_PASSWORD",
-                    "label": "Database Password",
-                    "description": "The password for the database. Default is baserow.",
-                    "default": "baserow"
-                },
-                {
-                    "name": "SECRET_KEY",
-                    "label": "Secret Key",
-                    "description": "The secret key for Baserow. Default is baserow.",
-                    "default": "baserow"
-                },
                 {
                     "name": "TZ",
                     "label": "Time-Zone",
                     "description": "Time Zone. Default is UTC.",
                     "default": "UTC"
+                },
+                {
+                    "name": "POSTGRES_DB",
+                    "label": "POSTGRES_DB",
+                    "default": "kestra",
+                    "description": "Specifies a name for your database or defaults to the POSTGRES_USER value when left blank."
+                },
+                {
+                    "name": "POSTGRES_USER",
+                    "label": "POSTGRES_USER",
+                    "default": "kestra",
+                    "description": "Specifies a user with superuser privileges and a database with the same name. Postgres uses the default user when this is empty."
+                },
+                {
+                    "name": "POSTGRES_PASSWORD",
+                    "label": "POSTGRES_PASSWORD",
+                    "default": "k3str4",
+                    "description": "Password used by the POSTGRES_USER."
+                },
+                {
+                    "name": "KESTRA_PORT",
+                    "default": "8080",
+                    "description": "Port to expose kestra. Default is 8080.",
+                    "label": "KESTRA_PORT"
                 }
             ],
             "repository": {
                 "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
-                "stackfile": "cookbook/composeStacks/baserow/docker-compose.yml"
+                "stackfile": "cookbook/composeStacks/kestra/docker-compose.yml"
             },
             "type": 3,
-            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/baserow.png",
+            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/kestra.png",
             "id": 13
         },
         {
-            "description": "IPEX-LLM is a PyTorch library for running LLM on Intel CPU and GPU (e.g., local PC with iGPU, discrete GPU such as Arc A-Series, Flex and Max) with very low latency.",
-            "title": "IPEX-LLM (Cookbook)",
-            "name": "ipex-llm",
+            "description": "Open source low-code tool for developers to build customized LLM orchestration flow & AI agents",
+            "title": "FlowiseAI (Cookbook)",
             "categories": [
+                "Low Code",
                 "AI",
                 "Cookbook"
             ],
             "platform": "linux",
-            "note": "<a href=\"https://github.com/intel-analytics/ipex-llm\" target=\"_blank\">IPEX-LLM Github</a><br> <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
+            "note": "<a href=\"https://flowiseai.com/\" target=\"_blank\">FlowiseAI Docs</a><br> <a href=\"https://github.com/FlowiseAI/Flowise\" target=\"_blank\">FlowiseAI Github</a> | Report <a href=\"https://github.com/FlowiseAI/Flowise/issues\" target=\"_blank\">Issue</a><br> <a href=\"https://www.docker.com/blog/how-to-use-the-postgres-docker-official-image/\" target=\"_blank\">Postgres Docker Info</a> <br> <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/tz/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
+            "name": "flowise",
             "env": [
                 {
                     "name": "TZ",
@@ -821,65 +703,49 @@
                     "default": "UTC"
                 },
                 {
-                    "name": "IMAGE_TAPE",
-                    "description": "Image Type (GPU or only CPU Serving) Default: ipex-llm-serving-xpu",
-                    "select": [
-                        {
-                            "text": "ipex-llm-serving-xpu",
-                            "value": "ipex-llm-serving-xpu",
-                            "default": true
-                        },
-                        {
-                            "text": "ipex-llm-serving-cpu",
-                            "value": "ipex-llm-serving-cpu"
-                        }
-                    ],
-                    "label": "IMAGE_TAPE"
+                    "name": "POSTGRES_DB",
+                    "label": "POSTGRES_DB",
+                    "default": "flowise",
+                    "description": "Specifies a name for your database or defaults to the POSTGRES_USER value when left blank."
                 },
                 {
-                    "name": "IMAGE_VERSION",
-                    "description": "Image Vesion. Default: latest",
-                    "select": [
-                        {
-                            "text": "latest",
-                            "value": "latest",
-                            "default": true
-                        },
-                        {
-                            "text": "2.1.0-SNAPSHOT",
-                            "value": "2.1.0-SNAPSHOT"
-                        }
-                    ],
-                    "label": "IMAGE_VERSION"
+                    "name": "POSTGRES_USER",
+                    "label": "POSTGRES_USER",
+                    "default": "flowiseuser",
+                    "description": "Specifies a user with superuser privileges and a database with the same name. Postgres uses the default user when this is empty."
+                },
+                {
+                    "name": "POSTGRES_PASSWORD",
+                    "label": "POSTGRES_PASSWORD",
+                    "default": "fl0wiser83632ai",
+                    "description": "Password used by the POSTGRES_USER."
+                },
+                {
+                    "name": "FLOWISE_PORT",
+                    "default": "3000",
+                    "description": "Port to expose flowise server. Default is 3000.",
+                    "label": "FLOWISE_PORT"
+                },
+                {
+                    "name": "FLOWISE_USERNAME",
+                    "default": "user",
+                    "description": "Username for flowise basic auth. Default is `user`.",
+                    "label": "FLOWISE_USERNAME"
+                },
+                {
+                    "name": "FLOWISE_PASSWORD",
+                    "default": "1234",
+                    "description": "Password for flowise basic auth. Default is 1234",
+                    "label": "FLOWISE_PASSWORD"
                 }
             ],
             "repository": {
                 "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
-                "stackfile": "cookbook/composeStacks/ipex-llm/docker-compose.yml"
+                "stackfile": "cookbook/composeStacks/flowiseai/docker-compose.yml"
             },
             "type": 3,
-            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/ipex-llm.png",
+            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/flowiseai.png",
             "id": 14
-        },
-        {
-            "description": "Docker swarm service for automatically updating your services whenever their image is refreshed",
-            "note": "Check the <a href=\"https://github.com/containrrr/shepherd\" target=\"_blank\">GitLab documentation</a> to get started.",
-            "categories": [
-                "Automation",
-                "Messaging",
-                "Cookbook"
-            ],
-            "title": "Shepherd (Cookbook)",
-            "repository": {
-                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
-                "stackfile": "cookbook/composeStacks/shepherd/docker-compose.yml"
-            },
-            "name": "shepherd",
-            "type": 3,
-            "platform": "linux",
-            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/shepherd.png",
-            "env": [],
-            "id": 15
         },
         {
             "description": "The world's most popular workflow automation platform for technical teams",
@@ -891,7 +757,7 @@
             ],
             "platform": "linux",
             "name": "n8n",
-            "note": "<a href=\"https://docs.n8n.io/https://docs.n8n.org/\" target=\"_blank\">n8n Docs</a><br> <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
+            "note": "<a href=\"https://docs.n8n.io/https://docs.n8n.org/\" target=\"_blank\">n8n Docs</a><br> <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/tz/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
             "env": [
                 {
                     "name": "TZ",
@@ -1001,7 +867,7 @@
             },
             "type": 3,
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/n8n.png",
-            "id": 16
+            "id": 15
         },
         {
             "description": "Zigbee to MQTT bridge, get rid of your proprietary Zigbee bridges",
@@ -1019,57 +885,7 @@
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/zigbee2mqtt.png",
             "env": [],
-            "id": 17
-        },
-        {
-            "description": "Infinitely scalable, event-driven, language-agnostic orchestration and scheduling platform to manage millions of workflows declaratively in code.",
-            "title": "Kestra (Cookbook)",
-            "name": "kestra",
-            "categories": [
-                "Low Code",
-                "Cookbook"
-            ],
-            "platform": "linux",
-            "note": "<a href=\"https://kestra.io/docs\" target=\"_blank\">Kestra Docs</a><br> <a href=\"https://github.com/kestra-io/kestra\" target=\"_blank\">Kestra Github</a> | Report <a href=\"https://github.com/kestra-io/kestra/issues\" target=\"_blank\">Issue</a><br> <a href=\"https://hub.docker.com/r/kestra/kestra\" target=\"_blank\">Kestra Docker Hub</a><br> <a href=\"https://www.docker.com/blog/how-to-use-the-postgres-docker-official-image/\" target=\"_blank\">Postgres Docker Info</a> <br> <br> <b>Note:</b><br> Remember to create on host tmp folder<br> - mkdir /tmp/kestra-wd/ <br> - chmod -R 0777 /tmp/kestra-wd/ <br> <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
-            "env": [
-                {
-                    "name": "TZ",
-                    "label": "Time-Zone",
-                    "description": "Time Zone. Default is UTC.",
-                    "default": "UTC"
-                },
-                {
-                    "name": "POSTGRES_DB",
-                    "label": "POSTGRES_DB",
-                    "default": "kestra",
-                    "description": "Specifies a name for your database or defaults to the POSTGRES_USER value when left blank."
-                },
-                {
-                    "name": "POSTGRES_USER",
-                    "label": "POSTGRES_USER",
-                    "default": "kestra",
-                    "description": "Specifies a user with superuser privileges and a database with the same name. Postgres uses the default user when this is empty."
-                },
-                {
-                    "name": "POSTGRES_PASSWORD",
-                    "label": "POSTGRES_PASSWORD",
-                    "default": "k3str4",
-                    "description": "Password used by the POSTGRES_USER."
-                },
-                {
-                    "name": "KESTRA_PORT",
-                    "default": "8080",
-                    "description": "Port to expose kestra. Default is 8080.",
-                    "label": "KESTRA_PORT"
-                }
-            ],
-            "repository": {
-                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
-                "stackfile": "cookbook/composeStacks/kestra/docker-compose.yml"
-            },
-            "type": 3,
-            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/kestra.png",
-            "id": 18
+            "id": 16
         },
         {
             "description": "Call all LLM APIs using the OpenAI format. Use Bedrock, Azure, OpenAI, Cohere, Anthropic, Ollama, Sagemaker, HuggingFace, Replicate (100+ LLMs)",
@@ -1080,7 +896,7 @@
             ],
             "platform": "linux",
             "name": "litellm",
-            "note": "<a href=\"https://github.com/BerriAI/litellm/\" target=\"_blank\">LiteLLM GitHub</a><br>\n<a href=\"https://docs.litellm.ai/docs/\" target=\"_blank\">Litellm Docs</a><br>\n<br>\nWebUI: http://litellm:4000/ui\n <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
+            "note": "<a href=\"https://github.com/BerriAI/litellm/\" target=\"_blank\">LiteLLM GitHub</a><br>\n<a href=\"https://docs.litellm.ai/docs/\" target=\"_blank\">Litellm Docs</a><br>\n<br>\nWebUI: http://litellm:4000/ui\n <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/tz/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
             "env": [
                 {
                     "name": "TZ",
@@ -1131,19 +947,18 @@
             },
             "type": 3,
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/litellm.png",
-            "id": 19
+            "id": 17
         },
         {
-            "description": "Open source low-code tool for developers to build customized LLM orchestration flow & AI agents",
-            "title": "FlowiseAI (Cookbook)",
+            "description": "AutoGen Studio is an interface powered by AutoGen, designed to simplify the process of creating and managing multi-agent solutions. It\u2019s a user-friendly platform that allows even beginners to declaratively define and modify agents and multi-agent workflows through an intuitive interface.",
+            "title": "autogen-studio (Cookbook)",
             "categories": [
-                "Low Code",
                 "AI",
                 "Cookbook"
             ],
             "platform": "linux",
-            "note": "<a href=\"https://flowiseai.com/\" target=\"_blank\">FlowiseAI Docs</a><br> <a href=\"https://github.com/FlowiseAI/Flowise\" target=\"_blank\">FlowiseAI Github</a> | Report <a href=\"https://github.com/FlowiseAI/Flowise/issues\" target=\"_blank\">Issue</a><br> <a href=\"https://www.docker.com/blog/how-to-use-the-postgres-docker-official-image/\" target=\"_blank\">Postgres Docker Info</a> <br> <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
-            "name": "flowise",
+            "name": "autogen-studio",
+            "note": "<a href=\"https://autogen-studio.com/\" target=\"_blank\">AutoGen Studio Official Page</a><br>\n<a href=\"https://github.com/lludlow/autogen-studio\" target=\"_blank\">Larry Ludlow Github Docker container for Autogen Studio</a><br>\n<br>\nWebUI: http://autogen-studio:8081/\n <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/tz/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
             "env": [
                 {
                     "name": "TZ",
@@ -1152,48 +967,201 @@
                     "default": "UTC"
                 },
                 {
-                    "name": "POSTGRES_DB",
-                    "label": "POSTGRES_DB",
-                    "default": "flowise",
-                    "description": "Specifies a name for your database or defaults to the POSTGRES_USER value when left blank."
+                    "name": "AUTOGEN_PORT",
+                    "default": "8081",
+                    "description": "The port to run the AutoGen Studio server on. Default is 8081.",
+                    "label": "AUTOGEN_PORT"
                 },
                 {
-                    "name": "POSTGRES_USER",
-                    "label": "POSTGRES_USER",
-                    "default": "flowiseuser",
-                    "description": "Specifies a user with superuser privileges and a database with the same name. Postgres uses the default user when this is empty."
+                    "name": "OPENAI_API_KEY",
+                    "default": "sk-1234",
+                    "description": "The API key used for the OpenAI connector.",
+                    "required": true,
+                    "label": "OPENAI_API_KEY"
                 },
                 {
-                    "name": "POSTGRES_PASSWORD",
-                    "label": "POSTGRES_PASSWORD",
-                    "default": "fl0wiser83632ai",
-                    "description": "Password used by the POSTGRES_USER."
-                },
-                {
-                    "name": "FLOWISE_PORT",
-                    "default": "3000",
-                    "description": "Port to expose flowise server. Default is 3000.",
-                    "label": "FLOWISE_PORT"
-                },
-                {
-                    "name": "FLOWISE_USERNAME",
-                    "default": "user",
-                    "description": "Username for flowise basic auth. Default is `user`.",
-                    "label": "FLOWISE_USERNAME"
-                },
-                {
-                    "name": "FLOWISE_PASSWORD",
-                    "default": "1234",
-                    "description": "Password for flowise basic auth. Default is 1234",
-                    "label": "FLOWISE_PASSWORD"
+                    "name": "OPENAI_BASE_URL",
+                    "default": "https://api.openai.com/v1",
+                    "description": "The Base URL used for the OpenAI connector.",
+                    "label": "OPENAI_BASE_URL"
                 }
             ],
             "repository": {
                 "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
-                "stackfile": "cookbook/composeStacks/flowiseai/docker-compose.yml"
+                "stackfile": "cookbook/composeStacks/autogenstudio/docker-compose.yml"
             },
             "type": 3,
-            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/flowiseai.png",
+            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/autogenstudio.png",
+            "id": 18
+        },
+        {
+            "description": "Baserow is an open-source online database that allows you to create tables, forms, and views with a minimal amount of code.",
+            "title": "Baserow (Cookbook)",
+            "categories": [
+                "Low Code",
+                "Database",
+                "Cookbook"
+            ],
+            "platform": "linux",
+            "name": "baserow",
+            "note": "<a href=\"https://baserow.io/docs/\" target=\"_blank\">Baserow Docs</a><br> <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/tz/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
+            "env": [
+                {
+                    "name": "BASEROW_HTTP_PORT",
+                    "label": "Published HTTP Port",
+                    "description": "The HTTP port for Baserow. Default is 80.",
+                    "default": "80"
+                },
+                {
+                    "name": "BASEROW_HTTPS_PORT",
+                    "label": "Published HTTPS Port",
+                    "description": "The HTTPS port for Baserow. Default is 443.",
+                    "default": "443"
+                },
+                {
+                    "name": "WEB_FRONTEND_PORT",
+                    "label": "Container HTTP Port",
+                    "description": "The port for the web frontend hosted on container side. Default is 80.",
+                    "default": "80"
+                },
+                {
+                    "name": "WEB_FRONTEND_SSL_PORT",
+                    "label": "Container HTTPS Port",
+                    "description": "The port for the web frontend SSL hosted on container side. Default is 443.",
+                    "default": "443"
+                },
+                {
+                    "name": "BASEROW_PUBLIC_URL",
+                    "label": "Baserow Public URL",
+                    "description": "The public URL for Baserow. Default is http://localhost.",
+                    "default": "http://localhost"
+                },
+                {
+                    "name": "MIGRATE_ON_STARTUP",
+                    "label": "Migrate on Startup",
+                    "description": "Whether to migrate the database on startup. Default is True.",
+                    "select": [
+                        {
+                            "text": "True",
+                            "value": "true",
+                            "default": true
+                        },
+                        {
+                            "text": "False",
+                            "value": "false"
+                        }
+                    ]
+                },
+                {
+                    "name": "BASEROW_TRIGGER_SYNC_TEMPLATES_AFTER_MIGRATION",
+                    "label": "Trigger Sync Templates After Migration",
+                    "description": "Whether to trigger syncing of templates after migration. Default is True.",
+                    "select": [
+                        {
+                            "text": "True",
+                            "value": "true",
+                            "default": true
+                        },
+                        {
+                            "text": "False",
+                            "value": "false"
+                        }
+                    ]
+                },
+                {
+                    "name": "DATABASE_PASSWORD",
+                    "label": "Database Password",
+                    "description": "The password for the database. Default is baserow.",
+                    "default": "baserow"
+                },
+                {
+                    "name": "SECRET_KEY",
+                    "label": "Secret Key",
+                    "description": "The secret key for Baserow. Default is baserow.",
+                    "default": "baserow"
+                },
+                {
+                    "name": "TZ",
+                    "label": "Time-Zone",
+                    "description": "Time Zone. Default is UTC.",
+                    "default": "UTC"
+                }
+            ],
+            "repository": {
+                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
+                "stackfile": "cookbook/composeStacks/baserow/docker-compose.yml"
+            },
+            "type": 3,
+            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/baserow.png",
+            "id": 19
+        },
+        {
+            "description": "It's like Airtable for your database. Make your database a full-fledged collaborative app ready for any end-user.",
+            "title": "Basetool (Cookbook)",
+            "categories": [
+                "Low Code",
+                "Database",
+                "Cookbook"
+            ],
+            "platform": "linux",
+            "name": "basetool",
+            "note": "<a href=\"https://www.basetool.io\" target=\"_blank\">Basetool Docs</a><br>",
+            "env": [
+                {
+                    "name": "BASETOOL_HTTP_PORT",
+                    "label": "Basetool HTTP Port",
+                    "description": "The HTTP port to expose Basetool on.",
+                    "default": "7654"
+                },
+                {
+                    "name": "BASETOOL_PORT",
+                    "label": "Basetool Port",
+                    "description": "The port Basetool runs on within its container.",
+                    "default": "7654"
+                },
+                {
+                    "name": "BASE_URL",
+                    "label": "Base URL",
+                    "description": "Base URL for Basetool, without protocol (http/https).",
+                    "default": "localhost:7654"
+                },
+                {
+                    "name": "POSTGRES_USER",
+                    "label": "PostgreSQL User",
+                    "description": "Username for PostgreSQL database.",
+                    "default": "basetool"
+                },
+                {
+                    "name": "POSTGRES_PASSWORD",
+                    "label": "PostgreSQL Password",
+                    "description": "Password for PostgreSQL database.",
+                    "default": "basetool13203eiGht"
+                },
+                {
+                    "name": "POSTGRES_HOSTNAME",
+                    "label": "PostgreSQL Hostname",
+                    "description": "Hostname for PostgreSQL database.",
+                    "default": "postgres"
+                },
+                {
+                    "name": "POSTGRES_DB",
+                    "label": "PostgreSQL Database",
+                    "description": "Name of the PostgreSQL database.",
+                    "default": "basetool"
+                },
+                {
+                    "name": "TZ",
+                    "label": "Time Zone",
+                    "description": "Time Zone.",
+                    "default": "UTC"
+                }
+            ],
+            "repository": {
+                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
+                "stackfile": "cookbook/composeStacks/basetool/docker-compose.yml"
+            },
+            "type": 3,
+            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/basetool.png",
             "id": 20
         },
         {
@@ -1260,29 +1228,61 @@
             "id": 21
         },
         {
-            "description": "Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.  It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-click.",
-            "title": "Node-RED (Cookbook)",
+            "description": "IPEX-LLM is a PyTorch library for running LLM on Intel CPU and GPU (e.g., local PC with iGPU, discrete GPU such as Arc A-Series, Flex and Max) with very low latency.",
+            "title": "IPEX-LLM (Cookbook)",
+            "name": "ipex-llm",
             "categories": [
-                "Low Code",
+                "AI",
                 "Cookbook"
             ],
+            "platform": "linux",
+            "note": "<a href=\"https://github.com/intel-analytics/ipex-llm\" target=\"_blank\">IPEX-LLM Github</a><br> <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/tz/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
             "env": [
                 {
                     "name": "TZ",
                     "label": "Time-Zone",
-                    "description": "Time Zone",
+                    "description": "Time Zone. Default is UTC.",
                     "default": "UTC"
+                },
+                {
+                    "name": "IMAGE_TAPE",
+                    "description": "Image Type (GPU or only CPU Serving) Default: ipex-llm-serving-xpu",
+                    "select": [
+                        {
+                            "text": "ipex-llm-serving-xpu",
+                            "value": "ipex-llm-serving-xpu",
+                            "default": true
+                        },
+                        {
+                            "text": "ipex-llm-serving-cpu",
+                            "value": "ipex-llm-serving-cpu"
+                        }
+                    ],
+                    "label": "IMAGE_TAPE"
+                },
+                {
+                    "name": "IMAGE_VERSION",
+                    "description": "Image Vesion. Default: latest",
+                    "select": [
+                        {
+                            "text": "latest",
+                            "value": "latest",
+                            "default": true
+                        },
+                        {
+                            "text": "2.1.0-SNAPSHOT",
+                            "value": "2.1.0-SNAPSHOT"
+                        }
+                    ],
+                    "label": "IMAGE_VERSION"
                 }
             ],
             "repository": {
                 "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
-                "stackfile": "cookbook/composeStacks/node-red/docker-compose.yml"
+                "stackfile": "cookbook/composeStacks/ipex-llm/docker-compose.yml"
             },
-            "name": "node-red",
             "type": 3,
-            "platform": "linux",
-            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/node-red.png",
-            "note": "<br><a href=\"{GITHUB_URL_CONTENT}main/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
+            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/ipex-llm.png",
             "id": 22
         }
     ]

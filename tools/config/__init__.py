@@ -9,9 +9,9 @@ class ConfigReader:
         self.file_path = file_path
         
     def read_config(self, file_path=None) -> Union[Dict,None]:
-        if file_path is None:
-            file_path = self.file_path 
-        
+        if self.file_path is not None:
+            file_path = os.path.join(self.file_path, file_path)
+
         # If still file path is None - return None    
         if file_path is None:
             return None
