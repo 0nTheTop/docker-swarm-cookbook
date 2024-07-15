@@ -52,8 +52,8 @@ jobs:
           git config -l
       - name: 💾 Commit and push new files JSON templates
         run: |
-          git add templates_cookbook.json
-          git add templates.json
+          git add --force templates_cookbook.json
+          git add --force templates.json
           git commit -m "Generated new files $(date +'%Y-%m-%d %H:%M:%S')"
           git push -u origin main
       - name: All done ✅
