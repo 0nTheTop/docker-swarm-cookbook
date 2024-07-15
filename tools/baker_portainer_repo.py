@@ -16,8 +16,8 @@ CURRENT_FILE_PATH = os.path.dirname(os.path.realpath(__file__))
 
 cr = ConfigReader(os.path.join(CURRENT_FILE_PATH, "config"))
 GITHUB_URL = cr.read_config("github.yaml")['github_url']
-GITHUB_URL_CONTENT = cr.read_config(os.path.join(CURRENT_FILE_PATH, "config", "github.yaml"))['github_url_content']
-REF_CATEGORIES = cr.read_config(os.path.join(CURRENT_FILE_PATH, "config", "categories.yaml"))
+GITHUB_URL_CONTENT = cr.read_config("github.yaml")['github_url_content']
+REF_CATEGORIES = cr.read_config("categories.yaml")
 WORKING_FOLDER = os.path.join(CURRENT_FILE_PATH, "..") 
 
 def generate_key(key_type):
@@ -63,9 +63,9 @@ def standardize_categories(categories):
 
 class PortainerRepos():
     def __init__(self) -> None:
-        cr = ConfigReader()
+        global cr
         self.templates_folder_path = os.path.join(WORKING_FOLDER, "downloaded-collections", "templates")
-        self.urls = cr.read_config(os.path.join(CURRENT_FILE_PATH, "config", "repos.yaml"))['repos']
+        self.urls = cr.read_config("repos.yaml")['repos']
         
         
     def download(self):
