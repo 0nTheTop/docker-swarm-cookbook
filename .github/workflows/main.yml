@@ -19,10 +19,15 @@ on:
           
 jobs:
   run:
-    runs-on: python:3.9
+    runs-on: ubuntu-latest
+    #runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
       - name: Run Python Portainer Collection Downloader
         run: python baker_download_collection.py
       - name: Run Python Portainer Generator
