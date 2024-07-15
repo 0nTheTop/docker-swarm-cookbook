@@ -65,8 +65,9 @@ class PortainerRepos():
     def __init__(self) -> None:
         global cr
         self.templates_folder_path = os.path.join(WORKING_FOLDER, "downloaded-collections", "templates")
+        if not os.path.exists(self.templates_folder_path):
+            os.makedirs(self.templates_folder_path)
         self.urls = cr.read_config("repos.yaml")['repos']
-        
         
     def download(self):
         for url in self.urls:
