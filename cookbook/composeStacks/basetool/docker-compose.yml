@@ -80,6 +80,8 @@ services:
       - "traefik.http.services.basetool-s.loadbalancer.sticky.cookie.secure=true"
 
   redis:
+    container_name: redis
+    hostname: redis
     image: redis
     networks:
       - basetool
