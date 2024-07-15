@@ -1,0 +1,43 @@
+description: It's like Airtable for your database. Make your database a full-fledged collaborative app ready for any end-user.
+title: Basetool
+categories:
+  - lowcode
+  - database
+platform: linux
+name: basetool
+note: <a href="https://www.basetool.io" target="_blank">Basetool Docs</a><br>
+env:
+  - name: BASETOOL_HTTP_PORT
+    label: Basetool HTTP Port
+    description: The HTTP port to expose Basetool on.
+    default: 7654
+  - name: BASETOOL_PORT
+    label: Basetool Port
+    description: The port Basetool runs on within its container.
+    default: 7654
+  - name: BASE_URL
+    label: Base URL
+    description: Base URL for Basetool, without protocol (http/https).
+    default: localhost:7654
+  - name: POSTGRES_USER
+    label: PostgreSQL User
+    description: Username for PostgreSQL database.
+    default: basetool
+  - name: POSTGRES_PASSWORD
+    label: PostgreSQL Password
+    description: Password for PostgreSQL database.
+    default: basetool13203eiGht
+  - name: POSTGRES_HOSTNAME
+    label: PostgreSQL Hostname
+    description: Hostname for PostgreSQL database.
+    default: postgres
+  - name: POSTGRES_DB
+    label: PostgreSQL Database
+    description: Name of the PostgreSQL database.
+    default: basetool
+  - name: TZ
+    label: Time Zone
+    description: Time Zone.
+    default: UTC 
+
+

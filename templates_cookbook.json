@@ -552,7 +552,7 @@
                 {
                     "name": "LANGFLOW_SECRET_KEY",
                     "description": "A key used for encrypting the superuser's password.",
-                    "default": "KEOYIZCWYLvI000PYAFdbs8AYxAuN9f1tzxT4bBaHjQ=",
+                    "default": "xiuNZoWoyozUflnRFFmI7v6r2gR2EMdJfhivznOpJ74=",
                     "label": "LANGFLOW_SECRET_KEY"
                 },
                 {
@@ -1093,6 +1093,75 @@
             "type": 3,
             "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/baserow.png",
             "id": 19
+        },
+        {
+            "description": "It's like Airtable for your database. Make your database a full-fledged collaborative app ready for any end-user.",
+            "title": "Basetool (Cookbook)",
+            "categories": [
+                "Low Code",
+                "Database",
+                "Cookbook"
+            ],
+            "platform": "linux",
+            "name": "basetool",
+            "note": "<a href=\"https://www.basetool.io\" target=\"_blank\">Basetool Docs</a><br>",
+            "env": [
+                {
+                    "name": "BASETOOL_HTTP_PORT",
+                    "label": "Basetool HTTP Port",
+                    "description": "The HTTP port to expose Basetool on.",
+                    "default": "7654"
+                },
+                {
+                    "name": "BASETOOL_PORT",
+                    "label": "Basetool Port",
+                    "description": "The port Basetool runs on within its container.",
+                    "default": "7654"
+                },
+                {
+                    "name": "BASE_URL",
+                    "label": "Base URL",
+                    "description": "Base URL for Basetool, without protocol (http/https).",
+                    "default": "localhost:7654"
+                },
+                {
+                    "name": "POSTGRES_USER",
+                    "label": "PostgreSQL User",
+                    "description": "Username for PostgreSQL database.",
+                    "default": "basetool"
+                },
+                {
+                    "name": "POSTGRES_PASSWORD",
+                    "label": "PostgreSQL Password",
+                    "description": "Password for PostgreSQL database.",
+                    "default": "basetool13203eiGht"
+                },
+                {
+                    "name": "POSTGRES_HOSTNAME",
+                    "label": "PostgreSQL Hostname",
+                    "description": "Hostname for PostgreSQL database.",
+                    "default": "postgres"
+                },
+                {
+                    "name": "POSTGRES_DB",
+                    "label": "PostgreSQL Database",
+                    "description": "Name of the PostgreSQL database.",
+                    "default": "basetool"
+                },
+                {
+                    "name": "TZ",
+                    "label": "Time Zone",
+                    "description": "Time Zone.",
+                    "default": "UTC"
+                }
+            ],
+            "repository": {
+                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
+                "stackfile": "cookbook/composeStacks/basetool/docker-compose.yml"
+            },
+            "type": 3,
+            "logo": "",
+            "id": 20
         }
     ]
 }

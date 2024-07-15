@@ -1,0 +1,124 @@
+---
+version: "3.9"
+
+services:
+  basetool:
+    # https://docs.basetool.io/basetool/self-host/docker
+    hostname: basetool
+    container_name: basetool
+    image: docker.io/basetool/basetool:latest
+    ports:
+      - mode: host
+        published: ${BASETOOL_HTTP_PORT:-7654}
+        target: ${BASETOOL_PORT:-7654}
+    networks:
+      - basetool
+      #- traefik
+    links:
+      - redis
+    environment:
+      # The port on which to run the app in the container
+      PORT: ${BASETOOL_PORT:-7654}
+      # URL without the http(s) protocol
+      BASE_URL: ${BASE_URL:-localhost:7654}
+      # URL with the http(s) protocol
+      NEXTAUTH_URL: http://${BASE_URL}
+
+      # Change this for production
+      NEXT_PUBLIC_APP_ENV: development
+
+      # Generate a secret using `openssl rand -hex 32`
+      SECRET:
+      TZ: ${TZ}
+
+      # host.docker.internal uses your localhost as db host
+      DATABASE_URL: postgresql://${POSTGRES_USER:-basetool}:${POSTGRES_PASSWORD:-basetool13203eiGht}@${POSTGRES_HOSTNAME:-postgres}/${POSTGRES_DB:-basetool}
+
+      # Required to store the data source SSH keys
+      AWS_S3_DS_KEYS_ACCESS_KEY_ID:
+      AWS_S3_DS_KEYS_SECRET_ACCESS_KEY:
+      AWS_S3_DS_KEYS_REGION:
+
+      # Required to send emails
+      EMAIL_FROM: "Basetool install <hi@PLEASE_UPDATE_THIS.com>"
+      SMTP_HOST: smtp.mailtrap.io
+      SMTP_PORT: 587
+      SMTP_USER:
+      SMTP_PASSWORD:
+
+      # Set up both analytics properties
+      # https://developers.google.com/analytics/devguides/collection/ga4/basic-tag?technology=gtagjs
+      NEXT_PUBLIC_GOOGLE_ANALYTICS_UA:
+      NEXT_PUBLIC_GOOGLE_ANALYTICS:
+
+      # Google Sheets integration
+      # Required if you plan to use the Google Sheets integration
+      # https://console.cloud.google.com/apis/credentials/consent/edit?authuser=1&supportedpurview=project
+      GSHEETS_CLIENT_ID:
+      GSHEETS_CLIENT_SECRET:
+      GSHEETS_REDIRECT_URI:
+
+      # Required when using SSH keys and Google Sheets integration
+      REDIS_URL: redis://redis:6379
+
+      # Report errors to your account
+      SENTRY_SERVER_INIT_PATH: .next/server/sentry/initServerSDK.js
+      SENTRY_ORG:
+      SENTRY_PROJECT:
+      SENTRY_AUTH_TOKEN:
+      SENTRY_DSN:
+      # Same as above
+      NEXT_PUBLIC_SENTRY_DSN:
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=traefik"
+      - "traefik.http.routers.basetool.rule=HostRegexp(`^basetool\\..*`)"
+      - "traefik.http.routers.basetool.service=basetool-s"
+      - "traefik.http.routers.basetool.entryPoints=web"
+      - "traefik.http.services.basetool-s.loadbalancer.server.port=${basetool_HTTP_PORT:-80}"
+      - "traefik.http.services.basetool-s.loadbalancer.sticky.cookie.name=stickycookie"
+      - "traefik.http.services.basetool-s.loadbalancer.sticky.cookie.secure=true"
+
+  redis:
+    image: redis
+    networks:
+      - basetool
+      #- traefik
+
+  postgres:
+    hostname: ${POSTGRES_HOSTNAME:-postgres}
+    container_name: basetool-postgres
+    image: postgres:16
+    environment:
+      TZ: ${TZ}
+      POSTGRES_DB: ${POSTGRES_DB:-basetool}
+      POSTGRES_USER: ${POSTGRES_USER:-basetool}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-basetool13203eiGht}
+    restart: always
+    #ports:
+    #  - "5432:5432"
+    volumes:
+      - basetool-postgres-data:/var/lib/postgresql/data
+    networks:
+      - basetool
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-basetool} -d ${POSTGRES_DB:-basetool}"]
+      timeout: 20s
+      interval: 10s
+      retries: 5
+      start_period: 30s
+
+volumes:
+  basetool-data:
+    name: basetool-data
+  basetool-postgres-data:
+    name: basetool-postgres-data
+
+networks:
+  basetool:
+    name: basetool
+    driver: bridge
+    attachable: true
+# traefik:
+#   external: true
+
