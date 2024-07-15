@@ -24,6 +24,13 @@ jobs:
         run: python baker_download_collection.py
       - name: Run Python Portainer Generator
         run: python baker_portainer_repo.py
+      - name: set git config
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config --global user.email "${GITHUB_ACTOR_ID}+${GITHUB_ACTOR}@users.noreply.github.com"
+          git config --global user.name "$(gh api /users/${GITHUB_ACTOR} | jq .name -r)"
+          git config -l
       - name: Commit and push new files
         run: |
           git add templates_cookbook.json
