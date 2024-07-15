@@ -20,5 +20,13 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Run Python script
+      - name: Run Python Portainer Collection Downloader
+        run: python baker_download_collection.py
+      - name: Run Python Portainer Generator
         run: python baker_portainer_repo.py
+      - name: Commit and push new files
+        run: |
+          git add templates_cookbook.json
+          git add templates.json
+          git commit -m "Generated new files"
+          git push origin master
