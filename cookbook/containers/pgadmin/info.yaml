@@ -1,0 +1,46 @@
+---
+title: pgadmin
+description: pgadmin
+note:  <a href="https://github.com/pgadmin-org/pgadmin4" target="_blank">GithHub</a>
+        <a href="https://www.pgadmin.org/" target="_blank">Main Page</a>
+categories: [ "Database", "Tools" ]
+platform: linux
+name: pgadmin
+hostname: pgadmin
+image: dpage/pgadmin4
+ports: 
+  - 9080:80/tcp
+network: "bridge"
+restart_policy: unless-stopped
+env: 
+  - name: TZ
+    label: Time-Zone
+    description: Time Zone. Default is UTC.
+    default: UTC
+  - name: PGADMIN_DEFAULT_EMAIL
+    label: PGADMIN_DEFAULT_EMAIL
+    description: Default username to login
+    default: admin@xample.com
+  - name: PGADMIN_DEFAULT_PASSWORD
+    description: PGADMIN_DEFAULT_PASSWORD
+    default: admin
+volumes: 
+  - container: /pgadmin_data
+    bind: /var/lib/pgadmin
+labels:
+  - name: traefik.enable
+    value: true
+  - name: traefik.docker.network
+    value: traefik
+  - name: traefik.http.routers.pgadmin.rule
+    value: HostRegexp(`^pgadmin\..*`)
+  - name: traefik.http.routers.pgadmin.service
+    value: pgadmin-s
+  - name: traefik.http.routers.pgadmin.entryPoints
+    value: web
+  - name: traefik.http.services.pgadmin-s.loadbalancer.server.port
+    value: 9080
+  - name: traefik.http.services.pgadmin-s.loadbalancer.sticky.cookie.name
+    value: stickycookie
+  - name: traefik.http.services.pgadmin-s.loadbalancer.sticky.cookie.secure
+    value: true

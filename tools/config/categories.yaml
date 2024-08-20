@@ -49,6 +49,7 @@ Dashboard:
   - Dashboardserver
 Database:
   - database
+  - databases
 DevTools:
   - Devtools
   - Devops
