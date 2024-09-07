@@ -21636,6 +21636,60 @@
         },
         {
             "categories": [
+                "Rss",
+                "Lissy93"
+            ],
+            "description": "A lightweight RSS feed aggregator and reader.",
+            "logo": "",
+            "name": "fusion",
+            "platform": "linux",
+            "repository": {
+                "stackfile": "Template/Stack/fusion.yml",
+                "url": "https://github.com/xneo1/portainer_templates"
+            },
+            "title": "Fusion (lissy93)",
+            "type": 3,
+            "maintainer": " https://github.com/xneo1/portainer_templates/",
+            "id": 525
+        },
+        {
+            "categories": [
+                "Analytics",
+                "Lissy93"
+            ],
+            "description": "Medama Analytics is an open-source project dedicated to providing self-hostable, cookie-free website analytics.",
+            "logo": "https://raw.githubusercontent.com/medama-io/medama/main/.github/images/banner-dark.svg",
+            "name": "medama",
+            "platform": "linux",
+            "repository": {
+                "stackfile": "Template/Stack/medama.yml",
+                "url": "https://github.com/xneo1/portainer_templates"
+            },
+            "title": "Medama (lissy93)",
+            "type": 3,
+            "maintainer": " https://github.com/xneo1/portainer_templates/",
+            "id": 526
+        },
+        {
+            "categories": [
+                "Notes",
+                "Lissy93"
+            ],
+            "description": "",
+            "logo": "",
+            "name": "markopolis",
+            "platform": "linux",
+            "repository": {
+                "stackfile": "Template/Stack/markopolis.yml",
+                "url": "https://github.com/xneo1/portainer_templates"
+            },
+            "title": "Markopolis (lissy93)",
+            "type": 3,
+            "maintainer": " https://github.com/xneo1/portainer_templates/",
+            "id": 527
+        },
+        {
+            "categories": [
                 "Automation",
                 "AI",
                 "Lissy93"
@@ -21651,7 +21705,7 @@
             "title": "Activepieces (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 525
+            "id": 528
         },
         {
             "categories": [
@@ -21669,7 +21723,7 @@
             "title": "Dockge (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 526
+            "id": 529
         },
         {
             "categories": [
@@ -21687,7 +21741,7 @@
             "title": "Dokemon (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 527
+            "id": 530
         },
         {
             "categories": [
@@ -21706,7 +21760,7 @@
             "title": "Draw.io (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 528
+            "id": 531
         },
         {
             "categories": [
@@ -21724,7 +21778,7 @@
             "title": "Hauk (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 529
+            "id": 532
         },
         {
             "categories": [
@@ -21743,7 +21797,7 @@
             "title": "Plane (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 530
+            "id": 533
         },
         {
             "categories": [
@@ -21761,7 +21815,7 @@
             "title": "Shaarli (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 531
+            "id": 534
         },
         {
             "categories": [
@@ -21780,7 +21834,7 @@
             "title": "Flowiseai (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 532
+            "id": 535
         },
         {
             "categories": [
@@ -21798,7 +21852,7 @@
             "title": "Feedcord (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 533
+            "id": 536
         },
         {
             "categories": [
@@ -21816,7 +21870,7 @@
             "title": "Fetchcord (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 534
+            "id": 537
         },
         {
             "categories": [
@@ -21834,7 +21888,7 @@
             "title": "Tubearchivist (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 535
+            "id": 538
         },
         {
             "categories": [
@@ -21852,7 +21906,7 @@
             "title": "Actual (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 536
+            "id": 539
         },
         {
             "categories": [
@@ -21871,7 +21925,7 @@
             "title": "Baikal (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 537
+            "id": 540
         },
         {
             "categories": [
@@ -21890,7 +21944,7 @@
             "title": "Autobrr (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 538
+            "id": 541
         },
         {
             "categories": [
@@ -21908,7 +21962,7 @@
             "title": "Glances (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 539
+            "id": 542
         },
         {
             "categories": [
@@ -21927,7 +21981,7 @@
             "title": "Documize (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 540
+            "id": 543
         },
         {
             "categories": [
@@ -21945,7 +21999,7 @@
             "title": "Meshcentral (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 541
+            "id": 544
         },
         {
             "categories": [
@@ -21963,7 +22017,7 @@
             "title": "Rport (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 542
+            "id": 545
         },
         {
             "categories": [
@@ -21981,7 +22035,7 @@
             "title": "Remotely (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 543
+            "id": 546
         },
         {
             "categories": [
@@ -22000,7 +22054,7 @@
             "title": "Tabby (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 544
+            "id": 547
         },
         {
             "categories": [
@@ -22019,7 +22073,7 @@
             "title": "Excalidraw (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 545
+            "id": 548
         },
         {
             "categories": [
@@ -22037,7 +22091,7 @@
             "title": "Upsnap (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 546
+            "id": 549
         },
         {
             "categories": [
@@ -22057,7 +22111,7 @@
             "title": "Tooljet (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 547
+            "id": 550
         },
         {
             "categories": [
@@ -22078,7 +22132,7 @@
             "title": "Budibase (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 548
+            "id": 551
         },
         {
             "categories": [
@@ -22096,7 +22150,7 @@
             "title": "Meilisearch (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 549
+            "id": 552
         },
         {
             "categories": [
@@ -22115,7 +22169,7 @@
             "title": "Ory Kratos (Standalone) (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 550
+            "id": 553
         },
         {
             "categories": [
@@ -22134,7 +22188,7 @@
             "title": "Ory Kratos (Oathkeeper) (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 551
+            "id": 554
         },
         {
             "categories": [
@@ -22154,7 +22208,7 @@
             "title": "Appsmith (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 552
+            "id": 555
         },
         {
             "categories": [
@@ -22172,7 +22226,7 @@
             "title": "Mailpile (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 553
+            "id": 556
         },
         {
             "categories": [
@@ -22190,7 +22244,7 @@
             "title": "Poste.io (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 554
+            "id": 557
         },
         {
             "categories": [
@@ -22208,7 +22262,7 @@
             "title": "iperf (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 555
+            "id": 558
         },
         {
             "categories": [
@@ -22226,7 +22280,7 @@
             "title": "Lazytainer (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 556
+            "id": 559
         },
         {
             "categories": [
@@ -22244,7 +22298,7 @@
             "title": "I hate money (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 557
+            "id": 560
         },
         {
             "categories": [
@@ -22262,7 +22316,7 @@
             "title": "OpenBudgeteer (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 558
+            "id": 561
         },
         {
             "categories": [
@@ -22280,7 +22334,7 @@
             "title": "Fireshare (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 559
+            "id": 562
         },
         {
             "categories": [
@@ -22298,7 +22352,7 @@
             "title": "Filepizza (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 560
+            "id": 563
         },
         {
             "categories": [
@@ -22316,7 +22370,7 @@
             "title": "Jump (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 561
+            "id": 564
         },
         {
             "categories": [
@@ -22334,7 +22388,7 @@
             "title": "Hasty-Paste (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 562
+            "id": 565
         },
         {
             "categories": [
@@ -22352,7 +22406,7 @@
             "title": "Xwiki (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 563
+            "id": 566
         },
         {
             "categories": [
@@ -22370,7 +22424,7 @@
             "title": "Leantime (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 564
+            "id": 567
         },
         {
             "categories": [
@@ -22388,7 +22442,7 @@
             "title": "Jellyseer (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 565
+            "id": 568
         },
         {
             "categories": [
@@ -22406,7 +22460,7 @@
             "title": "Trudesk (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 566
+            "id": 569
         },
         {
             "categories": [
@@ -22424,7 +22478,7 @@
             "title": "Dashdot (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 567
+            "id": 570
         },
         {
             "categories": [
@@ -22444,7 +22498,7 @@
             "title": "Baserow (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 568
+            "id": 571
         },
         {
             "categories": [
@@ -22464,7 +22518,7 @@
             "title": "NocoDB (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 569
+            "id": 572
         },
         {
             "categories": [
@@ -22482,7 +22536,7 @@
             "title": "Broadlink Manager (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 570
+            "id": 573
         },
         {
             "categories": [
@@ -22501,7 +22555,7 @@
             "title": "Frigate NVR (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 571
+            "id": 574
         },
         {
             "categories": [
@@ -22522,7 +22576,7 @@
             "title": "Umami.is (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 572
+            "id": 575
         },
         {
             "categories": [
@@ -22543,7 +22597,7 @@
             "title": "Matomo (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 573
+            "id": 576
         },
         {
             "categories": [
@@ -22561,7 +22615,7 @@
             "title": "Neko (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/xneo1/portainer_templates/",
-            "id": 574
+            "id": 577
         },
         {
             "categories": [
@@ -22586,7 +22640,7 @@
             "title": "Stash (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/mycroftwilde/portainer_templates/",
-            "id": 575
+            "id": 578
         },
         {
             "categories": [
@@ -22604,7 +22658,7 @@
             "title": "Rocket Chat (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/mycroftwilde/portainer_templates/",
-            "id": 576
+            "id": 579
         },
         {
             "categories": [
@@ -22634,7 +22688,7 @@
             "title": "Joplin (lissy93)",
             "type": 3,
             "maintainer": " https://github.com/mycroftwilde/portainer_templates/",
-            "id": 577
+            "id": 580
         },
         {
             "categories": [
@@ -22677,7 +22731,7 @@
                 }
             ],
             "maintainer": " https://github.com/mycroftwilde/portainer_templates/",
-            "id": 578
+            "id": 581
         },
         {
             "type": 1,
@@ -22749,7 +22803,7 @@
             ],
             "restart_policy": "unless-stopped",
             "maintainer": " https://github.com/mycroftwilde/portainer_templates/",
-            "id": 579
+            "id": 582
         },
         {
             "type": 1,
@@ -22825,7 +22879,7 @@
             ],
             "restart_policy": "unless-stopped",
             "maintainer": " https://github.com/mycroftwilde/portainer_templates/",
-            "id": 580
+            "id": 583
         },
         {
             "type": 1,
@@ -22883,7 +22937,7 @@
             ],
             "restart_policy": "unless-stopped",
             "maintainer": " https://github.com/mycroftwilde/portainer_templates/",
-            "id": 581
+            "id": 584
         },
         {
             "type": 1,
@@ -22973,7 +23027,7 @@
             ],
             "restart_policy": "unless-stopped",
             "maintainer": " https://github.com/mycroftwilde/portainer_templates/",
-            "id": 582
+            "id": 585
         },
         {
             "type": 1,
@@ -22993,7 +23047,7 @@
             ],
             "restart_policy": "unless-stopped",
             "maintainer": " https://github.com/mycroftwilde/portainer_templates/",
-            "id": 583
+            "id": 586
         },
         {
             "type": 1,
@@ -23049,7 +23103,7 @@
             ],
             "restart_policy": "unless-stopped",
             "maintainer": " https://github.com/mycroftwilde/portainer_templates/",
-            "id": 584
+            "id": 587
         },
         {
             "type": 1,
@@ -23105,7 +23159,7 @@
             ],
             "restart_policy": "unless-stopped",
             "maintainer": " https://github.com/mycroftwilde/portainer_templates/",
-            "id": 585
+            "id": 588
         },
         {
             "type": 1,
@@ -23167,7 +23221,7 @@
             ],
             "restart_policy": "unless-stopped",
             "maintainer": " https://github.com/mycroftwilde/portainer_templates/",
-            "id": 586
+            "id": 589
         },
         {
             "category": [
@@ -23225,7 +23279,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 587
+            "id": 590
         },
         {
             "category": [
@@ -23273,7 +23327,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 588
+            "id": 591
         },
         {
             "category": [
@@ -23319,7 +23373,7 @@
             "categories": [
                 "Lissy93"
             ],
-            "id": 589
+            "id": 592
         },
         {
             "type": 1,
@@ -23383,7 +23437,7 @@
                 }
             ],
             "maintainer": " https://github.com/mediadepot/templates/",
-            "id": 590
+            "id": 593
         },
         {
             "type": 1,
@@ -23447,7 +23501,7 @@
                 }
             ],
             "maintainer": " https://github.com/mediadepot/templates/",
-            "id": 591
+            "id": 594
         },
         {
             "type": 1,
@@ -23549,7 +23603,7 @@
                 }
             ],
             "maintainer": " https://github.com/mediadepot/templates/",
-            "id": 592
+            "id": 595
         },
         {
             "type": 3,
@@ -23569,7 +23623,7 @@
                 "stackfile": "stacks/filerun/docker-compose.yml"
             },
             "maintainer": " https://github.com/mediadepot/templates/",
-            "id": 593
+            "id": 596
         },
         {
             "type": 1,
@@ -23614,7 +23668,7 @@
                 }
             ],
             "maintainer": " https://github.com/mediadepot/templates/",
-            "id": 594
+            "id": 597
         },
         {
             "type": 3,
@@ -23655,7 +23709,7 @@
                 "stackfile": "stacks/klaxon/docker-compose.yml"
             },
             "maintainer": " https://github.com/mediadepot/templates/",
-            "id": 595
+            "id": 598
         },
         {
             "type": 1,
@@ -23695,7 +23749,7 @@
             ],
             "labels": [],
             "maintainer": " https://github.com/mediadepot/templates/",
-            "id": 596
+            "id": 599
         },
         {
             "type": 1,
@@ -23746,7 +23800,7 @@
             ],
             "labels": [],
             "maintainer": " https://github.com/mediadepot/templates/",
-            "id": 597
+            "id": 600
         },
         {
             "type": 3,
@@ -23764,7 +23818,7 @@
                 "stackfile": "stacks/mayan/docker-compose.yml"
             },
             "maintainer": " https://github.com/mediadepot/templates/",
-            "id": 598
+            "id": 601
         },
         {
             "type": 1,
@@ -23838,7 +23892,7 @@
                 }
             ],
             "maintainer": " https://github.com/mediadepot/templates/",
-            "id": 599
+            "id": 602
         },
         {
             "type": 3,
@@ -23856,7 +23910,7 @@
                 "stackfile": "stacks/plextraktsync/docker-compose.yml"
             },
             "maintainer": " https://github.com/mediadepot/templates/",
-            "id": 600
+            "id": 603
         },
         {
             "type": 1,
@@ -23973,7 +24027,7 @@
             ],
             "labels": [],
             "maintainer": " https://github.com/mediadepot/templates/",
-            "id": 601
+            "id": 604
         },
         {
             "type": 1,
@@ -24001,7 +24055,7 @@
                 }
             ],
             "maintainer": " https://github.com/mediadepot/templates/",
-            "id": 602
+            "id": 605
         },
         {
             "type": 1,
@@ -24048,7 +24102,7 @@
                 }
             ],
             "maintainer": " https://github.com/mediadepot/templates/",
-            "id": 603
+            "id": 606
         },
         {
             "type": 1,
@@ -24121,7 +24175,7 @@
                 }
             ],
             "maintainer": " https://github.com/mediadepot/templates/",
-            "id": 604
+            "id": 607
         },
         {
             "type": 1,
@@ -24194,7 +24248,7 @@
                 }
             ],
             "maintainer": " https://github.com/mediadepot/templates/",
-            "id": 605
+            "id": 608
         },
         {
             "type": 1,
@@ -24241,7 +24295,7 @@
                 }
             ],
             "maintainer": " https://github.com/mediadepot/templates/",
-            "id": 606
+            "id": 609
         },
         {
             "type": 1,
@@ -24325,7 +24379,7 @@
             ],
             "labels": [],
             "maintainer": " https://github.com/mediadepot/templates/",
-            "id": 607
+            "id": 610
         },
         {
             "type": 1,
@@ -24378,7 +24432,7 @@
                 }
             ],
             "maintainer": " https://github.com/mediadepot/templates/",
-            "id": 608
+            "id": 611
         },
         {
             "categories": [
@@ -24395,7 +24449,7 @@
             },
             "title": "Adguard Home (xneo1)",
             "type": 3,
-            "id": 609
+            "id": 612
         },
         {
             "categories": [
@@ -24427,7 +24481,7 @@
                     "container": "/etc/authelia/"
                 }
             ],
-            "id": 610
+            "id": 613
         },
         {
             "categories": [
@@ -24444,7 +24498,7 @@
             },
             "title": "Bazarr (xneo1)",
             "type": 3,
-            "id": 611
+            "id": 614
         },
         {
             "categories": [
@@ -24481,7 +24535,7 @@
                     "container": "/zusam/data"
                 }
             ],
-            "id": 612
+            "id": 615
         },
         {
             "categories": [
@@ -24497,7 +24551,7 @@
             },
             "title": "ProxiTok (xneo1)",
             "type": 3,
-            "id": 613
+            "id": 616
         },
         {
             "categories": [
@@ -24541,7 +24595,7 @@
                     "container": "/music"
                 }
             ],
-            "id": 614
+            "id": 617
         },
         {
             "categories": [
@@ -24566,7 +24620,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 615
+            "id": 618
         },
         {
             "categories": [
@@ -24615,7 +24669,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 616
+            "id": 619
         },
         {
             "categories": [
@@ -24660,7 +24714,7 @@
             },
             "title": "Bookstack (xneo1)",
             "type": 3,
-            "id": 617
+            "id": 620
         },
         {
             "categories": [
@@ -24695,7 +24749,7 @@
                     "container": "/home/node/trilium-data"
                 }
             ],
-            "id": 618
+            "id": 621
         },
         {
             "categories": [
@@ -24736,7 +24790,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 619
+            "id": 622
         },
         {
             "categories": [
@@ -24776,7 +24830,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 620
+            "id": 623
         },
         {
             "categories": [
@@ -24818,7 +24872,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 621
+            "id": 624
         },
         {
             "categories": [
@@ -24879,7 +24933,7 @@
                     "container": "/var/www/html/images"
                 }
             ],
-            "id": 622
+            "id": 625
         },
         {
             "categories": [
@@ -24903,7 +24957,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 623
+            "id": 626
         },
         {
             "categories": [
@@ -24956,7 +25010,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 624
+            "id": 627
         },
         {
             "categories": [
@@ -24992,7 +25046,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 625
+            "id": 628
         },
         {
             "categories": [
@@ -25037,7 +25091,7 @@
                     "container": "/movies"
                 }
             ],
-            "id": 626
+            "id": 629
         },
         {
             "categories": [
@@ -25074,7 +25128,7 @@
                     "container": "/music"
                 }
             ],
-            "id": 627
+            "id": 630
         },
         {
             "categories": [
@@ -25099,7 +25153,7 @@
                     "container": "/dashmachine/dashmachine/user_data"
                 }
             ],
-            "id": 628
+            "id": 631
         },
         {
             "categories": [
@@ -25141,7 +25195,7 @@
                     "container": "/downloads"
                 }
             ],
-            "id": 629
+            "id": 632
         },
         {
             "categories": [
@@ -25170,7 +25224,7 @@
                     "container": "/downloads"
                 }
             ],
-            "id": 630
+            "id": 633
         },
         {
             "categories": [
@@ -25212,7 +25266,7 @@
                     "container": "/downloads"
                 }
             ],
-            "id": 631
+            "id": 634
         },
         {
             "categories": [
@@ -25251,7 +25305,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 632
+            "id": 635
         },
         {
             "categories": [
@@ -25290,7 +25344,7 @@
             "restart_policy": "unless-stopped",
             "title": "Duck DNS (xneo1)",
             "type": 1,
-            "id": 633
+            "id": 636
         },
         {
             "categories": [
@@ -25338,7 +25392,7 @@
                     "container": "/source"
                 }
             ],
-            "id": 634
+            "id": 637
         },
         {
             "categories": [
@@ -25389,7 +25443,7 @@
                     "container": "/data/movies"
                 }
             ],
-            "id": 635
+            "id": 638
         },
         {
             "categories": [
@@ -25414,7 +25468,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 636
+            "id": 639
         },
         {
             "categories": [
@@ -25443,7 +25497,7 @@
                     "container": "/myfiles"
                 }
             ],
-            "id": 637
+            "id": 640
         },
         {
             "categories": [
@@ -25479,7 +25533,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 638
+            "id": 641
         },
         {
             "categories": [
@@ -25496,7 +25550,7 @@
             },
             "title": "Miniflux (xneo1)",
             "type": 3,
-            "id": 639
+            "id": 642
         },
         {
             "categories": [
@@ -25539,7 +25593,7 @@
                     "container": "/mylar"
                 }
             ],
-            "id": 640
+            "id": 643
         },
         {
             "categories": [
@@ -25564,7 +25618,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 641
+            "id": 644
         },
         {
             "categories": [
@@ -25605,7 +25659,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 642
+            "id": 645
         },
         {
             "categories": [
@@ -25642,7 +25696,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 643
+            "id": 646
         },
         {
             "categories": [
@@ -25686,7 +25740,7 @@
                     "container": "/music"
                 }
             ],
-            "id": 644
+            "id": 647
         },
         {
             "categories": [
@@ -25725,7 +25779,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 645
+            "id": 648
         },
         {
             "categories": [
@@ -25755,7 +25809,7 @@
                     "container": "/www/config.yml"
                 }
             ],
-            "id": 646
+            "id": 649
         },
         {
             "categories": [
@@ -25789,7 +25843,7 @@
             },
             "title": "Dashy (xneo1)",
             "type": 3,
-            "id": 647
+            "id": 650
         },
         {
             "categories": [
@@ -25822,7 +25876,7 @@
             },
             "title": "Koillection (xneo1)",
             "type": 3,
-            "id": 648
+            "id": 651
         },
         {
             "categories": [
@@ -25856,7 +25910,7 @@
             },
             "title": "Vikunja (xneo1)",
             "type": 3,
-            "id": 649
+            "id": 652
         },
         {
             "categories": [
@@ -25890,7 +25944,7 @@
             },
             "title": "Audiobookshelf (xneo1)",
             "type": 3,
-            "id": 650
+            "id": 653
         },
         {
             "categories": [
@@ -25924,7 +25978,7 @@
             },
             "title": "Fenrus (xneo1)",
             "type": 3,
-            "id": 651
+            "id": 654
         },
         {
             "categories": [
@@ -25958,7 +26012,7 @@
             },
             "title": "Authentik (xneo1)",
             "type": 3,
-            "id": 652
+            "id": 655
         },
         {
             "categories": [
@@ -25992,7 +26046,7 @@
             },
             "title": "Navidrome (xneo1)",
             "type": 3,
-            "id": 653
+            "id": 656
         },
         {
             "categories": [
@@ -26017,7 +26071,7 @@
                     "container": "/app/data"
                 }
             ],
-            "id": 654
+            "id": 657
         },
         {
             "categories": [
@@ -26041,7 +26095,7 @@
                     "container": "/var/lib/mysql"
                 }
             ],
-            "id": 655
+            "id": 658
         },
         {
             "categories": [
@@ -26077,7 +26131,7 @@
                     "container": "/data"
                 }
             ],
-            "id": 656
+            "id": 659
         },
         {
             "categories": [
@@ -26125,7 +26179,7 @@
             },
             "title": "Invoice Ninja (xneo1)",
             "type": 3,
-            "id": 657
+            "id": 660
         },
         {
             "categories": [
@@ -26166,7 +26220,7 @@
                     "container": "/downloads"
                 }
             ],
-            "id": 658
+            "id": 661
         },
         {
             "categories": [
@@ -26217,7 +26271,7 @@
                     "container": "/data/movies"
                 }
             ],
-            "id": 659
+            "id": 662
         },
         {
             "categories": [
@@ -26254,7 +26308,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 660
+            "id": 663
         },
         {
             "categories": [
@@ -26295,7 +26349,7 @@
                     "container": "/books"
                 }
             ],
-            "id": 661
+            "id": 664
         },
         {
             "categories": [
@@ -26420,7 +26474,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 662
+            "id": 665
         },
         {
             "categories": [
@@ -26445,7 +26499,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 663
+            "id": 666
         },
         {
             "categories": [
@@ -26490,7 +26544,7 @@
                     "container": "/music"
                 }
             ],
-            "id": 664
+            "id": 667
         },
         {
             "categories": [
@@ -26533,7 +26587,7 @@
                     "container": "/pictures"
                 }
             ],
-            "id": 665
+            "id": 668
         },
         {
             "categories": [
@@ -26574,7 +26628,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 666
+            "id": 669
         },
         {
             "categories": [
@@ -26610,7 +26664,7 @@
                     "container": "/minecraft"
                 }
             ],
-            "id": 667
+            "id": 670
         },
         {
             "categories": [
@@ -26655,7 +26709,7 @@
                     "container": "/downloads"
                 }
             ],
-            "id": 668
+            "id": 671
         },
         {
             "categories": [
@@ -26690,7 +26744,7 @@
                     "container": "/config/.minetest"
                 }
             ],
-            "id": 669
+            "id": 672
         },
         {
             "categories": [
@@ -26726,7 +26780,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 670
+            "id": 673
         },
         {
             "categories": [
@@ -26759,7 +26813,7 @@
             "restart_policy": "unless-stopped",
             "title": "Minisatip (xneo1)",
             "type": 1,
-            "id": 671
+            "id": 674
         },
         {
             "categories": [
@@ -26787,7 +26841,7 @@
                     "container": "/music"
                 }
             ],
-            "id": 672
+            "id": 675
         },
         {
             "categories": [
@@ -26841,7 +26895,7 @@
                     "container": "/opt/murmur/log"
                 }
             ],
-            "id": 673
+            "id": 676
         },
         {
             "categories": [
@@ -26887,7 +26941,7 @@
                     "container": "/data"
                 }
             ],
-            "id": 674
+            "id": 677
         },
         {
             "categories": [
@@ -26924,7 +26978,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 675
+            "id": 678
         },
         {
             "categories": [
@@ -26969,7 +27023,7 @@
                     "container": "/comics"
                 }
             ],
-            "id": 676
+            "id": 679
         },
         {
             "categories": [
@@ -27009,7 +27063,7 @@
                     "container": "/downloads"
                 }
             ],
-            "id": 677
+            "id": 680
         },
         {
             "categories": [
@@ -27050,7 +27104,7 @@
                     "container": "/downloads"
                 }
             ],
-            "id": 678
+            "id": 681
         },
         {
             "categories": [
@@ -27099,7 +27153,7 @@
             },
             "title": "Nextcloud (xneo1)",
             "type": 3,
-            "id": 679
+            "id": 682
         },
         {
             "categories": [
@@ -27137,7 +27191,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 680
+            "id": 683
         },
         {
             "categories": [
@@ -27161,7 +27215,7 @@
             "restart_policy": "always",
             "title": "Nginx Proxy Manager (xneo1)",
             "type": 3,
-            "id": 681
+            "id": 684
         },
         {
             "categories": [
@@ -27198,7 +27252,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 682
+            "id": 685
         },
         {
             "categories": [
@@ -27217,7 +27271,7 @@
             },
             "title": "Ombi (xneo1)",
             "type": 3,
-            "id": 683
+            "id": 686
         },
         {
             "categories": [
@@ -27260,7 +27314,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 684
+            "id": 687
         },
         {
             "categories": [
@@ -27278,7 +27332,7 @@
             },
             "title": "Organizr (xneo1)",
             "type": 3,
-            "id": 685
+            "id": 688
         },
         {
             "categories": [
@@ -27295,7 +27349,7 @@
             },
             "title": "Overseerr (xneo1)",
             "type": 3,
-            "id": 686
+            "id": 689
         },
         {
             "categories": [
@@ -27352,7 +27406,7 @@
             },
             "title": "Owncloud (xneo1)",
             "type": 3,
-            "id": 687
+            "id": 690
         },
         {
             "categories": [
@@ -27389,7 +27443,7 @@
             },
             "title": "Petio (xneo1)",
             "type": 3,
-            "id": 688
+            "id": 691
         },
         {
             "categories": [
@@ -27433,7 +27487,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 689
+            "id": 692
         },
         {
             "categories": [
@@ -27467,7 +27521,7 @@
                     "container": "/etc/dnsmasq.d"
                 }
             ],
-            "id": 690
+            "id": 693
         },
         {
             "categories": [
@@ -27503,7 +27557,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 691
+            "id": 694
         },
         {
             "categories": [
@@ -27552,7 +27606,7 @@
                     "container": "/movies"
                 }
             ],
-            "id": 692
+            "id": 695
         },
         {
             "categories": [
@@ -27595,7 +27649,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 693
+            "id": 696
         },
         {
             "categories": [
@@ -27637,7 +27691,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 694
+            "id": 697
         },
         {
             "categories": [
@@ -27665,7 +27719,7 @@
                     "container": "/root"
                 }
             ],
-            "id": 695
+            "id": 698
         },
         {
             "categories": [
@@ -27702,7 +27756,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 696
+            "id": 699
         },
         {
             "categories": [
@@ -27742,7 +27796,7 @@
                     "container": "/data"
                 }
             ],
-            "id": 697
+            "id": 700
         },
         {
             "categories": [
@@ -27784,7 +27838,7 @@
                     "container": "/downloads"
                 }
             ],
-            "id": 698
+            "id": 701
         },
         {
             "categories": [
@@ -27820,7 +27874,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 699
+            "id": 702
         },
         {
             "categories": [
@@ -27865,7 +27919,7 @@
                     "container": "/movies"
                 }
             ],
-            "id": 700
+            "id": 703
         },
         {
             "categories": [
@@ -27882,7 +27936,7 @@
             },
             "title": "Tdarr (xneo1)",
             "type": 3,
-            "id": 701
+            "id": 704
         },
         {
             "categories": [
@@ -27906,7 +27960,7 @@
                     "container": "/usr/src/app"
                 }
             ],
-            "id": 702
+            "id": 705
         },
         {
             "categories": [
@@ -27948,7 +28002,7 @@
                     "container": "/downloads"
                 }
             ],
-            "id": 703
+            "id": 706
         },
         {
             "categories": [
@@ -27990,7 +28044,7 @@
                     "container": "/downloads"
                 }
             ],
-            "id": 704
+            "id": 707
         },
         {
             "categories": [
@@ -28035,7 +28089,7 @@
                     "container": "/incomplete-downloads"
                 }
             ],
-            "id": 705
+            "id": 708
         },
         {
             "categories": [
@@ -28080,7 +28134,7 @@
                     "container": "/tv"
                 }
             ],
-            "id": 706
+            "id": 709
         },
         {
             "categories": [
@@ -28125,7 +28179,7 @@
                     "container": "/downloads"
                 }
             ],
-            "id": 707
+            "id": 710
         },
         {
             "categories": [
@@ -28166,7 +28220,7 @@
                     "container": "/data"
                 }
             ],
-            "id": 708
+            "id": 711
         },
         {
             "categories": [
@@ -28183,7 +28237,7 @@
             },
             "title": "Snibox (xneo1)",
             "type": 3,
-            "id": 709
+            "id": 712
         },
         {
             "categories": [
@@ -28232,7 +28286,7 @@
                     "container": "/downloads"
                 }
             ],
-            "id": 710
+            "id": 713
         },
         {
             "categories": [
@@ -28273,7 +28327,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 711
+            "id": 714
         },
         {
             "categories": [
@@ -28309,7 +28363,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 712
+            "id": 715
         },
         {
             "categories": [
@@ -28334,7 +28388,7 @@
                     "container": "/var/lib/tiddlywiki"
                 }
             ],
-            "id": 713
+            "id": 716
         },
         {
             "categories": [
@@ -28370,7 +28424,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 714
+            "id": 717
         },
         {
             "categories": [
@@ -28414,7 +28468,7 @@
                     "container": "/watch"
                 }
             ],
-            "id": 715
+            "id": 718
         },
         {
             "categories": [
@@ -28477,7 +28531,7 @@
                     "container": "/etc/localtime"
                 }
             ],
-            "id": 716
+            "id": 719
         },
         {
             "categories": [
@@ -28518,7 +28572,7 @@
                     "container": "/recordings"
                 }
             ],
-            "id": 717
+            "id": 720
         },
         {
             "categories": [
@@ -28566,7 +28620,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 718
+            "id": 721
         },
         {
             "categories": [
@@ -28610,7 +28664,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 719
+            "id": 722
         },
         {
             "categories": [
@@ -28633,7 +28687,7 @@
                     "container": "/var/run/docker.sock"
                 }
             ],
-            "id": 720
+            "id": 723
         },
         {
             "categories": [
@@ -28671,7 +28725,7 @@
                     "container": "/data"
                 }
             ],
-            "id": 721
+            "id": 724
         },
         {
             "categories": [
@@ -28695,7 +28749,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 722
+            "id": 725
         },
         {
             "categories": [
@@ -28724,7 +28778,7 @@
                     "container": "/data"
                 }
             ],
-            "id": 723
+            "id": 726
         },
         {
             "categories": [
@@ -28752,7 +28806,7 @@
                     "container": "/var/run/docker.sock"
                 }
             ],
-            "id": 724
+            "id": 727
         },
         {
             "categories": [
@@ -28770,7 +28824,7 @@
             },
             "title": "Uptime Kuma (xneo1)",
             "type": 3,
-            "id": 725
+            "id": 728
         },
         {
             "categories": [
@@ -28794,7 +28848,7 @@
                     "container": "/var/run/docker.sock"
                 }
             ],
-            "id": 726
+            "id": 729
         },
         {
             "categories": [
@@ -28811,7 +28865,7 @@
             },
             "title": "Monica (xneo1)",
             "type": 3,
-            "id": 727
+            "id": 730
         },
         {
             "categories": [
@@ -28829,7 +28883,7 @@
             "restart_policy": "always",
             "title": "Netbox (xneo1)",
             "type": 1,
-            "id": 728
+            "id": 731
         },
         {
             "categories": [
@@ -28851,7 +28905,7 @@
             "restart_policy": "always",
             "title": "Freeboard (xneo1)",
             "type": 3,
-            "id": 729
+            "id": 732
         },
         {
             "categories": [
@@ -28872,7 +28926,7 @@
             "restart_policy": "always",
             "title": "Ghostfolio (xneo1)",
             "type": 3,
-            "id": 730
+            "id": 733
         },
         {
             "categories": [
@@ -28893,7 +28947,7 @@
             "restart_policy": "always",
             "title": "Servas (xneo1)",
             "type": 3,
-            "id": 731
+            "id": 734
         },
         {
             "categories": [
@@ -28914,7 +28968,7 @@
             "restart_policy": "always",
             "title": "Wallabag (xneo1)",
             "type": 3,
-            "id": 732
+            "id": 735
         },
         {
             "categories": [
@@ -28932,7 +28986,7 @@
             "restart_policy": "always",
             "title": "Teleport (xneo1)",
             "type": 3,
-            "id": 733
+            "id": 736
         },
         {
             "categories": [
@@ -28952,7 +29006,7 @@
             "restart_policy": "always",
             "title": "Cryptofolio (xneo1)",
             "type": 1,
-            "id": 734
+            "id": 737
         },
         {
             "categories": [
@@ -28970,7 +29024,7 @@
             },
             "title": "Nodered (xneo1)",
             "type": 3,
-            "id": 735
+            "id": 738
         },
         {
             "categories": [
@@ -28991,7 +29045,7 @@
                     "container": "/datastore"
                 }
             ],
-            "id": 736
+            "id": 739
         },
         {
             "categories": [
@@ -29019,7 +29073,7 @@
                     "container": "/resources"
                 }
             ],
-            "id": 737
+            "id": 740
         },
         {
             "categories": [
@@ -29043,7 +29097,7 @@
                     "container": "/app"
                 }
             ],
-            "id": 738
+            "id": 741
         },
         {
             "categories": [
@@ -29067,7 +29121,7 @@
                     "container": "/app"
                 }
             ],
-            "id": 739
+            "id": 742
         },
         {
             "categories": [
@@ -29084,7 +29138,7 @@
             },
             "title": "Firefox (xneo1)",
             "type": 3,
-            "id": 740
+            "id": 743
         },
         {
             "categories": [
@@ -29101,7 +29155,7 @@
             },
             "title": "Homechart (xneo1)",
             "type": 3,
-            "id": 741
+            "id": 744
         },
         {
             "categories": [
@@ -29141,7 +29195,7 @@
                     "container": "/config"
                 }
             ],
-            "id": 742
+            "id": 745
         },
         {
             "categories": [
@@ -29158,7 +29212,7 @@
             },
             "title": "Ferdi Server (xneo1)",
             "type": 3,
-            "id": 743
+            "id": 746
         },
         {
             "categories": [
@@ -29175,7 +29229,7 @@
             },
             "title": "Ferdium (xneo1)",
             "type": 3,
-            "id": 744
+            "id": 747
         },
         {
             "categories": [
@@ -29192,7 +29246,7 @@
             },
             "title": "Snippet Box (xneo1)",
             "type": 3,
-            "id": 745
+            "id": 748
         },
         {
             "categories": [
@@ -29212,7 +29266,7 @@
             ],
             "title": "Littlelink Server (xneo1)",
             "type": 3,
-            "id": 746
+            "id": 749
         },
         {
             "categories": [
@@ -29229,7 +29283,7 @@
             },
             "title": "Linkstack (xneo1)",
             "type": 3,
-            "id": 747
+            "id": 750
         },
         {
             "categories": [
@@ -29246,7 +29300,7 @@
             },
             "title": "Aria2 Pro (xneo1)",
             "type": 3,
-            "id": 748
+            "id": 751
         },
         {
             "categories": [
@@ -29263,7 +29317,7 @@
             },
             "title": "Flood (xneo1)",
             "type": 3,
-            "id": 749
+            "id": 752
         },
         {
             "categories": [
@@ -29281,7 +29335,7 @@
             },
             "title": "Photoprism (xneo1)",
             "type": 3,
-            "id": 750
+            "id": 753
         },
         {
             "categories": [
@@ -29299,7 +29353,7 @@
             },
             "title": "Immich (xneo1)",
             "type": 3,
-            "id": 751
+            "id": 754
         },
         {
             "categories": [
@@ -29316,7 +29370,7 @@
             },
             "title": "Apprise-API (xneo1)",
             "type": 3,
-            "id": 752
+            "id": 755
         },
         {
             "categories": [
@@ -29333,7 +29387,7 @@
             },
             "title": "Netboot.xyz (xneo1)",
             "type": 3,
-            "id": 753
+            "id": 756
         },
         {
             "categories": [
@@ -29350,7 +29404,7 @@
             },
             "title": "Pingvin (xneo1)",
             "type": 3,
-            "id": 754
+            "id": 757
         },
         {
             "categories": [
@@ -29368,7 +29422,7 @@
             },
             "title": "Stirling-PDF (xneo1)",
             "type": 3,
-            "id": 755
+            "id": 758
         },
         {
             "categories": [
@@ -29385,7 +29439,7 @@
             },
             "title": "NetAlertX (xneo1)",
             "type": 3,
-            "id": 756
+            "id": 759
         },
         {
             "categories": [
@@ -29403,7 +29457,7 @@
             },
             "title": "TimeTagger (xneo1)",
             "type": 3,
-            "id": 757
+            "id": 760
         },
         {
             "categories": [
@@ -29420,7 +29474,7 @@
             },
             "title": "Invidious (xneo1)",
             "type": 3,
-            "id": 758
+            "id": 761
         },
         {
             "categories": [
@@ -29437,7 +29491,7 @@
             },
             "title": "Chibisafe (xneo1)",
             "type": 3,
-            "id": 759
+            "id": 762
         },
         {
             "categories": [
@@ -29454,7 +29508,7 @@
             },
             "title": "Kiwix (xneo1)",
             "type": 3,
-            "id": 760
+            "id": 763
         },
         {
             "categories": [
@@ -29471,7 +29525,7 @@
             },
             "title": "Tandoor (xneo1)",
             "type": 3,
-            "id": 761
+            "id": 764
         },
         {
             "categories": [
@@ -29488,7 +29542,7 @@
             },
             "title": "Webtrees (xneo1)",
             "type": 3,
-            "id": 762
+            "id": 765
         },
         {
             "categories": [
@@ -29506,7 +29560,7 @@
             },
             "title": "Wordpress (xneo1)",
             "type": 3,
-            "id": 763
+            "id": 766
         },
         {
             "categories": [
@@ -29523,7 +29577,7 @@
             },
             "title": "pve-exporter (xneo1)",
             "type": 3,
-            "id": 764
+            "id": 767
         },
         {
             "categories": [
@@ -29540,7 +29594,7 @@
             },
             "title": "Grocy (xneo1)",
             "type": 3,
-            "id": 765
+            "id": 768
         },
         {
             "categories": [
@@ -29557,7 +29611,7 @@
             },
             "title": "Ansible-semaphore (xneo1)",
             "type": 3,
-            "id": 766
+            "id": 769
         },
         {
             "categories": [
@@ -29574,7 +29628,7 @@
             },
             "title": "Shiori (xneo1)",
             "type": 3,
-            "id": 767
+            "id": 770
         },
         {
             "categories": [
@@ -29592,7 +29646,7 @@
             },
             "title": "Airsonic (xneo1)",
             "type": 3,
-            "id": 768
+            "id": 771
         },
         {
             "categories": [
@@ -29610,7 +29664,7 @@
             },
             "title": "Funkwhale (xneo1)",
             "type": 3,
-            "id": 769
+            "id": 772
         },
         {
             "categories": [
@@ -29627,7 +29681,7 @@
             },
             "title": "Gokapi (xneo1)",
             "type": 3,
-            "id": 770
+            "id": 773
         },
         {
             "categories": [
@@ -29644,7 +29698,7 @@
             },
             "title": "Traggo (xneo1)",
             "type": 3,
-            "id": 771
+            "id": 774
         },
         {
             "categories": [
@@ -29661,7 +29715,7 @@
             },
             "title": "Moodle (xneo1)",
             "type": 3,
-            "id": 772
+            "id": 775
         },
         {
             "categories": [
@@ -29678,7 +29732,7 @@
             },
             "title": "Freescout (xneo1)",
             "type": 3,
-            "id": 773
+            "id": 776
         },
         {
             "categories": [
@@ -29695,7 +29749,7 @@
             },
             "title": "Wger (xneo1)",
             "type": 3,
-            "id": 774
+            "id": 777
         },
         {
             "categories": [
@@ -29712,7 +29766,7 @@
             },
             "title": "Docker Container Stats (xneo1)",
             "type": 3,
-            "id": 775
+            "id": 778
         },
         {
             "categories": [
@@ -29729,7 +29783,7 @@
             },
             "title": "Codex (xneo1)",
             "type": 3,
-            "id": 776
+            "id": 779
         },
         {
             "categories": [
@@ -29747,7 +29801,7 @@
             },
             "title": "Kapowarr (xneo1)",
             "type": 3,
-            "id": 777
+            "id": 780
         },
         {
             "categories": [
@@ -29764,7 +29818,7 @@
             },
             "title": "Signal Proxy (xneo1)",
             "type": 3,
-            "id": 778
+            "id": 781
         },
         {
             "categories": [
@@ -29781,7 +29835,7 @@
             },
             "title": "Chiefonboarding (xneo1)",
             "type": 3,
-            "id": 779
+            "id": 782
         },
         {
             "categories": [
@@ -29798,7 +29852,7 @@
             },
             "title": "Castopod (xneo1)",
             "type": 3,
-            "id": 780
+            "id": 783
         },
         {
             "categories": [
@@ -29815,7 +29869,7 @@
             },
             "title": "Mautic (xneo1)",
             "type": 3,
-            "id": 781
+            "id": 784
         },
         {
             "categories": [
@@ -29832,7 +29886,7 @@
             },
             "title": "Medusa (xneo1)",
             "type": 3,
-            "id": 782
+            "id": 785
         },
         {
             "categories": [
@@ -29850,7 +29904,7 @@
             },
             "title": "Your_spotify (xneo1)",
             "type": 3,
-            "id": 783
+            "id": 786
         },
         {
             "categories": [
@@ -29868,7 +29922,7 @@
             },
             "title": "Influxdb & Telegraf (xneo1)",
             "type": 3,
-            "id": 784
+            "id": 787
         },
         {
             "categories": [
@@ -29885,7 +29939,7 @@
             },
             "title": "Influxdb (xneo1)",
             "type": 3,
-            "id": 785
+            "id": 788
         },
         {
             "categories": [
@@ -29904,7 +29958,7 @@
             },
             "title": "Grafana (xneo1)",
             "type": 3,
-            "id": 786
+            "id": 789
         },
         {
             "categories": [
@@ -29921,7 +29975,7 @@
             },
             "title": "Filestash (xneo1)",
             "type": 3,
-            "id": 787
+            "id": 790
         },
         {
             "categories": [
@@ -29938,7 +29992,7 @@
             },
             "title": "Silverstripe (xneo1)",
             "type": 3,
-            "id": 788
+            "id": 791
         },
         {
             "categories": [
@@ -29955,7 +30009,7 @@
             },
             "title": "Readarr (xneo1)",
             "type": 3,
-            "id": 789
+            "id": 792
         },
         {
             "categories": [
@@ -29972,7 +30026,7 @@
             },
             "title": "Whisparr (xneo1)",
             "type": 3,
-            "id": 790
+            "id": 793
         },
         {
             "categories": [
@@ -29989,7 +30043,7 @@
             },
             "title": "Midarr (xneo1)",
             "type": 3,
-            "id": 791
+            "id": 794
         },
         {
             "categories": [
@@ -30006,7 +30060,7 @@
             },
             "title": "Mastodon (xneo1)",
             "type": 3,
-            "id": 792
+            "id": 795
         },
         {
             "categories": [
@@ -30023,7 +30077,7 @@
             },
             "title": "Appwrite (xneo1)",
             "type": 3,
-            "id": 793
+            "id": 796
         },
         {
             "categories": [
@@ -30040,7 +30094,7 @@
             },
             "title": "Speedtest Tracker (xneo1)",
             "type": 3,
-            "id": 794
+            "id": 797
         },
         {
             "categories": [
@@ -30058,7 +30112,7 @@
             },
             "title": "OpnForm (xneo1)",
             "type": 3,
-            "id": 795
+            "id": 798
         },
         {
             "categories": [
@@ -30076,7 +30130,7 @@
             },
             "title": "Gathio (xneo1)",
             "type": 3,
-            "id": 796
+            "id": 799
         },
         {
             "categories": [
@@ -30093,7 +30147,75 @@
             },
             "title": "Beszel (xneo1)",
             "type": 3,
-            "id": 797
+            "id": 800
+        },
+        {
+            "categories": [
+                "Rss",
+                "Xneo1"
+            ],
+            "description": "A lightweight RSS feed aggregator and reader.",
+            "logo": "",
+            "name": "fusion",
+            "platform": "linux",
+            "repository": {
+                "stackfile": "Template/Stack/fusion.yml",
+                "url": "https://github.com/xneo1/portainer_templates"
+            },
+            "title": "Fusion (xneo1)",
+            "type": 3,
+            "id": 801
+        },
+        {
+            "categories": [
+                "Analytics",
+                "Xneo1"
+            ],
+            "description": "Medama Analytics is an open-source project dedicated to providing self-hostable, cookie-free website analytics.",
+            "logo": "https://raw.githubusercontent.com/medama-io/medama/main/.github/images/banner-dark.svg",
+            "name": "medama",
+            "platform": "linux",
+            "repository": {
+                "stackfile": "Template/Stack/medama.yml",
+                "url": "https://github.com/xneo1/portainer_templates"
+            },
+            "title": "Medama (xneo1)",
+            "type": 3,
+            "id": 802
+        },
+        {
+            "categories": [
+                "Notes",
+                "Xneo1"
+            ],
+            "description": "Markopolis is like the self hosted version of Obsidian Publish.",
+            "logo": "",
+            "name": "markopolis",
+            "platform": "linux",
+            "repository": {
+                "stackfile": "Template/Stack/markopolis.yml",
+                "url": "https://github.com/xneo1/portainer_templates"
+            },
+            "title": "Markopolis (xneo1)",
+            "type": 3,
+            "id": 803
+        },
+        {
+            "categories": [
+                "Bookmarks",
+                "Xneo1"
+            ],
+            "description": "Hoarder is an open source 'Bookmark Everything' app that uses AI for automatically tagging the content you throw at it.",
+            "logo": "https://raw.githubusercontent.com/hoarder-app/hoarder/main/screenshots/logo.png",
+            "name": "hoarder",
+            "platform": "linux",
+            "repository": {
+                "stackfile": "Template/Stack/hoarder.yml",
+                "url": "https://github.com/xneo1/portainer_templates"
+            },
+            "title": "Hoarder (xneo1)",
+            "type": 3,
+            "id": 804
         },
         {
             "categories": [
@@ -30111,7 +30233,7 @@
             },
             "title": "Activepieces (xneo1)",
             "type": 3,
-            "id": 798
+            "id": 805
         },
         {
             "categories": [
@@ -30128,7 +30250,7 @@
             },
             "title": "Dockge (xneo1)",
             "type": 3,
-            "id": 799
+            "id": 806
         },
         {
             "categories": [
@@ -30145,7 +30267,7 @@
             },
             "title": "Dokemon (xneo1)",
             "type": 3,
-            "id": 800
+            "id": 807
         },
         {
             "categories": [
@@ -30163,7 +30285,7 @@
             },
             "title": "Draw.io (xneo1)",
             "type": 3,
-            "id": 801
+            "id": 808
         },
         {
             "categories": [
@@ -30180,7 +30302,7 @@
             },
             "title": "Hauk (xneo1)",
             "type": 3,
-            "id": 802
+            "id": 809
         },
         {
             "categories": [
@@ -30198,7 +30320,7 @@
             },
             "title": "Plane (xneo1)",
             "type": 3,
-            "id": 803
+            "id": 810
         },
         {
             "categories": [
@@ -30215,7 +30337,7 @@
             },
             "title": "Shaarli (xneo1)",
             "type": 3,
-            "id": 804
+            "id": 811
         },
         {
             "categories": [
@@ -30233,7 +30355,7 @@
             },
             "title": "Flowiseai (xneo1)",
             "type": 3,
-            "id": 805
+            "id": 812
         },
         {
             "categories": [
@@ -30250,7 +30372,7 @@
             },
             "title": "Feedcord (xneo1)",
             "type": 3,
-            "id": 806
+            "id": 813
         },
         {
             "categories": [
@@ -30267,7 +30389,7 @@
             },
             "title": "Fetchcord (xneo1)",
             "type": 3,
-            "id": 807
+            "id": 814
         },
         {
             "categories": [
@@ -30284,7 +30406,7 @@
             },
             "title": "Tubearchivist (xneo1)",
             "type": 3,
-            "id": 808
+            "id": 815
         },
         {
             "categories": [
@@ -30301,7 +30423,7 @@
             },
             "title": "Actual (xneo1)",
             "type": 3,
-            "id": 809
+            "id": 816
         },
         {
             "categories": [
@@ -30319,7 +30441,7 @@
             },
             "title": "Baikal (xneo1)",
             "type": 3,
-            "id": 810
+            "id": 817
         },
         {
             "categories": [
@@ -30337,7 +30459,7 @@
             },
             "title": "Autobrr (xneo1)",
             "type": 3,
-            "id": 811
+            "id": 818
         },
         {
             "categories": [
@@ -30354,7 +30476,7 @@
             },
             "title": "Glances (xneo1)",
             "type": 3,
-            "id": 812
+            "id": 819
         },
         {
             "categories": [
@@ -30372,7 +30494,7 @@
             },
             "title": "Tailscale (xneo1)",
             "type": 3,
-            "id": 813
+            "id": 820
         },
         {
             "categories": [
@@ -30390,7 +30512,7 @@
             },
             "title": "Documize (xneo1)",
             "type": 3,
-            "id": 814
+            "id": 821
         },
         {
             "categories": [
@@ -30407,7 +30529,7 @@
             },
             "title": "Homarr (xneo1)",
             "type": 3,
-            "id": 815
+            "id": 822
         },
         {
             "categories": [
@@ -30424,7 +30546,7 @@
             },
             "title": "Meshcentral (xneo1)",
             "type": 3,
-            "id": 816
+            "id": 823
         },
         {
             "categories": [
@@ -30441,7 +30563,7 @@
             },
             "title": "Rust Desk (xneo1)",
             "type": 3,
-            "id": 817
+            "id": 824
         },
         {
             "categories": [
@@ -30458,7 +30580,7 @@
             },
             "title": "Rport (xneo1)",
             "type": 3,
-            "id": 818
+            "id": 825
         },
         {
             "categories": [
@@ -30475,7 +30597,7 @@
             },
             "title": "Remotely (xneo1)",
             "type": 3,
-            "id": 819
+            "id": 826
         },
         {
             "categories": [
@@ -30493,7 +30615,7 @@
             },
             "title": "Tabby (xneo1)",
             "type": 3,
-            "id": 820
+            "id": 827
         },
         {
             "categories": [
@@ -30511,7 +30633,7 @@
             },
             "title": "Excalidraw (xneo1)",
             "type": 3,
-            "id": 821
+            "id": 828
         },
         {
             "categories": [
@@ -30528,7 +30650,7 @@
             },
             "title": "Upsnap (xneo1)",
             "type": 3,
-            "id": 822
+            "id": 829
         },
         {
             "categories": [
@@ -30547,7 +30669,7 @@
             },
             "title": "Tooljet (xneo1)",
             "type": 3,
-            "id": 823
+            "id": 830
         },
         {
             "categories": [
@@ -30567,7 +30689,7 @@
             },
             "title": "Syncthing (xneo1)",
             "type": 3,
-            "id": 824
+            "id": 831
         },
         {
             "categories": [
@@ -30587,7 +30709,7 @@
             },
             "title": "Budibase (xneo1)",
             "type": 3,
-            "id": 825
+            "id": 832
         },
         {
             "categories": [
@@ -30604,7 +30726,7 @@
             },
             "title": "Meilisearch (xneo1)",
             "type": 3,
-            "id": 826
+            "id": 833
         },
         {
             "categories": [
@@ -30622,7 +30744,7 @@
             },
             "title": "Ory Kratos (Standalone) (xneo1)",
             "type": 3,
-            "id": 827
+            "id": 834
         },
         {
             "categories": [
@@ -30640,7 +30762,7 @@
             },
             "title": "Ory Kratos (Oathkeeper) (xneo1)",
             "type": 3,
-            "id": 828
+            "id": 835
         },
         {
             "categories": [
@@ -30659,7 +30781,7 @@
             },
             "title": "Appsmith (xneo1)",
             "type": 3,
-            "id": 829
+            "id": 836
         },
         {
             "categories": [
@@ -30676,7 +30798,7 @@
             },
             "title": "Mailpile (xneo1)",
             "type": 3,
-            "id": 830
+            "id": 837
         },
         {
             "categories": [
@@ -30693,7 +30815,7 @@
             },
             "title": "Poste.io (xneo1)",
             "type": 3,
-            "id": 831
+            "id": 838
         },
         {
             "categories": [
@@ -30710,7 +30832,7 @@
             },
             "title": "iperf (xneo1)",
             "type": 3,
-            "id": 832
+            "id": 839
         },
         {
             "categories": [
@@ -30727,7 +30849,7 @@
             },
             "title": "Lazytainer (xneo1)",
             "type": 3,
-            "id": 833
+            "id": 840
         },
         {
             "categories": [
@@ -30744,7 +30866,7 @@
             },
             "title": "Homepage (xneo1)",
             "type": 3,
-            "id": 834
+            "id": 841
         },
         {
             "categories": [
@@ -30761,7 +30883,7 @@
             },
             "title": "I hate money (xneo1)",
             "type": 3,
-            "id": 835
+            "id": 842
         },
         {
             "categories": [
@@ -30778,7 +30900,7 @@
             },
             "title": "OpenBudgeteer (xneo1)",
             "type": 3,
-            "id": 836
+            "id": 843
         },
         {
             "categories": [
@@ -30795,7 +30917,7 @@
             },
             "title": "Fireshare (xneo1)",
             "type": 3,
-            "id": 837
+            "id": 844
         },
         {
             "categories": [
@@ -30812,7 +30934,7 @@
             },
             "title": "Filepizza (xneo1)",
             "type": 3,
-            "id": 838
+            "id": 845
         },
         {
             "categories": [
@@ -30829,7 +30951,7 @@
             },
             "title": "Jump (xneo1)",
             "type": 3,
-            "id": 839
+            "id": 846
         },
         {
             "categories": [
@@ -30846,7 +30968,7 @@
             },
             "title": "Hasty-Paste (xneo1)",
             "type": 3,
-            "id": 840
+            "id": 847
         },
         {
             "categories": [
@@ -30863,7 +30985,7 @@
             },
             "title": "Xwiki (xneo1)",
             "type": 3,
-            "id": 841
+            "id": 848
         },
         {
             "categories": [
@@ -30880,7 +31002,7 @@
             },
             "title": "Leantime (xneo1)",
             "type": 3,
-            "id": 842
+            "id": 849
         },
         {
             "categories": [
@@ -30897,7 +31019,7 @@
             },
             "title": "Jellyseer (xneo1)",
             "type": 3,
-            "id": 843
+            "id": 850
         },
         {
             "categories": [
@@ -30914,7 +31036,7 @@
             },
             "title": "Trudesk (xneo1)",
             "type": 3,
-            "id": 844
+            "id": 851
         },
         {
             "categories": [
@@ -30931,7 +31053,7 @@
             },
             "title": "Dashdot (xneo1)",
             "type": 3,
-            "id": 845
+            "id": 852
         },
         {
             "categories": [
@@ -30950,7 +31072,7 @@
             },
             "title": "Baserow (xneo1)",
             "type": 3,
-            "id": 846
+            "id": 853
         },
         {
             "categories": [
@@ -30969,7 +31091,7 @@
             },
             "title": "NocoDB (xneo1)",
             "type": 3,
-            "id": 847
+            "id": 854
         },
         {
             "categories": [
@@ -30986,7 +31108,7 @@
             },
             "title": "Broadlink Manager (xneo1)",
             "type": 3,
-            "id": 848
+            "id": 855
         },
         {
             "categories": [
@@ -31003,7 +31125,7 @@
             },
             "title": "Homebridge (xneo1)",
             "type": 3,
-            "id": 849
+            "id": 856
         },
         {
             "categories": [
@@ -31021,7 +31143,7 @@
             },
             "title": "Frigate NVR (xneo1)",
             "type": 3,
-            "id": 850
+            "id": 857
         },
         {
             "categories": [
@@ -31041,7 +31163,7 @@
             ],
             "title": "Umami.is (xneo1)",
             "type": 3,
-            "id": 851
+            "id": 858
         },
         {
             "categories": [
@@ -31061,7 +31183,7 @@
             ],
             "title": "Matomo (xneo1)",
             "type": 3,
-            "id": 852
+            "id": 859
         },
         {
             "categories": [
@@ -31078,7 +31200,7 @@
             },
             "title": "Neko (xneo1)",
             "type": 3,
-            "id": 853
+            "id": 860
         },
         {
             "categories": [
@@ -31095,7 +31217,7 @@
             },
             "title": "Ghost (xneo1)",
             "type": 3,
-            "id": 854
+            "id": 861
         },
         {
             "categories": [
@@ -31135,7 +31257,7 @@
                     "container": "/app/audio"
                 }
             ],
-            "id": 855
+            "id": 862
         },
         {
             "categories": [
@@ -31171,12 +31293,174 @@
                     "container": "/config"
                 }
             ],
-            "id": 856
+            "id": 863
+        },
+        {
+            "title": "lingva-translate (Cookbook)",
+            "description": "Alternative front-end for Google Translate, serving as a Free and Open Source translator with over a hundred languages available",
+            "note": "<a href=\"https://lingva.thedaviddelta.com/\" target=\"_blank\">Lingva Translate</a> pagr.<br>",
+            "categories": [
+                "Web",
+                "Tool",
+                "Database",
+                "Cookbook"
+            ],
+            "platform": "linux",
+            "name": "lingva",
+            "hostname": "lingva",
+            "container_name": "lingva",
+            "image": "thedaviddelta/lingva-translate:latest",
+            "ports": [
+                "3000:3000/tcp"
+            ],
+            "restart_policy": "always",
+            "env": [
+                {
+                    "name": "site_domain",
+                    "label": "site_domain",
+                    "description": "Site domain.",
+                    "default": "lingva.ml"
+                },
+                {
+                    "name": "force_default_theme",
+                    "label": "force_default_theme",
+                    "description": "Force default theme.",
+                    "default": "light"
+                },
+                {
+                    "name": "default_source_lang",
+                    "label": "default_source_lang",
+                    "description": "Default source language.",
+                    "default": "auto"
+                },
+                {
+                    "name": "default_target_lang",
+                    "label": "default_target_lang",
+                    "description": "Default target language.",
+                    "default": "en"
+                }
+            ],
+            "labels": [
+                {
+                    "name": "traefik.enable",
+                    "value": "true"
+                },
+                {
+                    "name": "traefik.docker.network",
+                    "value": "traefik"
+                },
+                {
+                    "name": "traefik.http.routers.lingva.rule",
+                    "value": "HostRegexp(`^lingva\\..*`)"
+                },
+                {
+                    "name": "traefik.http.routers.lingva.service",
+                    "value": "lingva-s"
+                },
+                {
+                    "name": "traefik.http.routers.lingva.entryPoints",
+                    "value": "web"
+                },
+                {
+                    "name": "traefik.http.services.lingva-s.loadbalancer.server.port",
+                    "value": "3000"
+                },
+                {
+                    "name": "traefik.http.services.lingva-s.loadbalancer.sticky.cookie.name",
+                    "value": "stickycookie"
+                },
+                {
+                    "name": "traefik.http.services.lingva-s.loadbalancer.sticky.cookie.secure",
+                    "value": "true"
+                }
+            ],
+            "repository": {
+                "url": "https://github.com/nchekwa/docker-swarm-cookbook/",
+                "stackfile": "cookbook/containers/lingva-translate/None"
+            },
+            "type": 1,
+            "logo": "https://raw.githubusercontent.com/nchekwa/docker-swarm-cookbook/main/icons/lingva-translate.png",
+            "id": 864
+        },
+        {
+            "title": "Cloudbeaver (Cookbook)",
+            "description": "Cloud Database Manager - Community Edition",
+            "note": "Cloud Database Manager - Community Edition.<br> <br> CloudBeaver is a web server which provides rich web interface. Server itself is a Java application, web part is written on TypeScript and React.<br> It is free to use and open-source (licensed under Apache 2 license).<br> See out <a href=\"https://github.com/dbeaver/cloudbeaver/wiki\" target=\"_blank\">WIKI</a> for more details.<br> <br> <br> <a href=\"https://raw.githubusercontent.com/nchekwa/docker-swarm-cookbook/main/tz/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
+            "categories": [
+                "Web",
+                "Tool",
+                "Database",
+                "Cookbook"
+            ],
+            "platform": "linux",
+            "name": "cloudbeaver",
+            "hostname": "cloudbeaver",
+            "container_name": "cloudbeaver",
+            "image": "dbeaver/cloudbeaver:latest",
+            "ports": [
+                "8978:8978/tcp"
+            ],
+            "restart_policy": "always",
+            "env": [
+                {
+                    "name": "TZ",
+                    "label": "Time-Zone",
+                    "description": "Time Zone. Default is UTC.",
+                    "default": "UTC"
+                }
+            ],
+            "volumes": [
+                {
+                    "container": "/opt/cloudbeaver/workspace",
+                    "bind": "/opt/docker/cloudbeaver/workspace"
+                }
+            ],
+            "labels": [
+                {
+                    "name": "traefik.enable",
+                    "value": "true"
+                },
+                {
+                    "name": "traefik.docker.network",
+                    "value": "traefik"
+                },
+                {
+                    "name": "traefik.http.routers.cloudbeaver.rule",
+                    "value": "HostRegexp(`^cloudbeaver\\..*`)"
+                },
+                {
+                    "name": "traefik.http.routers.cloudbeaver.service",
+                    "value": "cloudbeaver-s"
+                },
+                {
+                    "name": "traefik.http.routers.cloudbeaver.entryPoints",
+                    "value": "web"
+                },
+                {
+                    "name": "traefik.http.services.cloudbeaver-s.loadbalancer.server.port",
+                    "value": "8978"
+                },
+                {
+                    "name": "traefik.http.services.cloudbeaver-s.loadbalancer.sticky.cookie.name",
+                    "value": "stickycookie"
+                },
+                {
+                    "name": "traefik.http.services.cloudbeaver-s.loadbalancer.sticky.cookie.secure",
+                    "value": "true"
+                }
+            ],
+            "repository": {
+                "url": "https://github.com/nchekwa/docker-swarm-cookbook/",
+                "stackfile": "cookbook/containers/cloudbeaver/None"
+            },
+            "type": 1,
+            "logo": "https://raw.githubusercontent.com/nchekwa/docker-swarm-cookbook/main/icons/cloudbeaver.png",
+            "id": 865
         },
         {
             "title": "pgadmin (Cookbook)",
             "description": "pgadmin",
-            "note": "<a href=\"https://github.com/pgadmin-org/pgadmin4\" target=\"_blank\">GithHub</a> <a href=\"https://www.pgadmin.org/\" target=\"_blank\">Main Page</a> <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/tz/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
+            "note": "<a href=\"https://github.com/pgadmin-org/pgadmin4\" target=\"_blank\">GithHub</a> <a href=\"https://www.pgadmin.org/\" target=\"_blank\">Main Page</a> <br> <br> <a href=\"https://raw.githubusercontent.com/nchekwa/docker-swarm-cookbook/main/tz/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
             "categories": [
                 "Database",
                 "Tool",
@@ -31252,17 +31536,17 @@
                 }
             ],
             "repository": {
-                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
+                "url": "https://github.com/nchekwa/docker-swarm-cookbook/",
                 "stackfile": "cookbook/containers/pgadmin/None"
             },
             "type": 1,
-            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/pgadmin.png",
-            "id": 857
+            "logo": "https://raw.githubusercontent.com/nchekwa/docker-swarm-cookbook/main/icons/pgadmin.png",
+            "id": 866
         },
         {
             "title": "openedai-speech (Cookbook)",
             "description": "openedai-speech",
-            "note": "<a href=\"https://github.com/matatonic/openedai-speech\" target=\"_blank\">GithHub</a> <a href=\"https://github.com/matatonic/openedai-speech/tree/main/config\" target=\"_blank\">Config Files</a> <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/tz/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
+            "note": "<a href=\"https://github.com/matatonic/openedai-speech\" target=\"_blank\">GithHub</a> <a href=\"https://github.com/matatonic/openedai-speech/tree/main/config\" target=\"_blank\">Config Files</a> <br> <br> <a href=\"https://raw.githubusercontent.com/nchekwa/docker-swarm-cookbook/main/tz/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
             "categories": [
                 "AI",
                 "Tool",
@@ -31345,179 +31629,17 @@
                 }
             ],
             "repository": {
-                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
+                "url": "https://github.com/nchekwa/docker-swarm-cookbook/",
                 "stackfile": "cookbook/containers/openedai-speech/None"
             },
             "type": 1,
             "logo": "",
-            "id": 858
-        },
-        {
-            "title": "lingva-translate (Cookbook)",
-            "description": "Alternative front-end for Google Translate, serving as a Free and Open Source translator with over a hundred languages available",
-            "note": "<a href=\"https://lingva.thedaviddelta.com/\" target=\"_blank\">Lingva Translate</a> pagr.<br>",
-            "categories": [
-                "Web",
-                "Tool",
-                "Database",
-                "Cookbook"
-            ],
-            "platform": "linux",
-            "name": "lingva",
-            "hostname": "lingva",
-            "container_name": "lingva",
-            "image": "thedaviddelta/lingva-translate:latest",
-            "ports": [
-                "3000:3000/tcp"
-            ],
-            "restart_policy": "always",
-            "env": [
-                {
-                    "name": "site_domain",
-                    "label": "site_domain",
-                    "description": "Site domain.",
-                    "default": "lingva.ml"
-                },
-                {
-                    "name": "force_default_theme",
-                    "label": "force_default_theme",
-                    "description": "Force default theme.",
-                    "default": "light"
-                },
-                {
-                    "name": "default_source_lang",
-                    "label": "default_source_lang",
-                    "description": "Default source language.",
-                    "default": "auto"
-                },
-                {
-                    "name": "default_target_lang",
-                    "label": "default_target_lang",
-                    "description": "Default target language.",
-                    "default": "en"
-                }
-            ],
-            "labels": [
-                {
-                    "name": "traefik.enable",
-                    "value": "true"
-                },
-                {
-                    "name": "traefik.docker.network",
-                    "value": "traefik"
-                },
-                {
-                    "name": "traefik.http.routers.lingva.rule",
-                    "value": "HostRegexp(`^lingva\\..*`)"
-                },
-                {
-                    "name": "traefik.http.routers.lingva.service",
-                    "value": "lingva-s"
-                },
-                {
-                    "name": "traefik.http.routers.lingva.entryPoints",
-                    "value": "web"
-                },
-                {
-                    "name": "traefik.http.services.lingva-s.loadbalancer.server.port",
-                    "value": "3000"
-                },
-                {
-                    "name": "traefik.http.services.lingva-s.loadbalancer.sticky.cookie.name",
-                    "value": "stickycookie"
-                },
-                {
-                    "name": "traefik.http.services.lingva-s.loadbalancer.sticky.cookie.secure",
-                    "value": "true"
-                }
-            ],
-            "repository": {
-                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
-                "stackfile": "cookbook/containers/lingva-translate/None"
-            },
-            "type": 1,
-            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/lingva-translate.png",
-            "id": 859
-        },
-        {
-            "title": "Cloudbeaver (Cookbook)",
-            "description": "Cloud Database Manager - Community Edition",
-            "note": "Cloud Database Manager - Community Edition.<br> <br> CloudBeaver is a web server which provides rich web interface. Server itself is a Java application, web part is written on TypeScript and React.<br> It is free to use and open-source (licensed under Apache 2 license).<br> See out <a href=\"https://github.com/dbeaver/cloudbeaver/wiki\" target=\"_blank\">WIKI</a> for more details.<br> <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/tz/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
-            "categories": [
-                "Web",
-                "Tool",
-                "Database",
-                "Cookbook"
-            ],
-            "platform": "linux",
-            "name": "cloudbeaver",
-            "hostname": "cloudbeaver",
-            "container_name": "cloudbeaver",
-            "image": "dbeaver/cloudbeaver:latest",
-            "ports": [
-                "8978:8978/tcp"
-            ],
-            "restart_policy": "always",
-            "env": [
-                {
-                    "name": "TZ",
-                    "label": "Time-Zone",
-                    "description": "Time Zone. Default is UTC.",
-                    "default": "UTC"
-                }
-            ],
-            "volumes": [
-                {
-                    "container": "/opt/cloudbeaver/workspace",
-                    "bind": "/opt/docker/cloudbeaver/workspace"
-                }
-            ],
-            "labels": [
-                {
-                    "name": "traefik.enable",
-                    "value": "true"
-                },
-                {
-                    "name": "traefik.docker.network",
-                    "value": "traefik"
-                },
-                {
-                    "name": "traefik.http.routers.cloudbeaver.rule",
-                    "value": "HostRegexp(`^cloudbeaver\\..*`)"
-                },
-                {
-                    "name": "traefik.http.routers.cloudbeaver.service",
-                    "value": "cloudbeaver-s"
-                },
-                {
-                    "name": "traefik.http.routers.cloudbeaver.entryPoints",
-                    "value": "web"
-                },
-                {
-                    "name": "traefik.http.services.cloudbeaver-s.loadbalancer.server.port",
-                    "value": "8978"
-                },
-                {
-                    "name": "traefik.http.services.cloudbeaver-s.loadbalancer.sticky.cookie.name",
-                    "value": "stickycookie"
-                },
-                {
-                    "name": "traefik.http.services.cloudbeaver-s.loadbalancer.sticky.cookie.secure",
-                    "value": "true"
-                }
-            ],
-            "repository": {
-                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
-                "stackfile": "cookbook/containers/cloudbeaver/None"
-            },
-            "type": 1,
-            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/cloudbeaver.png",
-            "id": 860
+            "id": 867
         },
         {
             "title": "Portainer Agent (Cookbook)",
             "repository": {
-                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
+                "url": "https://github.com/nchekwa/docker-swarm-cookbook/",
                 "stackfile": "cookbook/swarmStacks/portainer_agent/docker-stack.yml"
             },
             "name": "portainer-agent",
@@ -31526,10 +31648,52 @@
             ],
             "type": 2,
             "platform": "linux",
-            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/portainer_agent.png",
+            "logo": "https://raw.githubusercontent.com/nchekwa/docker-swarm-cookbook/main/icons/portainer_agent.png",
             "description": "portainer agent",
             "env": [],
-            "id": 861
+            "id": 868
+        },
+        {
+            "description": "3 Nodes MinIO Cluster",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/minio.png",
+            "note": "Please remember that MINIO_ROOT_PASSWORD needs to have min **8** characters.",
+            "categories": [
+                "Database",
+                "Cookbook"
+            ],
+            "env": [
+                {
+                    "name": "MINIO_ROOT_PASSWORD",
+                    "label": "MINIO_ROOT_PASSWORD",
+                    "description": "Password used by the MinIO root user. **It needs to have lenght min 8 characters.**"
+                }
+            ],
+            "title": "Minio cluster (Cookbook)",
+            "repository": {
+                "url": "https://github.com/nchekwa/docker-swarm-cookbook/",
+                "stackfile": "cookbook/swarmStacks/minio-cluster/docker-stack.yml"
+            },
+            "name": "minio-cluster",
+            "type": 2,
+            "platform": "linux",
+            "id": 869
+        },
+        {
+            "title": "Traefik (Cookbook)",
+            "description": "Traefik v3",
+            "platform": "linux",
+            "repository": {
+                "url": "https://github.com/nchekwa/docker-swarm-cookbook/",
+                "stackfile": "cookbook/swarmStacks/traefik/docker-stack.yml"
+            },
+            "name": "traefik",
+            "categories": [
+                "Cookbook"
+            ],
+            "type": 2,
+            "logo": "https://raw.githubusercontent.com/nchekwa/docker-swarm-cookbook/main/icons/traefik.png",
+            "env": [],
+            "id": 870
         },
         {
             "description": "Windmill is the most popular workflow automation platform for technical teams",
@@ -31541,7 +31705,7 @@
             ],
             "platform": "linux",
             "name": "Windmill",
-            "note": "<a href=\"https://www.windmill.dev/\" target=\"_blank\">Windmill Docs</a><br> <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/tz/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
+            "note": "<a href=\"https://www.windmill.dev/\" target=\"_blank\">Windmill Docs</a><br> <br> <br> <a href=\"https://raw.githubusercontent.com/nchekwa/docker-swarm-cookbook/main/tz/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
             "env": [
                 {
                     "name": "TZ",
@@ -31591,12 +31755,12 @@
                 }
             ],
             "repository": {
-                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
+                "url": "https://github.com/nchekwa/docker-swarm-cookbook/",
                 "stackfile": "cookbook/swarmStacks/windmill/docker-stack.yml"
             },
             "type": 2,
-            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/windmill.png",
-            "id": 862
+            "logo": "https://raw.githubusercontent.com/nchekwa/docker-swarm-cookbook/main/icons/windmill.png",
+            "id": 871
         },
         {
             "description": "2 Nodes MySQL Cluster",
@@ -31624,56 +31788,14 @@
                 }
             ],
             "repository": {
-                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
+                "url": "https://github.com/nchekwa/docker-swarm-cookbook/",
                 "stackfile": "cookbook/swarmStacks/mysql-cluster/docker-stack.yml"
             },
             "name": "mysql-cluster",
             "type": 2,
             "platform": "linux",
-            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/mysql-cluster.png",
-            "id": 863
-        },
-        {
-            "title": "Traefik (Cookbook)",
-            "description": "Traefik v3",
-            "platform": "linux",
-            "repository": {
-                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
-                "stackfile": "cookbook/swarmStacks/traefik/docker-stack.yml"
-            },
-            "name": "traefik",
-            "categories": [
-                "Cookbook"
-            ],
-            "type": 2,
-            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/traefik.png",
-            "env": [],
-            "id": 864
-        },
-        {
-            "description": "3 Nodes MinIO Cluster",
-            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/minio.png",
-            "note": "Please remember that MINIO_ROOT_PASSWORD needs to have min **8** characters.",
-            "categories": [
-                "Database",
-                "Cookbook"
-            ],
-            "env": [
-                {
-                    "name": "MINIO_ROOT_PASSWORD",
-                    "label": "MINIO_ROOT_PASSWORD",
-                    "description": "Password used by the MinIO root user. **It needs to have lenght min 8 characters.**"
-                }
-            ],
-            "title": "Minio cluster (Cookbook)",
-            "repository": {
-                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
-                "stackfile": "cookbook/swarmStacks/minio-cluster/docker-stack.yml"
-            },
-            "name": "minio-cluster",
-            "type": 2,
-            "platform": "linux",
-            "id": 865
+            "logo": "https://raw.githubusercontent.com/nchekwa/docker-swarm-cookbook/main/icons/mysql-cluster.png",
+            "id": 872
         },
         {
             "description": "Infinitely scalable, event-driven, language-agnostic orchestration and scheduling platform to manage millions of workflows declaratively in code.",
@@ -31684,7 +31806,7 @@
                 "Cookbook"
             ],
             "platform": "linux",
-            "note": "<a href=\"https://kestra.io/docs\" target=\"_blank\">Kestra Docs</a><br> <a href=\"https://github.com/kestra-io/kestra\" target=\"_blank\">Kestra Github</a> | Report <a href=\"https://github.com/kestra-io/kestra/issues\" target=\"_blank\">Issue</a><br> <a href=\"https://hub.docker.com/r/kestra/kestra\" target=\"_blank\">Kestra Docker Hub</a><br> <a href=\"https://www.docker.com/blog/how-to-use-the-postgres-docker-official-image/\" target=\"_blank\">Postgres Docker Info</a> <br> <br> <b>Note:</b><br> Remember to create on host tmp folder<br> - mkdir /tmp/kestra-wd/ <br> - chmod -R 0777 /tmp/kestra-wd/ <br> <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/tz/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
+            "note": "<a href=\"https://kestra.io/docs\" target=\"_blank\">Kestra Docs</a><br> <a href=\"https://github.com/kestra-io/kestra\" target=\"_blank\">Kestra Github</a> | Report <a href=\"https://github.com/kestra-io/kestra/issues\" target=\"_blank\">Issue</a><br> <a href=\"https://hub.docker.com/r/kestra/kestra\" target=\"_blank\">Kestra Docker Hub</a><br> <a href=\"https://www.docker.com/blog/how-to-use-the-postgres-docker-official-image/\" target=\"_blank\">Postgres Docker Info</a> <br> <br> <b>Note:</b><br> Remember to create on host tmp folder<br> - mkdir /tmp/kestra-wd/ <br> - chmod -R 0777 /tmp/kestra-wd/ <br> <br> <br> <a href=\"https://raw.githubusercontent.com/nchekwa/docker-swarm-cookbook/main/tz/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
             "env": [
                 {
                     "name": "TZ",
@@ -31718,57 +31840,59 @@
                 }
             ],
             "repository": {
-                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
+                "url": "https://github.com/nchekwa/docker-swarm-cookbook/",
                 "stackfile": "cookbook/composeStacks/kestra/docker-compose.yml"
             },
             "type": 3,
-            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/kestra.png",
-            "id": 866
+            "logo": "https://raw.githubusercontent.com/nchekwa/docker-swarm-cookbook/main/icons/kestra.png",
+            "id": 873
         },
         {
-            "description": "Langflow-AI is a visual framework for building multi-agent and RAG applications. It's open-source, Python-powered, fully customizable, model and vector store agnostic.",
-            "title": "Langflow-AI (Cookbook)",
+            "description": "Baserow is an open-source online database that allows you to create tables, forms, and views with a minimal amount of code.",
+            "title": "Baserow (Cookbook)",
             "categories": [
-                "AI",
                 "Low Code",
+                "Database",
                 "Cookbook"
             ],
             "platform": "linux",
-            "note": "<a href=\"https://www.docker.com/blog/how-to-use-the-postgres-docker-official-image/\" target=\"_blank\">Postgres Docker Info</a> <br> <a href=\"https://docs.langflow.org/\" target=\"_blank\">Langflow Docs</a><br> <br> <a href=\"https://github.com/langflow-ai/langflow/issues/1708\" target=\"_blank\">Issue 1708</a> In case of error <b>\"An error has occurred while fetching types\"</b> <br> Ensure that env variables are set correctly<br> LANGFLOW_ACCESS_SAME_SITE = <b>lax</b><br> LANGFLOW_ACCESS_SECURE = <b>false</b><br> <b>Note:</b> This error ocure when you access via http and not using SSL proxy. <br> <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/tz/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
+            "name": "baserow",
+            "note": "<a href=\"https://baserow.io/docs/\" target=\"_blank\">Baserow Docs</a><br> <br> <br> <a href=\"https://raw.githubusercontent.com/nchekwa/docker-swarm-cookbook/main/tz/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
             "env": [
                 {
-                    "name": "TZ",
-                    "label": "Time-Zone",
-                    "description": "Time Zone. Default is UTC.",
-                    "default": "UTC"
+                    "name": "BASEROW_HTTP_PORT",
+                    "label": "Published HTTP Port",
+                    "description": "The HTTP port for Baserow. Default is 80.",
+                    "default": "80"
                 },
                 {
-                    "name": "POSTGRES_USER",
-                    "label": "POSTGRES_USER",
-                    "default": "langflow",
-                    "description": "Specifies a user with superuser privileges and a database with the same name. Postgres uses the default user when this is empty."
+                    "name": "BASEROW_HTTPS_PORT",
+                    "label": "Published HTTPS Port",
+                    "description": "The HTTPS port for Baserow. Default is 443.",
+                    "default": "443"
                 },
                 {
-                    "name": "POSTGRES_PASSWORD",
-                    "label": "POSTGRES_PASSWORD",
-                    "default": "langflow345",
-                    "description": "Password used by the POSTGRES_USER."
+                    "name": "WEB_FRONTEND_PORT",
+                    "label": "Container HTTP Port",
+                    "description": "The port for the web frontend hosted on container side. Default is 80.",
+                    "default": "80"
                 },
                 {
-                    "name": "POSTGRES_DB",
-                    "label": "POSTGRES_DB",
-                    "default": "langflow",
-                    "description": "Specifies a name for your database or defaults to the POSTGRES_USER value when left blank."
+                    "name": "WEB_FRONTEND_SSL_PORT",
+                    "label": "Container HTTPS Port",
+                    "description": "The port for the web frontend SSL hosted on container side. Default is 443.",
+                    "default": "443"
                 },
                 {
-                    "name": "LANGFLOW_PORT",
-                    "default": "7860",
-                    "description": "The port to run the Langflow server on. Default is 7860.",
-                    "label": "LANGFLOW_PORT"
+                    "name": "BASEROW_PUBLIC_URL",
+                    "label": "Baserow Public URL",
+                    "description": "The public URL for Baserow. Default is http://localhost.",
+                    "default": "http://localhost"
                 },
                 {
-                    "name": "LANGFLOW_AUTO_LOGIN",
-                    "description": "Determines whether Langflow should automatically log users in. Default is True.",
+                    "name": "MIGRATE_ON_STARTUP",
+                    "label": "Migrate on Startup",
+                    "description": "Whether to migrate the database on startup. Default is True.",
                     "select": [
                         {
                             "text": "True",
@@ -31779,393 +31903,49 @@
                             "text": "False",
                             "value": "false"
                         }
-                    ],
-                    "label": "LANGFLOW_AUTO_LOGIN"
+                    ]
                 },
                 {
-                    "name": "LANGFLOW_SUPERUSER",
-                    "description": "The username of the superuser.",
-                    "default": "admin",
-                    "label": "LANGFLOW_SUPERUSER"
-                },
-                {
-                    "name": "LANGFLOW_SUPERUSER_PASSWORD",
-                    "default": "langsuperuser",
-                    "description": "The password for the superuser.",
-                    "label": "LANGFLOW_SUPERUSER_PASSWORD"
-                },
-                {
-                    "name": "LANGFLOW_SECRET_KEY",
-                    "description": "A key used for encrypting the superuser's password.",
-                    "default": "ePsvzxpSZwJ0hPL6mdLU4wuXU5YadMKwIbFjs04MMBg=",
-                    "label": "LANGFLOW_SECRET_KEY"
-                },
-                {
-                    "name": "LANGFLOW_NEW_USER_IS_ACTIVE",
-                    "description": "Determines whether new users are automatically activated. Default is False.",
+                    "name": "BASEROW_TRIGGER_SYNC_TEMPLATES_AFTER_MIGRATION",
+                    "label": "Trigger Sync Templates After Migration",
+                    "description": "Whether to trigger syncing of templates after migration. Default is True.",
                     "select": [
                         {
                             "text": "True",
-                            "value": "true"
+                            "value": "true",
+                            "default": true
                         },
                         {
                             "text": "False",
-                            "value": "false",
-                            "default": true
+                            "value": "false"
                         }
-                    ],
-                    "label": "LANGFLOW_NEW_USER_IS_ACTIVE"
+                    ]
                 },
                 {
-                    "name": "LANGFLOW_ACCESS_SAME_SITE",
-                    "description": "Sets the SameSite attribute of the access token cookie. Options are \"lax\" (default), \"strict,\" and \"none.\"",
-                    "select": [
-                        {
-                            "text": "Lax",
-                            "value": "lax",
-                            "default": true
-                        },
-                        {
-                            "text": "Strict",
-                            "value": "strict"
-                        },
-                        {
-                            "text": "None",
-                            "value": "none"
-                        }
-                    ],
-                    "label": "LANGFLOW_ACCESS_SAME_SITE"
+                    "name": "DATABASE_PASSWORD",
+                    "label": "Database Password",
+                    "description": "The password for the database. Default is baserow.",
+                    "default": "baserow"
                 },
                 {
-                    "name": "LANGFLOW_ACCESS_SECURE",
-                    "description": "Enables or disables the Secure attribute of the access token cookie (default is disabled).",
-                    "select": [
-                        {
-                            "text": "True",
-                            "value": "true"
-                        },
-                        {
-                            "text": "False",
-                            "value": "false",
-                            "default": true
-                        }
-                    ],
-                    "label": "LANGFLOW_ACCESS_SECURE"
+                    "name": "SECRET_KEY",
+                    "label": "Secret Key",
+                    "description": "The secret key for Baserow. Default is baserow.",
+                    "default": "baserow"
                 },
-                {
-                    "name": "LANGFLOW_ACCESS_HTTPONLY",
-                    "description": "Enables or disables the HttpOnly attribute of the access token cookie (default is disabled).",
-                    "select": [
-                        {
-                            "text": "True",
-                            "value": "true"
-                        },
-                        {
-                            "text": "False",
-                            "value": "false",
-                            "default": true
-                        }
-                    ],
-                    "label": "LANGFLOW_ACCESS_HTTPONLY"
-                }
-            ],
-            "repository": {
-                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
-                "stackfile": "cookbook/composeStacks/langflow-ai/docker-compose.yml"
-            },
-            "name": "langflow-ai",
-            "type": 3,
-            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/langflow-ai.png",
-            "id": 867
-        },
-        {
-            "description": "Qdrant is an Open-Source Vector Database and Vector Search Engine written in Rust. It provides fast and scalable vector similarity search service.",
-            "categories": [
-                "Database",
-                "Cookbook"
-            ],
-            "title": "Qdrant (Cookbook)",
-            "repository": {
-                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
-                "stackfile": "cookbook/composeStacks/qdrant/docker-compose.yml"
-            },
-            "name": "qdrant",
-            "type": 3,
-            "platform": "linux",
-            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/qdrant.png",
-            "env": [],
-            "id": 868
-        },
-        {
-            "description": "IPEX-LLM is a PyTorch library for running LLM on Intel CPU and GPU (e.g., local PC with iGPU, discrete GPU such as Arc A-Series, Flex and Max) with very low latency.",
-            "title": "IPEX-LLM (Cookbook)",
-            "name": "ipex-llm",
-            "categories": [
-                "AI",
-                "Cookbook"
-            ],
-            "platform": "linux",
-            "note": "<a href=\"https://github.com/intel-analytics/ipex-llm\" target=\"_blank\">IPEX-LLM Github</a><br> <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/tz/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
-            "env": [
                 {
                     "name": "TZ",
                     "label": "Time-Zone",
                     "description": "Time Zone. Default is UTC.",
                     "default": "UTC"
-                },
-                {
-                    "name": "IMAGE_TAPE",
-                    "description": "Image Type (GPU or only CPU Serving) Default: ipex-llm-serving-xpu",
-                    "select": [
-                        {
-                            "text": "ipex-llm-serving-xpu",
-                            "value": "ipex-llm-serving-xpu",
-                            "default": true
-                        },
-                        {
-                            "text": "ipex-llm-serving-cpu",
-                            "value": "ipex-llm-serving-cpu"
-                        }
-                    ],
-                    "label": "IMAGE_TAPE"
-                },
-                {
-                    "name": "IMAGE_VERSION",
-                    "description": "Image Vesion. Default: latest",
-                    "select": [
-                        {
-                            "text": "latest",
-                            "value": "latest",
-                            "default": true
-                        },
-                        {
-                            "text": "2.1.0-SNAPSHOT",
-                            "value": "2.1.0-SNAPSHOT"
-                        }
-                    ],
-                    "label": "IMAGE_VERSION"
                 }
             ],
             "repository": {
-                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
-                "stackfile": "cookbook/composeStacks/ipex-llm/docker-compose.yml"
+                "url": "https://github.com/nchekwa/docker-swarm-cookbook/",
+                "stackfile": "cookbook/composeStacks/baserow/docker-compose.yml"
             },
             "type": 3,
-            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/ipex-llm.png",
-            "id": 869
-        },
-        {
-            "description": "Zigbee to MQTT bridge, get rid of your proprietary Zigbee bridges",
-            "note": "Check the <a href=\"https://www.zigbee2mqtt.io/\" target=\"_blank\">Main Zigbee2MQTT Page</a> to get started.",
-            "title": "Zigbee2mqtt (Cookbook)",
-            "repository": {
-                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
-                "stackfile": "cookbook/composeStacks/zigbee2mqtt/docker-compose.yml"
-            },
-            "name": "zigbee2mqtt",
-            "categories": [
-                "Cookbook"
-            ],
-            "type": 3,
-            "platform": "linux",
-            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/zigbee2mqtt.png",
-            "env": [],
-            "id": 870
-        },
-        {
-            "description": "It's like Airtable for your database. Make your database a full-fledged collaborative app ready for any end-user.",
-            "title": "Basetool (Cookbook)",
-            "categories": [
-                "Low Code",
-                "Database",
-                "Cookbook"
-            ],
-            "platform": "linux",
-            "name": "basetool",
-            "note": "<a href=\"https://www.basetool.io\" target=\"_blank\">Basetool Docs</a><br>",
-            "env": [
-                {
-                    "name": "BASETOOL_HTTP_PORT",
-                    "label": "Basetool HTTP Port",
-                    "description": "The HTTP port to expose Basetool on.",
-                    "default": "7654"
-                },
-                {
-                    "name": "BASETOOL_PORT",
-                    "label": "Basetool Port",
-                    "description": "The port Basetool runs on within its container.",
-                    "default": "7654"
-                },
-                {
-                    "name": "BASE_URL",
-                    "label": "Base URL",
-                    "description": "Base URL for Basetool, without protocol (http/https).",
-                    "default": "localhost:7654"
-                },
-                {
-                    "name": "POSTGRES_USER",
-                    "label": "PostgreSQL User",
-                    "description": "Username for PostgreSQL database.",
-                    "default": "basetool"
-                },
-                {
-                    "name": "POSTGRES_PASSWORD",
-                    "label": "PostgreSQL Password",
-                    "description": "Password for PostgreSQL database.",
-                    "default": "basetool13203eiGht"
-                },
-                {
-                    "name": "POSTGRES_HOSTNAME",
-                    "label": "PostgreSQL Hostname",
-                    "description": "Hostname for PostgreSQL database.",
-                    "default": "postgres"
-                },
-                {
-                    "name": "POSTGRES_DB",
-                    "label": "PostgreSQL Database",
-                    "description": "Name of the PostgreSQL database.",
-                    "default": "basetool"
-                },
-                {
-                    "name": "TZ",
-                    "label": "Time Zone",
-                    "description": "Time Zone.",
-                    "default": "UTC"
-                }
-            ],
-            "repository": {
-                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
-                "stackfile": "cookbook/composeStacks/basetool/docker-compose.yml"
-            },
-            "type": 3,
-            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/basetool.png",
-            "id": 871
-        },
-        {
-            "description": "AutoGen Studio is an interface powered by AutoGen, designed to simplify the process of creating and managing multi-agent solutions. It\u2019s a user-friendly platform that allows even beginners to declaratively define and modify agents and multi-agent workflows through an intuitive interface.",
-            "title": "autogen-studio (Cookbook)",
-            "categories": [
-                "AI",
-                "Cookbook"
-            ],
-            "platform": "linux",
-            "name": "autogen-studio",
-            "note": "<a href=\"https://autogen-studio.com/\" target=\"_blank\">AutoGen Studio Official Page</a><br>\n<a href=\"https://github.com/lludlow/autogen-studio\" target=\"_blank\">Larry Ludlow Github Docker container for Autogen Studio</a><br>\n<br>\nWebUI: http://autogen-studio:8081/\n <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/tz/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
-            "env": [
-                {
-                    "name": "TZ",
-                    "label": "Time-Zone",
-                    "description": "Time Zone. Default is UTC.",
-                    "default": "UTC"
-                },
-                {
-                    "name": "AUTOGEN_PORT",
-                    "default": "8081",
-                    "description": "The port to run the AutoGen Studio server on. Default is 8081.",
-                    "label": "AUTOGEN_PORT"
-                },
-                {
-                    "name": "OPENAI_API_KEY",
-                    "default": "sk-1234",
-                    "description": "The API key used for the OpenAI connector.",
-                    "required": true,
-                    "label": "OPENAI_API_KEY"
-                },
-                {
-                    "name": "OPENAI_BASE_URL",
-                    "default": "https://api.openai.com/v1",
-                    "description": "The Base URL used for the OpenAI connector.",
-                    "label": "OPENAI_BASE_URL"
-                }
-            ],
-            "repository": {
-                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
-                "stackfile": "cookbook/composeStacks/autogenstudio/docker-compose.yml"
-            },
-            "type": 3,
-            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/autogenstudio.png",
-            "id": 872
-        },
-        {
-            "description": "Docker swarm service for automatically updating your services whenever their image is refreshed",
-            "note": "Check the <a href=\"https://github.com/containrrr/shepherd\" target=\"_blank\">GitLab documentation</a> to get started.",
-            "categories": [
-                "Automation",
-                "Messaging",
-                "Cookbook"
-            ],
-            "title": "Shepherd (Cookbook)",
-            "repository": {
-                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
-                "stackfile": "cookbook/composeStacks/shepherd/docker-compose.yml"
-            },
-            "name": "shepherd",
-            "type": 3,
-            "platform": "linux",
-            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/shepherd.png",
-            "env": [],
-            "id": 873
-        },
-        {
-            "description": "Call all LLM APIs using the OpenAI format. Use Bedrock, Azure, OpenAI, Cohere, Anthropic, Ollama, Sagemaker, HuggingFace, Replicate (100+ LLMs)",
-            "title": "litellm (Cookbook)",
-            "categories": [
-                "AI",
-                "Cookbook"
-            ],
-            "platform": "linux",
-            "name": "litellm",
-            "note": "<a href=\"https://github.com/BerriAI/litellm/\" target=\"_blank\">LiteLLM GitHub</a><br>\n<a href=\"https://docs.litellm.ai/docs/\" target=\"_blank\">Litellm Docs</a><br>\n<br>\nWebUI: http://litellm:4000/ui\n <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/tz/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
-            "env": [
-                {
-                    "name": "TZ",
-                    "label": "Time-Zone",
-                    "description": "Time Zone. Default is UTC.",
-                    "default": "UTC"
-                },
-                {
-                    "name": "POSTGRES_DB",
-                    "label": "POSTGRES_DB",
-                    "default": "litellm",
-                    "description": "Specifies a name for your database or defaults to the POSTGRES_USER value when left blank."
-                },
-                {
-                    "name": "POSTGRES_USER",
-                    "label": "POSTGRES_USER",
-                    "default": "litellm",
-                    "description": "Specifies a user with superuser privileges and a database with the same name. Postgres uses the default user when this is empty."
-                },
-                {
-                    "name": "POSTGRES_PASSWORD",
-                    "label": "POSTGRES_PASSWORD",
-                    "default": "LITELLM13203eiGht",
-                    "description": "Password used by the POSTGRES_USER."
-                },
-                {
-                    "name": "LITELLM_PORT",
-                    "default": "4000",
-                    "description": "The port to run the LiteLLM server on. Default is 4000.",
-                    "label": "LITELLM_PORT"
-                },
-                {
-                    "name": "LITELLM_MASTER_KEY",
-                    "label": "LITELLM_MASTER_KEY",
-                    "default": "sk-1234",
-                    "description": "Access Master Key to LiteLLM - make this unique. must start with `sk-`. Default is 'sk-1234'."
-                },
-                {
-                    "name": "REDIS_PWD",
-                    "label": "REDIS_PWD",
-                    "default": "litellm",
-                    "description": "Password used by the Redis Cache."
-                }
-            ],
-            "repository": {
-                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
-                "stackfile": "cookbook/composeStacks/litellm/docker-compose.yml"
-            },
-            "type": 3,
-            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/litellm.png",
+            "logo": "https://raw.githubusercontent.com/nchekwa/docker-swarm-cookbook/main/icons/baserow.png",
             "id": 874
         },
         {
@@ -32178,7 +31958,7 @@
             ],
             "platform": "linux",
             "name": "n8n",
-            "note": "<a href=\"https://docs.n8n.io/https://docs.n8n.org/\" target=\"_blank\">n8n Docs</a><br> <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/tz/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
+            "note": "<a href=\"https://docs.n8n.io/https://docs.n8n.org/\" target=\"_blank\">n8n Docs</a><br> <br> <br> <a href=\"https://raw.githubusercontent.com/nchekwa/docker-swarm-cookbook/main/tz/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
             "env": [
                 {
                     "name": "TZ",
@@ -32283,12 +32063,75 @@
                 }
             ],
             "repository": {
-                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
+                "url": "https://github.com/nchekwa/docker-swarm-cookbook/",
                 "stackfile": "cookbook/composeStacks/n8n/docker-compose.yml"
             },
             "type": 3,
-            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/n8n.png",
+            "logo": "https://raw.githubusercontent.com/nchekwa/docker-swarm-cookbook/main/icons/n8n.png",
             "id": 875
+        },
+        {
+            "description": "Zigbee to MQTT bridge, get rid of your proprietary Zigbee bridges",
+            "note": "Check the <a href=\"https://www.zigbee2mqtt.io/\" target=\"_blank\">Main Zigbee2MQTT Page</a> to get started.",
+            "title": "Zigbee2mqtt (Cookbook)",
+            "repository": {
+                "url": "https://github.com/nchekwa/docker-swarm-cookbook/",
+                "stackfile": "cookbook/composeStacks/zigbee2mqtt/docker-compose.yml"
+            },
+            "name": "zigbee2mqtt",
+            "categories": [
+                "Cookbook"
+            ],
+            "type": 3,
+            "platform": "linux",
+            "logo": "https://raw.githubusercontent.com/nchekwa/docker-swarm-cookbook/main/icons/zigbee2mqtt.png",
+            "env": [],
+            "id": 876
+        },
+        {
+            "description": "AutoGen Studio is an interface powered by AutoGen, designed to simplify the process of creating and managing multi-agent solutions. It\u2019s a user-friendly platform that allows even beginners to declaratively define and modify agents and multi-agent workflows through an intuitive interface.",
+            "title": "autogen-studio (Cookbook)",
+            "categories": [
+                "AI",
+                "Cookbook"
+            ],
+            "platform": "linux",
+            "name": "autogen-studio",
+            "note": "<a href=\"https://autogen-studio.com/\" target=\"_blank\">AutoGen Studio Official Page</a><br>\n<a href=\"https://github.com/lludlow/autogen-studio\" target=\"_blank\">Larry Ludlow Github Docker container for Autogen Studio</a><br>\n<br>\nWebUI: http://autogen-studio:8081/\n <br> <br> <a href=\"https://raw.githubusercontent.com/nchekwa/docker-swarm-cookbook/main/tz/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
+            "env": [
+                {
+                    "name": "TZ",
+                    "label": "Time-Zone",
+                    "description": "Time Zone. Default is UTC.",
+                    "default": "UTC"
+                },
+                {
+                    "name": "AUTOGEN_PORT",
+                    "default": "8081",
+                    "description": "The port to run the AutoGen Studio server on. Default is 8081.",
+                    "label": "AUTOGEN_PORT"
+                },
+                {
+                    "name": "OPENAI_API_KEY",
+                    "default": "sk-1234",
+                    "description": "The API key used for the OpenAI connector.",
+                    "required": true,
+                    "label": "OPENAI_API_KEY"
+                },
+                {
+                    "name": "OPENAI_BASE_URL",
+                    "default": "https://api.openai.com/v1",
+                    "description": "The Base URL used for the OpenAI connector.",
+                    "label": "OPENAI_BASE_URL"
+                }
+            ],
+            "repository": {
+                "url": "https://github.com/nchekwa/docker-swarm-cookbook/",
+                "stackfile": "cookbook/composeStacks/autogenstudio/docker-compose.yml"
+            },
+            "type": 3,
+            "logo": "https://raw.githubusercontent.com/nchekwa/docker-swarm-cookbook/main/icons/autogenstudio.png",
+            "id": 877
         },
         {
             "description": "Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.  It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-click.",
@@ -32306,15 +32149,33 @@
                 }
             ],
             "repository": {
-                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
+                "url": "https://github.com/nchekwa/docker-swarm-cookbook/",
                 "stackfile": "cookbook/composeStacks/node-red/docker-compose.yml"
             },
             "name": "node-red",
             "type": 3,
             "platform": "linux",
-            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/node-red.png",
+            "logo": "https://raw.githubusercontent.com/nchekwa/docker-swarm-cookbook/main/icons/node-red.png",
             "note": "<br><a href=\"{GITHUB_URL_CONTENT}main/tz/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
-            "id": 876
+            "id": 878
+        },
+        {
+            "description": "Qdrant is an Open-Source Vector Database and Vector Search Engine written in Rust. It provides fast and scalable vector similarity search service.",
+            "categories": [
+                "Database",
+                "Cookbook"
+            ],
+            "title": "Qdrant (Cookbook)",
+            "repository": {
+                "url": "https://github.com/nchekwa/docker-swarm-cookbook/",
+                "stackfile": "cookbook/composeStacks/qdrant/docker-compose.yml"
+            },
+            "name": "qdrant",
+            "type": 3,
+            "platform": "linux",
+            "logo": "https://raw.githubusercontent.com/nchekwa/docker-swarm-cookbook/main/icons/qdrant.png",
+            "env": [],
+            "id": 879
         },
         {
             "description": "Open source low-code tool for developers to build customized LLM orchestration flow & AI agents",
@@ -32325,7 +32186,7 @@
                 "Cookbook"
             ],
             "platform": "linux",
-            "note": "<a href=\"https://flowiseai.com/\" target=\"_blank\">FlowiseAI Docs</a><br> <a href=\"https://github.com/FlowiseAI/Flowise\" target=\"_blank\">FlowiseAI Github</a> | Report <a href=\"https://github.com/FlowiseAI/Flowise/issues\" target=\"_blank\">Issue</a><br> <a href=\"https://www.docker.com/blog/how-to-use-the-postgres-docker-official-image/\" target=\"_blank\">Postgres Docker Info</a> <br> <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/tz/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
+            "note": "<a href=\"https://flowiseai.com/\" target=\"_blank\">FlowiseAI Docs</a><br> <a href=\"https://github.com/FlowiseAI/Flowise\" target=\"_blank\">FlowiseAI Github</a> | Report <a href=\"https://github.com/FlowiseAI/Flowise/issues\" target=\"_blank\">Issue</a><br> <a href=\"https://www.docker.com/blog/how-to-use-the-postgres-docker-official-image/\" target=\"_blank\">Postgres Docker Info</a> <br> <br> <br> <a href=\"https://raw.githubusercontent.com/nchekwa/docker-swarm-cookbook/main/tz/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
             "name": "flowise",
             "env": [
                 {
@@ -32372,113 +32233,227 @@
                 }
             ],
             "repository": {
-                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
+                "url": "https://github.com/nchekwa/docker-swarm-cookbook/",
                 "stackfile": "cookbook/composeStacks/flowiseai/docker-compose.yml"
             },
             "type": 3,
-            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/flowiseai.png",
-            "id": 877
+            "logo": "https://raw.githubusercontent.com/nchekwa/docker-swarm-cookbook/main/icons/flowiseai.png",
+            "id": 880
         },
         {
-            "description": "Baserow is an open-source online database that allows you to create tables, forms, and views with a minimal amount of code.",
-            "title": "Baserow (Cookbook)",
+            "description": "Langflow-AI is a visual framework for building multi-agent and RAG applications. It's open-source, Python-powered, fully customizable, model and vector store agnostic.",
+            "title": "Langflow-AI (Cookbook)",
             "categories": [
+                "AI",
                 "Low Code",
-                "Database",
                 "Cookbook"
             ],
             "platform": "linux",
-            "name": "baserow",
-            "note": "<a href=\"https://baserow.io/docs/\" target=\"_blank\">Baserow Docs</a><br> <br> <br> <a href=\"https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/tz/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
+            "note": "<a href=\"https://www.docker.com/blog/how-to-use-the-postgres-docker-official-image/\" target=\"_blank\">Postgres Docker Info</a> <br> <a href=\"https://docs.langflow.org/\" target=\"_blank\">Langflow Docs</a><br> <br> <a href=\"https://github.com/langflow-ai/langflow/issues/1708\" target=\"_blank\">Issue 1708</a> In case of error <b>\"An error has occurred while fetching types\"</b> <br> Ensure that env variables are set correctly<br> LANGFLOW_ACCESS_SAME_SITE = <b>lax</b><br> LANGFLOW_ACCESS_SECURE = <b>false</b><br> <b>Note:</b> This error ocure when you access via http and not using SSL proxy. <br> <br> <br> <a href=\"https://raw.githubusercontent.com/nchekwa/docker-swarm-cookbook/main/tz/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
             "env": [
-                {
-                    "name": "BASEROW_HTTP_PORT",
-                    "label": "Published HTTP Port",
-                    "description": "The HTTP port for Baserow. Default is 80.",
-                    "default": "80"
-                },
-                {
-                    "name": "BASEROW_HTTPS_PORT",
-                    "label": "Published HTTPS Port",
-                    "description": "The HTTPS port for Baserow. Default is 443.",
-                    "default": "443"
-                },
-                {
-                    "name": "WEB_FRONTEND_PORT",
-                    "label": "Container HTTP Port",
-                    "description": "The port for the web frontend hosted on container side. Default is 80.",
-                    "default": "80"
-                },
-                {
-                    "name": "WEB_FRONTEND_SSL_PORT",
-                    "label": "Container HTTPS Port",
-                    "description": "The port for the web frontend SSL hosted on container side. Default is 443.",
-                    "default": "443"
-                },
-                {
-                    "name": "BASEROW_PUBLIC_URL",
-                    "label": "Baserow Public URL",
-                    "description": "The public URL for Baserow. Default is http://localhost.",
-                    "default": "http://localhost"
-                },
-                {
-                    "name": "MIGRATE_ON_STARTUP",
-                    "label": "Migrate on Startup",
-                    "description": "Whether to migrate the database on startup. Default is True.",
-                    "select": [
-                        {
-                            "text": "True",
-                            "value": "true",
-                            "default": true
-                        },
-                        {
-                            "text": "False",
-                            "value": "false"
-                        }
-                    ]
-                },
-                {
-                    "name": "BASEROW_TRIGGER_SYNC_TEMPLATES_AFTER_MIGRATION",
-                    "label": "Trigger Sync Templates After Migration",
-                    "description": "Whether to trigger syncing of templates after migration. Default is True.",
-                    "select": [
-                        {
-                            "text": "True",
-                            "value": "true",
-                            "default": true
-                        },
-                        {
-                            "text": "False",
-                            "value": "false"
-                        }
-                    ]
-                },
-                {
-                    "name": "DATABASE_PASSWORD",
-                    "label": "Database Password",
-                    "description": "The password for the database. Default is baserow.",
-                    "default": "baserow"
-                },
-                {
-                    "name": "SECRET_KEY",
-                    "label": "Secret Key",
-                    "description": "The secret key for Baserow. Default is baserow.",
-                    "default": "baserow"
-                },
                 {
                     "name": "TZ",
                     "label": "Time-Zone",
                     "description": "Time Zone. Default is UTC.",
                     "default": "UTC"
+                },
+                {
+                    "name": "POSTGRES_USER",
+                    "label": "POSTGRES_USER",
+                    "default": "langflow",
+                    "description": "Specifies a user with superuser privileges and a database with the same name. Postgres uses the default user when this is empty."
+                },
+                {
+                    "name": "POSTGRES_PASSWORD",
+                    "label": "POSTGRES_PASSWORD",
+                    "default": "langflow345",
+                    "description": "Password used by the POSTGRES_USER."
+                },
+                {
+                    "name": "POSTGRES_DB",
+                    "label": "POSTGRES_DB",
+                    "default": "langflow",
+                    "description": "Specifies a name for your database or defaults to the POSTGRES_USER value when left blank."
+                },
+                {
+                    "name": "LANGFLOW_PORT",
+                    "default": "7860",
+                    "description": "The port to run the Langflow server on. Default is 7860.",
+                    "label": "LANGFLOW_PORT"
+                },
+                {
+                    "name": "LANGFLOW_AUTO_LOGIN",
+                    "description": "Determines whether Langflow should automatically log users in. Default is True.",
+                    "select": [
+                        {
+                            "text": "True",
+                            "value": "true",
+                            "default": true
+                        },
+                        {
+                            "text": "False",
+                            "value": "false"
+                        }
+                    ],
+                    "label": "LANGFLOW_AUTO_LOGIN"
+                },
+                {
+                    "name": "LANGFLOW_SUPERUSER",
+                    "description": "The username of the superuser.",
+                    "default": "admin",
+                    "label": "LANGFLOW_SUPERUSER"
+                },
+                {
+                    "name": "LANGFLOW_SUPERUSER_PASSWORD",
+                    "default": "langsuperuser",
+                    "description": "The password for the superuser.",
+                    "label": "LANGFLOW_SUPERUSER_PASSWORD"
+                },
+                {
+                    "name": "LANGFLOW_SECRET_KEY",
+                    "description": "A key used for encrypting the superuser's password.",
+                    "default": "sABv-59dTP_aaeOdi-xiJ67uoQqNzDe4v0fjBi5QPcw=",
+                    "label": "LANGFLOW_SECRET_KEY"
+                },
+                {
+                    "name": "LANGFLOW_NEW_USER_IS_ACTIVE",
+                    "description": "Determines whether new users are automatically activated. Default is False.",
+                    "select": [
+                        {
+                            "text": "True",
+                            "value": "true"
+                        },
+                        {
+                            "text": "False",
+                            "value": "false",
+                            "default": true
+                        }
+                    ],
+                    "label": "LANGFLOW_NEW_USER_IS_ACTIVE"
+                },
+                {
+                    "name": "LANGFLOW_ACCESS_SAME_SITE",
+                    "description": "Sets the SameSite attribute of the access token cookie. Options are \"lax\" (default), \"strict,\" and \"none.\"",
+                    "select": [
+                        {
+                            "text": "Lax",
+                            "value": "lax",
+                            "default": true
+                        },
+                        {
+                            "text": "Strict",
+                            "value": "strict"
+                        },
+                        {
+                            "text": "None",
+                            "value": "none"
+                        }
+                    ],
+                    "label": "LANGFLOW_ACCESS_SAME_SITE"
+                },
+                {
+                    "name": "LANGFLOW_ACCESS_SECURE",
+                    "description": "Enables or disables the Secure attribute of the access token cookie (default is disabled).",
+                    "select": [
+                        {
+                            "text": "True",
+                            "value": "true"
+                        },
+                        {
+                            "text": "False",
+                            "value": "false",
+                            "default": true
+                        }
+                    ],
+                    "label": "LANGFLOW_ACCESS_SECURE"
+                },
+                {
+                    "name": "LANGFLOW_ACCESS_HTTPONLY",
+                    "description": "Enables or disables the HttpOnly attribute of the access token cookie (default is disabled).",
+                    "select": [
+                        {
+                            "text": "True",
+                            "value": "true"
+                        },
+                        {
+                            "text": "False",
+                            "value": "false",
+                            "default": true
+                        }
+                    ],
+                    "label": "LANGFLOW_ACCESS_HTTPONLY"
                 }
             ],
             "repository": {
-                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
-                "stackfile": "cookbook/composeStacks/baserow/docker-compose.yml"
+                "url": "https://github.com/nchekwa/docker-swarm-cookbook/",
+                "stackfile": "cookbook/composeStacks/langflow-ai/docker-compose.yml"
+            },
+            "name": "langflow-ai",
+            "type": 3,
+            "logo": "https://raw.githubusercontent.com/nchekwa/docker-swarm-cookbook/main/icons/langflow-ai.png",
+            "id": 881
+        },
+        {
+            "description": "Call all LLM APIs using the OpenAI format. Use Bedrock, Azure, OpenAI, Cohere, Anthropic, Ollama, Sagemaker, HuggingFace, Replicate (100+ LLMs)",
+            "title": "litellm (Cookbook)",
+            "categories": [
+                "AI",
+                "Cookbook"
+            ],
+            "platform": "linux",
+            "name": "litellm",
+            "note": "<a href=\"https://github.com/BerriAI/litellm/\" target=\"_blank\">LiteLLM GitHub</a><br>\n<a href=\"https://docs.litellm.ai/docs/\" target=\"_blank\">Litellm Docs</a><br>\n<br>\nWebUI: http://litellm:4000/ui\n <br> <br> <a href=\"https://raw.githubusercontent.com/nchekwa/docker-swarm-cookbook/main/tz/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
+            "env": [
+                {
+                    "name": "TZ",
+                    "label": "Time-Zone",
+                    "description": "Time Zone. Default is UTC.",
+                    "default": "UTC"
+                },
+                {
+                    "name": "POSTGRES_DB",
+                    "label": "POSTGRES_DB",
+                    "default": "litellm",
+                    "description": "Specifies a name for your database or defaults to the POSTGRES_USER value when left blank."
+                },
+                {
+                    "name": "POSTGRES_USER",
+                    "label": "POSTGRES_USER",
+                    "default": "litellm",
+                    "description": "Specifies a user with superuser privileges and a database with the same name. Postgres uses the default user when this is empty."
+                },
+                {
+                    "name": "POSTGRES_PASSWORD",
+                    "label": "POSTGRES_PASSWORD",
+                    "default": "LITELLM13203eiGht",
+                    "description": "Password used by the POSTGRES_USER."
+                },
+                {
+                    "name": "LITELLM_PORT",
+                    "default": "4000",
+                    "description": "The port to run the LiteLLM server on. Default is 4000.",
+                    "label": "LITELLM_PORT"
+                },
+                {
+                    "name": "LITELLM_MASTER_KEY",
+                    "label": "LITELLM_MASTER_KEY",
+                    "default": "sk-1234",
+                    "description": "Access Master Key to LiteLLM - make this unique. must start with `sk-`. Default is 'sk-1234'."
+                },
+                {
+                    "name": "REDIS_PWD",
+                    "label": "REDIS_PWD",
+                    "default": "litellm",
+                    "description": "Password used by the Redis Cache."
+                }
+            ],
+            "repository": {
+                "url": "https://github.com/nchekwa/docker-swarm-cookbook/",
+                "stackfile": "cookbook/composeStacks/litellm/docker-compose.yml"
             },
             "type": 3,
-            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/baserow.png",
-            "id": 878
+            "logo": "https://raw.githubusercontent.com/nchekwa/docker-swarm-cookbook/main/icons/litellm.png",
+            "id": 882
         },
         {
             "description": "Nocodb",
@@ -32536,12 +32511,159 @@
                 }
             ],
             "repository": {
-                "url": "https://github.com/0nTheTop/docker-swarm-cookbook/",
+                "url": "https://github.com/nchekwa/docker-swarm-cookbook/",
                 "stackfile": "cookbook/composeStacks/nocodb/docker-compose.yml"
             },
             "type": 3,
-            "logo": "https://raw.githubusercontent.com/0nTheTop/docker-swarm-cookbook/main/icons/nocodb.png",
-            "id": 879
+            "logo": "https://raw.githubusercontent.com/nchekwa/docker-swarm-cookbook/main/icons/nocodb.png",
+            "id": 883
+        },
+        {
+            "description": "IPEX-LLM is a PyTorch library for running LLM on Intel CPU and GPU (e.g., local PC with iGPU, discrete GPU such as Arc A-Series, Flex and Max) with very low latency.",
+            "title": "IPEX-LLM (Cookbook)",
+            "name": "ipex-llm",
+            "categories": [
+                "AI",
+                "Cookbook"
+            ],
+            "platform": "linux",
+            "note": "<a href=\"https://github.com/intel-analytics/ipex-llm\" target=\"_blank\">IPEX-LLM Github</a><br> <br> <br> <a href=\"https://raw.githubusercontent.com/nchekwa/docker-swarm-cookbook/main/tz/timezones.txt\" target=\"_blank\">timedatectl list-timezones</a> to see all timezones",
+            "env": [
+                {
+                    "name": "TZ",
+                    "label": "Time-Zone",
+                    "description": "Time Zone. Default is UTC.",
+                    "default": "UTC"
+                },
+                {
+                    "name": "IMAGE_TAPE",
+                    "description": "Image Type (GPU or only CPU Serving) Default: ipex-llm-serving-xpu",
+                    "select": [
+                        {
+                            "text": "ipex-llm-serving-xpu",
+                            "value": "ipex-llm-serving-xpu",
+                            "default": true
+                        },
+                        {
+                            "text": "ipex-llm-serving-cpu",
+                            "value": "ipex-llm-serving-cpu"
+                        }
+                    ],
+                    "label": "IMAGE_TAPE"
+                },
+                {
+                    "name": "IMAGE_VERSION",
+                    "description": "Image Vesion. Default: latest",
+                    "select": [
+                        {
+                            "text": "latest",
+                            "value": "latest",
+                            "default": true
+                        },
+                        {
+                            "text": "2.1.0-SNAPSHOT",
+                            "value": "2.1.0-SNAPSHOT"
+                        }
+                    ],
+                    "label": "IMAGE_VERSION"
+                }
+            ],
+            "repository": {
+                "url": "https://github.com/nchekwa/docker-swarm-cookbook/",
+                "stackfile": "cookbook/composeStacks/ipex-llm/docker-compose.yml"
+            },
+            "type": 3,
+            "logo": "https://raw.githubusercontent.com/nchekwa/docker-swarm-cookbook/main/icons/ipex-llm.png",
+            "id": 884
+        },
+        {
+            "description": "It's like Airtable for your database. Make your database a full-fledged collaborative app ready for any end-user.",
+            "title": "Basetool (Cookbook)",
+            "categories": [
+                "Low Code",
+                "Database",
+                "Cookbook"
+            ],
+            "platform": "linux",
+            "name": "basetool",
+            "note": "<a href=\"https://www.basetool.io\" target=\"_blank\">Basetool Docs</a><br>",
+            "env": [
+                {
+                    "name": "BASETOOL_HTTP_PORT",
+                    "label": "Basetool HTTP Port",
+                    "description": "The HTTP port to expose Basetool on.",
+                    "default": "7654"
+                },
+                {
+                    "name": "BASETOOL_PORT",
+                    "label": "Basetool Port",
+                    "description": "The port Basetool runs on within its container.",
+                    "default": "7654"
+                },
+                {
+                    "name": "BASE_URL",
+                    "label": "Base URL",
+                    "description": "Base URL for Basetool, without protocol (http/https).",
+                    "default": "localhost:7654"
+                },
+                {
+                    "name": "POSTGRES_USER",
+                    "label": "PostgreSQL User",
+                    "description": "Username for PostgreSQL database.",
+                    "default": "basetool"
+                },
+                {
+                    "name": "POSTGRES_PASSWORD",
+                    "label": "PostgreSQL Password",
+                    "description": "Password for PostgreSQL database.",
+                    "default": "basetool13203eiGht"
+                },
+                {
+                    "name": "POSTGRES_HOSTNAME",
+                    "label": "PostgreSQL Hostname",
+                    "description": "Hostname for PostgreSQL database.",
+                    "default": "postgres"
+                },
+                {
+                    "name": "POSTGRES_DB",
+                    "label": "PostgreSQL Database",
+                    "description": "Name of the PostgreSQL database.",
+                    "default": "basetool"
+                },
+                {
+                    "name": "TZ",
+                    "label": "Time Zone",
+                    "description": "Time Zone.",
+                    "default": "UTC"
+                }
+            ],
+            "repository": {
+                "url": "https://github.com/nchekwa/docker-swarm-cookbook/",
+                "stackfile": "cookbook/composeStacks/basetool/docker-compose.yml"
+            },
+            "type": 3,
+            "logo": "https://raw.githubusercontent.com/nchekwa/docker-swarm-cookbook/main/icons/basetool.png",
+            "id": 885
+        },
+        {
+            "description": "Docker swarm service for automatically updating your services whenever their image is refreshed",
+            "note": "Check the <a href=\"https://github.com/containrrr/shepherd\" target=\"_blank\">GitLab documentation</a> to get started.",
+            "categories": [
+                "Automation",
+                "Messaging",
+                "Cookbook"
+            ],
+            "title": "Shepherd (Cookbook)",
+            "repository": {
+                "url": "https://github.com/nchekwa/docker-swarm-cookbook/",
+                "stackfile": "cookbook/composeStacks/shepherd/docker-compose.yml"
+            },
+            "name": "shepherd",
+            "type": 3,
+            "platform": "linux",
+            "logo": "https://raw.githubusercontent.com/nchekwa/docker-swarm-cookbook/main/icons/shepherd.png",
+            "env": [],
+            "id": 886
         }
     ]
 }
